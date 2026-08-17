@@ -27,7 +27,9 @@ const MIME_TYPES = {
     '.webp': 'image/webp',
     '.woff': 'font/woff',
     '.woff2': 'font/woff2',
-    '.ttf': 'font/ttf'
+    '.ttf': 'font/ttf',
+    '.mp4': 'video/mp4',
+    '.webm': 'video/webm'
 };
 
 const COMPRESSIBLE = new Set([
@@ -79,9 +81,10 @@ function serveFileFromDiskOrCache(req, res, filePath) {
     const mimeType = MIME_TYPES[ext] || 'application/octet-stream';
     const isHtml = ext === '.html';
     const isSvg = ext === '.svg';
+    const isNoCacheAsset = isHtml || isSvg || filePath.includes('\\video\\') || filePath.includes('/video/') || filePath.includes('\\hero\\') || filePath.includes('/hero/');
 
     const cacheKey = filePath;
-    if (!isHtml && !isSvg && fileCache.has(cacheKey)) {
+    if (!isNoCacheAsset && fileCache.has(cacheKey)) {
         const cached = fileCache.get(cacheKey);
         const headers = {
             'Content-Type': mimeType,
@@ -97,17 +100,17 @@ function serveFileFromDiskOrCache(req, res, filePath) {
             return res.end('404 Not Found');
         }
 
-        // Cache non-HTML, non-SVG static assets in RAM memory for instant delivery
-        if (!isHtml && !isSvg && data.length < 2 * 1024 * 1024 && (currentCacheSize + data.length < MAX_CACHE_SIZE_BYTES)) {
+        // Cache non-HTML, non-SVG, non-hero static assets in RAM memory for instant delivery
+        if (!isNoCacheAsset && data.length < 2 * 1024 * 1024 && (currentCacheSize + data.length < MAX_CACHE_SIZE_BYTES)) {
             fileCache.set(cacheKey, data);
             currentCacheSize += data.length;
         }
 
         const headers = {
             'Content-Type': mimeType,
-            'Cache-Control': (isHtml || isSvg) ? 'no-cache, no-store, must-revalidate, max-age=0' : 'public, max-age=31536000, immutable',
-            'Pragma': (isHtml || isSvg) ? 'no-cache' : undefined,
-            'Expires': (isHtml || isSvg) ? '0' : undefined,
+            'Cache-Control': isNoCacheAsset ? 'no-cache, no-store, must-revalidate, max-age=0' : 'public, max-age=31536000, immutable',
+            'Pragma': isNoCacheAsset ? 'no-cache' : undefined,
+            'Expires': isNoCacheAsset ? '0' : undefined,
             'X-Local-Cache': 'MISS'
         };
         // Remove undefined headers
