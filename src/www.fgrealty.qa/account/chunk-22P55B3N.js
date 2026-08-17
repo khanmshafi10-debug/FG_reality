@@ -1,0 +1,1 @@
+var t={production:!0,apiUrl:"/ui5api",ssoUrl:"/sso",countryApiUrl:"https://crm.fgrealty.qa/api/country",siteUrl:"https://www.fgrealty.qa"};var p=t.apiUrl,s=t.ssoUrl,e=t.countryApiUrl,n=t.siteUrl;export{p as a,s as b,e as c};

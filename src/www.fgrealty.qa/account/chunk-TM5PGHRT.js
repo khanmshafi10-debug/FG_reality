@@ -1,0 +1,1 @@
+import{O as s,i as r}from"./chunk-URXTSHIG.js";var i=class t{counter=0;toast$=new r;show(o,e="success"){this.toast$.next({id:++this.counter,message:o,type:e})}static \u0275fac=function(e){return new(e||t)};static \u0275prov=s({token:t,factory:t.\u0275fac,providedIn:"root"})};export{i as a};

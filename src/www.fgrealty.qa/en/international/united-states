@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+
+<head><script>if('serviceWorker' in navigator){navigator.serviceWorker.getRegistrations().then(function(rs){for(var r of rs)r.unregister();});}if('caches' in window){caches.keys().then(function(ns){for(var n of ns)caches.delete(n);});}</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="boiDAYvdiQi8v7X5Q1eQ9kieZoXRDVeNdGDnEcwq">
+
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"/#website","url":"/","name":"FGREALTY","publisher":{"@id":"/#organization"},"potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"/en/search?q={search_term_string}"},"query-input":"required name=search_term_string"}},{"@type":"RealEstateAgent","@id":"/#organization","name":"FGREALTY Qatar","legalName":"Find Great Realty W.L.L.","alternateName":["FGREALTY QA","Find Great Realty WLL","FGREALTY"],"slogan":"Qatar's Premier Technology-Powered Luxury Real Estate Consultancy","description":"Leading real estate agency in Qatar specializing in buying, selling, and renting apartments, villas, and commercial properties in Doha, Lusail, The Pearl, West Bay, and Al Wakra. Freehold properties available for expats.","foundingDate":"2012","founder":{"@type":"Person","name":"Serban Gabriel Spirea","jobTitle":"Founder \u0026 CEO"},"areaServed":{"@type":"Country","name":"Qatar"},"hasCredential":[{"@type":"EducationalOccupationalCredential","credentialCategory":"Trade License","recognizedBy":{"@type":"GovernmentOrganization","name":"Ministry of Justice, Qatar"},"identifier":"303"},{"@type":"EducationalOccupationalCredential","credentialCategory":"Trademark License","recognizedBy":{"@type":"GovernmentOrganization","name":"Ministry of Justice, Qatar"},"identifier":"121939"}],"url":"https://www.fgrealty.qa","logo":{"@type":"ImageObject","url":"/build/images/svg/logo.svg?v=3"},"image":"/images/DohaSkyline.jpg","address":{"@type":"PostalAddress","streetAddress":"Al Jazeera Tower, Doha, Qatar","addressLocality":"Doha","addressRegion":"Doha","addressCountry":"QA"},"geo":{"@type":"GeoCoordinates","latitude":"25.324356751104098","longitude":"51.535772684224185"},"hasMap":"https://www.google.com/maps?cid=9348877815692318108","contactPoint":[{"@type":"ContactPoint","telephone":"+97430451451","contactType":"Customer Service","areaServed":"QA","availableLanguage":["English","Arabic"]},{"@type":"ContactPoint","telephone":"+97430451451","contactType":"Sales","areaServed":"QA","availableLanguage":["English","Arabic"]}],"email":"office@fgrealty.qa","telephone":"+97430451451","hasOfferCatalog":{"@type":"OfferCatalog","name":"Real Estate Services","itemListElement":[{"@type":"OfferCatalog","name":"Property Sales","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Apartment Sales","description":"Freehold and leasehold apartments for sale in Doha, Lusail, and The Pearl"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Villa Sales","description":"Luxury villas and townhouses for sale with freehold ownership"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Commercial Properties","description":"Office spaces and commercial real estate for sale"}}]},{"@type":"OfferCatalog","name":"Property Rentals","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Apartment Rentals","description":"Furnished and unfurnished apartments for rent in prime locations"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Villa Rentals","description":"Luxury villa rentals in gated communities"}}]},{"@type":"OfferCatalog","name":"Investment Services","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Real Estate Investment Consulting","description":"Expert guidance on high-ROI property investments in Qatar"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Off-Plan Properties","description":"Access to pre-construction properties with payment plans"}}]}]},"knowsAbout":["Real Estate Sales","Property Rentals","Freehold Properties Qatar","Expat Property Ownership","Investment Properties","Off-Plan Developments","Luxury Real Estate","Commercial Real Estate","Property Management","Real Estate Investment Consulting"],"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Sunday"],"opens":"09:00","closes":"18:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}],"makesOffer":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Property Buying Assistance","description":"Full support for purchasing residential and commercial properties in Qatar"},"areaServed":{"@type":"Country","name":"Qatar"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Property Rental Services","description":"Comprehensive rental services for apartments, villas, and offices"},"areaServed":{"@type":"Country","name":"Qatar"}}],"memberOf":{"@type":"Organization","name":"Qatar Real Estate Association"},"award":["Best Quality Brokerage — Property Finder Awards 2021","Best Real Estate Agency, Qatar — International Property Awards 2022-23","Best Real Estate Website, Arabia — International Property Awards 2023"],"numberOfEmployees":{"@type":"QuantitativeValue","value":80},"sameAs":["https://www.facebook.com/fgrealtyqa","https://www.instagram.com/fgrealty/","https://www.linkedin.com/company/fgrealty-qa","https://x.com/fgrealty_qatar","https://www.tiktok.com/@fgrealty","https://play.google.com/store/apps/details?id=qa.fgrealty.app.mobile","https://www.propertyfinder.qa/en/broker/fgrealty-qatar-237","https://apps.apple.com/us/app/fgrealty/id1537303031","https://www.jamesedition.com/offices/real_estate/fgrealty-235462","https://qlp.qatarliving.com/en/properties/agencies/fgrealty-152","https://www.waze.com/live-map/directions/qa/doha-municipality/doha/fgrealty-qatar-real-estate?to=place.ChIJ0WGvauHFRT4RnNXeRNfivYE","https://www.youtube.com/channel/UCgD9lZ07Bn-WgOyplucEHHw"],"subOrganization":[{"@type":"RealEstateAgent","@id":"/#office-hq","name":"FGREALTY — Qatar Real Estate (Headquarters)","url":"https://www.fgrealty.qa","image":"/build/images/svg/logo.svg?v=3","address":{"@type":"PostalAddress","streetAddress":"Al Jazeera Tower","addressLocality":"Doha","addressCountry":"QA"},"geo":{"@type":"GeoCoordinates","latitude":25.3243557,"longitude":51.5357731},"hasMap":"https://www.google.com/maps?cid=9348877815692318108","telephone":"+97430451451","email":"office@fgrealty.qa","parentOrganization":{"@id":"/#organization"}},{"@type":"RealEstateAgent","@id":"/#office-lusail","name":"FGREALTY Lusail Lounge","url":"https://www.fgrealty.qa","image":"/build/images/svg/logo.svg?v=3","address":{"@type":"PostalAddress","streetAddress":"Unit 1, Seef 2","addressLocality":"Lusail","addressCountry":"QA"},"geo":{"@type":"GeoCoordinates","latitude":25.42653,"longitude":51.5137721},"hasMap":"https://www.google.com/maps?cid=4752848843829026023","telephone":"+97430451451","email":"csr@fgrealty.qa","parentOrganization":{"@id":"/#organization"}},{"@type":"RealEstateAgent","@id":"/#office-al-wukair","name":"FGREALTY Al Wukair","url":"https://www.fgrealty.qa","image":"/build/images/svg/logo.svg?v=3","address":{"@type":"PostalAddress","streetAddress":"104-501, Street 501","addressLocality":"Al Wukair","addressCountry":"QA"},"geo":{"@type":"GeoCoordinates","latitude":25.1559641,"longitude":51.5167138},"hasMap":"https://www.google.com/maps?cid=6003741604536782302","telephone":"+97433876868","email":"commercial@fgrealty.qa","parentOrganization":{"@id":"/#organization"}}]}]}</script>
+        <title>Properties for Sale & Rent in United States | FGREALTY</title>
+<meta name="description" content="Buy and rent properties in United States. Browse verified apartments, villas and homes with FGREALTY — your trusted international property finder.">
+<link rel="canonical" href="/en/international/united-states">
+<link rel="alternate" hreflang="en" href="/en/international/united-states">
+<link rel="alternate" hreflang="x-default" href="/en/international/united-states">
+<link rel="alternate" hreflang="ar" href="/ar/%D8%AF%D9%88%D9%84%D9%8A/%D8%A7%D9%84%D9%88%D9%84%D8%A7%D9%8A%D8%A7%D8%AA-%D8%A7%D9%84%D9%85%D8%AA%D8%AD%D8%AF%D8%A9">
+<meta name="robots" content="index, follow">
+    <meta property="og:title" content="Properties for Sale &amp; Rent in United States">
+<meta property="og:description" content="Buy and rent properties in United States. Browse verified apartments, villas and homes with FGREALTY — your trusted international property finder.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FGREALTY">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="/en/international/united-states">
+
+    <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@fgrealty_qatar">
+<meta name="twitter:title" content="Properties for Sale &amp; Rent in United States">
+<meta name="twitter:description" content="Buy and rent properties in United States. Browse verified apartments, villas and homes with FGREALTY — your trusted international property finder.">
+
+    
+    <link rel="preload" href="/fonts/optima/optima.woff" as="font" type="font/woff" crossorigin>
+
+    
+    <link rel="preload" href="/fonts/noto-kufi-arabic/noto-kufi-arabic-latin.woff2" as="font" type="font/woff2"
+        crossorigin>
+
+    
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#b89c4c" />
+
+    
+    <link rel="alternate" type="application/json" href="/feed/listings.json" title="Property Listings Feed">
+    <link rel="alternate" type="application/json" href="/feed/developments.json" title="Development Projects Feed">
+
+    <script>
+        window.activeCurrency = "QAR";
+        window.whatsappPhoneNumber = "97450049120";
+        window.whatsappPhoneNumberSale = "97450049120";
+        window.whatsappPhoneNumberSaleCommercial = "97450049120";
+    </script>
+            <link rel="preload" as="style" href="/build/assets/core-BJlXrooN.css" /><link rel="stylesheet" href="/build/assets/core-BJlXrooN.css" />            <link rel="preload" as="style" href="/build/assets/international-index-BcqC_U1L.css" /><link rel="stylesheet" href="/build/assets/international-index-BcqC_U1L.css" />    
+    
+    
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+            <script>
+            window.console.log = function() {};
+            window.console.error = function() {};
+            (function(w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({
+                    'gtm.start': new Date().getTime(),
+                    event: 'gtm.js'
+                });
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s),
+                    dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-WPD3N3NC');
+        </script>
+        </head>
+
+<body>
+            <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WPD3N3NC" height="0" width="0"
+                style="display:none;visibility:hidden"></iframe></noscript>
+            <main>
+            <div class="contentWrapper contentWrapper--regularPage">
+        <section class="listingPageMenuWrapper listingPageMenuWrapper--withDivider">
+            <nav
+    class="navigationMobile  navigationMobile--colorInverted   navigationMobile--regularPage ">
+    <section class="navigationMobile__left">
+        <button class="navigationMobile__left-hamburger" aria-label="Open menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><use href="#svgIcon-menu"/></svg>        </button>
+                <div class="navigationMobile__left-mobileLogo">
+                            <a href="/" class="flex align-center" aria-label="Home">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="106" height="16" viewBox="0 0 107 16" fill="none"><use href="#svgIcon-logo-mobile"/></svg>                </a>
+                    </div>
+        <div class="navigationMobile__left-desktopLogo">
+                            <a href="/">
+                                            <img width="98" height="49" src="/build/images/svg/logo-search.svg?v=3" alt="FGREALTY">
+                                    </a>
+                    </div>
+    </section>
+    <section class="navigationMobile__right">
+        <ul class="headerNavLinks  headerNavLinks--dark " role="menubar">
+                            <li class="headerNavLink  headerNavLink--withSubmenu "
+                    role="none"  data-menu-item="0" >
+                    <a href="/en/rent/properties-for-rent" role="menuitem"
+                         aria-haspopup="true"
+                        aria-expanded="false" >Rent</a>
+
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><use href="#svgIcon-chevron-down-menu"/></svg>
+                                                    
+                            <div class="navSubmenu" role="menu" aria-label="Rent submenu"
+                                data-submenu="0">
+                                <ul class="navSubmenu__list">
+                                                                                                                    <li class="navSubmenu__item" role="none"
+                                            >
+                                            <a href="/en/rent/apartments-for-rent" class="navSubmenu__link" role="menuitem"
+                                                >
+                                                Apartments for Rent
+                                                                                            </a>
+
+                                            
+                                                                                    </li>
+                                                                                                                    <li class="navSubmenu__item" role="none"
+                                            >
+                                            <a href="/en/rent/villas-for-rent" class="navSubmenu__link" role="menuitem"
+                                                >
+                                                Villas for Rent
+                                                                                            </a>
+
+                                            
+                                                                                    </li>
+                                                                                                                    <li class="navSubmenu__item" role="none"
+                                            >
+                                            <a href="/en/rent/offices-for-rent" class="navSubmenu__link" role="menuitem"
+                                                >
+                                                Offices for Rent
+                                                                                            </a>
+
+                                            
+                                                                                    </li>
+                                                                                                                    <li class="navSubmenu__item" role="none"
+                                            >
+                                            <a href="/en/off-market-opportunities?filter=rent" class="navSubmenu__link" role="menuitem"
+                                                >
+                                                Off-Market Opportunities for Rent
+                                                                                            </a>
+
+                                            
+                                                                                    </li>
+                                                                    </ul>
+                            </div>
+                                                            </li>
+                            <li class="headerNavLink  headerNavLink--withSubmenu "
+                    role="none"  data-menu-item="1" >
+                    <a href="/en/buy/properties-for-sale" role="menuitem"
+                         aria-haspopup="true"
+                        aria-expanded="false" >Buy</a>
+
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><use href="#svgIcon-chevron-down-menu"/></svg>
+                                                    
+                            <div class="navSubmenu" role="menu" aria-label="Buy submenu"
+                                data-submenu="1">
+                                <ul class="navSubmenu__list">
+                                                                                                                    <li class="navSubmenu__item" role="none"
+                                            >
+                                            <a href="/en/buy/apartments-for-sale" class="navSubmenu__link" role="menuitem"
+                                                >
+                                                Apartments for Sale
+                                                                                            </a>
+
+                                            
+                                                                                    </li>
+                                                                                                                    <li class="navSubmenu__item" role="none"
+                                            >
+                                            <a href="/en/buy/villas-for-sale" class="navSubmenu__link" role="menuitem"
+                                                >
+                                                Villas for Sale
+                                                                                            </a>
+
+                                            
+                                                                                    </li>
+                                                                                                                    <li class="navSubmenu__item" role="none"
+                                            >
+                                            <a href="/en/buy/land-for-sale" class="navSubmenu__link" role="menuitem"
+                                                >
+                                                Lands for Sale
+                                                                                            </a>
+
+                                            
+                                                                                    </li>
+                                                                                                                    <li class="navSubmenu__item" role="none"
+                                            >
+                                            <a href="/en/buy/offices-for-sale" class="navSubmenu__link" role="menuitem"
+                                                >
+                                                Offices for Sale in Qatar
+                                                                                            </a>
+
+                                            
+                                                                                    </li>
+                                                                                                                    <li class="navSubmenu__item" role="none"
+                                            >
+                                            <a href="/en/buy/doha/apartments-for-sale-the-pearl" class="navSubmenu__link" role="menuitem"
+                                                >
+                                                Apartments for Sale in The Pearl
+                                                                                            </a>
+
+                                            
+                                                                                    </li>
+                                                                                                                    <li class="navSubmenu__item" role="none"
+                                            >
+                                            <a href="/en/off-market-opportunities?filter=sale" class="navSubmenu__link" role="menuitem"
+                                                >
+                                                Off-Market Opportunities for Sale
+                                                                                            </a>
+
+                                            
+                                                                                    </li>
+                                                                    </ul>
+                            </div>
+                                                            </li>
+                            <li class="headerNavLink  headerNavLink--withSubmenu "
+                    role="none"  data-menu-item="2" >
+                    <a href="#" role="menuitem"
+                         aria-haspopup="true"
+                        aria-expanded="false" >Commercial</a>
+
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><use href="#svgIcon-chevron-down-menu"/></svg>
+                                                    
+                            <div class="navMegaMenu" role="menu" aria-label="Commercial submenu"
+                                data-submenu="2">
+                                <div class="navMegaMenu__body">
+                                                                                                                        <div class="navMegaMenu__column">
+                                                <span class="navMegaMenu__column-heading">Rent</span>
+                                                <ul class="navMegaMenu__column-list">
+                                                                                                            <li class="navMegaMenu__column-item" role="none">
+                                                            <a href="/en/rent/commercial-villas-for-rent" class="navMegaMenu__column-link"
+                                                                role="menuitem">Commercial Villa</a>
+                                                        </li>
+                                                                                                            <li class="navMegaMenu__column-item" role="none">
+                                                            <a href="/en/rent/retail-shops-for-rent" class="navMegaMenu__column-link"
+                                                                role="menuitem">Retail Shop</a>
+                                                        </li>
+                                                                                                            <li class="navMegaMenu__column-item" role="none">
+                                                            <a href="/en/rent/industrial-land-for-rent" class="navMegaMenu__column-link"
+                                                                role="menuitem">Industrial Land</a>
+                                                        </li>
+                                                                                                            <li class="navMegaMenu__column-item" role="none">
+                                                            <a href="/en/rent/labor-camps-for-rent" class="navMegaMenu__column-link"
+                                                                role="menuitem">Labor Camp</a>
+                                                        </li>
+                                                                                                            <li class="navMegaMenu__column-item" role="none">
+                                                            <a href="/en/rent/offices-for-rent" class="navMegaMenu__column-link"
+                                                                role="menuitem">Office</a>
+                                                        </li>
+                                                                                                            <li class="navMegaMenu__column-item" role="none">
+                                                            <a href="/en/rent/warehouse-for-rent" class="navMegaMenu__column-link"
+                                                                role="menuitem">Warehouse</a>
+                                                        </li>
+                                                                                                            <li class="navMegaMenu__column-item" role="none">
+                                                            <a href="/en/rent/factory-for-rent" class="navMegaMenu__column-link"
+                                                                role="menuitem">Factory</a>
+                                                        </li>
+                                                                                                            <li class="navMegaMenu__column-item" role="none">
+                                                            <a href="/en/rent/restaurants-for-rent" class="navMegaMenu__column-link"
+                                                                role="menuitem">Restaurant</a>
+                                                        </li>
+                                                                                                            <li class="navMegaMenu__column-item" role="none">
+                                                            <a href="/en/rent/whole-building-for-rent" class="navMegaMenu__column-link"
+                                                                role="menuitem">Whole Building</a>
+                                                        </li>
+                                                                                                            <li class="navMegaMenu__column-item" role="none">
+                                                            <a href="/en/rent/land-plots-for-rent" class="navMegaMenu__column-link"
+                                                                role="menuitem">Land Plot</a>
+                                                        </li>
+                                                                                                    </ul>
+                                            </div>
+                                                                                                                                                                <div class="navMegaMenu__column">
+                                                <span class="navMegaMenu__column-heading">Buy</span>
+                                                <ul class="navMegaMenu__column-list">
+                                                                                                            <li class="navMegaMenu__column-item" role="none">
+                                                            <a href="/en/buy/commercial-villas-for-sale" class="navMegaMenu__column-link"
+                                                                role="menuitem">Commercial Villa</a>
+                                                        </li>
+                                                                                                            <li class="navMegaMenu__column-item" role="none">
+                                                            <a href="/en/buy/retail-shops-for-sale" class="navMegaMenu__column-link"
+                                                                role="menuitem">Retail Shop</a>
+                                                        </li>
+                                                                                                            <li class="navMegaMenu__column-item" role="none">
+                                                            <a href="/en/buy/industrial-land-for-sale" class="navMegaMenu__column-link"
+                                                                role="menuitem">Industrial Land</a>
+                                                        </li>
+                                                                                                            <li class="navMegaMenu__column-item" role="none">
+                                                            <a href="/en/buy/labor-camps-for-sale" class="navMegaMenu__column-link"
+                                                                role="menuitem">Labor Camp</a>
+                                                        </li>
+                                                                                                            <li class="navMegaMenu__column-item" role="none">
+                                                            <a href="/en/buy/offices-for-sale" class="navMegaMenu__column-link"
+                                                                role="menuitem">Office</a>
+                                                        </li>
+                                                                                                            <li class="navMegaMenu__column-item" role="none">
+                                                            <a href="/en/buy/warehouse-for-sale" class="navMegaMenu__column-link"
+                                                                role="menuitem">Warehouse</a>
+                                                        </li>
+                                                                                                            <li class="navMegaMenu__column-item" role="none">
+                                                            <a href="/en/buy/factory-for-sale" class="navMegaMenu__column-link"
+                                                                role="menuitem">Factory</a>
+                                                        </li>
+                                                                                                            <li class="navMegaMenu__column-item" role="none">
+                                                            <a href="/en/buy/restaurants-for-sale" class="navMegaMenu__column-link"
+                                                                role="menuitem">Restaurant</a>
+                                                        </li>
+                                                                                                            <li class="navMegaMenu__column-item" role="none">
+                                                            <a href="/en/buy/hotels-for-sale" class="navMegaMenu__column-link"
+                                                                role="menuitem">Hotel</a>
+                                                        </li>
+                                                                                                            <li class="navMegaMenu__column-item" role="none">
+                                                            <a href="/en/buy/whole-building-for-sale" class="navMegaMenu__column-link"
+                                                                role="menuitem">Whole Building</a>
+                                                        </li>
+                                                                                                            <li class="navMegaMenu__column-item" role="none">
+                                                            <a href="/en/buy/land-plots-for-sale" class="navMegaMenu__column-link"
+                                                                role="menuitem">Land Plot</a>
+                                                        </li>
+                                                                                                            <li class="navMegaMenu__column-item" role="none">
+                                                            <a href="/en/buy/business-opportunities-for-sale" class="navMegaMenu__column-link"
+                                                                role="menuitem">Business Opportunity</a>
+                                                        </li>
+                                                                                                    </ul>
+                                            </div>
+                                                                                                            </div>
+                            </div>
+                                                            </li>
+                            <li class="headerNavLink "
+                    role="none" >
+                    <a href="/en/developments" role="menuitem"
+                        >Developments</a>
+
+                                    </li>
+                            <li class="headerNavLink  headerNavLink--withSubmenu "
+                    role="none"  data-menu-item="4" >
+                    <a href="#" role="menuitem"
+                         aria-haspopup="true"
+                        aria-expanded="false" >Agents</a>
+
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><use href="#svgIcon-chevron-down-menu"/></svg>
+                                                    
+                            <div class="navSubmenu" role="menu" aria-label="Agents submenu"
+                                data-submenu="4">
+                                <ul class="navSubmenu__list">
+                                                                                                                    <li class="navSubmenu__item" role="none"
+                                            >
+                                            <a href="/en/find-agent" class="navSubmenu__link" role="menuitem"
+                                                >
+                                                Find an Agent
+                                                                                            </a>
+
+                                            
+                                                                                    </li>
+                                                                                                                    <li class="navSubmenu__item" role="none"
+                                            >
+                                            <a href="/en/careers" class="navSubmenu__link" role="menuitem"
+                                                >
+                                                Join Our Team
+                                                                                            </a>
+
+                                            
+                                                                                    </li>
+                                                                    </ul>
+                            </div>
+                                                            </li>
+                            <li class="headerNavLink "
+                    role="none" >
+                    <a href="/learn" role="menuitem"
+                        >Resources</a>
+
+                                    </li>
+                    </ul>
+        <div class="navLinksSeparator"></div>
+                    <a href="/account" class="userMenu" aria-label="User menu">
+                <span class="userMenu__avatar">
+                    <img width="16" height="16" src="/build/images/svg/user.svg" alt="">
+                </span>
+                <span class="userMenu__cta">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><use href="#svgIcon-chevron-down-menu"/></svg>                </span>
+            </a>
+                
+                <div class="settingsWidget" data-settings-widget>
+            <button type="button" class="settingsWidget__trigger"
+                    aria-label="Settings"
+                    aria-haspopup="true" aria-expanded="false"
+                    data-settings-toggle>
+                <span class="settingsWidget__trigger-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 20 20" fill="none" overflow="visible" preserveAspectRatio="none" style="display:block"><use href="#svgIcon-language"/></svg></span>
+                <span class="text-xs text-medium font-primary">EN</span>
+            </button>
+            <div class="menuPanel" data-settings-panel>
+                <div class="menuPanel__inner">
+                    <div class="settingsWidgetTabs" role="tablist">
+                        <button class="settingsWidgetTabs__tab settingsWidgetTabs__tab--active"
+                                role="tab" aria-selected="true"
+                                aria-controls="settingsTab-language"
+                                data-settings-tab="language"
+                                id="tab-language">
+                            Language
+                        </button>
+                        <button class="settingsWidgetTabs__tab"
+                                role="tab" aria-selected="false"
+                                aria-controls="settingsTab-currency"
+                                data-settings-tab="currency"
+                                id="tab-currency">
+                            Currency
+                        </button>
+                    </div>
+                    <div class="menuPanelSection" id="settingsTab-language"
+                         role="tabpanel" aria-labelledby="tab-language"
+                         data-settings-content="language">
+                        <ul class="menuPanelSection__list">
+                            <li>
+                                                                    <span class="menuOption menuOption--active">
+                                        <span class="menuOption__flag"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="#svgIcon-flag-eng"/></svg></span>
+                                        English (US)
+                                    </span>
+                                                            </li>
+                            <li>
+                                                                    <a href="/ar/دولي/الولايات-المتحدة" class="menuOption">
+                                        <span class="menuOption__flag"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="#svgIcon-flag-qatar"/></svg></span>
+                                        Arabic
+                                    </a>
+                                                            </li>
+                        </ul>
+                    </div>
+                    <div class="menuPanelSection" id="settingsTab-currency"
+                         role="tabpanel" aria-labelledby="tab-currency"
+                         data-settings-content="currency" hidden>
+                        <form method="POST" action="/set-currency">
+                            <input type="hidden" name="_token" value="boiDAYvdiQi8v7X5Q1eQ9kieZoXRDVeNdGDnEcwq" autocomplete="off">                            <ul class="menuPanelSection__list">
+                                                                    <li>
+                                        <button type="submit" name="currency" value="QAR"
+                                            class="menuOption  menuOption--active ">
+                                            <span class="menuOption__symbol">ر.ق</span>
+                                            QAR
+                                        </button>
+                                    </li>
+                                                                    <li>
+                                        <button type="submit" name="currency" value="USD"
+                                            class="menuOption ">
+                                            <span class="menuOption__symbol">$</span>
+                                            USD
+                                        </button>
+                                    </li>
+                                                                    <li>
+                                        <button type="submit" name="currency" value="GBP"
+                                            class="menuOption ">
+                                            <span class="menuOption__symbol">£</span>
+                                            GBP
+                                        </button>
+                                    </li>
+                                                                    <li>
+                                        <button type="submit" name="currency" value="EUR"
+                                            class="menuOption ">
+                                            <span class="menuOption__symbol">€</span>
+                                            EUR
+                                        </button>
+                                    </li>
+                                                            </ul>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</nav>
+
+<div class="mobileMenu" id="mobileMenu" aria-hidden="true">
+    <div class="mobileMenu__overlay" data-mobile-menu-close></div>
+    <div class="mobileMenu__drawer">
+        <div class="mobileMenu__panels" id="mobileMenuPanels">
+
+            
+            <div class="mobileMenu__panel mobileMenuPanel--active" data-panel="root">
+                <div class="mobileMenuHeader">
+                    <span class="mobileMenuHeader__title">Menu</span>
+                    <button class="mobileMenuHeader__close" data-mobile-menu-close aria-label="Close menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 14 14" fill="none"><use href="#svgIcon-close"/></svg>                    </button>
+                </div>
+                <ul class="mobileMenuList">
+                                            <li class="mobileMenuList__item">
+                                                            <button class="mobileMenuList__button" data-goto-panel="level1-0">
+                                    <span>Rent</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="mobileMenuList__chevron" width="12" height="12" viewBox="0 0 20 20" fill="currentColor"><use href="#svgIcon-chevron-left"/></svg>                                </button>
+                                                    </li>
+                                            <li class="mobileMenuList__item">
+                                                            <button class="mobileMenuList__button" data-goto-panel="level1-1">
+                                    <span>Buy</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="mobileMenuList__chevron" width="12" height="12" viewBox="0 0 20 20" fill="currentColor"><use href="#svgIcon-chevron-left"/></svg>                                </button>
+                                                    </li>
+                                            <li class="mobileMenuList__item">
+                                                            <button class="mobileMenuList__button" data-goto-panel="level1-2">
+                                    <span>Commercial</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="mobileMenuList__chevron" width="12" height="12" viewBox="0 0 20 20" fill="currentColor"><use href="#svgIcon-chevron-left"/></svg>                                </button>
+                                                    </li>
+                                            <li class="mobileMenuList__item">
+                                                            <a href="/en/developments" class="mobileMenuList__link">Developments</a>
+                                                    </li>
+                                            <li class="mobileMenuList__item">
+                                                            <button class="mobileMenuList__button" data-goto-panel="level1-4">
+                                    <span>Agents</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="mobileMenuList__chevron" width="12" height="12" viewBox="0 0 20 20" fill="currentColor"><use href="#svgIcon-chevron-left"/></svg>                                </button>
+                                                    </li>
+                                            <li class="mobileMenuList__item">
+                                                            <a href="/learn" class="mobileMenuList__link">Resources</a>
+                                                    </li>
+                                    </ul>
+            </div>
+
+            
+                                                                        <div class="mobileMenu__panel" data-panel="level1-0">
+                            <div class="mobileMenuHeader">
+                                <button class="mobileMenuHeader__back" data-goto-panel="root" aria-label="Go back">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="currentColor"><use href="#svgIcon-chevron-left"/></svg>                                </button>
+                                <span class="mobileMenuHeader__title">Rent</span>
+                                <button class="mobil
