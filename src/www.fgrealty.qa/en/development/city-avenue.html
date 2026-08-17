@@ -71,11 +71,100 @@
       .modern-unit-btn--whatsapp { background: #25d366; color: #fff; }
       .modern-unit-btn--whatsapp:hover { background: #1eb956; }
       .modern-unit-btn--call { background: #111; color: #fff; }
-      .modern-unit-btn--call:hover { background: #333; }
+      .modern-unit-btn--call:hover { background: #d4b97a; color: #111; }
       
       .premium-section-header { text-align: center; max-width: 600px; margin: 0 auto 30px auto; }
       .premium-section-header h2 { font-size: 1.75rem; font-weight: 700; color: #111; font-family: optimaltstd-medium, sans-serif; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
       .premium-section-header p { font-size: 0.95rem; color: #666; margin: 0; }
+
+      /* LUXURY QATAR CONSULTANCY SIDEBAR CARD */
+      .qatar-consultancy-card {
+        background: #141414 !important;
+        color: #ffffff !important;
+        border-radius: 16px !important;
+        padding: 28px 24px !important;
+        border: 1px solid rgba(212, 185, 122, 0.3) !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
+        box-sizing: border-box !important;
+      }
+      .qatar-consultancy-card .badge-exclusive {
+        color: #d4b97a !important;
+        background: rgba(212, 185, 122, 0.12) !important;
+        border: 1px solid rgba(212, 185, 122, 0.3) !important;
+        padding: 6px 14px !important;
+        border-radius: 20px !important;
+        font-size: 0.72rem !important;
+        font-weight: 700 !important;
+        letter-spacing: 1.5px !important;
+        display: inline-block !important;
+        margin-bottom: 14px !important;
+        text-transform: uppercase !important;
+      }
+      .qatar-consultancy-card .card-title {
+        color: #ffffff !important;
+        font-size: 1.25rem !important;
+        font-weight: 600 !important;
+        margin: 0 0 12px 0 !important;
+        line-height: 1.35 !important;
+      }
+      .qatar-consultancy-card .card-desc {
+        color: rgba(255, 255, 255, 0.8) !important;
+        font-size: 0.86rem !important;
+        line-height: 1.6 !important;
+        margin-bottom: 22px !important;
+      }
+      .qatar-consultancy-card .btn-whatsapp-consult {
+        background: linear-gradient(135deg, #c5a85c 0%, #a38438 100%) !important;
+        color: #ffffff !important;
+        text-align: center !important;
+        padding: 13px 18px !important;
+        border-radius: 10px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        font-weight: 700 !important;
+        font-size: 0.92rem !important;
+        text-decoration: none !important;
+        transition: all 0.3s ease !important;
+        box-shadow: 0 4px 15px rgba(184, 156, 76, 0.25) !important;
+        margin-bottom: 12px !important;
+        border: none !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+      }
+      .qatar-consultancy-card .btn-whatsapp-consult:hover {
+        background: linear-gradient(135deg, #d4b97a 0%, #b89c4c 100%) !important;
+        color: #ffffff !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 6px 20px rgba(212, 185, 122, 0.4) !important;
+      }
+      .qatar-consultancy-card .btn-call-consult {
+        background: rgba(255, 255, 255, 0.05) !important;
+        color: #ffffff !important;
+        border: 1.5px solid rgba(212, 185, 122, 0.4) !important;
+        text-align: center !important;
+        padding: 13px 18px !important;
+        border-radius: 10px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        font-weight: 600 !important;
+        font-size: 0.92rem !important;
+        text-decoration: none !important;
+        transition: all 0.3s ease !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+      }
+      .qatar-consultancy-card .btn-call-consult:hover {
+        background: #d4b97a !important;
+        color: #111111 !important;
+        border-color: #d4b97a !important;
+        font-weight: 700 !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 6px 20px rgba(212, 185, 122, 0.35) !important;
+      }
     </style>
 </head>
 
@@ -321,18 +410,19 @@
 
             <div class="developmentDetailsContent__secondSection">
                 <aside class="developmentSidebar" style="position:sticky;top:90px;">
-                    <div class="card p-xl" style="background:#111;color:#fff;border-radius:16px;">
-                        <span class="text-xs text-caps text-gold font-bold" style="color:#d4b97a;letter-spacing:1px;">EXCLUSIVE CONSULTANCY</span>
-                        <h3 class="heading-18 text-white mt-xs mb-md">Speak with a Qatar Real Estate Expert</h3>
-                        <p class="text-xs text-grey-300 mb-xl" style="line-height:1.6;opacity:0.85;">
+                    <div class="qatar-consultancy-card">
+                        <span class="badge-exclusive">EXCLUSIVE CONSULTANCY</span>
+                        <h3 class="card-title">Speak with a Qatar Real Estate Expert</h3>
+                        <p class="card-desc">
                             Interested in unit availability, floor plans, or booking a site inspection for <strong>City Avenue</strong>?
                         </p>
-                        <a href="https://wa.me/97450049120?text=Hello%20FGREALTY%2C%20I%20am%20interested%20in%20City%20Avenue%20Al%20Erkyah%20City" target="_blank" 
-                           class="fgBtn fgBtn--gold w-full mb-md" style="background:#b89c4c;color:#fff;text-align:center;padding:12px;border-radius:8px;display:block;font-weight:bold;text-decoration:none;">
-                            WhatsApp FGREALTY
+                        <a href="https://wa.me/97450049120?text=Hello%20FGREALTY%2C%20I%20am%20interested%20in%20City%20Avenue%20Al%20Erkyah%20City" target="_blank" class="btn-whatsapp-consult">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            <span>WhatsApp FGREALTY</span>
                         </a>
-                        <a href="tel:+97430451451" class="fgBtn fgBtn--outline w-full" style="color:#fff;border:1px solid rgba(255,255,255,0.3);text-align:center;padding:12px;border-radius:8px;display:block;text-decoration:none;">
-                            Call +974 3045 1451
+                        <a href="tel:+97430451451" class="btn-call-consult">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="currentColor"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+                            <span>Call +974 3045 1451</span>
                         </a>
                     </div>
                 </aside>
