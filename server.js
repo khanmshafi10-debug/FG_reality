@@ -131,6 +131,12 @@ const server = http.createServer((req, res) => {
 
     if (reqPath === '/' || reqPath === '') reqPath = '/index.html';
 
+    // Redirect account and international routes to home
+    if (reqPath.startsWith('/account') || reqPath.startsWith('/en/international')) {
+        res.writeHead(302, { 'Location': '/' });
+        return res.end();
+    }
+
     let filePath;
     if (reqPath.startsWith('/yourstay.qa/')) {
         filePath = path.join(SRC_DIR, reqPath);
