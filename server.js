@@ -131,8 +131,8 @@ const server = http.createServer((req, res) => {
 
     if (reqPath === '/' || reqPath === '') reqPath = '/index.html';
 
-    // Redirect account, international, and developments routes to home
-    if (reqPath.startsWith('/account') || reqPath.startsWith('/en/international') || reqPath.startsWith('/en/developments')) {
+    // Redirect account, international, developments, learn (resources), and agent routes to home
+    if (reqPath.startsWith('/account') || reqPath.startsWith('/en/international') || reqPath.startsWith('/en/developments') || reqPath.startsWith('/learn') || reqPath.startsWith('/en/find-agent') || reqPath.startsWith('/en/careers') || reqPath.startsWith('/find-agent') || reqPath.startsWith('/careers')) {
         res.writeHead(302, { 'Location': '/' });
         return res.end();
     }
