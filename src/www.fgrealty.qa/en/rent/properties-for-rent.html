@@ -511,8 +511,10 @@
                                     <svg xmlns="http://www.w3.org/2000/svg" class="mobileMenuList__chevron" width="12" height="12" viewBox="0 0 20 20" fill="currentColor"><use href="#svgIcon-chevron-left"/></svg>                                </button>
                                                     </li>
                                             <li class="mobileMenuList__item">
-                                                            <a href="/en/developments" class="mobileMenuList__link">Developments</a>
-                                                    </li>
+                                                <button class="mobileMenuList__button" data-goto-panel="level1-3">
+                                    <span>Developments</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="mobileMenuList__chevron" width="12" height="12" viewBox="0 0 20 20" fill="currentColor"><use href="#svgIcon-chevron-left"/></svg>                                </button>
+                                            </li>
                                             <li class="mobileMenuList__item">
                                                             <button class="mobileMenuList__button" data-goto-panel="level1-4">
                                     <span>Agents</span>
@@ -669,7 +671,33 @@
                                             </li>
                                                                             </ul>
                                                                                     </div>
-                                                                                                                                        <div class="mobileMenu__panel" data-panel="level1-4">
+                                                                                                                                        
+
+                                    <div class="mobileMenu__panel" data-panel="level1-3">
+                                        <div class="mobileMenuHeader">
+                                            <button class="mobileMenuHeader__back" data-goto-panel="root" aria-label="Go back">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="currentColor"><use href="#svgIcon-chevron-left"/></svg>                                </button>
+                                            <span class="mobileMenuHeader__title">Developments</span>
+                                            <button class="mobileMenuHeader__close" data-mobile-menu-close aria-label="Close menu">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 14 14" fill="none"><use href="#svgIcon-close"/></svg>                                </button>
+                                        </div>
+                                        <ul class="mobileMenuList">
+                                            <li class="mobileMenuList__item">
+                                                <a href="/en/development/skala-villas" class="mobileMenuList__link">Skala Villas</a>
+                                            </li>
+                                            <li class="mobileMenuList__item">
+                                                <a href="/en/development/city-avenue" class="mobileMenuList__link">City Avenue</a>
+                                            </li>
+                                            <li class="mobileMenuList__item">
+                                                <a href="/en/development/milos" class="mobileMenuList__link">Milos Residence</a>
+                                            </li>
+                                            <li class="mobileMenuList__item">
+                                                <a href="/en/development/rivan" class="mobileMenuList__link">Rivan Tower</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="mobileMenu__panel" data-panel="level1-4">
                             <div class="mobileMenuHeader">
                                 <button class="mobileMenuHeader__back" data-goto-panel="root" aria-label="Go back">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="currentColor"><use href="#svgIcon-chevron-left"/></svg>                                </button>
@@ -5848,7 +5876,7 @@ if (!window.__contentAccordionInit) {
                     <div class="flex flex-col gap-sm">
                         <a href="https://yourstay.qa" class="text-sm text-grey-50 text-decoration-none">Hotel Booking Platform</a>
                         <a href="/en/areas" class="text-sm text-grey-50 text-decoration-none">Qatar&#039;s Areas</a>
-                        <a href="/en/developments" class="text-sm text-grey-50 text-decoration-none">New Developments</a>
+                        <a href="/en/development/skala-villas" class="text-sm text-grey-50 text-decoration-none">New Developments</a>
                         <a href="/en/search/exclusive" class="text-sm text-grey-50 text-decoration-none">Exclusive Properties</a>
                         <a href="/en/off-market-opportunities" class="text-sm text-grey-50 text-decoration-none">Off-Market Opportunities</a>
                         <a href="/blog" class="text-sm text-grey-50 text-decoration-none">Blog</a>

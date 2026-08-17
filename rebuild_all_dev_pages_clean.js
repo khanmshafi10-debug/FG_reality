@@ -3,19 +3,20 @@ const path = require('path');
 
 const devDir = path.join(__dirname, 'src/www.fgrealty.qa/en/development');
 
-// Read the-seef.html to extract shared components
+// Read index.html to extract shared Header & Mobile Nav components
+const indexFile = fs.readFileSync(path.join(__dirname, 'src/www.fgrealty.qa/index.html'), 'utf8');
 const seefFile = fs.readFileSync(path.join(devDir, 'the-seef.html'), 'utf8');
 
 // 1. Extract SVG sprite block
-const svgSpriteMatch = seefFile.match(/<svg xmlns="http:\/\/www\.w3\.org\/2000\/svg" style="display:\s*none;">[\s\S]*?<\/svg>/);
+const svgSpriteMatch = indexFile.match(/<svg xmlns="http:\/\/www\.w3\.org\/2000\/svg" style="display:\s*none;">[\s\S]*?<\/svg>/);
 const svgSprite = svgSpriteMatch ? svgSpriteMatch[0] : '';
 
-// 2. Extract Header block
-const headerMatch = seefFile.match(/<header class="header"[\s\S]*?<\/header>/);
+// 2. Extract Header block (containing Developments dropdown menu)
+const headerMatch = indexFile.match(/<header class="header"[\s\S]*?<\/header>/);
 const headerHtml = headerMatch ? headerMatch[0] : '';
 
-// 3. Extract Navigation Mobile block
-const navMobileMatch = seefFile.match(/<nav class="navigationMobile"[\s\S]*?<\/nav>/);
+// 3. Extract Navigation Mobile block (containing Developments sub-panel)
+const navMobileMatch = indexFile.match(/<nav class="navigationMobile"[\s\S]*?<\/nav>/);
 const navMobileHtml = navMobileMatch ? navMobileMatch[0] : '';
 
 // 4. Extract Search Box block

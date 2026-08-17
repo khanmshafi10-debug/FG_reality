@@ -921,9 +921,35 @@
                                             </div>
                                         </div>
                                     </li>
-                                    <li class="headerNavLink " role="none">
-                                        <a href="/en/developments" role="menuitem">Developments</a>
+                                    <li class="headerNavLink  headerNavLink--withSubmenu " role="none" data-menu-item="3">
+                                        <a href="#" role="menuitem" aria-haspopup="true" aria-expanded="false">Developments</a>
 
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><use href="#svgIcon-chevron-down-menu"/></svg>
+
+                                        <div class="navSubmenu" role="menu" aria-label="Developments submenu" data-submenu="3">
+                                            <ul class="navSubmenu__list">
+                                                <li class="navSubmenu__item" role="none">
+                                                    <a href="/en/development/skala-villas" class="navSubmenu__link" role="menuitem">
+                                                Skala Villas
+                                                    </a>
+                                                </li>
+                                                <li class="navSubmenu__item" role="none">
+                                                    <a href="/en/development/city-avenue" class="navSubmenu__link" role="menuitem">
+                                                City Avenue
+                                                    </a>
+                                                </li>
+                                                <li class="navSubmenu__item" role="none">
+                                                    <a href="/en/development/milos" class="navSubmenu__link" role="menuitem">
+                                                Milos Residence
+                                                    </a>
+                                                </li>
+                                                <li class="navSubmenu__item" role="none">
+                                                    <a href="/en/development/rivan" class="navSubmenu__link" role="menuitem">
+                                                Rivan Tower
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </li>
                                     <li class="headerNavLink  headerNavLink--withSubmenu " role="none" data-menu-item="4">
                                         <a href="#" role="menuitem" aria-haspopup="true" aria-expanded="false">Agents</a>
@@ -1052,7 +1078,9 @@
                                     <svg xmlns="http://www.w3.org/2000/svg" class="mobileMenuList__chevron" width="12" height="12" viewBox="0 0 20 20" fill="currentColor"><use href="#svgIcon-chevron-left"/></svg>                                </button>
                                             </li>
                                             <li class="mobileMenuList__item">
-                                                <a href="/en/developments" class="mobileMenuList__link">Developments</a>
+                                                <button class="mobileMenuList__button" data-goto-panel="level1-3">
+                                    <span>Developments</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="mobileMenuList__chevron" width="12" height="12" viewBox="0 0 20 20" fill="currentColor"><use href="#svgIcon-chevron-left"/></svg>                                </button>
                                             </li>
                                             <li class="mobileMenuList__item">
                                                 <button class="mobileMenuList__button" data-goto-panel="level1-4">
@@ -1210,6 +1238,32 @@
                                             </li>
                                         </ul>
                                     </div>
+                                    
+
+                                    <div class="mobileMenu__panel" data-panel="level1-3">
+                                        <div class="mobileMenuHeader">
+                                            <button class="mobileMenuHeader__back" data-goto-panel="root" aria-label="Go back">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="currentColor"><use href="#svgIcon-chevron-left"/></svg>                                </button>
+                                            <span class="mobileMenuHeader__title">Developments</span>
+                                            <button class="mobileMenuHeader__close" data-mobile-menu-close aria-label="Close menu">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 14 14" fill="none"><use href="#svgIcon-close"/></svg>                                </button>
+                                        </div>
+                                        <ul class="mobileMenuList">
+                                            <li class="mobileMenuList__item">
+                                                <a href="/en/development/skala-villas" class="mobileMenuList__link">Skala Villas</a>
+                                            </li>
+                                            <li class="mobileMenuList__item">
+                                                <a href="/en/development/city-avenue" class="mobileMenuList__link">City Avenue</a>
+                                            </li>
+                                            <li class="mobileMenuList__item">
+                                                <a href="/en/development/milos" class="mobileMenuList__link">Milos Residence</a>
+                                            </li>
+                                            <li class="mobileMenuList__item">
+                                                <a href="/en/development/rivan" class="mobileMenuList__link">Rivan Tower</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
                                     <div class="mobileMenu__panel" data-panel="level1-4">
                                         <div class="mobileMenuHeader">
                                             <button class="mobileMenuHeader__back" data-goto-panel="root" aria-label="Go back">
@@ -1309,7 +1363,7 @@
                     <h2 class="heading-sm heading-tablet-lg text-dark-grey-300 uppercase">Unlock High-value Investment Opportunities</h2>
 
                     <span class="arrowLink">
-                <a href="/en/developments" class="text-sm text-tablet-md">All developments</a>
+                <a href="/en/development/skala-villas" class="text-sm text-tablet-md">Explore Developments</a>
                 <svg xmlns="http://www.w3.org/2000/svg" class="arrowLink__icon" width="16" height="13" viewBox="0 0 16 13" fill="none"><use href="#svgIcon-arrow-right"/></svg>            </span>
 
                 </div>
@@ -3346,7 +3400,7 @@
                         <div class="flex flex-col gap-sm">
                             <a href="https://yourstay.qa" class="text-sm text-grey-50 text-decoration-none">Hotel Booking Platform</a>
                             <a href="/en/areas" class="text-sm text-grey-50 text-decoration-none">Qatar&#039;s Areas</a>
-                            <a href="/en/developments" class="text-sm text-grey-50 text-decoration-none">New Developments</a>
+                            <a href="/en/development/skala-villas" class="text-sm text-grey-50 text-decoration-none">New Developments</a>
                             <a href="/en/search/exclusive" class="text-sm text-grey-50 text-decoration-none">Exclusive Properties</a>
                             <a href="/en/off-market-opportunities" class="text-sm text-grey-50 text-decoration-none">Off-Market Opportunities</a>
                             <a href="/blog" class="text-sm text-grey-50 text-decoration-none">Blog</a>
