@@ -110,9 +110,9 @@
     <section
         class="hero__splash"
                     data-hero-splash
-            data-video-webm="/video/Prime View Real Estate.webm?v=1786995000"
-            data-video-mp4="/video/Prime View Real Estate.mp4?v=1786995000"
-            data-video-poster="/video/poster.avif?v=1786995000"
+            data-video-webm="/video/hero-video.webm?v=5"
+            data-video-mp4="/video/hero-video.mp4?v=5"
+            data-video-poster="/video/poster.avif?v=5"
             >
         <picture class="hero__splash-image">
             <source
@@ -4418,16 +4418,23 @@ document.addEventListener('DOMContentLoaded', function() {
         (function() {
             var splash = document.querySelector('[data-hero-splash]');
             if (!splash) return;
-            if (!window.matchMedia('(min-width: 1280px)').matches) return;
+            if (!window.matchMedia('(min-width: 768px)').matches) return;
 
-            var idle = window.requestIdleCallback || function(cb) { return setTimeout(cb, 1); };
-            idle(function() {
+            function initHeroVideo() {
+                if (splash.querySelector('video')) return;
+
                 var video = document.createElement('video');
                 video.className = 'hero__splash-video';
                 video.muted = true;
+                video.defaultMuted = true;
                 video.loop = true;
                 video.playsInline = true;
-                video.preload = 'none';
+                video.autoplay = true;
+                video.preload = 'auto';
+                video.setAttribute('autoplay', '');
+                video.setAttribute('muted', '');
+                video.setAttribute('playsinline', '');
+                video.setAttribute('loop', '');
                 video.poster = splash.getAttribute('data-video-poster') || '';
 
                 var webm = splash.getAttribute('data-video-webm');
@@ -4446,9 +4453,31 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
 
                 splash.appendChild(video);
-                var p = video.play();
-                if (p && typeof p.catch === 'function') p.catch(function() {});
-            });
+
+                function attemptPlay() {
+                    var p = video.play();
+                    if (p && typeof p.catch === 'function') {
+                        p.catch(function() {
+                            var onUserInteract = function() {
+                                video.play();
+                                document.removeEventListener('touchstart', onUserInteract);
+                                document.removeEventListener('click', onUserInteract);
+                                document.removeEventListener('scroll', onUserInteract);
+                            };
+                            document.addEventListener('touchstart', onUserInteract, { once: true, passive: true });
+                            document.addEventListener('click', onUserInteract, { once: true });
+                            document.addEventListener('scroll', onUserInteract, { once: true, passive: true });
+                        });
+                    }
+                }
+                attemptPlay();
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initHeroVideo);
+            } else {
+                initHeroVideo();
+            }
         })();
 
         (function() {

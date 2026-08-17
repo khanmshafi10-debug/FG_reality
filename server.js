@@ -120,7 +120,13 @@ function serveFileFromDiskOrCache(req, res, filePath) {
 }
 
 const server = http.createServer((req, res) => {
-    let reqPath = req.url.split('?')[0].split('#')[0];
+    let rawPath = req.url.split('?')[0].split('#')[0];
+    let reqPath;
+    try {
+        reqPath = decodeURIComponent(rawPath);
+    } catch(e) {
+        reqPath = rawPath;
+    }
 
     // Fast-stub third party tracking/analytics requests & unregister lingering Service Workers
     if (reqPath.includes('gtm.js') || reqPath.includes('analytics') || reqPath.includes('facebook') || reqPath.includes('stape')) {
