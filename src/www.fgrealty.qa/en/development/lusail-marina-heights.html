@@ -78,7 +78,306 @@
                 f.parentNode.insertBefore(j, f);
             })(window, document, 'script', 'dataLayer', 'GTM-WPD3N3NC');
         </script>
-        </head>
+        
+<style id="custom-modern-dev-ui">
+/* ── Modern Developments & Listings UI Upgrade ── */
+.premium-section-header {
+  margin-bottom: 2rem;
+  text-align: left;
+}
+.premium-section-header h2 {
+  font-family: 'Optima', 'Noto Kufi Arabic', serif, sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #111;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+}
+.premium-section-header h2::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #b89c4c;
+  margin-top: 6px;
+  border-radius: 2px;
+}
+.premium-section-header p {
+  color: #666;
+  font-size: 0.95rem;
+  margin-top: 6px;
+}
+
+/* Explore Developments Grid */
+.explore-dev-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+.explore-dev-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #e8e8e8;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none !important;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+}
+.explore-dev-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(0,0,0,0.12);
+  border-color: #b89c4c;
+}
+.explore-dev-card__image-wrap {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background: #111;
+}
+.explore-dev-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.explore-dev-card:hover .explore-dev-card__img {
+  transform: scale(1.08);
+}
+.explore-dev-card__badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
+  z-index: 2;
+}
+.explore-dev-card__badge--offplan {
+  background: rgba(184, 156, 76, 0.95);
+  color: #fff;
+}
+.explore-dev-card__badge--ready {
+  background: rgba(16, 185, 129, 0.95);
+  color: #fff;
+}
+.explore-dev-card__body {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.explore-dev-card__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 4px;
+}
+.explore-dev-card__location {
+  font-size: 0.85rem;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+.explore-dev-card__footer {
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.explore-dev-card__price-label {
+  font-size: 0.75rem;
+  color: #888;
+  text-transform: uppercase;
+}
+.explore-dev-card__price-val {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #b89c4c;
+}
+.explore-dev-card__btn {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #111;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.2s;
+}
+.explore-dev-card:hover .explore-dev-card__btn {
+  color: #b89c4c;
+}
+
+/* Property Listings Grid */
+.modern-listings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.modern-unit-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+}
+.modern-unit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+  border-color: #d4b97a;
+}
+.modern-unit-card__img-wrap {
+  position: relative;
+  width: 100%;
+  height: 230px;
+  overflow: hidden;
+  background: #1a1a1a;
+}
+.modern-unit-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.modern-unit-card:hover .modern-unit-card__img {
+  transform: scale(1.06);
+}
+.modern-unit-card__photos-count {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: rgba(0,0,0,0.65);
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.modern-unit-card__tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #111;
+  color: #d4b97a;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.modern-unit-card__content {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.modern-unit-card__price {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #111;
+  margin-bottom: 6px;
+}
+.modern-unit-card__price span {
+  font-size: 0.85rem;
+  color: #b89c4c;
+  font-weight: 600;
+  margin-left: 4px;
+}
+.modern-unit-card__title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #333;
+  line-height: 1.4;
+  margin-bottom: 8px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: 2.7em;
+}
+.modern-unit-card__location {
+  font-size: 0.8rem;
+  color: #777;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.modern-unit-card__specs {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 0;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+  margin-bottom: 14px;
+}
+.modern-unit-card__spec-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  color: #555;
+  font-weight: 500;
+}
+.modern-unit-card__actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: auto;
+}
+.modern-unit-btn {
+  padding: 9px 12px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.modern-unit-btn--whatsapp {
+  background: #25D366;
+  color: #fff !important;
+}
+.modern-unit-btn--whatsapp:hover {
+  background: #1eb956;
+}
+.modern-unit-btn--call {
+  background: #f5f5f5;
+  color: #111 !important;
+  border: 1px solid #e0e0e0;
+}
+.modern-unit-btn--call:hover {
+  background: #e8e8e8;
+}
+</style>
+
+</head>
 
 <body>
             <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WPD3N3NC" height="0" width="0"
@@ -6357,7 +6656,272 @@
     </div>
 </div>
 
-    </main>
+    
+    <section class="container mt-5xl mb-4xl">
+      <div class="premium-section-header">
+        <h2>Explore Other Qatar Developments</h2>
+        <p>Discover premier luxury residential & commercial projects across Qatar</p>
+      </div>
+      <div class="explore-dev-grid">
+        
+    <a href="/en/development/skala-villas" class="explore-dev-card">
+      <div class="explore-dev-card__image-wrap">
+        <img src="/images/developments/skala-villas/hero.jpg" alt="Skala Villas" class="explore-dev-card__img" loading="lazy">
+        <span class="explore-dev-card__badge explore-dev-card__badge--offplan">
+          Off-Plan
+        </span>
+      </div>
+      <div class="explore-dev-card__body">
+        <h3 class="explore-dev-card__title">Skala Villas</h3>
+        <div class="explore-dev-card__location">
+          <span>📍</span> Qetaifan Island, Lusail
+        </div>
+        <div class="explore-dev-card__footer">
+          <div>
+            <div class="explore-dev-card__price-label">Starting from</div>
+            <div class="explore-dev-card__price-val">3.5M QAR</div>
+          </div>
+          <span class="explore-dev-card__btn">Explore &rarr;</span>
+        </div>
+      </div>
+    </a>
+  
+    <a href="/en/development/city-avenue" class="explore-dev-card">
+      <div class="explore-dev-card__image-wrap">
+        <img src="/images/developments/city-avenue/hero.jpg" alt="City Avenue" class="explore-dev-card__img" loading="lazy">
+        <span class="explore-dev-card__badge explore-dev-card__badge--offplan">
+          Off-Plan
+        </span>
+      </div>
+      <div class="explore-dev-card__body">
+        <h3 class="explore-dev-card__title">City Avenue</h3>
+        <div class="explore-dev-card__location">
+          <span>📍</span> Al Erkyah City, Lusail
+        </div>
+        <div class="explore-dev-card__footer">
+          <div>
+            <div class="explore-dev-card__price-label">Starting from</div>
+            <div class="explore-dev-card__price-val">800K QAR</div>
+          </div>
+          <span class="explore-dev-card__btn">Explore &rarr;</span>
+        </div>
+      </div>
+    </a>
+  
+    <a href="/en/development/milos" class="explore-dev-card">
+      <div class="explore-dev-card__image-wrap">
+        <img src="/images/developments/milos/hero.jpg" alt="Milos" class="explore-dev-card__img" loading="lazy">
+        <span class="explore-dev-card__badge explore-dev-card__badge--ready">
+          Ready
+        </span>
+      </div>
+      <div class="explore-dev-card__body">
+        <h3 class="explore-dev-card__title">Milos</h3>
+        <div class="explore-dev-card__location">
+          <span>📍</span> Legtaifiya, Doha
+        </div>
+        <div class="explore-dev-card__footer">
+          <div>
+            <div class="explore-dev-card__price-label">Starting from</div>
+            <div class="explore-dev-card__price-val">950K QAR</div>
+          </div>
+          <span class="explore-dev-card__btn">Explore &rarr;</span>
+        </div>
+      </div>
+    </a>
+  
+    <a href="/en/development/rivan" class="explore-dev-card">
+      <div class="explore-dev-card__image-wrap">
+        <img src="/images/developments/rivan/hero.jpg" alt="Rivan" class="explore-dev-card__img" loading="lazy">
+        <span class="explore-dev-card__badge explore-dev-card__badge--ready">
+          Ready
+        </span>
+      </div>
+      <div class="explore-dev-card__body">
+        <h3 class="explore-dev-card__title">Rivan</h3>
+        <div class="explore-dev-card__location">
+          <span>📍</span> Al Erkyah City, Lusail
+        </div>
+        <div class="explore-dev-card__footer">
+          <div>
+            <div class="explore-dev-card__price-label">Starting from</div>
+            <div class="explore-dev-card__price-val">700K QAR</div>
+          </div>
+          <span class="explore-dev-card__btn">Explore &rarr;</span>
+        </div>
+      </div>
+    </a>
+  
+      </div>
+    </section>
+  
+    <section class="container mt-4xl mb-5xl">
+      <div class="premium-section-header">
+        <h2>Available Units & Properties in Qatar</h2>
+        <p>Explore handpicked luxury apartments, townhouses, and villas for sale</p>
+      </div>
+      <div class="modern-listings-grid">
+        
+    <article class="modern-unit-card">
+      <div class="modern-unit-card__img-wrap">
+        <img src="/storage/2301/conversions/1717423934_1-thumb.avif" alt="SUPER DUPLEX with EXCELLENT Payment Plan!" class="modern-unit-card__img" loading="lazy">
+        <span class="modern-unit-card__tag">Featured</span>
+        <div class="modern-unit-card__photos-count">📷 18 Photos</div>
+      </div>
+      <div class="modern-unit-card__content">
+        <div class="modern-unit-card__price">5,036,423 <span>QAR</span></div>
+        <h3 class="modern-unit-card__title">SUPER DUPLEX with EXCELLENT Payment Plan!</h3>
+        <div class="modern-unit-card__location">📍 Seef Lusail District, Lusail</div>
+        <div class="modern-unit-card__specs">
+          <div class="modern-unit-card__spec-item">🛏️ 3+ Beds</div>
+          <div class="modern-unit-card__spec-item">🛁 4.5 Baths</div>
+          <div class="modern-unit-card__spec-item">📐 310 m²</div>
+        </div>
+        <div class="modern-unit-card__actions">
+          <a href="https://wa.me/97450049120?text=Hi%2C%20I%20am%20interested%20in%20SUPER%20DUPLEX%20with%20EXCELLENT%20Payment%20Plan!" target="_blank" class="modern-unit-btn modern-unit-btn--whatsapp">
+            <span>WhatsApp</span>
+          </a>
+          <a href="tel:+97430451451" class="modern-unit-btn modern-unit-btn--call">
+            <span>Call Agent</span>
+          </a>
+        </div>
+      </div>
+    </article>
+  
+    <article class="modern-unit-card">
+      <div class="modern-unit-card__img-wrap">
+        <img src="/storage/2495/conversions/1713874537_img-4098-thumb.avif" alt="Premium 2BR with Breathtaking Sea Views & 6-Year Plan" class="modern-unit-card__img" loading="lazy">
+        <span class="modern-unit-card__tag">Off-Plan</span>
+        <div class="modern-unit-card__photos-count">📷 14 Photos</div>
+      </div>
+      <div class="modern-unit-card__content">
+        <div class="modern-unit-card__price">2,662,487 <span>QAR</span></div>
+        <h3 class="modern-unit-card__title">Premium 2BR with Breathtaking Sea Views & 6-Year Plan</h3>
+        <div class="modern-unit-card__location">📍 Seef Lusail District, Lusail</div>
+        <div class="modern-unit-card__specs">
+          <div class="modern-unit-card__spec-item">🛏️ 2 Beds</div>
+          <div class="modern-unit-card__spec-item">🛁 2.5 Baths</div>
+          <div class="modern-unit-card__spec-item">📐 173 m²</div>
+        </div>
+        <div class="modern-unit-card__actions">
+          <a href="https://wa.me/97450049120?text=Hi%2C%20I%20am%20interested%20in%20Premium%202BR%20with%20Breathtaking%20Sea%20Views%20%26%206-Year%20Plan" target="_blank" class="modern-unit-btn modern-unit-btn--whatsapp">
+            <span>WhatsApp</span>
+          </a>
+          <a href="tel:+97430451451" class="modern-unit-btn modern-unit-btn--call">
+            <span>Call Agent</span>
+          </a>
+        </div>
+      </div>
+    </article>
+  
+    <article class="modern-unit-card">
+      <div class="modern-unit-card__img-wrap">
+        <img src="/storage/4531/conversions/1716988252_1-thumb.avif" alt="MOVE IN AT 35% DOWNPAYMENT | SPACIOUS 1 BEDROOM" class="modern-unit-card__img" loading="lazy">
+        <span class="modern-unit-card__tag">Ready</span>
+        <div class="modern-unit-card__photos-count">📷 8 Photos</div>
+      </div>
+      <div class="modern-unit-card__content">
+        <div class="modern-unit-card__price">1,728,680 <span>QAR</span></div>
+        <h3 class="modern-unit-card__title">MOVE IN AT 35% DOWNPAYMENT | SPACIOUS 1 BEDROOM</h3>
+        <div class="modern-unit-card__location">📍 Al Erkyah City, Lusail</div>
+        <div class="modern-unit-card__specs">
+          <div class="modern-unit-card__spec-item">🛏️ 1 Bed</div>
+          <div class="modern-unit-card__spec-item">🛁 1.5 Baths</div>
+          <div class="modern-unit-card__spec-item">📐 131 m²</div>
+        </div>
+        <div class="modern-unit-card__actions">
+          <a href="https://wa.me/97450049120?text=Hi%2C%20I%20am%20interested%20in%20MOVE%20IN%20AT%2035%25%20DOWNPAYMENT%20%7C%20SPACIOUS%201%20BEDROOM" target="_blank" class="modern-unit-btn modern-unit-btn--whatsapp">
+            <span>WhatsApp</span>
+          </a>
+          <a href="tel:+97430451451" class="modern-unit-btn modern-unit-btn--call">
+            <span>Call Agent</span>
+          </a>
+        </div>
+      </div>
+    </article>
+  
+    <article class="modern-unit-card">
+      <div class="modern-unit-card__img-wrap">
+        <img src="/images/developments/skala-villas/hero.jpg" alt="OWN YOUR APARTMENT WITH ONLY 20% DOWN PAYMENT" class="modern-unit-card__img" loading="lazy">
+        <span class="modern-unit-card__tag">Luxury Villa</span>
+        <div class="modern-unit-card__photos-count">📷 12 Photos</div>
+      </div>
+      <div class="modern-unit-card__content">
+        <div class="modern-unit-card__price">3,575,000 <span>QAR</span></div>
+        <h3 class="modern-unit-card__title">OWN YOUR APARTMENT WITH ONLY 20% DOWN PAYMENT</h3>
+        <div class="modern-unit-card__location">📍 Qetaifan Island, Lusail</div>
+        <div class="modern-unit-card__specs">
+          <div class="modern-unit-card__spec-item">🛏️ 3+ Beds</div>
+          <div class="modern-unit-card__spec-item">🛁 4.5 Baths</div>
+          <div class="modern-unit-card__spec-item">📐 230 m²</div>
+        </div>
+        <div class="modern-unit-card__actions">
+          <a href="https://wa.me/97450049120?text=Hi%2C%20I%20am%20interested%20in%20OWN%20YOUR%20APARTMENT%20WITH%20ONLY%2020%25%20DOWN%20PAYMENT" target="_blank" class="modern-unit-btn modern-unit-btn--whatsapp">
+            <span>WhatsApp</span>
+          </a>
+          <a href="tel:+97430451451" class="modern-unit-btn modern-unit-btn--call">
+            <span>Call Agent</span>
+          </a>
+        </div>
+      </div>
+    </article>
+  
+    <article class="modern-unit-card">
+      <div class="modern-unit-card__img-wrap">
+        <img src="/storage/5558/conversions/1727943330_1717681285-fgr03030-thumb.avif" alt="MOVE IN AT 35% | 4 YEARS PAYMENT-PLAN" class="modern-unit-card__img" loading="lazy">
+        <span class="modern-unit-card__tag">Hot Deal</span>
+        <div class="modern-unit-card__photos-count">📷 6 Photos</div>
+      </div>
+      <div class="modern-unit-card__content">
+        <div class="modern-unit-card__price">1,922,000 <span>QAR</span></div>
+        <h3 class="modern-unit-card__title">MOVE IN AT 35% | 4 YEARS PAYMENT-PLAN</h3>
+        <div class="modern-unit-card__location">📍 Seef Lusail District, Lusail</div>
+        <div class="modern-unit-card__specs">
+          <div class="modern-unit-card__spec-item">🛏️ 1 Bed</div>
+          <div class="modern-unit-card__spec-item">🛁 1.5 Baths</div>
+          <div class="modern-unit-card__spec-item">📐 125 m²</div>
+        </div>
+        <div class="modern-unit-card__actions">
+          <a href="https://wa.me/97450049120?text=Hi%2C%20I%20am%20interested%20in%20MOVE%20IN%20AT%2035%25%20%7C%204%20YEARS%20PAYMENT-PLAN" target="_blank" class="modern-unit-btn modern-unit-btn--whatsapp">
+            <span>WhatsApp</span>
+          </a>
+          <a href="tel:+97430451451" class="modern-unit-btn modern-unit-btn--call">
+            <span>Call Agent</span>
+          </a>
+        </div>
+      </div>
+    </article>
+  
+    <article class="modern-unit-card">
+      <div class="modern-unit-card__img-wrap">
+        <img src="/images/developments/milos/hero.jpg" alt="20% DOWNPAYMENT READY-TO-MOVE | 3BR + MAID" class="modern-unit-card__img" loading="lazy">
+        <span class="modern-unit-card__tag">Ready</span>
+        <div class="modern-unit-card__photos-count">📷 9 Photos</div>
+      </div>
+      <div class="modern-unit-card__content">
+        <div class="modern-unit-card__price">3,250,000 <span>QAR</span></div>
+        <h3 class="modern-unit-card__title">20% DOWNPAYMENT READY-TO-MOVE | 3BR + MAID</h3>
+        <div class="modern-unit-card__location">📍 Legtaifiya, Doha</div>
+        <div class="modern-unit-card__specs">
+          <div class="modern-unit-card__spec-item">🛏️ 3 Beds</div>
+          <div class="modern-unit-card__spec-item">🛁 3.5 Baths</div>
+          <div class="modern-unit-card__spec-item">📐 224 m²</div>
+        </div>
+        <div class="modern-unit-card__actions">
+          <a href="https://wa.me/97450049120?text=Hi%2C%20I%20am%20interested%20in%2020%25%20DOWNPAYMENT%20READY-TO-MOVE%20%7C%203BR%20%2B%20MAID" target="_blank" class="modern-unit-btn modern-unit-btn--whatsapp">
+            <span>WhatsApp</span>
+          </a>
+          <a href="tel:+97430451451" class="modern-unit-btn modern-unit-btn--call">
+            <span>Call Agent</span>
+          </a>
+        </div>
+      </div>
+    </article>
+  
+      </div>
+    </section>
+  
+</main>
     <div class="footerWrapper">
     <footer class="footer">
         <div class="flex flex-col gap-xs pt-lg">
