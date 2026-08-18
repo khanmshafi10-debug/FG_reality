@@ -1730,6 +1730,8 @@
             </section>
             
             <!-- Premium Architectural & Gallery Section -->
+            
+            <!-- Premium Architectural & Gallery Section -->
             <section class="pageBlock luxuryGallerySection" id="gallery-showcase">
                 <style>
                     .luxuryGallery {
@@ -1811,7 +1813,19 @@
                         grid-template-columns: repeat(12, 1fr);
                         grid-auto-rows: 260px;
                         gap: 20px;
+                        transition: all 0.4s ease;
                     }
+
+                    /* When filtering, switch to uniform grid to eliminate white space */
+                    .galleryGrid.is-filtered {
+                        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+                        grid-auto-rows: 280px;
+                    }
+                    .galleryGrid.is-filtered .galleryCard {
+                        grid-column: span 1 !important;
+                        grid-row: span 1 !important;
+                    }
+
                     .galleryCard {
                         position: relative;
                         border-radius: 16px;
@@ -1894,14 +1908,14 @@
                         align-items: flex-end;
                     }
                     .galleryCard__title {
-                        font-size: 1.3rem;
+                        font-size: 1.25rem;
                         font-weight: 700;
                         color: #ffffff;
                         margin-bottom: 4px;
                     }
                     .galleryCard__subtitle {
-                        font-size: 0.88rem;
-                        color: rgba(255, 255, 255, 0.75);
+                        font-size: 0.86rem;
+                        color: rgba(255, 255, 255, 0.8);
                     }
                     .galleryCard__btn {
                         width: 42px;
@@ -1915,6 +1929,7 @@
                         justify-content: center;
                         color: #ffffff;
                         transition: all 0.3s ease;
+                        flex-shrink: 0;
                     }
                     .galleryCard:hover .galleryCard__btn {
                         background: #c5a880;
@@ -1937,7 +1952,7 @@
                         }
                     }
                     @media (max-width: 640px) {
-                        .galleryGrid {
+                        .galleryGrid, .galleryGrid.is-filtered {
                             grid-template-columns: 1fr;
                             grid-auto-rows: 240px;
                         }
@@ -1955,10 +1970,10 @@
                     <div class="luxuryGallery__header">
                         <div class="luxuryGallery__badge">
                             <span class="luxuryGallery__badge-dot"></span>
-                            Exclusive Architecture &amp; Living
+                            Exclusive Architecture &amp; Interiors
                         </div>
                         <h2 class="luxuryGallery__title">Flagship Architectural Gallery</h2>
-                        <p class="luxuryGallery__subtitle">Discover the refined details, bespoke interiors, and waterfront splendor of Qatar’s premier luxury developments.</p>
+                        <p class="luxuryGallery__subtitle">Explore authentic interior rooms, waterfront estates, and luxury sky suites across Qatar’s premier developments.</p>
                         
                         <div class="luxuryGallery__filters">
                             <button class="luxuryGallery__filter-btn active" data-filter="all">All Showcase</button>
@@ -1968,16 +1983,17 @@
                         </div>
                     </div>
 
-                    <div class="galleryGrid">
-                        <!-- Card 1: Large Featured -->
+                    <div class="galleryGrid" id="gallery-grid-container">
+                        <!-- ROW 1 & 2 (8 + 4 = 12 cols, 2 rows height) -->
+                        <!-- Card 1: Large Hero -->
                         <a href="/en/development/valencia-residence" class="galleryCard galleryCard--large" data-category="penthouses">
-                            <img src="/images/developments/valencia-residence/hero.jpg" alt="Valencia Residence" class="galleryCard__img" loading="lazy">
+                            <img src="/images/developments/valencia-residence/hero.jpg" alt="Valencia Residence Exterior" class="galleryCard__img" loading="lazy">
                             <div class="galleryCard__overlay"></div>
                             <span class="galleryCard__tag">Fox Hills South, Lusail</span>
                             <div class="galleryCard__content">
                                 <div>
                                     <h3 class="galleryCard__title">Valencia Residence</h3>
-                                    <p class="galleryCard__subtitle">Luxury Living &amp; Premium Modern Residences</p>
+                                    <p class="galleryCard__subtitle">Luxury Living &amp; Premium Modern Facade</p>
                                 </div>
                                 <div class="galleryCard__btn">
                                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -1985,7 +2001,7 @@
                             </div>
                         </a>
 
-                        <!-- Card 2: Tall -->
+                        <!-- Card 2: Tall Hero -->
                         <a href="/en/development/flora-villas" class="galleryCard galleryCard--tall" data-category="villas">
                             <img src="/images/developments/flora-villas/hero.jpg" alt="Flora Standalone Villas" class="galleryCard__img" loading="lazy">
                             <div class="galleryCard__overlay"></div>
@@ -2001,7 +2017,8 @@
                             </div>
                         </a>
 
-                        <!-- Card 3: Medium -->
+                        <!-- ROW 3 (4 + 4 + 4 = 12 cols) -->
+                        <!-- Card 3: Medium Waterfront Villa -->
                         <a href="/en/development/skala-villas" class="galleryCard galleryCard--medium" data-category="villas">
                             <img src="/images/developments/skala-villas/hero.jpg" alt="Skala Villas" class="galleryCard__img" loading="lazy">
                             <div class="galleryCard__overlay"></div>
@@ -2017,15 +2034,15 @@
                             </div>
                         </a>
 
-                        <!-- Card 4: Medium -->
+                        <!-- Card 4: Medium Interior Living Room -->
                         <a href="/en/development/valencia-residence" class="galleryCard galleryCard--medium" data-category="interiors">
-                            <img src="/images/developments/valencia-residence/unit_1.jpg" alt="Valencia Interiors" class="galleryCard__img" loading="lazy">
+                            <img src="/images/developments/valencia-residence/unit_1.jpg" alt="Valencia Living Room Interior" class="galleryCard__img" loading="lazy">
                             <div class="galleryCard__overlay"></div>
-                            <span class="galleryCard__tag">Interior Suite</span>
+                            <span class="galleryCard__tag">Living Room Suite</span>
                             <div class="galleryCard__content">
                                 <div>
-                                    <h3 class="galleryCard__title">Valencia Master Living</h3>
-                                    <p class="galleryCard__subtitle">Sophisticated Interior Finishes</p>
+                                    <h3 class="galleryCard__title">Valencia Living Lounge</h3>
+                                    <p class="galleryCard__subtitle">Sophisticated Contemporary Finishes</p>
                                 </div>
                                 <div class="galleryCard__btn">
                                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -2033,7 +2050,24 @@
                             </div>
                         </a>
 
-                        <!-- Card 5: Wide -->
+                        <!-- Card 5: Medium Interior Villa Lounge (FILLING ROW 3 PERFECTLY) -->
+                        <a href="/en/development/flora-villas" class="galleryCard galleryCard--medium" data-category="interiors">
+                            <img src="/images/developments/flora-villas/unit_1.jpg" alt="Flora Villa Living Interior" class="galleryCard__img" loading="lazy">
+                            <div class="galleryCard__overlay"></div>
+                            <span class="galleryCard__tag">Villa Interior</span>
+                            <div class="galleryCard__content">
+                                <div>
+                                    <h3 class="galleryCard__title">Flora Master Salon</h3>
+                                    <p class="galleryCard__subtitle">High-End Bespoke Interior Design</p>
+                                </div>
+                                <div class="galleryCard__btn">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- ROW 4 (8 + 4 = 12 cols) -->
+                        <!-- Card 6: Wide Rivan Tower -->
                         <a href="/en/development/rivan" class="galleryCard galleryCard--wide" data-category="penthouses">
                             <img src="/images/developments/rivan/hero.jpg" alt="Rivan Tower" class="galleryCard__img" loading="lazy">
                             <div class="galleryCard__overlay"></div>
@@ -2049,8 +2083,8 @@
                             </div>
                         </a>
 
-                        <!-- Card 6: Medium -->
-                        <a href="/en/development/milos" class="galleryCard galleryCard--medium" data-category="interiors">
+                        <!-- Card 7: Medium Milos Residence -->
+                        <a href="/en/development/milos" class="galleryCard galleryCard--medium" data-category="penthouses">
                             <img src="/images/developments/milos/hero.jpg" alt="Milos Residence" class="galleryCard__img" loading="lazy">
                             <div class="galleryCard__overlay"></div>
                             <span class="galleryCard__tag">Legtaifiya</span>
@@ -2058,6 +2092,55 @@
                                 <div>
                                     <h3 class="galleryCard__title">Milos Residence</h3>
                                     <p class="galleryCard__subtitle">Coastal Architectural Grace</p>
+                                </div>
+                                <div class="galleryCard__btn">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- ROW 5 (4 + 4 + 4 = 12 cols) -->
+                        <!-- Card 8: Medium Valencia Bedroom Interior -->
+                        <a href="/en/development/valencia-residence" class="galleryCard galleryCard--medium" data-category="interiors">
+                            <img src="/images/developments/valencia-residence/unit_2.jpg" alt="Valencia Master Bedroom Interior" class="galleryCard__img" loading="lazy">
+                            <div class="galleryCard__overlay"></div>
+                            <span class="galleryCard__tag">Bedroom Suite</span>
+                            <div class="galleryCard__content">
+                                <div>
+                                    <h3 class="galleryCard__title">Valencia Bedroom Suite</h3>
+                                    <p class="galleryCard__subtitle">Warm Luxury Lighting &amp; Comfort</p>
+                                </div>
+                                <div class="galleryCard__btn">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Card 9: Medium City Avenue Interior -->
+                        <a href="/en/development/city-avenue" class="galleryCard galleryCard--medium" data-category="interiors">
+                            <img src="/images/developments/city-avenue/unit.jpg" alt="City Avenue Interior Suite" class="galleryCard__img" loading="lazy">
+                            <div class="galleryCard__overlay"></div>
+                            <span class="galleryCard__tag">City Avenue Suite</span>
+                            <div class="galleryCard__content">
+                                <div>
+                                    <h3 class="galleryCard__title">City Avenue Living Room</h3>
+                                    <p class="galleryCard__subtitle">Contemporary Urban Luxury</p>
+                                </div>
+                                <div class="galleryCard__btn">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Card 10: Medium Flora Villa Bedroom Interior -->
+                        <a href="/en/development/flora-villas" class="galleryCard galleryCard--medium" data-category="villas">
+                            <img src="/images/developments/flora-villas/unit_2.jpg" alt="Flora Villa Bedroom Interior" class="galleryCard__img" loading="lazy">
+                            <div class="galleryCard__overlay"></div>
+                            <span class="galleryCard__tag">Villa Suite</span>
+                            <div class="galleryCard__content">
+                                <div>
+                                    <h3 class="galleryCard__title">Flora Master Bedroom</h3>
+                                    <p class="galleryCard__subtitle">Elegant Villa Room Aesthetics</p>
                                 </div>
                                 <div class="galleryCard__btn">
                                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -2073,6 +2156,14 @@
                             document.querySelectorAll('.luxuryGallery__filter-btn').forEach(b => b.classList.remove('active'));
                             this.classList.add('active');
                             const filter = this.getAttribute('data-filter');
+                            const grid = document.getElementById('gallery-grid-container');
+
+                            if (filter === 'all') {
+                                grid.classList.remove('is-filtered');
+                            } else {
+                                grid.classList.add('is-filtered');
+                            }
+
                             document.querySelectorAll('.galleryCard').forEach(card => {
                                 if (filter === 'all' || card.getAttribute('data-category') === filter) {
                                     card.style.display = 'block';
