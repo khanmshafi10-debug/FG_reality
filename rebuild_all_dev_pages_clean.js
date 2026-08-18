@@ -104,12 +104,12 @@ const projects = {
             { title: 'Rivan', slug: 'rivan', loc: 'Al Erkyah City, Lusail', badge: 'Ready', badgeClass: 'ready', price: '700K QAR', img: '/images/developments/rivan/hero.jpg' }
         ],
         units: [
-            { title: 'Exclusive 4-Bedroom Beachfront Villa with Private Pool', loc: 'Qetaifan Island North, Lusail', price: '3,575,000', img: '/images/developments/skala-villas/unit.jpg', photos: '16', tag: 'Beachfront', beds: '4 Beds', baths: '5 Baths', area: '450 m²' },
-            { title: 'Signature 5BR Oceanfront Mansion with Private Beach Access', loc: 'Qetaifan Island North, Lusail', price: '5,850,000', img: '/images/developments/skala-villas/hero.jpg', photos: '22', tag: 'Luxury Mansion', beds: '5 Beds', baths: '6.5 Baths', area: '620 m²' },
-            { title: 'Modern 4BR Duplex Villa near Qetaifan Waterpark', loc: 'Qetaifan Island North, Lusail', price: '3,950,000', img: '/images/developments/skala-villas/unit.jpg', photos: '14', tag: 'Off-Plan', beds: '4 Beds', baths: '4.5 Baths', area: '480 m²' },
-            { title: 'Grand 6-Bedroom Beach Palace with Private Dock Access', loc: 'Qetaifan Island North, Lusail', price: '7,200,000', img: '/images/developments/skala-villas/hero.jpg', photos: '25', tag: 'Exclusive', beds: '6 Beds', baths: '7.5 Baths', area: '850 m²' },
-            { title: 'Semi-Detached 4BR Beachfront Villa | 2% Down Payment', loc: 'Qetaifan Island North, Lusail', price: '3,700,000', img: '/images/developments/skala-villas/unit.jpg', photos: '12', tag: 'Hot Deal', beds: '4 Beds', baths: '4.5 Baths', area: '420 m²' },
-            { title: '5BR Waterfront Residence with Panoramic Rooftop Lounge', loc: 'Qetaifan Island North, Lusail', price: '6,100,000', img: '/images/developments/skala-villas/hero.jpg', photos: '18', tag: 'Sea View', beds: '5 Beds', baths: '6 Baths', area: '680 m²' }
+            { title: 'Exclusive 4-Bedroom Beachfront Villa with Private Pool', loc: 'Qetaifan Island North, Lusail', price: '3,575,000', img: '/images/developments/skala-villas/sk-feature-1.jpg', photos: '16', tag: 'Beachfront', beds: '4 Beds', baths: '5 Baths', area: '450 m²' },
+            { title: 'Signature 5BR Oceanfront Mansion with Private Beach Access', loc: 'Qetaifan Island North, Lusail', price: '5,850,000', img: '/images/developments/skala-villas/sk-feature-2.jpg', photos: '22', tag: 'Luxury Mansion', beds: '5 Beds', baths: '6.5 Baths', area: '620 m²' },
+            { title: 'Modern 4BR Duplex Villa near Qetaifan Waterpark', loc: 'Qetaifan Island North, Lusail', price: '3,950,000', img: '/images/developments/skala-villas/sk-feature-4.jpg', photos: '14', tag: 'Off-Plan', beds: '4 Beds', baths: '4.5 Baths', area: '480 m²' },
+            { title: 'Grand 6-Bedroom Beach Palace with Private Dock Access', loc: 'Qetaifan Island North, Lusail', price: '7,200,000', img: '/images/developments/skala-villas/sk-feature-5.jpg', photos: '28', tag: 'Beach Palace', beds: '6 Beds', baths: '7.5 Baths', area: '750 m²' },
+            { title: '3-Bedroom Waterfront Villa with Private Garden & Maid Room', loc: 'Qetaifan Island North, Lusail', price: '3,200,000', img: '/images/developments/skala-villas/sk-feature-6.jpg', photos: '18', tag: 'Family Villa', beds: '3 Beds', baths: '3.5 Baths', area: '390 m²' },
+            { title: '5-Bedroom Presidential Waterfront Estate', loc: 'Qetaifan Island North, Lusail', price: '6,400,000', img: '/images/developments/skala-villas/hero.jpg', photos: '25', tag: 'Presidential', beds: '5 Beds', baths: '6 Baths', area: '650 m²' }
         ]
     },
     'city-avenue': {
@@ -144,12 +144,12 @@ const projects = {
             { title: 'Rivan', slug: 'rivan', loc: 'Al Erkyah City, Lusail', badge: 'Ready', badgeClass: 'ready', price: '700K QAR', img: '/images/developments/rivan/hero.jpg' }
         ],
         units: [
-            { title: 'Fully Furnished 1BR Hotel Apartment | Iris Hospitality', loc: 'Al Erkyah City, Lusail', price: '1,100,000', img: '/images/developments/city-avenue/unit.jpg', photos: '14', tag: 'Serviced Suite', beds: '1 Bed', baths: '1.5 Baths', area: '85 m²' },
-            { title: 'Spacious 2-Bedroom Apartment with Park View Balcony', loc: 'Al Erkyah City, Lusail', price: '1,450,000', img: '/images/developments/city-avenue/hero.jpg', photos: '18', tag: 'Wellness Living', beds: '2 Beds', baths: '2.5 Baths', area: '128 m²' },
-            { title: 'Luxury 3-Bedroom Corner Residence | 7-Year Plan', loc: 'Al Erkyah City, Lusail', price: '1,850,000', img: '/images/developments/city-avenue/unit.jpg', photos: '20', tag: 'Flexible Plan', beds: '3 Beds', baths: '3.5 Baths', area: '185 m²' },
-            { title: 'Modern Studio Apartment ideal for High Investment Yield', loc: 'Al Erkyah City, Lusail', price: '850,000', img: '/images/developments/city-avenue/hero.jpg', photos: '10', tag: 'High ROI', beds: 'Studio', baths: '1 Bath', area: '58 m²' },
-            { title: 'Prime Ground Floor Retail Outlet on City Avenue Promenade', loc: 'Al Erkyah City, Lusail', price: '2,200,000', img: '/images/developments/city-avenue/unit.jpg', photos: '12', tag: 'Commercial', beds: 'Retail', baths: '2 Baths', area: '140 m²' },
-            { title: 'Premium 2BR Executive Residence near Lusail Metro', loc: 'Al Erkyah City, Lusail', price: '1,380,000', img: '/images/developments/city-avenue/hero.jpg', photos: '15', tag: 'Hot Deal', beds: '2 Beds', baths: '2 Baths', area: '135 m²' }
+            { title: 'Fully Furnished 1BR Hotel Apartment | Iris Hospitality', loc: 'Al Erkyah City, Lusail', price: '1,100,000', img: '/images/developments/city-avenue/city_feature_1.jpg', photos: '14', tag: 'Serviced Suite', beds: '1 Bed', baths: '1.5 Baths', area: '85 m²' },
+            { title: 'Spacious 2-Bedroom Apartment with Park View Balcony', loc: 'Al Erkyah City, Lusail', price: '1,450,000', img: '/images/developments/city-avenue/city_feature_2.jpg', photos: '18', tag: 'Wellness Living', beds: '2 Beds', baths: '2.5 Baths', area: '128 m²' },
+            { title: 'Luxury 3-Bedroom Corner Residence | 7-Year Plan', loc: 'Al Erkyah City, Lusail', price: '1,850,000', img: '/images/developments/city-avenue/city_feature_3.jpg', photos: '20', tag: 'Flexible Plan', beds: '3 Beds', baths: '3.5 Baths', area: '185 m²' },
+            { title: 'Executive Avenue Boulevard Suite & Sky Balcony', loc: 'Al Erkyah City, Lusail', price: '2,100,000', img: '/images/developments/city-avenue/city_hero_new.jpg', photos: '24', tag: 'Executive Suite', beds: '3 Beds', baths: '3.5 Baths', area: '195 m²' },
+            { title: 'Modern Studio Apartment ideal for High Investment Yield', loc: 'Al Erkyah City, Lusail', price: '850,000', img: '/images/developments/milos/milos_real_1.jpg', photos: '10', tag: 'High ROI', beds: 'Studio', baths: '1 Bath', area: '58 m²' },
+            { title: '2-Bedroom Luxury Suite facing Al Erkyah Central Park', loc: 'Al Erkyah City, Lusail', price: '1,520,000', img: '/images/developments/milos/milos_real_3.jpg', photos: '16', tag: 'Park View', beds: '2 Beds', baths: '2.5 Baths', area: '135 m²' }
         ]
     },
     'milos': {
@@ -184,12 +184,12 @@ const projects = {
             { title: 'Rivan', slug: 'rivan', loc: 'Al Erkyah City, Lusail', badge: 'Ready', badgeClass: 'ready', price: '700K QAR', img: '/images/developments/rivan/hero.jpg' }
         ],
         units: [
-            { title: 'Ready 1-Bedroom Boutique Apartment | High-End Finishes', loc: 'Legtaifiya, Doha', price: '950,000', img: '/images/developments/milos/unit.jpg', photos: '12', tag: 'Ready Move-In', beds: '1 Bed', baths: '1.5 Baths', area: '95 m²' },
-            { title: 'Stunning 2-Bedroom Residence with Katara Sea View Balcony', loc: 'Legtaifiya, Doha', price: '1,450,000', img: '/images/developments/milos/hero.jpg', photos: '16', tag: 'Prime Location', beds: '2 Beds', baths: '2.5 Baths', area: '142 m²' },
-            { title: '3-Bedroom Luxury Apartment + Maid\'s Room | 20% Down Payment', loc: 'Legtaifiya, Doha', price: '2,250,000', img: '/images/developments/milos/unit.jpg', photos: '18', tag: 'Family Home', beds: '3 Beds', baths: '3.5 Baths', area: '215 m²' },
-            { title: 'Executive 2BR Residence near West Bay Lagoon & Diplomats Area', loc: 'Legtaifiya, Doha', price: '1,580,000', img: '/images/developments/milos/hero.jpg', photos: '15', tag: 'High ROI', beds: '2 Beds', baths: '2 Baths', area: '150 m²' },
-            { title: 'Modern 1BR Apartment with Open Designer Kitchen', loc: 'Legtaifiya, Doha', price: '990,000', img: '/images/developments/milos/unit.jpg', photos: '11', tag: 'Featured', beds: '1 Bed', baths: '1.5 Baths', area: '102 m²' },
-            { title: 'Penthouse 4-Bedroom Residence with Panoramic Coastline View', loc: 'Legtaifiya, Doha', price: '3,850,000', img: '/images/developments/milos/hero.jpg', photos: '24', tag: 'Luxury Penthouse', beds: '4 Beds', baths: '4.5 Baths', area: '340 m²' }
+            { title: 'Ready 1-Bedroom Boutique Apartment | High-End Finishes', loc: 'Legtaifiya, Doha', price: '950,000', img: '/images/developments/milos/milos_real_1.jpg', photos: '12', tag: 'Ready Move-In', beds: '1 Bed', baths: '1.5 Baths', area: '95 m²' },
+            { title: 'Stunning 2-Bedroom Residence with Katara Sea View Balcony', loc: 'Legtaifiya, Doha', price: '1,450,000', img: '/images/developments/milos/milos_real_3.jpg', photos: '16', tag: 'Prime Location', beds: '2 Beds', baths: '2.5 Baths', area: '142 m²' },
+            { title: '3-Bedroom Luxury Apartment + Maid\'s Room | 20% Down Payment', loc: 'Legtaifiya, Doha', price: '2,250,000', img: '/images/developments/milos/milos_real_5.jpg', photos: '18', tag: 'Family Home', beds: '3 Beds', baths: '3.5 Baths', area: '215 m²' },
+            { title: 'Executive 2BR Residence near West Bay Lagoon & Diplomats Area', loc: 'Legtaifiya, Doha', price: '1,580,000', img: '/images/developments/milos/milos_real_7.jpg', photos: '15', tag: 'High ROI', beds: '2 Beds', baths: '2.5 Baths', area: '150 m²' },
+            { title: 'Exclusive Penthouse Suite with Panoramic Coastal Views', loc: 'Legtaifiya, Doha', price: '3,100,000', img: '/images/developments/milos/milos_real_9.jpg', photos: '22', tag: 'Penthouse', beds: '4 Beds', baths: '4.5 Baths', area: '310 m²' },
+            { title: 'Master Coastal Residence with Diplomatic Bay View', loc: 'Legtaifiya, Doha', price: '2,400,000', img: '/images/developments/milos/hero.jpg', photos: '20', tag: 'Bay View', beds: '3 Beds', baths: '3.5 Baths', area: '225 m²' }
         ]
     },
     'rivan': {
@@ -226,10 +226,10 @@ const projects = {
         units: [
             { title: 'Ready 1-Bedroom Residence in Rivan Tower | 15% Down Payment', loc: 'Al Erkyah City, Lusail', price: '720,000', img: '/images/developments/rivan/unit.jpg', photos: '10', tag: 'Immediate Handover', beds: '1 Bed', baths: '1.5 Baths', area: '88 m²' },
             { title: 'Spacious 2-Bedroom Apartment with Natural Stone Cladding', loc: 'Al Erkyah City, Lusail', price: '1,080,000', img: '/images/developments/rivan/hero.jpg', photos: '14', tag: 'Ready Move-In', beds: '2 Beds', baths: '2.5 Baths', area: '132 m²' },
-            { title: 'Premium 3-Bedroom Family Suite with Double Glazed Glass', loc: 'Al Erkyah City, Lusail', price: '1,590,000', img: '/images/developments/rivan/unit.jpg', photos: '18', tag: '5-Year Plan', beds: '3 Beds', baths: '3.5 Baths', area: '190 m²' },
-            { title: 'Modern 1-Bedroom Corner Suite near Place Vendôme Mall', loc: 'Al Erkyah City, Lusail', price: '780,000', img: '/images/developments/rivan/hero.jpg', photos: '12', tag: 'Hot Deal', beds: '1 Bed', baths: '1.5 Baths', area: '92 m²' },
-            { title: 'Luxury 2BR Residence with Private Basement Parking', loc: 'Al Erkyah City, Lusail', price: '1,120,000', img: '/images/developments/rivan/unit.jpg', photos: '15', tag: 'Featured', beds: '2 Beds', baths: '2 Baths', area: '138 m²' },
-            { title: '3-Bedroom Duplex Penthouse with Crescent Park Views', loc: 'Al Erkyah City, Lusail', price: '2,150,000', img: '/images/developments/rivan/hero.jpg', photos: '22', tag: 'Exclusive Penthouse', beds: '3 Beds', baths: '4 Baths', area: '240 m²' }
+            { title: 'Premium 3-Bedroom Family Suite with Double Glazed Glass', loc: 'Al Erkyah City, Lusail', price: '1,590,000', img: '/images/developments/city-avenue/city_feature_1.jpg', photos: '18', tag: '5-Year Plan', beds: '3 Beds', baths: '3.5 Baths', area: '190 m²' },
+            { title: 'Modern 1-Bedroom Corner Suite near Place Vendôme Mall', loc: 'Al Erkyah City, Lusail', price: '780,000', img: '/images/developments/city-avenue/city_feature_2.jpg', photos: '12', tag: 'Prime Location', beds: '1 Bed', baths: '1.5 Baths', area: '92 m²' },
+            { title: 'Corner 2-Bedroom Apartment | Park & Boulevard View', loc: 'Al Erkyah City, Lusail', price: '1,150,000', img: '/images/developments/city-avenue/city_feature_3.jpg', photos: '16', tag: 'Corner Unit', beds: '2 Beds', baths: '2.5 Baths', area: '140 m²' },
+            { title: 'Sky Suite Penthouse with Skyline Terrace', loc: 'Al Erkyah City, Lusail', price: '2,200,000', img: '/images/developments/city-avenue/city_hero_new.jpg', photos: '25', tag: 'Sky Suite', beds: '4 Beds', baths: '4.5 Baths', area: '260 m²' }
         ]
     },
     'valencia-residence': {
@@ -264,12 +264,12 @@ const projects = {
             { title: 'City Avenue', slug: 'city-avenue', loc: 'Al Erkyah City, Lusail', badge: 'Off-Plan', badgeClass: 'offplan', price: '1.1M QAR', img: '/images/developments/city-avenue/hero.jpg' }
         ],
         units: [
-            { title: 'Semi-Furnished 1-Bedroom Apartment | 2% Down Payment', loc: 'Fox Hills South, Lusail', price: '720,000', img: '/images/developments/valencia-residence/unit_2.jpg', photos: '14', tag: 'Hot Deal', beds: '1 Bed', baths: '1.5 Baths', area: '78 m²' },
-            { title: 'Spacious 2-Bedroom Luxury Residence with Balcony', loc: 'Fox Hills South, Lusail', price: '1,150,000', img: '/images/developments/valencia-residence/unit_3.jpg', photos: '18', tag: '6-Year Plan', beds: '2 Beds', baths: '2.5 Baths', area: '118 m²' },
-            { title: 'Modern Studio Apartment | High Investment Yield in Lusail', loc: 'Fox Hills South, Lusail', price: '650,000', img: '/images/developments/valencia-residence/unit_4.jpg', photos: '10', tag: 'High ROI', beds: 'Studio', baths: '1 Bath', area: '52 m²' },
-            { title: '2-Bedroom Corner Residence facing Crescent Park View', loc: 'Fox Hills South, Lusail', price: '1,220,000', img: '/images/developments/valencia-residence/hero.jpg', photos: '16', tag: 'Park View', beds: '2 Beds', baths: '2 Baths', area: '124 m²' },
-            { title: '1-Bedroom Executive Apartment near Lusail Boulevard', loc: 'Fox Hills South, Lusail', price: '760,000', img: '/images/developments/valencia-residence/unit_1.jpg', photos: '12', tag: 'Off-Plan', beds: '1 Bed', baths: '1 Bath', area: '82 m²' },
-            { title: 'Exclusive Studio Residence with Private Balcony & Parking', loc: 'Fox Hills South, Lusail', price: '680,000', img: '/images/developments/valencia-residence/unit_2.jpg', photos: '11', tag: 'Freehold', beds: 'Studio', baths: '1 Bath', area: '55 m²' }
+            { title: 'Semi-Furnished 1-Bedroom Apartment | 2% Down Payment', loc: 'Fox Hills South, Lusail', price: '720,000', img: '/images/developments/valencia-residence/unit_1.jpg', photos: '14', tag: 'Hot Deal', beds: '1 Bed', baths: '1.5 Baths', area: '78 m²' },
+            { title: 'Spacious 2-Bedroom Luxury Residence with Balcony', loc: 'Fox Hills South, Lusail', price: '1,150,000', img: '/images/developments/valencia-residence/unit_2.jpg', photos: '18', tag: '6-Year Plan', beds: '2 Beds', baths: '2.5 Baths', area: '118 m²' },
+            { title: 'Modern Studio Apartment | High Investment Yield in Lusail', loc: 'Fox Hills South, Lusail', price: '650,000', img: '/images/developments/valencia-residence/unit_3.jpg', photos: '10', tag: 'High ROI', beds: 'Studio', baths: '1 Bath', area: '52 m²' },
+            { title: '2-Bedroom Corner Residence facing Crescent Park View', loc: 'Fox Hills South, Lusail', price: '1,220,000', img: '/images/developments/valencia-residence/unit_4.jpg', photos: '16', tag: 'Park View', beds: '2 Beds', baths: '2.5 Baths', area: '125 m²' },
+            { title: '3-Bedroom Family Residence + Maid\'s Room', loc: 'Fox Hills South, Lusail', price: '1,650,000', img: '/images/developments/valencia-residence/hero.jpg', photos: '20', tag: 'Family Suite', beds: '3 Beds', baths: '3.5 Baths', area: '168 m²' },
+            { title: 'Executive Master Penthouse Suite with Roof Garden', loc: 'Fox Hills South, Lusail', price: '2,350,000', img: '/images/developments/flora-villas/unit_1.jpg', photos: '26', tag: 'Penthouse', beds: '4 Beds', baths: '4.5 Baths', area: '250 m²' }
         ]
     },
     'flora-villas': {
@@ -304,12 +304,12 @@ const projects = {
             { title: 'City Avenue', slug: 'city-avenue', loc: 'Al Erkyah City, Lusail', badge: 'Off-Plan', badgeClass: 'offplan', price: '1.1M QAR', img: '/images/developments/city-avenue/hero.jpg' }
         ],
         units: [
-            { title: 'Signature 5-Bedroom Standalone Villa with Private Garden', loc: 'Huzoom District, North Lusail', price: '4,200,000', img: '/images/developments/flora-villas/unit_2.jpg', photos: '20', tag: 'Exclusive Villa', beds: '5 Beds', baths: '6 Baths', area: '520 m²' },
-            { title: 'Grand 6-Bedroom Villa + Penthouse & Private Swimming Pool', loc: 'Huzoom District, North Lusail', price: '5,600,000', img: '/images/developments/flora-villas/unit_3.jpg', photos: '24', tag: 'Luxury Mansion', beds: '6 Beds', baths: '7.5 Baths', area: '680 m²' },
-            { title: '5-Bedroom Modern Architecture Villa | 5% Down Payment', loc: 'Huzoom District, North Lusail', price: '4,450,000', img: '/images/developments/flora-villas/unit_4.jpg', photos: '18', tag: 'Hot Deal', beds: '5 Beds', baths: '5.5 Baths', area: '540 m²' },
-            { title: '6-Bedroom Corner Villa with Driver & Maid Quarters', loc: 'Huzoom District, North Lusail', price: '5,850,000', img: '/images/developments/flora-villas/hero.jpg', photos: '22', tag: 'Corner Plot', beds: '6 Beds', baths: '7 Baths', area: '710 m²' },
-            { title: '5-Bedroom Luxury Residence with Panoramic Rooftop Terrace', loc: 'Huzoom District, North Lusail', price: '4,350,000', img: '/images/developments/flora-villas/unit_1.jpg', photos: '16', tag: 'Freehold', beds: '5 Beds', baths: '6 Baths', area: '530 m²' },
-            { title: 'Grand 6-Bedroom Estate with Customized Landscaped Lawn', loc: 'Huzoom District, North Lusail', price: '6,100,000', img: '/images/developments/flora-villas/unit_2.jpg', photos: '25', tag: 'VVIP Villa', beds: '6 Beds', baths: '8 Baths', area: '750 m²' }
+            { title: 'Signature 5-Bedroom Standalone Villa with Private Garden', loc: 'Huzoom District, North Lusail', price: '4,200,000', img: '/images/developments/flora-villas/unit_1.jpg', photos: '20', tag: 'Exclusive Villa', beds: '5 Beds', baths: '6 Baths', area: '520 m²' },
+            { title: 'Grand 6-Bedroom Villa + Penthouse & Private Swimming Pool', loc: 'Huzoom District, North Lusail', price: '5,600,000', img: '/images/developments/flora-villas/unit_2.jpg', photos: '24', tag: 'Luxury Mansion', beds: '6 Beds', baths: '7.5 Baths', area: '680 m²' },
+            { title: '5-Bedroom Modern Architecture Villa | 5% Down Payment', loc: 'Huzoom District, North Lusail', price: '4,450,000', img: '/images/developments/flora-villas/unit_3.jpg', photos: '18', tag: 'Hot Deal', beds: '5 Beds', baths: '5.5 Baths', area: '540 m²' },
+            { title: '6-Bedroom Corner Villa with Driver & Maid Quarters', loc: 'Huzoom District, North Lusail', price: '5,850,000', img: '/images/developments/flora-villas/unit_4.jpg', photos: '22', tag: 'Corner Estate', beds: '6 Beds', baths: '7.5 Baths', area: '710 m²' },
+            { title: 'Executive 4-Bedroom Villa with Elevator & Maid Suite', loc: 'Huzoom District, North Lusail', price: '3,950,000', img: '/images/developments/flora-villas/hero.jpg', photos: '16', tag: 'Off-Plan', beds: '4 Beds', baths: '5 Baths', area: '480 m²' },
+            { title: 'Royal Waterfront Estate with Private Swimming Pool', loc: 'Huzoom District, North Lusail', price: '6,200,000', img: '/images/developments/skala-villas/sk-feature-4.jpg', photos: '30', tag: 'Royal Estate', beds: '6 Beds', baths: '8 Baths', area: '780 m²' }
         ]
     }
 };
