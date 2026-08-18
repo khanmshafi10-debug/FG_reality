@@ -64,8 +64,8 @@ const searchBoxHtml = `
         </section>
 `;
 
-// 5. Extract Popular Real Estate Links + Agent CTA Banner + Funding Banner from the-seef.html
-const popularLinksStart = seefFile.indexOf('<section class="listingDetailsLinks">');
+// 5. Extract Agent CTA Banner + Funding Banner from the-seef.html
+const popularLinksStart = seefFile.indexOf('<section class="bannerWrapper">');
 const popularLinksEnd = seefFile.indexOf('<div class="inquiryModal"');
 const popularLinksAndCtasHtml = seefFile.substring(popularLinksStart, popularLinksEnd);
 
