@@ -1728,7 +1728,364 @@
                     </div>
                 </section>
             </section>
-            <section class="pageBlock">
+            
+            <!-- Premium Architectural & Gallery Section -->
+            <section class="pageBlock luxuryGallerySection" id="gallery-showcase">
+                <style>
+                    .luxuryGallery {
+                        padding: 60px 0 20px 0;
+                        font-family: inherit;
+                    }
+                    .luxuryGallery__header {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        text-align: center;
+                        margin-bottom: 40px;
+                    }
+                    .luxuryGallery__badge {
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 8px;
+                        padding: 6px 18px;
+                        border-radius: 30px;
+                        background: rgba(197, 168, 128, 0.12);
+                        border: 1px solid rgba(197, 168, 128, 0.35);
+                        color: #c5a880;
+                        font-size: 0.8rem;
+                        font-weight: 600;
+                        letter-spacing: 2px;
+                        text-transform: uppercase;
+                        margin-bottom: 16px;
+                    }
+                    .luxuryGallery__badge-dot {
+                        width: 6px;
+                        height: 6px;
+                        border-radius: 50%;
+                        background-color: #c5a880;
+                        box-shadow: 0 0 8px #c5a880;
+                    }
+                    .luxuryGallery__title {
+                        font-size: 2.2rem;
+                        font-weight: 700;
+                        color: #1a1a1a;
+                        letter-spacing: -0.5px;
+                        margin-bottom: 12px;
+                    }
+                    .luxuryGallery__subtitle {
+                        font-size: 1rem;
+                        color: #666;
+                        max-width: 620px;
+                        line-height: 1.6;
+                        margin-bottom: 30px;
+                    }
+                    .luxuryGallery__filters {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        gap: 12px;
+                        margin-bottom: 35px;
+                    }
+                    .luxuryGallery__filter-btn {
+                        padding: 10px 24px;
+                        border-radius: 25px;
+                        border: 1px solid #e2e8f0;
+                        background: #ffffff;
+                        color: #4a5568;
+                        font-size: 0.88rem;
+                        font-weight: 500;
+                        cursor: pointer;
+                        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                    }
+                    .luxuryGallery__filter-btn:hover,
+                    .luxuryGallery__filter-btn.active {
+                        background: #1a1a1a;
+                        color: #ffffff;
+                        border-color: #1a1a1a;
+                        box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+                    }
+                    
+                    /* Asymmetric Bento Gallery Grid */
+                    .galleryGrid {
+                        display: grid;
+                        grid-template-columns: repeat(12, 1fr);
+                        grid-auto-rows: 260px;
+                        gap: 20px;
+                    }
+                    .galleryCard {
+                        position: relative;
+                        border-radius: 16px;
+                        overflow: hidden;
+                        text-decoration: none;
+                        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+                        background: #111;
+                        transition: transform 0.4s ease, box-shadow 0.4s ease;
+                    }
+                    .galleryCard:hover {
+                        transform: translateY(-4px);
+                        box-shadow: 0 16px 40px rgba(0,0,0,0.18);
+                    }
+
+                    .galleryCard--large {
+                        grid-column: span 8;
+                        grid-row: span 2;
+                    }
+                    .galleryCard--tall {
+                        grid-column: span 4;
+                        grid-row: span 2;
+                    }
+                    .galleryCard--medium {
+                        grid-column: span 4;
+                        grid-row: span 1;
+                    }
+                    .galleryCard--wide {
+                        grid-column: span 8;
+                        grid-row: span 1;
+                    }
+
+                    .galleryCard__img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+                    }
+                    .galleryCard:hover .galleryCard__img {
+                        transform: scale(1.08);
+                    }
+                    .galleryCard__overlay {
+                        position: absolute;
+                        inset: 0;
+                        background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.85) 100%);
+                        opacity: 0.9;
+                        transition: opacity 0.3s ease;
+                    }
+                    .galleryCard:hover .galleryCard__overlay {
+                        opacity: 0.95;
+                        background: linear-gradient(180deg, rgba(0,0,0,0.1) 20%, rgba(0,0,0,0.92) 100%);
+                    }
+                    
+                    .galleryCard__tag {
+                        position: absolute;
+                        top: 20px;
+                        left: 20px;
+                        padding: 6px 14px;
+                        border-radius: 20px;
+                        background: rgba(255, 255, 255, 0.2);
+                        backdrop-filter: blur(8px);
+                        -webkit-backdrop-filter: blur(8px);
+                        border: 1px solid rgba(255, 255, 255, 0.3);
+                        color: #ffffff;
+                        font-size: 0.75rem;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        z-index: 2;
+                    }
+
+                    .galleryCard__content {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        padding: 24px;
+                        z-index: 2;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: flex-end;
+                    }
+                    .galleryCard__title {
+                        font-size: 1.3rem;
+                        font-weight: 700;
+                        color: #ffffff;
+                        margin-bottom: 4px;
+                    }
+                    .galleryCard__subtitle {
+                        font-size: 0.88rem;
+                        color: rgba(255, 255, 255, 0.75);
+                    }
+                    .galleryCard__btn {
+                        width: 42px;
+                        height: 42px;
+                        border-radius: 50%;
+                        background: rgba(255, 255, 255, 0.2);
+                        backdrop-filter: blur(6px);
+                        border: 1px solid rgba(255, 255, 255, 0.3);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: #ffffff;
+                        transition: all 0.3s ease;
+                    }
+                    .galleryCard:hover .galleryCard__btn {
+                        background: #c5a880;
+                        border-color: #c5a880;
+                        transform: scale(1.1);
+                    }
+
+                    @media (max-width: 991px) {
+                        .galleryGrid {
+                            grid-template-columns: repeat(6, 1fr);
+                            grid-auto-rows: 240px;
+                        }
+                        .galleryCard--large, .galleryCard--wide {
+                            grid-column: span 6;
+                            grid-row: span 1;
+                        }
+                        .galleryCard--tall, .galleryCard--medium {
+                            grid-column: span 3;
+                            grid-row: span 1;
+                        }
+                    }
+                    @media (max-width: 640px) {
+                        .galleryGrid {
+                            grid-template-columns: 1fr;
+                            grid-auto-rows: 240px;
+                        }
+                        .galleryCard--large, .galleryCard--tall, .galleryCard--medium, .galleryCard--wide {
+                            grid-column: span 1;
+                            grid-row: span 1;
+                        }
+                        .luxuryGallery__title {
+                            font-size: 1.6rem;
+                        }
+                    }
+                </style>
+
+                <div class="luxuryGallery">
+                    <div class="luxuryGallery__header">
+                        <div class="luxuryGallery__badge">
+                            <span class="luxuryGallery__badge-dot"></span>
+                            Exclusive Architecture &amp; Living
+                        </div>
+                        <h2 class="luxuryGallery__title">Flagship Architectural Gallery</h2>
+                        <p class="luxuryGallery__subtitle">Discover the refined details, bespoke interiors, and waterfront splendor of Qatar’s premier luxury developments.</p>
+                        
+                        <div class="luxuryGallery__filters">
+                            <button class="luxuryGallery__filter-btn active" data-filter="all">All Showcase</button>
+                            <button class="luxuryGallery__filter-btn" data-filter="villas">Villas &amp; Estates</button>
+                            <button class="luxuryGallery__filter-btn" data-filter="penthouses">Residences &amp; Penthouses</button>
+                            <button class="luxuryGallery__filter-btn" data-filter="interiors">Bespoke Interiors</button>
+                        </div>
+                    </div>
+
+                    <div class="galleryGrid">
+                        <!-- Card 1: Large Featured -->
+                        <a href="/en/development/valencia-residence" class="galleryCard galleryCard--large" data-category="penthouses">
+                            <img src="/images/developments/valencia-residence/hero.jpg" alt="Valencia Residence" class="galleryCard__img" loading="lazy">
+                            <div class="galleryCard__overlay"></div>
+                            <span class="galleryCard__tag">Fox Hills South, Lusail</span>
+                            <div class="galleryCard__content">
+                                <div>
+                                    <h3 class="galleryCard__title">Valencia Residence</h3>
+                                    <p class="galleryCard__subtitle">Luxury Living &amp; Premium Modern Residences</p>
+                                </div>
+                                <div class="galleryCard__btn">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Card 2: Tall -->
+                        <a href="/en/development/flora-villas" class="galleryCard galleryCard--tall" data-category="villas">
+                            <img src="/images/developments/flora-villas/hero.jpg" alt="Flora Standalone Villas" class="galleryCard__img" loading="lazy">
+                            <div class="galleryCard__overlay"></div>
+                            <span class="galleryCard__tag">Huzoom District</span>
+                            <div class="galleryCard__content">
+                                <div>
+                                    <h3 class="galleryCard__title">Flora Standalone Villas</h3>
+                                    <p class="galleryCard__subtitle">Private Gardens &amp; Pool Sanctuary</p>
+                                </div>
+                                <div class="galleryCard__btn">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Card 3: Medium -->
+                        <a href="/en/development/skala-villas" class="galleryCard galleryCard--medium" data-category="villas">
+                            <img src="/images/developments/skala-villas/hero.jpg" alt="Skala Villas" class="galleryCard__img" loading="lazy">
+                            <div class="galleryCard__overlay"></div>
+                            <span class="galleryCard__tag">Qetaifan Island</span>
+                            <div class="galleryCard__content">
+                                <div>
+                                    <h3 class="galleryCard__title">Skala Waterfront Villas</h3>
+                                    <p class="galleryCard__subtitle">Beachfront Opulence</p>
+                                </div>
+                                <div class="galleryCard__btn">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Card 4: Medium -->
+                        <a href="/en/development/valencia-residence" class="galleryCard galleryCard--medium" data-category="interiors">
+                            <img src="/images/developments/valencia-residence/unit_1.jpg" alt="Valencia Interiors" class="galleryCard__img" loading="lazy">
+                            <div class="galleryCard__overlay"></div>
+                            <span class="galleryCard__tag">Interior Suite</span>
+                            <div class="galleryCard__content">
+                                <div>
+                                    <h3 class="galleryCard__title">Valencia Master Living</h3>
+                                    <p class="galleryCard__subtitle">Sophisticated Interior Finishes</p>
+                                </div>
+                                <div class="galleryCard__btn">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Card 5: Wide -->
+                        <a href="/en/development/rivan" class="galleryCard galleryCard--wide" data-category="penthouses">
+                            <img src="/images/developments/rivan/hero.jpg" alt="Rivan Tower" class="galleryCard__img" loading="lazy">
+                            <div class="galleryCard__overlay"></div>
+                            <span class="galleryCard__tag">Lusail City</span>
+                            <div class="galleryCard__content">
+                                <div>
+                                    <h3 class="galleryCard__title">Rivan Tower &amp; Sky Suites</h3>
+                                    <p class="galleryCard__subtitle">Architectural Horizon &amp; Panoramic Cityscape</p>
+                                </div>
+                                <div class="galleryCard__btn">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Card 6: Medium -->
+                        <a href="/en/development/milos" class="galleryCard galleryCard--medium" data-category="interiors">
+                            <img src="/images/developments/milos/hero.jpg" alt="Milos Residence" class="galleryCard__img" loading="lazy">
+                            <div class="galleryCard__overlay"></div>
+                            <span class="galleryCard__tag">Legtaifiya</span>
+                            <div class="galleryCard__content">
+                                <div>
+                                    <h3 class="galleryCard__title">Milos Residence</h3>
+                                    <p class="galleryCard__subtitle">Coastal Architectural Grace</p>
+                                </div>
+                                <div class="galleryCard__btn">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <script>
+                    document.querySelectorAll('.luxuryGallery__filter-btn').forEach(btn => {
+                        btn.addEventListener('click', function() {
+                            document.querySelectorAll('.luxuryGallery__filter-btn').forEach(b => b.classList.remove('active'));
+                            this.classList.add('active');
+                            const filter = this.getAttribute('data-filter');
+                            document.querySelectorAll('.galleryCard').forEach(card => {
+                                if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                                    card.style.display = 'block';
+                                } else {
+                                    card.style.display = 'none';
+                                }
+                            });
+                        });
+                    });
+                </script>
+            </section>
+
+<section class="pageBlock">
                 <section class="latestBlogPosts latestBlogPosts--carousel">
                     <div class="latestBlogPosts__header">
                         <span class="latestBlogPosts__header-title">Latest from the Blog</span>
