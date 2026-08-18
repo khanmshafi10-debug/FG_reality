@@ -234,6 +234,86 @@ const projects = {
             { title: 'Luxury 2BR Residence with Private Basement Parking', loc: 'Al Erkyah City, Lusail', price: '1,120,000', img: '/images/developments/rivan/unit.jpg', photos: '15', tag: 'Featured', beds: '2 Beds', baths: '2 Baths', area: '138 m²' },
             { title: '3-Bedroom Duplex Penthouse with Crescent Park Views', loc: 'Al Erkyah City, Lusail', price: '2,150,000', img: '/images/developments/rivan/hero.jpg', photos: '22', tag: 'Exclusive Penthouse', beds: '3 Beds', baths: '4 Baths', area: '240 m²' }
         ]
+    },
+    'valencia-residence': {
+        title: 'Valencia Residence',
+        pageTitle: 'Valencia Residence Fox Hills Lusail | Luxury Apartments Qatar | FGREALTY',
+        metaDesc: 'Off-plan studio, 1 & 2-bedroom luxury apartments for sale in Valencia Residence by TAAMEER, Fox Hills South Lusail Qatar. 6-year payment plan with 2% down payment.',
+        slug: 'valencia-residence',
+        location: 'Fox Hills South, Lusail',
+        developer: 'TAAMEER Development Group',
+        propType: 'Semi-Furnished Studio, 1 & 2 Bedroom Apartments',
+        bedrooms: 'Studio, 1 & 2 Bedrooms',
+        status: 'Off-Plan / Freehold',
+        handover: 'Handover Q1 2029',
+        price: '650K',
+        heroImage: '/images/developments/valencia-residence/hero.jpg',
+        description: 'Valencia Residence is a modern off-plan residential landmark developed by TAAMEER Development Group, situated in Fox Hills South, Lusail City. Designed around quiet luxury and integrated community living, Valencia Residence features semi-furnished studio, 1-bedroom, and 2-bedroom luxury apartments with floor-to-ceiling glass, private balconies, and refined contemporary interiors. Located steps away from Lusail Boulevard, Crescent Park, and Lusail Plaza Towers, residents enjoy access to a rooftop pool, state-of-the-art gym, children\'s play lounge, and 24/7 security concierge with a flexible 6-year payment plan.',
+        paymentPlanText: 'Highly flexible 6-year installment plan starting with a 2% down payment upon booking, with interest-free multi-stage installments through 2031.',
+        whatsappText: 'Hello%20FGREALTY%2C%20I%20am%20interested%20in%20Valencia%20Residence%20Fox%20Hills%20Lusail',
+        amenities: [
+            { icon: 'Shared-Swimming-Pool', label: 'Rooftop Swimming Pool' },
+            { icon: 'Gymnasium', label: 'Fitness & Wellness Gym' },
+            { icon: 'Security-Access', label: '24/7 Security & Concierge' },
+            { icon: 'Basement-Parking', label: 'Private Basement Parking' },
+            { icon: 'Central-Air-conditioning', label: 'Smart Central AC' },
+            { icon: 'Children-Play-Area', label: 'Children\'s Play Lounge' },
+            { icon: 'Open-Kitchen', label: 'Semi-Furnished Kitchen' },
+            { icon: 'Metro-Station', label: 'Near Lusail Tram' }
+        ],
+        exploreCards: [
+            { title: 'Flora Villas', slug: 'flora-villas', loc: 'Huzoom, North Lusail', badge: 'Off-Plan', badgeClass: 'offplan', price: '4.2M QAR', img: '/images/developments/flora-villas/hero.jpg' },
+            { title: 'Skala Villas', slug: 'skala-villas', loc: 'Qetaifan Island, Lusail', badge: 'Off-Plan', badgeClass: 'offplan', price: '3.5M QAR', img: '/images/developments/skala-villas/hero.jpg' },
+            { title: 'City Avenue', slug: 'city-avenue', loc: 'Al Erkyah City, Lusail', badge: 'Off-Plan', badgeClass: 'offplan', price: '1.1M QAR', img: '/images/developments/city-avenue/hero.jpg' }
+        ],
+        units: [
+            { title: 'Semi-Furnished 1-Bedroom Apartment | 2% Down Payment', loc: 'Fox Hills South, Lusail', price: '720,000', img: '/images/developments/valencia-residence/unit_2.jpg', photos: '14', tag: 'Hot Deal', beds: '1 Bed', baths: '1.5 Baths', area: '78 m²' },
+            { title: 'Spacious 2-Bedroom Luxury Residence with Balcony', loc: 'Fox Hills South, Lusail', price: '1,150,000', img: '/images/developments/valencia-residence/unit_3.jpg', photos: '18', tag: '6-Year Plan', beds: '2 Beds', baths: '2.5 Baths', area: '118 m²' },
+            { title: 'Modern Studio Apartment | High Investment Yield in Lusail', loc: 'Fox Hills South, Lusail', price: '650,000', img: '/images/developments/valencia-residence/unit_4.jpg', photos: '10', tag: 'High ROI', beds: 'Studio', baths: '1 Bath', area: '52 m²' },
+            { title: '2-Bedroom Corner Residence facing Crescent Park View', loc: 'Fox Hills South, Lusail', price: '1,220,000', img: '/images/developments/valencia-residence/hero.jpg', photos: '16', tag: 'Park View', beds: '2 Beds', baths: '2 Baths', area: '124 m²' },
+            { title: '1-Bedroom Executive Apartment near Lusail Boulevard', loc: 'Fox Hills South, Lusail', price: '760,000', img: '/images/developments/valencia-residence/unit_1.jpg', photos: '12', tag: 'Off-Plan', beds: '1 Bed', baths: '1 Bath', area: '82 m²' },
+            { title: 'Exclusive Studio Residence with Private Balcony & Parking', loc: 'Fox Hills South, Lusail', price: '680,000', img: '/images/developments/valencia-residence/unit_2.jpg', photos: '11', tag: 'Freehold', beds: 'Studio', baths: '1 Bath', area: '55 m²' }
+        ]
+    },
+    'flora-villas': {
+        title: 'Flora Villas',
+        pageTitle: 'Flora Villas Huzoom North Lusail | Luxury 5 & 6 Bedroom Standalone Villas | FGREALTY',
+        metaDesc: 'Exclusive 5 & 6-bedroom standalone freehold villas for sale in Flora Villas by TAAMEER, Huzoom District North Lusail Qatar. Private gardens, optional pool, 5% down payment.',
+        slug: 'flora-villas',
+        location: 'Huzoom District, North Lusail',
+        developer: 'TAAMEER Development Group',
+        propType: 'Luxury Standalone Freehold Villas',
+        bedrooms: '5 & 6 Bedrooms',
+        status: 'Off-Plan Exclusive Villa Collection',
+        handover: 'Handover Q1 2029',
+        price: '4.2M',
+        heroImage: '/images/developments/flora-villas/hero.jpg',
+        description: 'Flora Villas is a private sanctuary of 40 standalone luxury villas located in the peaceful Huzoom District of North Lusail. Developed by TAAMEER Development Group, Flora Villas offers grand 5-bedroom and 6-bedroom architectural villas across three expansive levels (Ground, 1st Floor, and Penthouse). Designed with floor-to-ceiling glass, reversed layouts for 100% neighbor privacy, private landscaped gardens, optional swimming pools, and dedicated maid and driver quarters, Flora Villas represents the pinnacle of private family living in North Lusail.',
+        paymentPlanText: 'Multi-stage flexible payment plan with 5% Down Payment on booking, interest-free construction installments through handover in Q1 2029.',
+        whatsappText: 'Hello%20FGREALTY%2C%20I%20am%20interested%20in%20Flora%20Villas%20North%20Lusail',
+        amenities: [
+            { icon: 'Shared-Swimming-Pool', label: 'Private Swimming Pool' },
+            { icon: 'Concierge-Assistance', label: 'Private Landscaping & Garden' },
+            { icon: 'Security-Access', label: '24/7 Gated Community' },
+            { icon: 'Basement-Parking', label: 'Multi-Car Covered Parking' },
+            { icon: 'Open-Kitchen', label: 'Maid & Driver Quarters' },
+            { icon: 'Central-Air-conditioning', label: 'Smart Villa HVAC' },
+            { icon: 'Mall', label: 'Three-Level Penthouse Design' },
+            { icon: 'Metro-Station', label: 'Near North Lusail District' }
+        ],
+        exploreCards: [
+            { title: 'Valencia Residence', slug: 'valencia-residence', loc: 'Fox Hills, Lusail', badge: 'Off-Plan', badgeClass: 'offplan', price: '650K QAR', img: '/images/developments/valencia-residence/hero.jpg' },
+            { title: 'Skala Villas', slug: 'skala-villas', loc: 'Qetaifan Island, Lusail', badge: 'Off-Plan', badgeClass: 'offplan', price: '3.5M QAR', img: '/images/developments/skala-villas/hero.jpg' },
+            { title: 'City Avenue', slug: 'city-avenue', loc: 'Al Erkyah City, Lusail', badge: 'Off-Plan', badgeClass: 'offplan', price: '1.1M QAR', img: '/images/developments/city-avenue/hero.jpg' }
+        ],
+        units: [
+            { title: 'Signature 5-Bedroom Standalone Villa with Private Garden', loc: 'Huzoom District, North Lusail', price: '4,200,000', img: '/images/developments/flora-villas/unit_2.jpg', photos: '20', tag: 'Exclusive Villa', beds: '5 Beds', baths: '6 Baths', area: '520 m²' },
+            { title: 'Grand 6-Bedroom Villa + Penthouse & Private Swimming Pool', loc: 'Huzoom District, North Lusail', price: '5,600,000', img: '/images/developments/flora-villas/unit_3.jpg', photos: '24', tag: 'Luxury Mansion', beds: '6 Beds', baths: '7.5 Baths', area: '680 m²' },
+            { title: '5-Bedroom Modern Architecture Villa | 5% Down Payment', loc: 'Huzoom District, North Lusail', price: '4,450,000', img: '/images/developments/flora-villas/unit_4.jpg', photos: '18', tag: 'Hot Deal', beds: '5 Beds', baths: '5.5 Baths', area: '540 m²' },
+            { title: '6-Bedroom Corner Villa with Driver & Maid Quarters', loc: 'Huzoom District, North Lusail', price: '5,850,000', img: '/images/developments/flora-villas/hero.jpg', photos: '22', tag: 'Corner Plot', beds: '6 Beds', baths: '7 Baths', area: '710 m²' },
+            { title: '5-Bedroom Luxury Residence with Panoramic Rooftop Terrace', loc: 'Huzoom District, North Lusail', price: '4,350,000', img: '/images/developments/flora-villas/unit_1.jpg', photos: '16', tag: 'Freehold', beds: '5 Beds', baths: '6 Baths', area: '530 m²' },
+            { title: 'Grand 6-Bedroom Estate with Customized Landscaped Lawn', loc: 'Huzoom District, North Lusail', price: '6,100,000', img: '/images/developments/flora-villas/unit_2.jpg', photos: '25', tag: 'VVIP Villa', beds: '6 Beds', baths: '8 Baths', area: '750 m²' }
+        ]
     }
 };
 

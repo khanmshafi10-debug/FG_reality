@@ -30,6 +30,16 @@ const newDesktopDropdown = `<li class="headerNavLink  headerNavLink--withSubmenu
                                                 Rivan Tower
                                                     </a>
                                                 </li>
+                                                <li class="navSubmenu__item" role="none">
+                                                    <a href="/en/development/valencia-residence" class="navSubmenu__link" role="menuitem">
+                                                Valencia Residence
+                                                    </a>
+                                                </li>
+                                                <li class="navSubmenu__item" role="none">
+                                                    <a href="/en/development/flora-villas" class="navSubmenu__link" role="menuitem">
+                                                Flora Villas
+                                                    </a>
+                                                </li>
                                             </ul>
                                         </div>
                                     </li>`;
@@ -63,6 +73,12 @@ const newMobilePanel = `
                                             <li class="mobileMenuList__item">
                                                 <a href="/en/development/rivan" class="mobileMenuList__link">Rivan Tower</a>
                                             </li>
+                                            <li class="mobileMenuList__item">
+                                                <a href="/en/development/valencia-residence" class="mobileMenuList__link">Valencia Residence</a>
+                                            </li>
+                                            <li class="mobileMenuList__item">
+                                                <a href="/en/development/flora-villas" class="mobileMenuList__link">Flora Villas</a>
+                                            </li>
                                         </ul>
                                     </div>`;
 
@@ -72,7 +88,7 @@ function getAllHtmlFiles(dir, fileList = []) {
         const filePath = path.join(dir, file);
         if (fs.statSync(filePath).isDirectory()) {
             getAllHtmlFiles(filePath, fileList);
-        } else if (file.endsWith('.html') && file !== 'developments.html') {
+        } else if (file.endsWith('.html')) {
             fileList.push(filePath);
         }
     }
@@ -86,43 +102,49 @@ for (const file of htmlFiles) {
     let content = fs.readFileSync(file, 'utf8');
     let modified = false;
 
-    // 1. Replace desktop header link for Developments
-    const desktopRegex = /<li class="headerNavLink\s*" role="none">\s*<a href="\/en\/developments" role="menuitem">Developments<\/a>\s*<\/li>/gi;
-    if (desktopRegex.test(content)) {
-        content = content.replace(desktopRegex, newDesktopDropdown);
+    // Update existing navSubmenu__list if missing Valencia Residence
+    if (content.includes('navSubmenu__list') && !content.includes('valencia-residence')) {
+        const listRegex = /<ul class="navSubmenu__list">[\s\S]*?<\/ul>/i;
+        const newSubmenuList = `<ul class="navSubmenu__list">
+                                                <li class="navSubmenu__item" role="none">
+                                                    <a href="/en/development/skala-villas" class="navSubmenu__link" role="menuitem">
+                                                Skala Villas
+                                                    </a>
+                                                </li>
+                                                <li class="navSubmenu__item" role="none">
+                                                    <a href="/en/development/city-avenue" class="navSubmenu__link" role="menuitem">
+                                                City Avenue
+                                                    </a>
+                                                </li>
+                                                <li class="navSubmenu__item" role="none">
+                                                    <a href="/en/development/milos" class="navSubmenu__link" role="menuitem">
+                                                Milos Residence
+                                                    </a>
+                                                </li>
+                                                <li class="navSubmenu__item" role="none">
+                                                    <a href="/en/development/rivan" class="navSubmenu__link" role="menuitem">
+                                                Rivan Tower
+                                                    </a>
+                                                </li>
+                                                <li class="navSubmenu__item" role="none">
+                                                    <a href="/en/development/valencia-residence" class="navSubmenu__link" role="menuitem">
+                                                Valencia Residence
+                                                    </a>
+                                                </li>
+                                                <li class="navSubmenu__item" role="none">
+                                                    <a href="/en/development/flora-villas" class="navSubmenu__link" role="menuitem">
+                                                Flora Villas
+                                                    </a>
+                                                </li>
+                                            </ul>`;
+        content = content.replace(listRegex, newSubmenuList);
         modified = true;
     }
 
-    // 2. Replace mobile menu link for Developments
-    const mobileLinkRegex = /<li class="mobileMenuList__item">\s*<a href="\/en\/developments" class="mobileMenuList__link">Developments<\/a>\s*<\/li>/gi;
-    if (mobileLinkRegex.test(content)) {
-        content = content.replace(mobileLinkRegex, newMobileItem);
-        modified = true;
-    }
-
-    // 3. Inject mobile menu panel level1-3 if not present
-    if (content.includes('data-goto-panel="level1-3"') && !content.includes('data-panel="level1-3"')) {
-        // Insert right before data-panel="level1-4" or inside mobileMenuPanels
-        if (content.includes('data-panel="level1-4"')) {
-            content = content.replace('<div class="mobileMenu__panel" data-panel="level1-4">', `${newMobilePanel}\n\n                                    <div class="mobileMenu__panel" data-panel="level1-4">`);
-            modified = true;
-        } else if (content.includes('data-panel="level1-2"')) {
-            const panel2End = content.indexOf('</div>', content.indexOf('data-panel="level1-2"')) + 6;
-            content = content.slice(0, panel2End) + newMobilePanel + content.slice(panel2End);
-            modified = true;
-        }
-    }
-
-    // 4. Replace any footer links or other standalone links to /en/developments with /en/development/skala-villas or dropdown trigger
-    const footerLinkRegex = /<a href="\/en\/developments" class="text-sm text-grey-50 text-decoration-none">New Developments<\/a>/gi;
-    if (footerLinkRegex.test(content)) {
-        content = content.replace(footerLinkRegex, '<a href="/en/development/skala-villas" class="text-sm text-grey-50 text-decoration-none">New Developments</a>');
-        modified = true;
-    }
-
-    const allDevsBtnRegex = /<a href="\/en\/developments" class="text-sm text-tablet-md">All developments<\/a>/gi;
-    if (allDevsBtnRegex.test(content)) {
-        content = content.replace(allDevsBtnRegex, '<a href="/en/development/skala-villas" class="text-sm text-tablet-md">Explore Developments</a>');
+    // Update mobile menu if missing Valencia Residence
+    if (content.includes('data-panel="level1-3"') && !content.includes('valencia-residence')) {
+        const mobilePanelRegex = /<div class="mobileMenu__panel" data-panel="level1-3">[\s\S]*?<\/div>/i;
+        content = content.replace(mobilePanelRegex, newMobilePanel.trim());
         modified = true;
     }
 
@@ -132,4 +154,4 @@ for (const file of htmlFiles) {
     }
 }
 
-console.log(`Updated navbar dropdown in ${updatedCount} HTML files!`);
+console.log(`Synced navbars across ${updatedCount} HTML files!`);
