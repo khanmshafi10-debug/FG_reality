@@ -1,0 +1,39 @@
+
+
+/* Global Container & Edge Alignment Fix */
+.developmentDetailsContent,
+.developmentDetailsTop,
+.container {
+  max-width: 1320px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 28px !important;
+  padding-right: 28px !important;
+  box-sizing: border-box !important;
+}
+
+@media (min-width: 1280px) {
+  .developmentDetailsContent {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    gap: 3.5rem !important;
+    padding-left: 28px !important;
+    padding-right: 28px !important;
+    padding-top: 3.5rem !important;
+    padding-bottom: 3.5rem !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 1320px !important;
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .developmentDetailsContent,
+  .developmentDetailsTop,
+  .container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+}

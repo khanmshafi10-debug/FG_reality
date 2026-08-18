@@ -77,6 +77,87 @@
       .premium-section-header h2 { font-size: 1.75rem; font-weight: 700; color: #111; font-family: optimaltstd-medium, sans-serif; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
       .premium-section-header p { font-size: 0.95rem; color: #666; margin: 0; }
 
+      
+      /* Fix layout container alignment so content NEVER touches the viewport edge */
+      .developmentDetailsContent,
+      .developmentDetailsTop,
+      .container {
+        max-width: 1320px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        padding-left: 28px !important;
+        padding-right: 28px !important;
+        box-sizing: border-box !important;
+      }
+
+      @media (min-width: 1280px) {
+        .developmentDetailsContent {
+          display: flex !important;
+          flex-direction: row !important;
+          align-items: flex-start !important;
+          gap: 3.5rem !important;
+          padding-left: 28px !important;
+          padding-right: 28px !important;
+          padding-top: 3.5rem !important;
+          padding-bottom: 3.5rem !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+          max-width: 1320px !important;
+          width: 100% !important;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .developmentDetailsContent,
+        .developmentDetailsTop,
+        .container {
+          padding-left: 16px !important;
+          padding-right: 16px !important;
+        }
+      }
+
+      .developmentDetailsContent__firstSection {
+        flex: 1 1 0% !important;
+        min-width: 0 !important;
+        padding-left: 0 !important;
+      }
+
+      .developmentDetailsContent__secondSection {
+        width: 380px !important;
+        min-width: 380px !important;
+        flex-shrink: 0 !important;
+      }
+
+      @media (max-width: 1024px) {
+        .developmentDetailsContent__secondSection {
+          width: 100% !important;
+          min-width: 100% !important;
+        }
+      }
+
+      /* Clean luxury typography & borders for section headers */
+      .developmentDetailsContent__firstSection h2 {
+        font-family: optimaltstd-medium, sans-serif !important;
+        font-size: 1.35rem !important;
+        font-weight: 700 !important;
+        color: #111111 !important;
+        letter-spacing: 0.5px !important;
+        position: relative !important;
+        padding-bottom: 8px !important;
+        margin-bottom: 16px !important;
+      }
+
+      .developmentDetailsContent__firstSection h2::after {
+        content: "" !important;
+        position: absolute !important;
+        left: 0 !important;
+        bottom: 0 !important;
+        width: 40px !important;
+        height: 3px !important;
+        background: #b89c4c !important;
+        border-radius: 2px !important;
+      }
+
       /* LUXURY QATAR CONSULTANCY SIDEBAR CARD */
       .qatar-consultancy-card {
         background: #141414 !important;
