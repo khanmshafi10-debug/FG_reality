@@ -141,7 +141,7 @@ const server = http.createServer((req, res) => {
     if (reqPath === '/' || reqPath === '') reqPath = '/index.html';
 
     // Redirect account, international, learn (resources), and agent routes to home
-    if (reqPath.startsWith('/account') || reqPath.startsWith('/en/international') || reqPath.startsWith('/learn') || reqPath.startsWith('/en/find-agent') || reqPath.startsWith('/en/careers') || reqPath.startsWith('/find-agent') || reqPath.startsWith('/careers')) {
+    if (reqPath === '/en/developments' || reqPath === '/en/developments.html' || reqPath === '/developments' || reqPath.startsWith('/account') || reqPath.startsWith('/en/international') || reqPath.startsWith('/learn') || reqPath.startsWith('/en/find-agent') || reqPath.startsWith('/en/careers') || reqPath.startsWith('/find-agent') || reqPath.startsWith('/careers')) {
         res.writeHead(302, { 'Location': '/' });
         return res.end();
     }

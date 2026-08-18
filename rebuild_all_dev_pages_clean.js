@@ -593,7 +593,7 @@ ${searchBoxHtml}
                     <ul class="breadcrumbs">
                         <li><a href="/">Home</a></li>
                         <li class="separator">/</li>
-                        <li><a href="/en/developments">Developments</a></li>
+                        <li><a href="javascript:void(0);">Developments</a></li>
                         <li class="separator">/</li>
                         <li><a href="#">${p.title}</a></li>
                     </ul>
