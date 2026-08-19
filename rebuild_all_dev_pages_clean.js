@@ -428,7 +428,8 @@ for (const [key, p] of Object.entries(projects)) {
       .explore-dev-card__btn { font-size: 0.85rem; font-weight: 700; color: #111; }
       .explore-dev-card:hover .explore-dev-card__btn { color: #b89c4c; }
 
-      .modern-listings-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; margin-top: 24px; }
+      .modern-listings-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 24px; }
+      @media (min-width: 768px) { .modern-listings-grid { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; } }
       .modern-unit-card { border-radius: 16px; background: #fff; border: 1px solid #e8e8e8; overflow: hidden; transition: all 0.3s ease; display: flex; flex-direction: column; }
       .modern-unit-card:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(0,0,0,0.08); border-color: #d4b97a; }
       .modern-unit-card__img-wrap { position: relative; height: 200px; overflow: hidden; }

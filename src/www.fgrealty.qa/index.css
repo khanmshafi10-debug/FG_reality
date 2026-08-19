@@ -95,3 +95,38 @@ html { scroll-behavior: smooth; }
 .bento-item:hover .bento-img, .explore-dev-card:hover .explore-dev-card__img, .modern-unit-card:hover .modern-unit-card__img {
   transform: scale(1.08);
 }
+
+
+/* GLOBAL RESPONSIVE & GLITCH FIXES */
+html, body {
+  overflow-x: hidden !important;
+  width: 100% !important;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.container, .container-fluid {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Fix any horizontal scrollable containers hiding their scrollbars */
+.scrollable-x, .horizontal-scroll-container, .modern-listings-grid {
+  -webkit-overflow-scrolling: touch;
+}
+.modern-listings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* more responsive minimum width */
+  gap: 20px;
+}
+@media (min-width: 768px) {
+  .modern-listings-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+  }
+}
