@@ -324,7 +324,7 @@ for (const [key, p] of Object.entries(projects)) {
                     </div>`).join('\n');
 
     const exploreHtml = p.exploreCards.map(c => `
-    <a href="/en/development/${c.slug}" class="explore-dev-card">
+    <a href="/en/development/${c.slug}" class="explore-dev-card" data-aos="fade-up" data-aos-duration="1000">
       <div class="explore-dev-card__image-wrap">
         <img src="${c.img}" alt="${c.title}" class="explore-dev-card__img" loading="lazy">
         <span class="explore-dev-card__badge explore-dev-card__badge--${c.badgeClass}">
@@ -347,7 +347,7 @@ for (const [key, p] of Object.entries(projects)) {
     </a>`).join('\n');
 
     const unitsHtml = p.units.map(u => `
-    <article class="modern-unit-card">
+    <article class="modern-unit-card" data-aos="fade-up" data-aos-duration="1000">
       <div class="modern-unit-card__img-wrap">
         <img src="${u.img}" alt="${u.title}" class="modern-unit-card__img" loading="lazy">
         <span class="modern-unit-card__tag">${u.tag}</span>
@@ -635,7 +635,7 @@ ${navMobileHtml}
 ${searchBoxHtml}
 
         <section class="developmentDetailsTop">
-            <div class="developmentDetailsTop__gallery">
+            <div class="developmentDetailsTop__gallery" data-aos="fade-in" data-aos-duration="1200">
                 <div class="developmentDetailsTop__gallery-img" style="background-image: url('${p.heroImage}');"></div>
                 <div class="developmentDetailsTop__gallery-topLayer">
                     <div class="developmentDetailsTop__gallery-topLayer-utilities">
@@ -726,7 +726,7 @@ ${searchBoxHtml}
             <div class="developmentDetailsContent__firstSection">
                 <h2 class="heading-20-tablet-24 text-caps">Development information</h2>
                 <section class="flex flex-col flex-tablet-row gap-tablet-4xl mt-xl">
-                    <article class="detailsTable">
+                    <article class="detailsTable" data-aos="fade-up" data-aos-duration="800">
                         <div class="detailsTable__section">
                             <section class="detailsTable__section-row">
                                 <div class="detailsTable__section-row-label">Developer</div>
@@ -738,7 +738,7 @@ ${searchBoxHtml}
                             </section>
                         </div>
                     </article>
-                    <article class="detailsTable">
+                    <article class="detailsTable" data-aos="fade-up" data-aos-duration="800">
                         <div class="detailsTable__section">
                             <section class="detailsTable__section-row">
                                 <div class="detailsTable__section-row-label">Property Type</div>
@@ -752,7 +752,7 @@ ${searchBoxHtml}
                     </article>
                 </section>
 
-                <div class="developmentDescriptionArea mt-4xl font-primary text-sm text-dark-grey-300 richContent">
+                <div class="developmentDescriptionArea" data-aos="fade-up" data-aos-duration="800" mt-4xl font-primary text-sm text-dark-grey-300 richContent">
                     <p>${p.description}</p>
                 </div>
 
@@ -769,7 +769,7 @@ ${amenitiesHtml}
 
             <div class="developmentDetailsContent__secondSection">
                 <aside class="developmentSidebar" style="position:sticky;top:90px;">
-                    <div class="qatar-consultancy-card">
+                    <div class="qatar-consultancy-card" data-aos="fade-left" data-aos-duration="1000">
                         <span class="badge-exclusive">EXCLUSIVE CONSULTANCY</span>
                         <h3 class="card-title">Speak with a Qatar Real Estate Expert</h3>
                         <p class="card-desc">
