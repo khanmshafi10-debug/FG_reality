@@ -13,7 +13,7 @@ if (carouselStart > -1) {
   }
 }
 
-// 24 Projects - GUARANTEED 100% Unique Image Assets & 100% Unique Copy
+// 24 Projects - GUARANTEED 100% Visually Unique Real Images & 100% Unique Copy
 const allProjects = [
   // SECTION 1: WATERFRONT & ISLANDS (6 CARDS)
   {
@@ -231,7 +231,7 @@ const allProjects = [
     plan: '35% Down Payment for immediate key handover, balance over 5-year post-handover plan',
     badge: 'Ready',
     badgeClass: 'ready',
-    img: '/images/developments/city-avenue/unit.jpg',
+    img: '/images/developments/all-projects/1.jpeg',
     desc: 'Ready-to-move-in luxury residences in Fox Hills with high-end designer finishes, 5-year post-handover payment plan, and immediate move-in key delivery.'
   },
 
@@ -379,7 +379,7 @@ const allProjects = [
     plan: '10% reservation, 5-year total payment plan with private pool included',
     badge: 'Off-Plan',
     badgeClass: 'offplan',
-    img: '/images/developments/flora-villas/unit_2.jpg',
+    img: '/images/developments/all-projects/2.jpeg',
     desc: 'Exclusive villa compound in New Salata featuring 5-bedroom luxury villas with maid quarters, private swimming pools, and 5-year payment plan.'
   },
   {
@@ -397,7 +397,7 @@ const allProjects = [
     plan: '10% Down Payment, 5-year payment plan with driver room & private garden',
     badge: 'Off-Plan',
     badgeClass: 'offplan',
-    img: '/images/developments/flora-villas/unit_3.jpg',
+    img: '/images/developments/all-projects/3.jpeg',
     desc: 'Premium standalone villa community in Al Muraikh offering 5-bedroom residences with private gardens, driver room, and 5-year flexible plan.'
   },
   {
@@ -433,7 +433,7 @@ const allProjects = [
     plan: '5% booking fee, flexible 6-year payment plan with handover in December 2028',
     badge: 'Off-Plan',
     badgeClass: 'offplan',
-    img: '/images/developments/valencia-residence/unit_2.jpg',
+    img: '/images/developments/all-projects/4.jpeg',
     desc: 'Premium residential tower in Al Kharaej offering 1-3 bedroom duplex apartments with double-height ceilings, 6-year payment plan, and 5% initial booking.'
   },
   {
@@ -451,7 +451,7 @@ const allProjects = [
     plan: '10% Booking fee, post-handover installment structure extending to 2031',
     badge: 'Off-Plan',
     badgeClass: 'offplan',
-    img: '/images/developments/valencia-residence/unit_1.jpg',
+    img: '/images/developments/all-projects/5.jpeg',
     desc: 'Mazaya Real Estate development in Seef Lusail featuring fully furnished smart apartments with open-plan layouts, rooftop pools, and promenade access.'
   }
 ];
