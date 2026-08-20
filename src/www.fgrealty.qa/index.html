@@ -2536,6 +2536,7 @@
      ════════════════════════════════════════════════════════════════ -->
 
 
+
 <style id="pvLightThemeProjectsCSS">
 /* ════════════════════════════════════════════════════════════════
    PRIME VIEW REAL ESTATE - ELEGANT LUXURY LIGHT THEME SHOWCASE
@@ -2768,7 +2769,6 @@
   box-shadow: 0 4px 14px rgba(197, 168, 128, 0.4);
 }
 
-/* ── Arrow Nav ── */
 .pvReelNav {
   position: absolute;
   top: 50%;
@@ -2799,11 +2799,15 @@
 .pvReelNav--prev { left: 24px; }
 .pvReelNav--next { right: 24px; }
 
-/* ── GRID LIGHT CARDS ── */
+/* ── GRID LIGHT CARDS (STRICT 3 COLUMNS FOR PERFECT BALANCED ROWS) ── */
 .pvGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
+}
+
+@media (max-width: 1024px) {
+  .pvGrid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 768px) {
@@ -3329,75 +3333,6 @@
     </div>
   
 
-    <div class="pvReelCard" onclick="openFgProjectModal('marbella')">
-      <div class="pvReelFrame">
-        <div class="pvReelNotch"></div>
-        <img src="/images/developments/milos/milos_real_6.jpg" alt="Marbella Residence" class="pvReelImg" loading="lazy">
-        <div class="pvReelOverlay"></div>
-        
-        <div class="pvReelTop">
-          <span class="pvBadge pvBadge--offplan">Off-Plan</span>
-        </div>
-
-        <div class="pvReelBody">
-          <h3 class="pvReelTitle">Marbella Residence</h3>
-          <p class="pvReelLoc">📍 Entertainment City</p>
-          <div class="pvReelSpecs">
-            <span class="pvReelType">Lifestyle Residences</span>
-            <span class="pvReelPrice">QAR 1,670,000</span>
-          </div>
-          <button type="button" class="pvReelCta">View Details →</button>
-        </div>
-      </div>
-    </div>
-  
-
-    <div class="pvReelCard" onclick="openFgProjectModal('bliss-tower')">
-      <div class="pvReelFrame">
-        <div class="pvReelNotch"></div>
-        <img src="/images/developments/milos/milos_real_8.jpg" alt="Bliss Tower Duplexes" class="pvReelImg" loading="lazy">
-        <div class="pvReelOverlay"></div>
-        
-        <div class="pvReelTop">
-          <span class="pvBadge pvBadge--offplan">Off-Plan</span>
-        </div>
-
-        <div class="pvReelBody">
-          <h3 class="pvReelTitle">Bliss Tower Duplexes</h3>
-          <p class="pvReelLoc">📍 Al Kharaej</p>
-          <div class="pvReelSpecs">
-            <span class="pvReelType">Duplex High-Rise</span>
-            <span class="pvReelPrice">QAR 1,520,000</span>
-          </div>
-          <button type="button" class="pvReelCta">View Details →</button>
-        </div>
-      </div>
-    </div>
-  
-
-    <div class="pvReelCard" onclick="openFgProjectModal('miran-tower')">
-      <div class="pvReelFrame">
-        <div class="pvReelNotch"></div>
-        <img src="/images/developments/valencia-residence/unit_1.jpg" alt="Miran Tower Smart Units" class="pvReelImg" loading="lazy">
-        <div class="pvReelOverlay"></div>
-        
-        <div class="pvReelTop">
-          <span class="pvBadge pvBadge--offplan">Off-Plan</span>
-        </div>
-
-        <div class="pvReelBody">
-          <h3 class="pvReelTitle">Miran Tower Smart Units</h3>
-          <p class="pvReelLoc">📍 Al Kharaej (Seef Lusail)</p>
-          <div class="pvReelSpecs">
-            <span class="pvReelType">Fully Furnished Smart Tower</span>
-            <span class="pvReelPrice">QAR 1,590,000</span>
-          </div>
-          <button type="button" class="pvReelCta">View Details →</button>
-        </div>
-      </div>
-    </div>
-  
-
     <div class="pvReelCard" onclick="window.location.href='/en/development/milos'">
       <div class="pvReelFrame">
         <div class="pvReelNotch"></div>
@@ -3513,6 +3448,29 @@
     </div>
   
 
+    <div class="pvReelCard" onclick="openFgProjectModal('marbella')">
+      <div class="pvReelFrame">
+        <div class="pvReelNotch"></div>
+        <img src="/images/developments/milos/milos_real_6.jpg" alt="Marbella Residence" class="pvReelImg" loading="lazy">
+        <div class="pvReelOverlay"></div>
+        
+        <div class="pvReelTop">
+          <span class="pvBadge pvBadge--offplan">Off-Plan</span>
+        </div>
+
+        <div class="pvReelBody">
+          <h3 class="pvReelTitle">Marbella Residence</h3>
+          <p class="pvReelLoc">📍 Entertainment City</p>
+          <div class="pvReelSpecs">
+            <span class="pvReelType">Lifestyle Residences</span>
+            <span class="pvReelPrice">QAR 1,670,000</span>
+          </div>
+          <button type="button" class="pvReelCta">View Details →</button>
+        </div>
+      </div>
+    </div>
+  
+
     <div class="pvReelCard" onclick="window.location.href='/en/development/flora-villas'">
       <div class="pvReelFrame">
         <div class="pvReelNotch"></div>
@@ -3604,6 +3562,52 @@
       </div>
     </div>
   
+
+    <div class="pvReelCard" onclick="openFgProjectModal('bliss-tower')">
+      <div class="pvReelFrame">
+        <div class="pvReelNotch"></div>
+        <img src="/images/developments/milos/milos_real_8.jpg" alt="Bliss Tower Duplexes" class="pvReelImg" loading="lazy">
+        <div class="pvReelOverlay"></div>
+        
+        <div class="pvReelTop">
+          <span class="pvBadge pvBadge--offplan">Off-Plan</span>
+        </div>
+
+        <div class="pvReelBody">
+          <h3 class="pvReelTitle">Bliss Tower Duplexes</h3>
+          <p class="pvReelLoc">📍 Al Kharaej</p>
+          <div class="pvReelSpecs">
+            <span class="pvReelType">Duplex High-Rise</span>
+            <span class="pvReelPrice">QAR 1,520,000</span>
+          </div>
+          <button type="button" class="pvReelCta">View Details →</button>
+        </div>
+      </div>
+    </div>
+  
+
+    <div class="pvReelCard" onclick="openFgProjectModal('miran-tower')">
+      <div class="pvReelFrame">
+        <div class="pvReelNotch"></div>
+        <img src="/images/developments/valencia-residence/unit_1.jpg" alt="Miran Tower Smart Units" class="pvReelImg" loading="lazy">
+        <div class="pvReelOverlay"></div>
+        
+        <div class="pvReelTop">
+          <span class="pvBadge pvBadge--offplan">Off-Plan</span>
+        </div>
+
+        <div class="pvReelBody">
+          <h3 class="pvReelTitle">Miran Tower Smart Units</h3>
+          <p class="pvReelLoc">📍 Al Kharaej (Seef Lusail)</p>
+          <div class="pvReelSpecs">
+            <span class="pvReelType">Fully Furnished Smart Tower</span>
+            <span class="pvReelPrice">QAR 1,590,000</span>
+          </div>
+          <button type="button" class="pvReelCta">View Details →</button>
+        </div>
+      </div>
+    </div>
+  
     </div>
 
     <button type="button" class="pvReelNav pvReelNav--next" onclick="scrollReelsTrack(1)" aria-label="Next Project">
@@ -3613,7 +3617,7 @@
 </section>
 
 <!-- ════════════════════════════════════════════════════════════════
-     SECTION 1: 🌊 SIGNATURE WATERFRONT & ISLAND ESTATES
+     SECTION 1: 🌊 SIGNATURE WATERFRONT & ISLAND ESTATES (6 CARDS)
      ════════════════════════════════════════════════════════════════ -->
 <section class="pvSecLight pvSecLight--white" id="waterfront-estates">
   <div class="pvContainer">
@@ -3843,14 +3847,14 @@
 </section>
 
 <!-- ════════════════════════════════════════════════════════════════
-     SECTION 2: 🏙️ LUSAIL CITY MASTERPIECE COLLECTION
+     SECTION 2: 🏙️ LUSAIL CITY MASTERPIECE COLLECTION (6 CARDS)
      ════════════════════════════════════════════════════════════════ -->
 <section class="pvSecLight pvSecLight--cream" id="lusail-masterpieces">
   <div class="pvContainer">
     <div class="pvSecHeader">
       <span class="pvPill">
         <span class="pvPillDot"></span>
-        Al Erkyah, Fox Hills & Seef Lusail (9 Projects)
+        Al Erkyah, Fox Hills & Seef Lusail (6 Projects)
       </span>
       <h2 class="pvSecTitle">🏙️ Lusail City Masterpiece Collection</h2>
       <p class="pvSecSub">
@@ -4068,124 +4072,19 @@
       </div>
     </article>
   
-
-    <article class="pvLightCard">
-      <div class="pvLightCard__media">
-        <img src="/images/developments/milos/milos_real_6.jpg" alt="Marbella Residence" class="pvLightCard__img" loading="lazy">
-        <div class="pvLightCard__overlay"></div>
-        <div class="pvLightCard__top">
-          <span class="pvBadge pvBadge--offplan">Off-Plan</span>
-        </div>
-        <div class="pvLightCard__location">
-          <svg width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M6 0C2.68629 0 0 2.68629 0 6C0 10.5 6 14 6 14C6 14 12 10.5 12 6C12 2.68629 9.31371 0 6 0ZM6 8.5C4.61929 8.5 3.5 7.38071 3.5 6C3.5 4.61929 4.61929 3.5 6 3.5C7.38071 3.5 8.5 4.61929 8.5 6C8.5 7.38071 7.38071 8.5 6 8.5Z" fill="#c5a880"/></svg>
-          <span>Entertainment City, Lusail</span>
-        </div>
-      </div>
-      <div class="pvLightCard__content">
-        <h3 class="pvLightCard__title">Marbella Residence</h3>
-        <p class="pvLightCard__sub">Lifestyle Residences</p>
-        <p class="pvLightCard__desc">Modern residential tower in Lusail Entertainment City offering 1-3 bedroom units with maid rooms, 7-year payment plan, and proximity to theme parks & boulevard.</p>
-        
-        <div class="pvLightCard__specs">
-          <div class="pvSpec"><span class="pvSpec__label">BEDROOMS</span><span class="pvSpec__val">1 - 3 Bedrooms</span></div>
-          <div class="pvSpec"><span class="pvSpec__label">HANDOVER</span><span class="pvSpec__val">Q3 2027</span></div>
-          <div class="pvSpec"><span class="pvSpec__label">DOWN PAYMENT</span><span class="pvSpec__val">10% Down Payment</span></div>
-          <div class="pvSpec pvSpec--price"><span class="pvSpec__label">STARTING FROM</span><span class="pvSpec__val">QAR 1,670,000</span></div>
-        </div>
-
-        <div class="pvLightCard__actions">
-          <button type="button" class="pvLightBtn pvLightBtn--modal" onclick="openFgProjectModal('marbella')"><span>Quick Details</span><svg width="14" height="12" viewBox="0 0 14 12" fill="none"><path d="M8 1L13 6M13 6L8 11M13 6H1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-          <a href="https://wa.me/97460005054?text=Hello%20Prime%20View%20Real%20Estate%2C%20I%20am%20interested%20in%20inquiring%20about%20Marbella%20Residence%20(Entertainment%20City)" target="_blank" rel="noopener" class="pvLightBtn pvLightBtn--wa" aria-label="Inquire via WhatsApp">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.099 4.019 4.027-1.056z"/></svg>
-            <span>Inquire</span>
-          </a>
-        </div>
-      </div>
-    </article>
-  
-
-    <article class="pvLightCard">
-      <div class="pvLightCard__media">
-        <img src="/images/developments/milos/milos_real_8.jpg" alt="Bliss Tower Duplexes" class="pvLightCard__img" loading="lazy">
-        <div class="pvLightCard__overlay"></div>
-        <div class="pvLightCard__top">
-          <span class="pvBadge pvBadge--offplan">Off-Plan</span>
-        </div>
-        <div class="pvLightCard__location">
-          <svg width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M6 0C2.68629 0 0 2.68629 0 6C0 10.5 6 14 6 14C6 14 12 10.5 12 6C12 2.68629 9.31371 0 6 0ZM6 8.5C4.61929 8.5 3.5 7.38071 3.5 6C3.5 4.61929 4.61929 3.5 6 3.5C7.38071 3.5 8.5 4.61929 8.5 6C8.5 7.38071 7.38071 8.5 6 8.5Z" fill="#c5a880"/></svg>
-          <span>Al Kharaej, Lusail</span>
-        </div>
-      </div>
-      <div class="pvLightCard__content">
-        <h3 class="pvLightCard__title">Bliss Tower Duplexes</h3>
-        <p class="pvLightCard__sub">Duplex High-Rise</p>
-        <p class="pvLightCard__desc">Premium residential tower in Al Kharaej offering 1-3 bedroom duplex apartments with double-height ceilings, 6-year payment plan, and 5% initial booking.</p>
-        
-        <div class="pvLightCard__specs">
-          <div class="pvSpec"><span class="pvSpec__label">BEDROOMS</span><span class="pvSpec__val">1 - 3 BR Duplex</span></div>
-          <div class="pvSpec"><span class="pvSpec__label">HANDOVER</span><span class="pvSpec__val">December 2028</span></div>
-          <div class="pvSpec"><span class="pvSpec__label">DOWN PAYMENT</span><span class="pvSpec__val">5% Down Payment</span></div>
-          <div class="pvSpec pvSpec--price"><span class="pvSpec__label">STARTING FROM</span><span class="pvSpec__val">QAR 1,520,000</span></div>
-        </div>
-
-        <div class="pvLightCard__actions">
-          <button type="button" class="pvLightBtn pvLightBtn--modal" onclick="openFgProjectModal('bliss-tower')"><span>Quick Details</span><svg width="14" height="12" viewBox="0 0 14 12" fill="none"><path d="M8 1L13 6M13 6L8 11M13 6H1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-          <a href="https://wa.me/97460005054?text=Hello%20Prime%20View%20Real%20Estate%2C%20I%20am%20interested%20in%20inquiring%20about%20Bliss%20Tower%20Duplexes%20(Al%20Kharaej)" target="_blank" rel="noopener" class="pvLightBtn pvLightBtn--wa" aria-label="Inquire via WhatsApp">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.099 4.019 4.027-1.056z"/></svg>
-            <span>Inquire</span>
-          </a>
-        </div>
-      </div>
-    </article>
-  
-
-    <article class="pvLightCard">
-      <div class="pvLightCard__media">
-        <img src="/images/developments/valencia-residence/unit_1.jpg" alt="Miran Tower Smart Units" class="pvLightCard__img" loading="lazy">
-        <div class="pvLightCard__overlay"></div>
-        <div class="pvLightCard__top">
-          <span class="pvBadge pvBadge--offplan">Off-Plan</span>
-        </div>
-        <div class="pvLightCard__location">
-          <svg width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M6 0C2.68629 0 0 2.68629 0 6C0 10.5 6 14 6 14C6 14 12 10.5 12 6C12 2.68629 9.31371 0 6 0ZM6 8.5C4.61929 8.5 3.5 7.38071 3.5 6C3.5 4.61929 4.61929 3.5 6 3.5C7.38071 3.5 8.5 4.61929 8.5 6C8.5 7.38071 7.38071 8.5 6 8.5Z" fill="#c5a880"/></svg>
-          <span>Al Kharaej (Seef Lusail), Lusail</span>
-        </div>
-      </div>
-      <div class="pvLightCard__content">
-        <h3 class="pvLightCard__title">Miran Tower Smart Units</h3>
-        <p class="pvLightCard__sub">Fully Furnished Smart Tower</p>
-        <p class="pvLightCard__desc">Mazaya Real Estate development in Seef Lusail featuring fully furnished smart apartments with open-plan layouts, rooftop pools, and promenade access.</p>
-        
-        <div class="pvLightCard__specs">
-          <div class="pvSpec"><span class="pvSpec__label">BEDROOMS</span><span class="pvSpec__val">2 Bedrooms</span></div>
-          <div class="pvSpec"><span class="pvSpec__label">HANDOVER</span><span class="pvSpec__val">March 2028</span></div>
-          <div class="pvSpec"><span class="pvSpec__label">DOWN PAYMENT</span><span class="pvSpec__val">10% Down Payment</span></div>
-          <div class="pvSpec pvSpec--price"><span class="pvSpec__label">STARTING FROM</span><span class="pvSpec__val">QAR 1,590,000</span></div>
-        </div>
-
-        <div class="pvLightCard__actions">
-          <button type="button" class="pvLightBtn pvLightBtn--modal" onclick="openFgProjectModal('miran-tower')"><span>Quick Details</span><svg width="14" height="12" viewBox="0 0 14 12" fill="none"><path d="M8 1L13 6M13 6L8 11M13 6H1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-          <a href="https://wa.me/97460005054?text=Hello%20Prime%20View%20Real%20Estate%2C%20I%20am%20interested%20in%20inquiring%20about%20Miran%20Tower%20Smart%20Units%20(Al%20Kharaej%20(Seef%20Lusail))" target="_blank" rel="noopener" class="pvLightBtn pvLightBtn--wa" aria-label="Inquire via WhatsApp">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.099 4.019 4.027-1.056z"/></svg>
-            <span>Inquire</span>
-          </a>
-        </div>
-      </div>
-    </article>
-  
     </div>
   </div>
 </section>
 
 <!-- ════════════════════════════════════════════════════════════════
-     SECTION 3: 💎 THE PEARL ISLAND COLLECTION
+     SECTION 3: 💎 THE PEARL ISLAND COLLECTION (6 CARDS)
      ════════════════════════════════════════════════════════════════ -->
 <section class="pvSecLight pvSecLight--white" id="pearl-island-collection">
   <div class="pvContainer">
     <div class="pvSecHeader">
       <span class="pvPill">
         <span class="pvPillDot"></span>
-        Floresta Gardens & Crown Jewels (5 Projects)
+        Floresta Gardens & Crown Jewels (6 Projects)
       </span>
       <h2 class="pvSecTitle">💎 The Pearl Island Collection</h2>
       <p class="pvSecSub">
@@ -4368,19 +4267,54 @@
       </div>
     </article>
   
+
+    <article class="pvLightCard">
+      <div class="pvLightCard__media">
+        <img src="/images/developments/milos/milos_real_6.jpg" alt="Marbella Residence" class="pvLightCard__img" loading="lazy">
+        <div class="pvLightCard__overlay"></div>
+        <div class="pvLightCard__top">
+          <span class="pvBadge pvBadge--offplan">Off-Plan</span>
+        </div>
+        <div class="pvLightCard__location">
+          <svg width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M6 0C2.68629 0 0 2.68629 0 6C0 10.5 6 14 6 14C6 14 12 10.5 12 6C12 2.68629 9.31371 0 6 0ZM6 8.5C4.61929 8.5 3.5 7.38071 3.5 6C3.5 4.61929 4.61929 3.5 6 3.5C7.38071 3.5 8.5 4.61929 8.5 6C8.5 7.38071 7.38071 8.5 6 8.5Z" fill="#c5a880"/></svg>
+          <span>Entertainment City, Lusail</span>
+        </div>
+      </div>
+      <div class="pvLightCard__content">
+        <h3 class="pvLightCard__title">Marbella Residence</h3>
+        <p class="pvLightCard__sub">Lifestyle Residences</p>
+        <p class="pvLightCard__desc">Modern residential tower in Lusail Entertainment City offering 1-3 bedroom units with maid rooms, 7-year payment plan, and proximity to theme parks & boulevard.</p>
+        
+        <div class="pvLightCard__specs">
+          <div class="pvSpec"><span class="pvSpec__label">BEDROOMS</span><span class="pvSpec__val">1 - 3 Bedrooms</span></div>
+          <div class="pvSpec"><span class="pvSpec__label">HANDOVER</span><span class="pvSpec__val">Q3 2027</span></div>
+          <div class="pvSpec"><span class="pvSpec__label">DOWN PAYMENT</span><span class="pvSpec__val">10% Down Payment</span></div>
+          <div class="pvSpec pvSpec--price"><span class="pvSpec__label">STARTING FROM</span><span class="pvSpec__val">QAR 1,670,000</span></div>
+        </div>
+
+        <div class="pvLightCard__actions">
+          <button type="button" class="pvLightBtn pvLightBtn--modal" onclick="openFgProjectModal('marbella')"><span>Quick Details</span><svg width="14" height="12" viewBox="0 0 14 12" fill="none"><path d="M8 1L13 6M13 6L8 11M13 6H1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <a href="https://wa.me/97460005054?text=Hello%20Prime%20View%20Real%20Estate%2C%20I%20am%20interested%20in%20inquiring%20about%20Marbella%20Residence%20(Entertainment%20City)" target="_blank" rel="noopener" class="pvLightBtn pvLightBtn--wa" aria-label="Inquire via WhatsApp">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.099 4.019 4.027-1.056z"/></svg>
+            <span>Inquire</span>
+          </a>
+        </div>
+      </div>
+    </article>
+  
     </div>
   </div>
 </section>
 
 <!-- ════════════════════════════════════════════════════════════════
-     SECTION 4: 🏡 PRIVATE VILLA ESTATES & RETREATS
+     SECTION 4: 🏡 PRIVATE VILLA ESTATES & RETREATS (6 CARDS)
      ════════════════════════════════════════════════════════════════ -->
 <section class="pvSecLight pvSecLight--pearl" id="private-villa-estates">
   <div class="pvContainer">
     <div class="pvSecHeader">
       <span class="pvPill">
         <span class="pvPillDot"></span>
-        Standalone Compounds & Beach Chalets (4 Projects)
+        Standalone Compounds & Beach Chalets (6 Projects)
       </span>
       <h2 class="pvSecTitle">🏡 Private Villa Estates & Retreats</h2>
       <p class="pvSecSub">
@@ -4521,6 +4455,76 @@
         <div class="pvLightCard__actions">
           <button type="button" class="pvLightBtn pvLightBtn--modal" onclick="openFgProjectModal('voya-residence')"><span>Quick Details</span><svg width="14" height="12" viewBox="0 0 14 12" fill="none"><path d="M8 1L13 6M13 6L8 11M13 6H1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
           <a href="https://wa.me/97460005054?text=Hello%20Prime%20View%20Real%20Estate%2C%20I%20am%20interested%20in%20inquiring%20about%20Voya%20Waterfront%20Chalets%20(Al%20Kharaej%20(Seef%20Lusail))" target="_blank" rel="noopener" class="pvLightBtn pvLightBtn--wa" aria-label="Inquire via WhatsApp">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.099 4.019 4.027-1.056z"/></svg>
+            <span>Inquire</span>
+          </a>
+        </div>
+      </div>
+    </article>
+  
+
+    <article class="pvLightCard">
+      <div class="pvLightCard__media">
+        <img src="/images/developments/milos/milos_real_8.jpg" alt="Bliss Tower Duplexes" class="pvLightCard__img" loading="lazy">
+        <div class="pvLightCard__overlay"></div>
+        <div class="pvLightCard__top">
+          <span class="pvBadge pvBadge--offplan">Off-Plan</span>
+        </div>
+        <div class="pvLightCard__location">
+          <svg width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M6 0C2.68629 0 0 2.68629 0 6C0 10.5 6 14 6 14C6 14 12 10.5 12 6C12 2.68629 9.31371 0 6 0ZM6 8.5C4.61929 8.5 3.5 7.38071 3.5 6C3.5 4.61929 4.61929 3.5 6 3.5C7.38071 3.5 8.5 4.61929 8.5 6C8.5 7.38071 7.38071 8.5 6 8.5Z" fill="#c5a880"/></svg>
+          <span>Al Kharaej, Lusail</span>
+        </div>
+      </div>
+      <div class="pvLightCard__content">
+        <h3 class="pvLightCard__title">Bliss Tower Duplexes</h3>
+        <p class="pvLightCard__sub">Duplex High-Rise</p>
+        <p class="pvLightCard__desc">Premium residential tower in Al Kharaej offering 1-3 bedroom duplex apartments with double-height ceilings, 6-year payment plan, and 5% initial booking.</p>
+        
+        <div class="pvLightCard__specs">
+          <div class="pvSpec"><span class="pvSpec__label">BEDROOMS</span><span class="pvSpec__val">1 - 3 BR Duplex</span></div>
+          <div class="pvSpec"><span class="pvSpec__label">HANDOVER</span><span class="pvSpec__val">December 2028</span></div>
+          <div class="pvSpec"><span class="pvSpec__label">DOWN PAYMENT</span><span class="pvSpec__val">5% Down Payment</span></div>
+          <div class="pvSpec pvSpec--price"><span class="pvSpec__label">STARTING FROM</span><span class="pvSpec__val">QAR 1,520,000</span></div>
+        </div>
+
+        <div class="pvLightCard__actions">
+          <button type="button" class="pvLightBtn pvLightBtn--modal" onclick="openFgProjectModal('bliss-tower')"><span>Quick Details</span><svg width="14" height="12" viewBox="0 0 14 12" fill="none"><path d="M8 1L13 6M13 6L8 11M13 6H1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <a href="https://wa.me/97460005054?text=Hello%20Prime%20View%20Real%20Estate%2C%20I%20am%20interested%20in%20inquiring%20about%20Bliss%20Tower%20Duplexes%20(Al%20Kharaej)" target="_blank" rel="noopener" class="pvLightBtn pvLightBtn--wa" aria-label="Inquire via WhatsApp">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.099 4.019 4.027-1.056z"/></svg>
+            <span>Inquire</span>
+          </a>
+        </div>
+      </div>
+    </article>
+  
+
+    <article class="pvLightCard">
+      <div class="pvLightCard__media">
+        <img src="/images/developments/valencia-residence/unit_1.jpg" alt="Miran Tower Smart Units" class="pvLightCard__img" loading="lazy">
+        <div class="pvLightCard__overlay"></div>
+        <div class="pvLightCard__top">
+          <span class="pvBadge pvBadge--offplan">Off-Plan</span>
+        </div>
+        <div class="pvLightCard__location">
+          <svg width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M6 0C2.68629 0 0 2.68629 0 6C0 10.5 6 14 6 14C6 14 12 10.5 12 6C12 2.68629 9.31371 0 6 0ZM6 8.5C4.61929 8.5 3.5 7.38071 3.5 6C3.5 4.61929 4.61929 3.5 6 3.5C7.38071 3.5 8.5 4.61929 8.5 6C8.5 7.38071 7.38071 8.5 6 8.5Z" fill="#c5a880"/></svg>
+          <span>Al Kharaej (Seef Lusail), Lusail</span>
+        </div>
+      </div>
+      <div class="pvLightCard__content">
+        <h3 class="pvLightCard__title">Miran Tower Smart Units</h3>
+        <p class="pvLightCard__sub">Fully Furnished Smart Tower</p>
+        <p class="pvLightCard__desc">Mazaya Real Estate development in Seef Lusail featuring fully furnished smart apartments with open-plan layouts, rooftop pools, and promenade access.</p>
+        
+        <div class="pvLightCard__specs">
+          <div class="pvSpec"><span class="pvSpec__label">BEDROOMS</span><span class="pvSpec__val">2 Bedrooms</span></div>
+          <div class="pvSpec"><span class="pvSpec__label">HANDOVER</span><span class="pvSpec__val">March 2028</span></div>
+          <div class="pvSpec"><span class="pvSpec__label">DOWN PAYMENT</span><span class="pvSpec__val">10% Down Payment</span></div>
+          <div class="pvSpec pvSpec--price"><span class="pvSpec__label">STARTING FROM</span><span class="pvSpec__val">QAR 1,590,000</span></div>
+        </div>
+
+        <div class="pvLightCard__actions">
+          <button type="button" class="pvLightBtn pvLightBtn--modal" onclick="openFgProjectModal('miran-tower')"><span>Quick Details</span><svg width="14" height="12" viewBox="0 0 14 12" fill="none"><path d="M8 1L13 6M13 6L8 11M13 6H1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <a href="https://wa.me/97460005054?text=Hello%20Prime%20View%20Real%20Estate%2C%20I%20am%20interested%20in%20inquiring%20about%20Miran%20Tower%20Smart%20Units%20(Al%20Kharaej%20(Seef%20Lusail))" target="_blank" rel="noopener" class="pvLightBtn pvLightBtn--wa" aria-label="Inquire via WhatsApp">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.099 4.019 4.027-1.056z"/></svg>
             <span>Inquire</span>
           </a>
