@@ -5962,40 +5962,6 @@ if (!window.__contentAccordionInit) {
                     <img src="/images/footer/footer-logo.svg?v=5" alt="Prime View Real Estate" width="220" height="44" style="height: 44px; width: auto; max-width: 220px; display: block;" loading="lazy" decoding="async" />
                 </div>
                 <span class="text-grey-600 text-sm font-primary">Founded in Doha, Qatar, FGREALTY (Find Great Realty W.L.L.) is a licensed real estate brokerage built on a technology-driven approach to luxury property services. The company combines advanced digital platforms, data-powered insights, and a client-focused advisory model to connect international investors, landlords, and developers with premium real estate opportunities across Qatar and beyond.</span>
-                <div class="footerTrustRow">
-                    <div class="footerTrustRow__awards">
-                        <picture>
-                            <source srcset="/images/footer/footer-awards@2x.avif" type="image/avif" />
-                            <img
-                                src="/images/footer/footer-awards@2x.png"
-                                alt="Arabian Property Awards — Best Real Estate Agency Website Qatar 2022-2023"
-                                width="300"
-                                height="43"
-                                loading="lazy"
-                                decoding="async" />
-                        </picture>
-                    </div>
-                    <a
-                        href="https://www.google.com/maps/place/FGREALTY+-+Qatar+Real+Estate/@25.3243557,51.5357731,991m/data=!3m1!1e3!4m16!1m9!3m8!1s0x3e45c5e16aaf61d1:0x81bde2d744ded59c!2sFGREALTY+-+Qatar+Real+Estate!8m2!3d25.3243557!4d51.5357731!9m1!1b1!16s%2Fg%2F11gr2j7dy5!3m5!1s0x3e45c5e16aaf61d1:0x81bde2d744ded59c!8m2!3d25.3243557!4d51.5357731!16s%2Fg%2F11gr2j7dy5?hl=en-QA&amp;entry=ttu&amp;g_ep=EgoyMDI2MDUzMS4wIKXMDSoASAFQAw%3D%3D"
-                        class="footerMapsRow"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="Read FGREALTY reviews on Google"
-                    >
-                        <span class="footerMapsRow__label">Rating on Google</span>
-                        <div class="footerMapsRow__rating">
-                            <span class="footerMapsRow__rating-value">4.8</span>
-                            <div class="footerMapsRow__rating-stars" aria-hidden="true">
-                                                                    <span class="fRatingStar"></span>
-                                                                    <span class="fRatingStar"></span>
-                                                                    <span class="fRatingStar"></span>
-                                                                    <span class="fRatingStar"></span>
-                                                                    <span class="fRatingStar"></span>
-                                                            </div>
-                            <span class="footerMapsRow__rating-count">(335)</span>
-                        </div>
-                    </a>
-                </div>
             </div>
             <div class="footer__row2-right footerLinkColumns">
                 <div class="footerLinkColumns__left flex flex-col gap-lg">
@@ -6094,8 +6060,6 @@ if (!window.__contentAccordionInit) {
                 <a href="/en/privacy-policy" class="text-xs text-grey-50 text-decoration-none">Privacy Policy</a>
                 <div class="separator"></div>
                 <a href="/en/terms-and-conditions" class="text-xs text-grey-50 text-decoration-none">Terms and Conditions</a>
-                <div class="separator"></div>
-                <a href="/en/cookie-policy" class="text-xs text-grey-50 text-decoration-none">Use of Cookies</a>
             </div>
         </div>
     </footer>

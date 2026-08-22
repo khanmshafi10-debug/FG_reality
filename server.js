@@ -81,7 +81,9 @@ function serveFileFromDiskOrCache(req, res, filePath) {
     const mimeType = MIME_TYPES[ext] || 'application/octet-stream';
     const isHtml = ext === '.html';
     const isSvg = ext === '.svg';
-    const isNoCacheAsset = isHtml || isSvg || filePath.includes('\\video\\') || filePath.includes('/video/') || filePath.includes('\\hero\\') || filePath.includes('/hero/');
+    const isCss = ext === '.css';
+    const isJs = ext === '.js';
+    const isNoCacheAsset = isHtml || isSvg || isCss || isJs || ext === '.ico' || filePath.includes('favicon') || filePath.includes('\\video\\') || filePath.includes('/video/') || filePath.includes('\\hero\\') || filePath.includes('/hero/');
 
     const cacheKey = filePath;
     if (!isNoCacheAsset && fileCache.has(cacheKey)) {
@@ -140,8 +142,42 @@ const server = http.createServer((req, res) => {
 
     if (reqPath === '/' || reqPath === '') reqPath = '/index.html';
 
-    // Redirect account, international, learn (resources), and agent routes to home
-    if (reqPath === '/en/developments' || reqPath === '/en/developments.html' || reqPath === '/developments' || reqPath.startsWith('/account') || reqPath.startsWith('/en/international') || reqPath.startsWith('/learn') || reqPath.startsWith('/en/find-agent') || reqPath.startsWith('/en/careers') || reqPath.startsWith('/find-agent') || reqPath.startsWith('/careers')) {
+    // Direct clean route rewrites
+    if (reqPath === '/en/privacy-policy' || reqPath === '/privacy-policy') {
+        const p = path.join(PUBLIC_DIR, 'en', 'privacy-policy.html');
+        if (fs.existsSync(p)) return serveFileFromDiskOrCache(req, res, p);
+    }
+    if (reqPath === '/en/terms-and-conditions' || reqPath === '/terms-and-conditions') {
+        const p = path.join(PUBLIC_DIR, 'en', 'terms-and-conditions.html');
+        if (fs.existsSync(p)) return serveFileFromDiskOrCache(req, res, p);
+    }
+    if (reqPath === '/en/developments' || reqPath === '/developments') {
+        const p = path.join(PUBLIC_DIR, 'en', 'developments.html');
+        if (fs.existsSync(p)) return serveFileFromDiskOrCache(req, res, p);
+    }
+    if (reqPath === '/en/areas' || reqPath === '/areas') {
+        const p = path.join(PUBLIC_DIR, 'en', 'areas.html');
+        if (fs.existsSync(p)) return serveFileFromDiskOrCache(req, res, p);
+    }
+    if (reqPath === '/en/about' || reqPath === '/about') {
+        const p = path.join(PUBLIC_DIR, 'en', 'about.html');
+        if (fs.existsSync(p)) return serveFileFromDiskOrCache(req, res, p);
+    }
+    if (reqPath === '/en/contact' || reqPath === '/contact') {
+        const p = path.join(PUBLIC_DIR, 'en', 'contact.html');
+        if (fs.existsSync(p)) return serveFileFromDiskOrCache(req, res, p);
+    }
+
+    // Cookie policy, legacy buy/rent listings, and old portals redirect
+    if (reqPath.startsWith('/en/cookie-policy') || reqPath.startsWith('/cookie-policy')) {
+        res.writeHead(302, { 'Location': '/en/privacy-policy.html' });
+        return res.end();
+    }
+    if (reqPath.startsWith('/en/buy') || reqPath.startsWith('/en/rent') || reqPath.startsWith('/buy') || reqPath.startsWith('/rent')) {
+        res.writeHead(302, { 'Location': '/en/developments.html' });
+        return res.end();
+    }
+    if (reqPath.startsWith('/account') || reqPath.startsWith('/en/international') || reqPath.startsWith('/learn') || reqPath.startsWith('/en/find-agent') || reqPath.startsWith('/en/careers') || reqPath.startsWith('/find-agent') || reqPath.startsWith('/careers')) {
         res.writeHead(302, { 'Location': '/' });
         return res.end();
     }
@@ -179,10 +215,15 @@ const server = http.createServer((req, res) => {
         return serveFileFromDiskOrCache(req, res, filePath);
     }
 
-    // 4. Live Auto-Caching Proxy Fallback
-    const targetUrl = 'https://www.fgrealty.qa' + reqPath;
-    console.log(`[FAST PROXY FETCH] ${reqPath} -> ${targetUrl}`);
+    // 4. If an HTML page / page route is not found, redirect to home - never proxy HTML routes
+    const isHtmlRoute = !hasExt || reqPath.endsWith('.html');
+    if (isHtmlRoute) {
+        res.writeHead(302, { 'Location': '/' });
+        return res.end();
+    }
 
+    // 5. Fallback auto-caching for missing static assets (images, fonts, media only)
+    const targetUrl = 'https://www.fgrealty.qa' + reqPath;
     https.get(targetUrl, { headers: { 'User-Agent': 'Mozilla/5.0' } }, (proxyRes) => {
         if (proxyRes.statusCode === 200) {
             const chunks = [];
@@ -190,9 +231,7 @@ const server = http.createServer((req, res) => {
             proxyRes.on('end', () => {
                 try {
                     const buffer = Buffer.concat(chunks);
-                    let savePath = (!hasExt && (proxyRes.headers['content-type'] || '').includes('text/html')) ? filePath + '.html' : filePath;
-                    
-                    // Prevent writing if savePath is an existing directory
+                    let savePath = filePath;
                     if (fs.existsSync(savePath) && fs.statSync(savePath).isDirectory()) {
                         savePath = path.join(savePath, 'index.html');
                     }
@@ -206,10 +245,9 @@ const server = http.createServer((req, res) => {
                         if (err) console.error(`[SAVE ERROR] Failed to save ${savePath}:`, err.message);
                     });
 
-                    const mimeType = proxyRes.headers['content-type'] || 'text/html; charset=utf-8';
+                    const mimeType = proxyRes.headers['content-type'] || 'application/octet-stream';
                     sendResponse(req, res, 200, { 'Content-Type': mimeType }, buffer);
                 } catch(e) {
-                    console.error('[RESPONSE ERROR]:', e.message);
                     res.writeHead(500, { 'Content-Type': 'text/plain' });
                     res.end(`Internal Server Error: ${e.message}`);
                 }
@@ -219,7 +257,6 @@ const server = http.createServer((req, res) => {
             res.end(`404 Not Found (${proxyRes.statusCode})`);
         }
     }).on('error', (proxyErr) => {
-        console.error('[PROXY ERROR]:', proxyErr.message);
         res.writeHead(500, { 'Content-Type': 'text/plain' });
         res.end(`Fetch error: ${proxyErr.message}`);
     });
@@ -234,5 +271,5 @@ process.on('unhandledRejection', (reason, promise) => {
 });
 
 server.listen(PORT, () => {
-    console.log(`⚡ FGREALTY High-Performance Local Server running at: http://localhost:${PORT}/`);
+    console.log(`⚡ Prime View Real Estate High-Performance Server running at: http://localhost:${PORT}/`);
 });

@@ -123,63 +123,6 @@ img, picture, video, canvas, svg {
   gap: 20px;
 }
 @media (min-width: 768px) {
-  .modern-listings-grid {
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 24px;
-  }
-}
-
-/* ======================================================== */
-/* ULTRA-PREMIUM GLASSMORPHISM NAVBAR & MEGA-MENU STYLING */
-/* ======================================================== */
-
-/* Top Header Bars across ALL pages (Home, Search, Rent, Buy, Developments, Projects) */
-.hero__content-top,
-.searchPageMenuWrapper,
-.listingPageMenuWrapper,
-.contentWrapper--regularPage > .listingPageMenuWrapper {
-  position: relative !important;
-  z-index: 1000 !important;
-  width: 100% !important;
-  background: #08080b !important;
-  background: linear-gradient(180deg, #0a0a0f 0%, #0d0d14 100%) !important;
-  border-bottom: 1px solid rgba(201, 168, 76, 0.28) !important;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45) !important;
-  padding: 12px 4% !important;
-  box-sizing: border-box !important;
-}
-
-.navigationMobile,
-.navigationMobile--colorInverted,
-.navigationMobile--regularPage {
-  background: rgba(18, 18, 24, 0.88) !important;
-  backdrop-filter: blur(25px) saturate(180%) !important;
-  -webkit-backdrop-filter: blur(25px) saturate(180%) !important;
-  border: 1px solid rgba(201, 168, 76, 0.35) !important;
-  border-radius: 40px !important;
-  padding: 8px 24px !important;
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-  transition: all 0.35s ease !important;
-  max-width: 1380px !important;
-  margin: 0 auto !important;
-  width: 100% !important;
-  box-sizing: border-box !important;
-}
-
-.navigationMobile:hover {
-  border-color: rgba(201, 168, 76, 0.55) !important;
-  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.65), 0 0 22px rgba(201, 168, 76, 0.22) !important;
-}
-
-/* Logos Visibility */
-.navigationMobile__left-desktopLogo {
-  display: flex !important;
-  align-items: center !important;
-}
-
 .navigationMobile__left-desktopLogo img,
 .navigationMobile__left-mobileLogo img {
   height: 44px !important;
@@ -271,47 +214,7 @@ img, picture, video, canvas, svg {
   transform: rotate(180deg) !important;
 }
 
-/* Glassmorphism Mega Menus */
-.navMegaMenu.devMegaMenuCustom {
-  position: absolute !important;
-  top: calc(100% + 14px) !important;
-  background: rgba(14, 14, 20, 0.97) !important;
-  backdrop-filter: blur(25px) saturate(200%) !important;
-  -webkit-backdrop-filter: blur(25px) saturate(200%) !important;
-  border: 1px solid rgba(201, 168, 76, 0.35) !important;
-  border-radius: 16px !important;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.75), 0 0 25px rgba(201, 168, 76, 0.15) !important;
-  padding: 24px 22px !important;
-  z-index: 9999 !important;
-}
 
-.navMegaMenu__column-heading {
-  color: #e7cf8a !important;
-  font-weight: 700 !important;
-  font-size: 0.72rem !important;
-  letter-spacing: 1.5px !important;
-  text-transform: uppercase !important;
-  border-bottom: 1.5px solid rgba(201, 168, 76, 0.35) !important;
-  padding-bottom: 6px !important;
-  margin-bottom: 12px !important;
-  display: block !important;
-}
-
-.navMegaMenu__column-link {
-  color: rgba(255, 255, 255, 0.85) !important;
-  font-size: 0.85rem !important;
-  font-weight: 500 !important;
-  text-decoration: none !important;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
-  display: inline-block !important;
-  padding: 3px 0 !important;
-}
-
-.navMegaMenu__column-link:hover {
-  color: #c9a84c !important;
-  transform: translateX(5px) !important;
-  text-shadow: 0 0 10px rgba(201, 168, 76, 0.4) !important;
-}
 
 /* Mobile Drawer Glassmorphism */
 .mobileMenu__drawer {
@@ -335,3 +238,657 @@ img, picture, video, canvas, svg {
   background: rgba(201, 168, 76, 0.12) !important;
 }
 
+
+/* ==========================================================================
+   1. HOMEPAGE HERO NAVBAR (Original Clean Transparent Floating Layout)
+   ========================================================================== */
+.hero__content-top {
+  padding: 1.5rem 0 !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  position: relative !important;
+  z-index: 1000 !important;
+  width: 100% !important;
+}
+
+.hero__content-top .navigationMobile {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  padding: 0 !important;
+  max-width: 100% !important;
+  width: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  height: auto !important;
+}
+
+.hero__content-top .navigationMobile:hover {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.hero__content-top .navigationMobile__left-desktopLogo a,
+.hero__content-top .navigationMobile__left-mobileLogo a,
+.hero__content-top .brand-logo-badge,
+.hero__content-top .navbar-logo-badge {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+.hero__content-top .navigationMobile__left-desktopLogo img,
+.hero__content-top .navigationMobile__left-mobileLogo img {
+  height: 48px !important;
+  width: auto !important;
+  max-width: 260px !important;
+  display: block !important;
+  object-fit: contain !important;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4)) !important;
+}
+
+.hero__content-top .headerNavLinks {
+  display: flex !important;
+  align-items: center !important;
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  gap: 12px !important;
+}
+
+.hero__content-top .headerNavLink > a {
+  color: #ffffff !important;
+  font-size: 0.88rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.5px !important;
+  text-transform: uppercase !important;
+  padding: 6px 12px !important;
+  border-radius: 6px !important;
+  background: transparent !important;
+  border: none !important;
+  transition: all 0.2s ease !important;
+  text-decoration: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+}
+
+.hero__content-top .headerNavLink > a:hover,
+.hero__content-top .headerNavLink.headerNavLink--active > a {
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.15) !important;
+}
+
+.hero__content-top .headerNavLinks .chevron {
+  color: #ffffff !important;
+  fill: #ffffff !important;
+  stroke: #ffffff !important;
+}
+
+.hero__content-top .navigationMobile__left-hamburger {
+  display: none !important;
+  color: #ffffff !important;
+  background: none !important;
+  border: none !important;
+  cursor: pointer !important;
+}
+.hero__content-top .navigationMobile__left-hamburger svg {
+  fill: #ffffff !important;
+  color: #ffffff !important;
+}
+
+@media (max-width: 992px) {
+  .hero__content-top .navigationMobile__left-hamburger {
+    display: flex !important;
+  }
+  .hero__content-top .navigationMobile__left-desktopLogo {
+    display: none !important;
+  }
+  .hero__content-top .headerNavLinks {
+    display: none !important;
+  }
+}
+
+/* ==========================================================================
+   2. REGULAR PAGES LIGHT THEME NAVBAR & HIGH-CONTRAST LOGO BADGE
+   ========================================================================== */
+.listingPageMenuWrapper,
+.listingPageMenuWrapper--withDivider {
+  background: rgba(255, 255, 255, 0.96) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border-bottom: 1px solid rgba(228, 224, 216, 0.9) !important;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04) !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 999 !important;
+  padding: 8px 0 !important;
+}
+
+.listingPageMenuWrapper .navigationMobile,
+.listingPageMenuWrapper .navigationMobile--colorInverted,
+.listingPageMenuWrapper .navigationMobile--regularPage {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  max-width: 1400px !important;
+  margin: 0 auto !important;
+  padding: 0 24px !important;
+  height: 60px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+/* Dark Luxury Badge ONLY on regular light theme pages & project detail pages */
+.listingPageMenuWrapper .navigationMobile__left-desktopLogo a,
+.listingPageMenuWrapper .navigationMobile__left-mobileLogo a,
+.project-top-nav__logo,
+.brand-logo-badge-light {
+  display: inline-flex !important;
+  align-items: center !important;
+  background: #0e0d11 !important;
+  padding: 6px 16px !important;
+  border-radius: 10px !important;
+  border: 1px solid rgba(201, 168, 76, 0.45) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.14) !important;
+  transition: all 0.25s ease !important;
+  text-decoration: none !important;
+}
+
+.listingPageMenuWrapper .navigationMobile__left-desktopLogo a:hover,
+.listingPageMenuWrapper .navigationMobile__left-mobileLogo a:hover,
+.project-top-nav__logo:hover,
+.brand-logo-badge-light:hover {
+  border-color: #c9a84c !important;
+  box-shadow: 0 4px 20px rgba(201, 168, 76, 0.3) !important;
+  transform: translateY(-1px) !important;
+}
+
+.listingPageMenuWrapper .navigationMobile__left-desktopLogo img,
+.listingPageMenuWrapper .navigationMobile__left-mobileLogo img,
+.project-top-nav__logo img {
+  height: 38px !important;
+  width: auto !important;
+  max-width: 220px !important;
+  display: block !important;
+  object-fit: contain !important;
+  filter: none !important;
+}
+
+.listingPageMenuWrapper .headerNavLinks {
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.listingPageMenuWrapper .headerNavLinks .headerNavLink > a {
+  color: #1c1a16 !important;
+  font-size: 0.88rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.3px !important;
+  padding: 8px 14px !important;
+  border-radius: 8px !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+}
+
+.listingPageMenuWrapper .headerNavLinks .headerNavLink > a:hover,
+.listingPageMenuWrapper .headerNavLinks .headerNavLink.headerNavLink--active > a {
+  color: #b8902a !important;
+  background: rgba(184, 144, 42, 0.08) !important;
+}
+
+.listingPageMenuWrapper .headerNavLinks .chevron {
+  color: #1c1a16 !important;
+  fill: #1c1a16 !important;
+  stroke: #1c1a16 !important;
+}
+
+.listingPageMenuWrapper .navigationMobile__left-hamburger {
+  color: #1c1a16 !important;
+  background: none !important;
+  border: none !important;
+}
+.listingPageMenuWrapper .navigationMobile__left-hamburger svg {
+  fill: #1c1a16 !important;
+  color: #1c1a16 !important;
+}
+
+
+
+
+/* ==========================================================================
+   HOMEPAGE TRANSPARENT FLOATING NAVBAR (NO DARK BACKGROUND)
+   ========================================================================== */
+.hero__content-top {
+  padding: 1.5rem 2rem !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  position: relative !important;
+  z-index: 1000 !important;
+  width: 100% !important;
+  max-width: 100rem !important;
+  margin: 0 auto !important;
+  box-sizing: border-box !important;
+}
+
+.hero__content-top .navigationMobile {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  padding: 0 !important;
+  max-width: 100% !important;
+  width: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  height: auto !important;
+}
+
+.hero__content-top .navigationMobile:hover {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.hero__content-top .navigationMobile__left-desktopLogo,
+.hero__content-top .navigationMobile__left-desktopLogo a,
+.hero__content-top .navigationMobile__left-desktopLogo span,
+.hero__content-top .navigationMobile__left-mobileLogo,
+.hero__content-top .navigationMobile__left-mobileLogo a,
+.hero__content-top .brand-logo-badge,
+.hero__content-top .navbar-logo-badge {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  text-decoration: none !important;
+  transform: none !important;
+}
+
+.hero__content-top .navigationMobile__left-desktopLogo img {
+  height: 48px !important;
+  width: auto !important;
+  max-width: 260px !important;
+  display: block !important;
+  object-fit: contain !important;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.45)) !important;
+}
+
+.hero__content-top .navigationMobile__left-mobileLogo img {
+  height: 38px !important;
+  width: auto !important;
+  max-width: 200px !important;
+  display: block !important;
+  object-fit: contain !important;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.45)) !important;
+}
+
+.hero__content-top .headerNavLinks {
+  display: flex !important;
+  align-items: center !important;
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  gap: 2rem !important;
+}
+
+.hero__content-top .headerNavLink {
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+}
+
+.hero__content-top .headerNavLink > a {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  color: #ffffff !important;
+  font-size: 0.92rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.8px !important;
+  text-transform: uppercase !important;
+  padding: 8px 4px !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  transition: color 0.2s ease, text-shadow 0.2s ease !important;
+  text-decoration: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6) !important;
+  white-space: nowrap !important;
+}
+
+.hero__content-top .headerNavLink > a:hover,
+.hero__content-top .headerNavLink:hover > a {
+  color: #e8cf8a !important;
+  text-shadow: 0 0 12px rgba(232, 207, 138, 0.6) !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.hero__content-top .headerNavLinks .chevron {
+  color: rgba(255, 255, 255, 0.85) !important;
+  fill: rgba(255, 255, 255, 0.85) !important;
+  stroke: rgba(255, 255, 255, 0.85) !important;
+  transition: transform 0.25s ease, color 0.25s ease !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.hero__content-top .headerNavLink:hover .chevron {
+  transform: rotate(180deg) !important;
+  color: #e8cf8a !important;
+  fill: #e8cf8a !important;
+  stroke: #e8cf8a !important;
+}
+
+.hero__content-top .navigationMobile__left-hamburger {
+  display: none !important;
+  color: #ffffff !important;
+  background: none !important;
+  border: none !important;
+  cursor: pointer !important;
+}
+.hero__content-top .navigationMobile__left-hamburger svg {
+  fill: #ffffff !important;
+  color: #ffffff !important;
+}
+
+@media (max-width: 992px) {
+  .hero__content-top .navigationMobile__left-hamburger {
+    display: flex !important;
+  }
+  .hero__content-top .navigationMobile__left-desktopLogo {
+    display: none !important;
+  }
+  .hero__content-top .navigationMobile__left-mobileLogo {
+    display: flex !important;
+  }
+  .hero__content-top .headerNavLinks {
+    display: none !important;
+  }
+}
+
+
+/* Dropdown inner links - crisp black text for visibility on white background */
+.hero__content-top .navMegaMenu a,
+.hero__content-top .devMegaMenuCustom a,
+.hero__content-top .navMegaMenu__column-link,
+.hero__content-top .headerNavLinks .navMegaMenu a,
+.hero__content-top .headerNavLinks .devMegaMenuCustom a,
+.hero__content-top .headerNavLinks .navMegaMenu__column-link,
+.navMegaMenu a,
+.devMegaMenuCustom a,
+.navMegaMenu__column-link,
+a.navMegaMenu__column-link {
+  color: #000000 !important;
+}
+
+.hero__content-top .navMegaMenu a:hover,
+.hero__content-top .devMegaMenuCustom a:hover,
+.hero__content-top .navMegaMenu__column-link:hover,
+.hero__content-top .headerNavLinks .navMegaMenu a:hover,
+.hero__content-top .headerNavLinks .devMegaMenuCustom a:hover,
+.hero__content-top .headerNavLinks .navMegaMenu__column-link:hover,
+.navMegaMenu a:hover,
+.devMegaMenuCustom a:hover,
+.navMegaMenu__column-link:hover,
+a.navMegaMenu__column-link:hover {
+  color: #c9a84c !important;
+}
+
+
+/* ==========================================================================
+   HOMEPAGE FINAL LUXURY PILL NAVBAR & NO BLACK SHADE ON SIDES
+   ========================================================================== */
+
+/* 1. Remove black dark shade band from hero splash top so sides are clean */
+.hero__splash:before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0.75) 100%) !important;
+  z-index: 2 !important;
+  pointer-events: none !important;
+}
+
+/* 2. Top container is fully transparent with no background shade */
+.hero__content {
+  background: transparent !important;
+}
+
+.hero__content-top,
+header.hero__content-top {
+  padding: 22px 24px 0 24px !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  position: relative !important;
+  z-index: 1000 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  box-sizing: border-box !important;
+}
+
+/* 3. The floating luxury capsule pill itself */
+.hero__content-top .navigationMobile {
+  background: rgba(14, 13, 17, 0.8) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(201, 168, 76, 0.45) !important;
+  border-radius: 9999px !important;
+  padding: 8px 32px 8px 24px !important;
+  max-width: 1340px !important;
+  width: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.32), 0 0 15px rgba(201, 168, 76, 0.08) !important;
+  box-sizing: border-box !important;
+  height: 64px !important;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.hero__content-top .navigationMobile:hover {
+  border-color: rgba(201, 168, 76, 0.7) !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.45), 0 0 20px rgba(201, 168, 76, 0.15) !important;
+}
+
+.hero__content-top .navigationMobile__left {
+  display: flex !important;
+  align-items: center !important;
+  gap: 1.25rem !important;
+}
+
+.hero__content-top .navigationMobile__left-desktopLogo,
+.hero__content-top .navigationMobile__left-desktopLogo a,
+.hero__content-top .navigationMobile__left-desktopLogo span,
+.hero__content-top .navigationMobile__left-mobileLogo,
+.hero__content-top .navigationMobile__left-mobileLogo a,
+.hero__content-top .brand-logo-badge,
+.hero__content-top .navbar-logo-badge {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  text-decoration: none !important;
+  transform: none !important;
+}
+
+.hero__content-top .navigationMobile__left-desktopLogo img {
+  height: 40px !important;
+  width: auto !important;
+  max-width: 240px !important;
+  display: block !important;
+  object-fit: contain !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.25)) !important;
+}
+
+.hero__content-top .navigationMobile__left-mobileLogo img {
+  height: 34px !important;
+  width: auto !important;
+  max-width: 180px !important;
+  display: block !important;
+  object-fit: contain !important;
+}
+
+.hero__content-top .navigationMobile__right {
+  display: flex !important;
+  align-items: center !important;
+}
+
+.hero__content-top .headerNavLinks {
+  display: flex !important;
+  align-items: center !important;
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  gap: 1.8rem !important;
+}
+
+.hero__content-top .headerNavLink {
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+}
+
+.hero__content-top .headerNavLink > a {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  color: #ffffff !important;
+  font-size: 0.88rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.8px !important;
+  text-transform: uppercase !important;
+  padding: 6px 2px !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  transition: color 0.2s ease, text-shadow 0.2s ease !important;
+  text-decoration: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  white-space: nowrap !important;
+}
+
+.hero__content-top .headerNavLink > a:hover,
+.hero__content-top .headerNavLink:hover > a {
+  color: #e8cf8a !important;
+  text-shadow: 0 0 10px rgba(232, 207, 138, 0.6) !important;
+}
+
+.hero__content-top .headerNavLinks .chevron {
+  color: rgba(255, 255, 255, 0.75) !important;
+  fill: rgba(255, 255, 255, 0.75) !important;
+  stroke: rgba(255, 255, 255, 0.75) !important;
+  transition: transform 0.25s ease, color 0.25s ease !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.hero__content-top .headerNavLink:hover .chevron {
+  transform: rotate(180deg) !important;
+  color: #e8cf8a !important;
+  fill: #e8cf8a !important;
+  stroke: #e8cf8a !important;
+}
+
+.hero__content-top .navigationMobile__left-hamburger {
+  display: none !important;
+  color: #ffffff !important;
+  background: none !important;
+  border: none !important;
+  cursor: pointer !important;
+}
+
+.hero__content-top .navigationMobile__left-hamburger svg {
+  fill: #ffffff !important;
+  color: #ffffff !important;
+}
+
+@media (max-width: 992px) {
+  .hero__content-top {
+    padding: 14px 16px 0 16px !important;
+  }
+  .hero__content-top .navigationMobile {
+    height: 54px !important;
+    padding: 6px 18px !important;
+  }
+  .hero__content-top .navigationMobile__left-hamburger {
+    display: flex !important;
+  }
+  .hero__content-top .navigationMobile__left-desktopLogo {
+    display: none !important;
+  }
+  .hero__content-top .navigationMobile__left-mobileLogo {
+    display: flex !important;
+  }
+  .hero__content-top .headerNavLinks {
+    display: none !important;
+  }
+}
+
+/* 4. Dropdown menus positioning & styling */
+.hero__content-top .navMegaMenu,
+.hero__content-top .devMegaMenuCustom {
+  top: calc(100% + 14px) !important;
+}
+
+/* 5. Dropdown inner link font colors: solid black for clear visibility on white card */
+.hero__content-top .navMegaMenu a,
+.hero__content-top .devMegaMenuCustom a,
+.hero__content-top .navMegaMenu__column-link,
+.hero__content-top .headerNavLinks .navMegaMenu a,
+.hero__content-top .headerNavLinks .devMegaMenuCustom a,
+.hero__content-top .headerNavLinks .navMegaMenu__column-link,
+.navMegaMenu a,
+.devMegaMenuCustom a,
+.navMegaMenu__column-link,
+a.navMegaMenu__column-link {
+  color: #000000 !important;
+}
+
+.hero__content-top .navMegaMenu a:hover,
+.hero__content-top .devMegaMenuCustom a:hover,
+.hero__content-top .navMegaMenu__column-link:hover,
+.hero__content-top .headerNavLinks .navMegaMenu a:hover,
+.hero__content-top .headerNavLinks .devMegaMenuCustom a:hover,
+.hero__content-top .headerNavLinks .navMegaMenu__column-link:hover,
+.navMegaMenu a:hover,
+.devMegaMenuCustom a:hover,
+.navMegaMenu__column-link:hover,
+a.navMegaMenu__column-link:hover {
+  color: #c9a84c !important;
+}

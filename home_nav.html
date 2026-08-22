@@ -1,0 +1,509 @@
+<header class="hero__content-top">
+    <!-- Main Navigation Bar -->
+    <nav class="navigationMobile">
+        <!-- Left Section: Mobile Hamburger & Logos -->
+        <section class="navigationMobile__left">
+            <button class="navigationMobile__left-hamburger" aria-label="Open menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><use href="#svgIcon-menu"/></svg>
+            </button>
+            <div class="navigationMobile__left-mobileLogo">
+                <a href="/" aria-label="Prime View Real Estate Home" class="flex align-center">
+                    <img src="/images/prime-view-logo.png" alt="Prime View Real Estate" style="height: 38px; width: auto; max-width: 200px; display: block;">
+                </a>
+            </div>
+            <div class="navigationMobile__left-desktopLogo">
+                <span>
+                    <img src="/images/prime-view-logo.png" alt="Prime View Real Estate" style="height: 48px; width: auto; max-width: 260px; display: block; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));">
+                </span>
+            </div>
+        </section>
+        <!-- Right Section: Desktop Navigation & Mega Menus -->
+        <section class="navigationMobile__right">
+            <ul class="headerNavLinks" role="menubar">
+                <!-- 1. Rent Menu with Mega Menu -->
+                <li class="headerNavLink headerNavLink--withSubmenu" role="none" data-menu-item="0">
+                    <a href="/en/rent/properties-for-rent" role="menuitem" aria-haspopup="true" aria-expanded="false">Rent</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><use href="#svgIcon-chevron-down-menu"/></svg>
+                    <div class="navMegaMenu devMegaMenuCustom" role="menu" aria-label="Rent submenu" data-submenu="0" style="width: 820px; max-width: calc(100vw - 32px); left: 0; transform: none; background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-radius: 14px; box-shadow: 0 20px 50px rgba(0,0,0,0.18), 0 0 20px rgba(201,168,76,0.12); border: 1px solid rgba(201,168,76,0.3); padding: 24px 22px; box-sizing: border-box;">
+                        <div class="navMegaMenu__body" style="display: flex; gap: 20px; width: 100%; box-sizing: border-box; justify-content: space-between;">
+                            <div class="navMegaMenu__column" style="flex: 1; min-width: 170px;">
+                                <span class="navMegaMenu__column-heading" style="color: #c9a84c; font-weight: 700; font-size: 0.72rem; letter-spacing: 1.2px; text-transform: uppercase; border-bottom: 1.5px solid rgba(201,168,76,0.35); padding-bottom: 6px; margin-bottom: 12px; display: block;">LUXURY RENTAL VILLAS</span>
+                                <ul class="navMegaMenu__column-list" style="list-style: none; padding: 0; margin: 0;">
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/flora-villas.html" class="navMegaMenu__column-link" role="menuitem">Flora Villas</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/skala-villas.html" class="navMegaMenu__column-link" role="menuitem">Skala Villas</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/via-doro.html" class="navMegaMenu__column-link" role="menuitem">Via D'Oro Villas</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/bliss-gardens.html" class="navMegaMenu__column-link" role="menuitem">Bliss Gardens (New Salata)</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/bliss-gardens-2.html" class="navMegaMenu__column-link" role="menuitem">Bliss Gardens (Al Muraikh)</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/coralia-villas.html" class="navMegaMenu__column-link" role="menuitem">Coralia Villas</a></li>
+                                </ul>
+                            </div>
+                            <div class="navMegaMenu__column" style="flex: 1; min-width: 170px;">
+                                <span class="navMegaMenu__column-heading" style="color: #c9a84c; font-weight: 700; font-size: 0.72rem; letter-spacing: 1.2px; text-transform: uppercase; border-bottom: 1.5px solid rgba(201,168,76,0.35); padding-bottom: 6px; margin-bottom: 12px; display: block;">WATERFRONT RENTALS</span>
+                                <ul class="navMegaMenu__column-list" style="list-style: none; padding: 0; margin: 0;">
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/milos.html" class="navMegaMenu__column-link" role="menuitem">Milos Residence</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/canal-bay.html" class="navMegaMenu__column-link" role="menuitem">Canal Bay</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/carlton-house.html" class="navMegaMenu__column-link" role="menuitem">Carlton House</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/skala-tower.html" class="navMegaMenu__column-link" role="menuitem">Skala Tower</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/la-mer-tower.html" class="navMegaMenu__column-link" role="menuitem">La Mer Tower</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/voya-residence.html" class="navMegaMenu__column-link" role="menuitem">Voya Waterfront</a></li>
+                                </ul>
+                            </div>
+                            <div class="navMegaMenu__column" style="flex: 1; min-width: 170px;">
+                                <span class="navMegaMenu__column-heading" style="color: #c9a84c; font-weight: 700; font-size: 0.72rem; letter-spacing: 1.2px; text-transform: uppercase; border-bottom: 1.5px solid rgba(201,168,76,0.35); padding-bottom: 6px; margin-bottom: 12px; display: block;">LUSAIL URBAN LIVING</span>
+                                <ul class="navMegaMenu__column-list" style="list-style: none; padding: 0; margin: 0;">
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/city-avenue.html" class="navMegaMenu__column-link" role="menuitem">City Avenue</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/rivan.html" class="navMegaMenu__column-link" role="menuitem">Rivan Tower</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/elite-residence.html" class="navMegaMenu__column-link" role="menuitem">Elite Residence</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/boulevard-residence.html" class="navMegaMenu__column-link" role="menuitem">Boulevard Residence</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/orjuwan.html" class="navMegaMenu__column-link" role="menuitem">Orjuwan Tower</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/bliss-residences.html" class="navMegaMenu__column-link" role="menuitem">Bliss Residences</a></li>
+                                </ul>
+                            </div>
+                            <div class="navMegaMenu__column" style="flex: 1; min-width: 170px;">
+                                <span class="navMegaMenu__column-heading" style="color: #c9a84c; font-weight: 700; font-size: 0.72rem; letter-spacing: 1.2px; text-transform: uppercase; border-bottom: 1.5px solid rgba(201,168,76,0.35); padding-bottom: 6px; margin-bottom: 12px; display: block;">PEARL & EXECUTIVE SUITES</span>
+                                <ul class="navMegaMenu__column-list" style="list-style: none; padding: 0; margin: 0;">
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/floresta-105.html" class="navMegaMenu__column-link" role="menuitem">Floresta 105</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/al-mayyas.html" class="navMegaMenu__column-link" role="menuitem">Al Mayyas Tower</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/corallia.html" class="navMegaMenu__column-link" role="menuitem">Corallia Lease-to-Own</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/marbella.html" class="navMegaMenu__column-link" role="menuitem">Marbella Residence</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/bliss-tower.html" class="navMegaMenu__column-link" role="menuitem">Bliss Tower</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/miran-tower.html" class="navMegaMenu__column-link" role="menuitem">Miran Tower</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!-- 2. Buy Menu with Mega Menu -->
+                <li class="headerNavLink headerNavLink--withSubmenu" role="none" data-menu-item="1">
+                    <a href="/en/buy/properties-for-sale" role="menuitem" aria-haspopup="true" aria-expanded="false">Buy</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><use href="#svgIcon-chevron-down-menu"/></svg>
+                    <div class="navMegaMenu devMegaMenuCustom" role="menu" aria-label="Buy submenu" data-submenu="1" style="width: 820px; max-width: calc(100vw - 32px); left: 50%; transform: translateX(-40%); background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-radius: 14px; box-shadow: 0 20px 50px rgba(0,0,0,0.18), 0 0 20px rgba(201,168,76,0.12); border: 1px solid rgba(201,168,76,0.3); padding: 24px 22px; box-sizing: border-box;">
+                        <div class="navMegaMenu__body" style="display: flex; gap: 20px; width: 100%; box-sizing: border-box; justify-content: space-between;">
+                            <div class="navMegaMenu__column" style="flex: 1; min-width: 170px;">
+                                <span class="navMegaMenu__column-heading" style="color: #c9a84c; font-weight: 700; font-size: 0.72rem; letter-spacing: 1.2px; text-transform: uppercase; border-bottom: 1.5px solid rgba(201,168,76,0.35); padding-bottom: 6px; margin-bottom: 12px; display: block;">PRIME INVESTMENT TOWERS</span>
+                                <ul class="navMegaMenu__column-list" style="list-style: none; padding: 0; margin: 0;">
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/rivan.html" class="navMegaMenu__column-link" role="menuitem">Rivan Tower</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/city-avenue.html" class="navMegaMenu__column-link" role="menuitem">City Avenue</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/orjuwan.html" class="navMegaMenu__column-link" role="menuitem">Orjuwan Tower</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/elite-residence.html" class="navMegaMenu__column-link" role="menuitem">Elite Residence</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/boulevard-residence.html" class="navMegaMenu__column-link" role="menuitem">Boulevard Residence</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/bliss-residences.html" class="navMegaMenu__column-link" role="menuitem">Bliss Residences</a></li>
+                                </ul>
+                            </div>
+                            <div class="navMegaMenu__column" style="flex: 1; min-width: 170px;">
+                                <span class="navMegaMenu__column-heading" style="color: #c9a84c; font-weight: 700; font-size: 0.72rem; letter-spacing: 1.2px; text-transform: uppercase; border-bottom: 1.5px solid rgba(201,168,76,0.35); padding-bottom: 6px; margin-bottom: 12px; display: block;">THE PEARL & ISLAND HOMES</span>
+                                <ul class="navMegaMenu__column-list" style="list-style: none; padding: 0; margin: 0;">
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/al-mayyas.html" class="navMegaMenu__column-link" role="menuitem">Al Mayyas Tower</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/milos.html" class="navMegaMenu__column-link" role="menuitem">Milos Residence</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/coralia-villas.html" class="navMegaMenu__column-link" role="menuitem">Coralia Villas</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/floresta-105.html" class="navMegaMenu__column-link" role="menuitem">Floresta 105</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/corallia.html" class="navMegaMenu__column-link" role="menuitem">Corallia Lease-to-Own</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/marbella.html" class="navMegaMenu__column-link" role="menuitem">Marbella Residence</a></li>
+                                </ul>
+                            </div>
+                            <div class="navMegaMenu__column" style="flex: 1; min-width: 170px;">
+                                <span class="navMegaMenu__column-heading" style="color: #c9a84c; font-weight: 700; font-size: 0.72rem; letter-spacing: 1.2px; text-transform: uppercase; border-bottom: 1.5px solid rgba(201,168,76,0.35); padding-bottom: 6px; margin-bottom: 12px; display: block;">EXCLUSIVE FREEHOLD VILLAS</span>
+                                <ul class="navMegaMenu__column-list" style="list-style: none; padding: 0; margin: 0;">
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/bliss-gardens.html" class="navMegaMenu__column-link" role="menuitem">Bliss Gardens (New Salata)</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/bliss-gardens-2.html" class="navMegaMenu__column-link" role="menuitem">Bliss Gardens (Al Muraikh)</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/flora-villas.html" class="navMegaMenu__column-link" role="menuitem">Flora Villas</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/via-doro.html" class="navMegaMenu__column-link" role="menuitem">Via D'Oro Villas</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/skala-villas.html" class="navMegaMenu__column-link" role="menuitem">Skala Villas</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/voya-residence.html" class="navMegaMenu__column-link" role="menuitem">Voya Waterfront</a></li>
+                                </ul>
+                            </div>
+                            <div class="navMegaMenu__column" style="flex: 1; min-width: 170px;">
+                                <span class="navMegaMenu__column-heading" style="color: #c9a84c; font-weight: 700; font-size: 0.72rem; letter-spacing: 1.2px; text-transform: uppercase; border-bottom: 1.5px solid rgba(201,168,76,0.35); padding-bottom: 6px; margin-bottom: 12px; display: block;">COASTAL & BEACHFRONT ASSETS</span>
+                                <ul class="navMegaMenu__column-list" style="list-style: none; padding: 0; margin: 0;">
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/skala-tower.html" class="navMegaMenu__column-link" role="menuitem">Skala Tower</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/la-mer-tower.html" class="navMegaMenu__column-link" role="menuitem">La Mer Tower</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/canal-bay.html" class="navMegaMenu__column-link" role="menuitem">Canal Bay</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/carlton-house.html" class="navMegaMenu__column-link" role="menuitem">Carlton House</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/bliss-tower.html" class="navMegaMenu__column-link" role="menuitem">Bliss Tower</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/miran-tower.html" class="navMegaMenu__column-link" role="menuitem">Miran Tower</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!-- 3. Commercial Menu with Mega Menu -->
+                <li class="headerNavLink headerNavLink--withSubmenu" role="none" data-menu-item="2">
+                    <a href="/en/development/carlton-house.html" role="menuitem" aria-haspopup="true" aria-expanded="false">Commercial</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><use href="#svgIcon-chevron-down-menu"/></svg>
+                    <div class="navMegaMenu devMegaMenuCustom" role="menu" aria-label="Commercial submenu" data-submenu="2" style="width: 820px; max-width: calc(100vw - 32px); right: 0; left: auto; transform: none; background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-radius: 14px; box-shadow: 0 20px 50px rgba(0,0,0,0.18), 0 0 20px rgba(201,168,76,0.12); border: 1px solid rgba(201,168,76,0.3); padding: 24px 22px; box-sizing: border-box;">
+                        <div class="navMegaMenu__body" style="display: flex; gap: 20px; width: 100%; box-sizing: border-box; justify-content: space-between;">
+                            <div class="navMegaMenu__column" style="flex: 1; min-width: 170px;">
+                                <span class="navMegaMenu__column-heading" style="color: #c9a84c; font-weight: 700; font-size: 0.72rem; letter-spacing: 1.2px; text-transform: uppercase; border-bottom: 1.5px solid rgba(201,168,76,0.35); padding-bottom: 6px; margin-bottom: 12px; display: block;">CORPORATE HIGH-RISES</span>
+                                <ul class="navMegaMenu__column-list" style="list-style: none; padding: 0; margin: 0;">
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/carlton-house.html" class="navMegaMenu__column-link" role="menuitem">Carlton House</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/skala-tower.html" class="navMegaMenu__column-link" role="menuitem">Skala Tower</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/rivan.html" class="navMegaMenu__column-link" role="menuitem">Rivan Tower</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/orjuwan.html" class="navMegaMenu__column-link" role="menuitem">Orjuwan Tower</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/la-mer-tower.html" class="navMegaMenu__column-link" role="menuitem">La Mer Tower</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/miran-tower.html" class="navMegaMenu__column-link" role="menuitem">Miran Tower</a></li>
+                                </ul>
+                            </div>
+                            <div class="navMegaMenu__column" style="flex: 1; min-width: 170px;">
+                                <span class="navMegaMenu__column-heading" style="color: #c9a84c; font-weight: 700; font-size: 0.72rem; letter-spacing: 1.2px; text-transform: uppercase; border-bottom: 1.5px solid rgba(201,168,76,0.35); padding-bottom: 6px; margin-bottom: 12px; display: block;">COMMERCIAL WATERFRONT</span>
+                                <ul class="navMegaMenu__column-list" style="list-style: none; padding: 0; margin: 0;">
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/canal-bay.html" class="navMegaMenu__column-link" role="menuitem">Canal Bay</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/via-doro.html" class="navMegaMenu__column-link" role="menuitem">Via D'Oro Villas</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/voya-residence.html" class="navMegaMenu__column-link" role="menuitem">Voya Waterfront</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/skala-villas.html" class="navMegaMenu__column-link" role="menuitem">Skala Villas</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/milos.html" class="navMegaMenu__column-link" role="menuitem">Milos Residence</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/bliss-tower.html" class="navMegaMenu__column-link" role="menuitem">Bliss Tower</a></li>
+                                </ul>
+                            </div>
+                            <div class="navMegaMenu__column" style="flex: 1; min-width: 170px;">
+                                <span class="navMegaMenu__column-heading" style="color: #c9a84c; font-weight: 700; font-size: 0.72rem; letter-spacing: 1.2px; text-transform: uppercase; border-bottom: 1.5px solid rgba(201,168,76,0.35); padding-bottom: 6px; margin-bottom: 12px; display: block;">MIXED-USE & RETAIL TRACTS</span>
+                                <ul class="navMegaMenu__column-list" style="list-style: none; padding: 0; margin: 0;">
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/city-avenue.html" class="navMegaMenu__column-link" role="menuitem">City Avenue</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/boulevard-residence.html" class="navMegaMenu__column-link" role="menuitem">Boulevard Residence</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/elite-residence.html" class="navMegaMenu__column-link" role="menuitem">Elite Residence</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/bliss-residences.html" class="navMegaMenu__column-link" role="menuitem">Bliss Residences</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/marbella.html" class="navMegaMenu__column-link" role="menuitem">Marbella Residence</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/floresta-105.html" class="navMegaMenu__column-link" role="menuitem">Floresta 105</a></li>
+                                </ul>
+                            </div>
+                            <div class="navMegaMenu__column" style="flex: 1; min-width: 170px;">
+                                <span class="navMegaMenu__column-heading" style="color: #c9a84c; font-weight: 700; font-size: 0.72rem; letter-spacing: 1.2px; text-transform: uppercase; border-bottom: 1.5px solid rgba(201,168,76,0.35); padding-bottom: 6px; margin-bottom: 12px; display: block;">EXECUTIVE HEADQUARTERS & ESTATES</span>
+                                <ul class="navMegaMenu__column-list" style="list-style: none; padding: 0; margin: 0;">
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/coralia-villas.html" class="navMegaMenu__column-link" role="menuitem">Coralia Villas</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/flora-villas.html" class="navMegaMenu__column-link" role="menuitem">Flora Villas</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/bliss-gardens.html" class="navMegaMenu__column-link" role="menuitem">Bliss Gardens (New Salata)</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/bliss-gardens-2.html" class="navMegaMenu__column-link" role="menuitem">Bliss Gardens (Al Muraikh)</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/al-mayyas.html" class="navMegaMenu__column-link" role="menuitem">Al Mayyas Tower</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/corallia.html" class="navMegaMenu__column-link" role="menuitem">Corallia Lease-to-Own</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!-- 4. Developments Menu with 24 Projects Mega Menu -->
+                <li class="headerNavLink headerNavLink--withSubmenu" role="none" data-menu-item="3">
+                    <a href="/en/developments.html" role="menuitem" aria-haspopup="true" aria-expanded="false">Developments</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><use href="#svgIcon-chevron-down-menu"/></svg>
+                    <div class="navMegaMenu devMegaMenuCustom" role="menu" aria-label="Developments submenu" data-submenu="3" style="width: 820px; max-width: calc(100vw - 32px); right: 0; left: auto; transform: none; background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-radius: 14px; box-shadow: 0 20px 50px rgba(0,0,0,0.18), 0 0 20px rgba(201,168,76,0.12); border: 1px solid rgba(201,168,76,0.3); padding: 24px 22px; box-sizing: border-box;">
+                        <div class="navMegaMenu__body" style="display: flex; gap: 20px; width: 100%; box-sizing: border-box; justify-content: space-between;">
+                            <div class="navMegaMenu__column" style="flex: 1; min-width: 170px;">
+                                <span class="navMegaMenu__column-heading" style="color: #c9a84c; font-weight: 700; font-size: 0.72rem; letter-spacing: 1.2px; text-transform: uppercase; border-bottom: 1.5px solid rgba(201,168,76,0.35); padding-bottom: 6px; margin-bottom: 12px; display: block;">WATERFRONT ESTATES</span>
+                                <ul class="navMegaMenu__column-list" style="list-style: none; padding: 0; margin: 0;">
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/skala-villas.html" class="navMegaMenu__column-link" role="menuitem">Skala Villas</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/via-doro.html" class="navMegaMenu__column-link" role="menuitem">Via D'Oro Villas</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/carlton-house.html" class="navMegaMenu__column-link" role="menuitem">Carlton House</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/canal-bay.html" class="navMegaMenu__column-link" role="menuitem">Canal Bay</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/skala-tower.html" class="navMegaMenu__column-link" role="menuitem">Skala Tower</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/la-mer-tower.html" class="navMegaMenu__column-link" role="menuitem">La Mer Tower</a></li>
+                                </ul>
+                            </div>
+                            <div class="navMegaMenu__column" style="flex: 1; min-width: 170px;">
+                                <span class="navMegaMenu__column-heading" style="color: #c9a84c; font-weight: 700; font-size: 0.72rem; letter-spacing: 1.2px; text-transform: uppercase; border-bottom: 1.5px solid rgba(201,168,76,0.35); padding-bottom: 6px; margin-bottom: 12px; display: block;">LUSAIL CITY HEIGHTS</span>
+                                <ul class="navMegaMenu__column-list" style="list-style: none; padding: 0; margin: 0;">
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/city-avenue.html" class="navMegaMenu__column-link" role="menuitem">City Avenue</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/rivan.html" class="navMegaMenu__column-link" role="menuitem">Rivan Tower</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/elite-residence.html" class="navMegaMenu__column-link" role="menuitem">Elite Residence</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/boulevard-residence.html" class="navMegaMenu__column-link" role="menuitem">Boulevard Residence</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/orjuwan.html" class="navMegaMenu__column-link" role="menuitem">Orjuwan Tower</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/bliss-residences.html" class="navMegaMenu__column-link" role="menuitem">Bliss Residences</a></li>
+                                </ul>
+                            </div>
+                            <div class="navMegaMenu__column" style="flex: 1; min-width: 170px;">
+                                <span class="navMegaMenu__column-heading" style="color: #c9a84c; font-weight: 700; font-size: 0.72rem; letter-spacing: 1.2px; text-transform: uppercase; border-bottom: 1.5px solid rgba(201,168,76,0.35); padding-bottom: 6px; margin-bottom: 12px; display: block;">THE PEARL ISLAND</span>
+                                <ul class="navMegaMenu__column-list" style="list-style: none; padding: 0; margin: 0;">
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/milos.html" class="navMegaMenu__column-link" role="menuitem">Milos Residence</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/floresta-105.html" class="navMegaMenu__column-link" role="menuitem">Floresta 105</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/al-mayyas.html" class="navMegaMenu__column-link" role="menuitem">Al Mayyas Tower</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/coralia-villas.html" class="navMegaMenu__column-link" role="menuitem">Coralia Villas</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/corallia.html" class="navMegaMenu__column-link" role="menuitem">Corallia Lease-to-Own</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/marbella.html" class="navMegaMenu__column-link" role="menuitem">Marbella Residence</a></li>
+                                </ul>
+                            </div>
+                            <div class="navMegaMenu__column" style="flex: 1; min-width: 170px;">
+                                <span class="navMegaMenu__column-heading" style="color: #c9a84c; font-weight: 700; font-size: 0.72rem; letter-spacing: 1.2px; text-transform: uppercase; border-bottom: 1.5px solid rgba(201,168,76,0.35); padding-bottom: 6px; margin-bottom: 12px; display: block;">VILLA ESTATES</span>
+                                <ul class="navMegaMenu__column-list" style="list-style: none; padding: 0; margin: 0;">
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/flora-villas.html" class="navMegaMenu__column-link" role="menuitem">Flora Villas</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/bliss-gardens.html" class="navMegaMenu__column-link" role="menuitem">Bliss Gardens (New Salata)</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/bliss-gardens-2.html" class="navMegaMenu__column-link" role="menuitem">Bliss Gardens (Al Muraikh)</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/voya-residence.html" class="navMegaMenu__column-link" role="menuitem">Voya Waterfront</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/bliss-tower.html" class="navMegaMenu__column-link" role="menuitem">Bliss Tower</a></li>
+                                    <li class="navMegaMenu__column-item" role="none" style="margin-bottom: 8px;"><a href="/en/development/miran-tower.html" class="navMegaMenu__column-link" role="menuitem">Miran Tower</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!-- 5. Static Links -->
+                <li class="headerNavLink" role="none">
+                    <a href="/en/about.html" role="menuitem" style="font-weight: 600;">About Us</a>
+                </li>
+                <li class="headerNavLink" role="none">
+                    <a href="/en/contact.html" role="menuitem" style="font-weight: 600;">Contact</a>
+                </li>
+            </ul>
+        </section>
+    </nav>
+    <!-- Mobile Slide-In Drawer Navigation (Multi-Level) -->
+    <div class="mobileMenu" id="mobileMenu" aria-hidden="true">
+        <div class="mobileMenu__overlay" data-mobile-menu-close></div>
+        <div class="mobileMenu__drawer">
+            <div class="mobileMenu__panels" id="mobileMenuPanels">
+                <!-- Level 0: Root Menu -->
+                <div class="mobileMenu__panel mobileMenuPanel--active" data-panel="root">
+                    <div class="mobileMenuHeader">
+                        <span class="mobileMenuHeader__title">Menu</span>
+                        <button class="mobileMenuHeader__close" data-mobile-menu-close aria-label="Close menu">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 14 14" fill="none"><use href="#svgIcon-close"/></svg>
+                        </button>
+                    </div>
+                    <ul class="mobileMenuList">
+                        <li class="mobileMenuList__item">
+                            <button class="mobileMenuList__button" data-goto-panel="level1-0">
+                                <span>Rent</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mobileMenuList__chevron" width="12" height="12" viewBox="0 0 20 20" fill="currentColor"><use href="#svgIcon-chevron-left"/></svg>
+                            </button>
+                        </li>
+                        <li class="mobileMenuList__item">
+                            <button class="mobileMenuList__button" data-goto-panel="level1-1">
+                                <span>Buy</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mobileMenuList__chevron" width="12" height="12" viewBox="0 0 20 20" fill="currentColor"><use href="#svgIcon-chevron-left"/></svg>
+                            </button>
+                        </li>
+                        <li class="mobileMenuList__item">
+                            <button class="mobileMenuList__button" data-goto-panel="level1-2">
+                                <span>Commercial</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mobileMenuList__chevron" width="12" height="12" viewBox="0 0 20 20" fill="currentColor"><use href="#svgIcon-chevron-left"/></svg>
+                            </button>
+                        </li>
+                        <li class="mobileMenuList__item">
+                            <button class="mobileMenuList__button" data-goto-panel="level1-3">
+                                <span>Developments</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="mobileMenuList__chevron" width="12" height="12" viewBox="0 0 20 20" fill="currentColor"><use href="#svgIcon-chevron-left"/></svg>
+                            </button>
+                        </li>
+                        <li class="mobileMenuList__item">
+                            <a href="/en/about.html" class="mobileMenuList__link">About Us</a>
+                        </li>
+                        <li class="mobileMenuList__item">
+                            <a href="/en/contact.html" class="mobileMenuList__link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Level 1: Rent Submenu -->
+                <div class="mobileMenu__panel" data-panel="level1-0">
+                    <div class="mobileMenuHeader">
+                        <button class="mobileMenuHeader__back" data-goto-panel="root" aria-label="Go back">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="currentColor"><use href="#svgIcon-chevron-left"/></svg>
+                        </button>
+                        <span class="mobileMenuHeader__title">Rent</span>
+                        <button class="mobileMenuHeader__close" data-mobile-menu-close aria-label="Close menu">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 14 14" fill="none"><use href="#svgIcon-close"/></svg>
+                        </button>
+                    </div>
+                    <span class="mobileMenuList__heading" style="color: #c9a84c; font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-top: 14px; margin-bottom: 6px; display: block; padding-left: 12px;">LUXURY RENTAL VILLAS</span>
+                    <ul class="mobileMenuList">
+                        <li class="mobileMenuList__item"><a href="/en/development/flora-villas.html" class="mobileMenuList__link" style="padding-left: 12px;">Flora Villas</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/skala-villas.html" class="mobileMenuList__link" style="padding-left: 12px;">Skala Villas</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/via-doro.html" class="mobileMenuList__link" style="padding-left: 12px;">Via D'Oro Villas</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/bliss-gardens.html" class="mobileMenuList__link" style="padding-left: 12px;">Bliss Gardens (New Salata)</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/bliss-gardens-2.html" class="mobileMenuList__link" style="padding-left: 12px;">Bliss Gardens (Al Muraikh)</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/coralia-villas.html" class="mobileMenuList__link" style="padding-left: 12px;">Coralia Villas</a></li>
+                    </ul>
+                    <span class="mobileMenuList__heading" style="color: #c9a84c; font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-top: 14px; margin-bottom: 6px; display: block; padding-left: 12px;">WATERFRONT RENTALS</span>
+                    <ul class="mobileMenuList">
+                        <li class="mobileMenuList__item"><a href="/en/development/milos.html" class="mobileMenuList__link" style="padding-left: 12px;">Milos Residence</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/canal-bay.html" class="mobileMenuList__link" style="padding-left: 12px;">Canal Bay</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/carlton-house.html" class="mobileMenuList__link" style="padding-left: 12px;">Carlton House</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/skala-tower.html" class="mobileMenuList__link" style="padding-left: 12px;">Skala Tower</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/la-mer-tower.html" class="mobileMenuList__link" style="padding-left: 12px;">La Mer Tower</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/voya-residence.html" class="mobileMenuList__link" style="padding-left: 12px;">Voya Waterfront</a></li>
+                    </ul>
+                    <span class="mobileMenuList__heading" style="color: #c9a84c; font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-top: 14px; margin-bottom: 6px; display: block; padding-left: 12px;">LUSAIL URBAN LIVING</span>
+                    <ul class="mobileMenuList">
+                        <li class="mobileMenuList__item"><a href="/en/development/city-avenue.html" class="mobileMenuList__link" style="padding-left: 12px;">City Avenue</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/rivan.html" class="mobileMenuList__link" style="padding-left: 12px;">Rivan Tower</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/elite-residence.html" class="mobileMenuList__link" style="padding-left: 12px;">Elite Residence</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/boulevard-residence.html" class="mobileMenuList__link" style="padding-left: 12px;">Boulevard Residence</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/orjuwan.html" class="mobileMenuList__link" style="padding-left: 12px;">Orjuwan Tower</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/bliss-residences.html" class="mobileMenuList__link" style="padding-left: 12px;">Bliss Residences</a></li>
+                    </ul>
+                    <span class="mobileMenuList__heading" style="color: #c9a84c; font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-top: 14px; margin-bottom: 6px; display: block; padding-left: 12px;">PEARL & EXECUTIVE SUITES</span>
+                    <ul class="mobileMenuList">
+                        <li class="mobileMenuList__item"><a href="/en/development/floresta-105.html" class="mobileMenuList__link" style="padding-left: 12px;">Floresta 105</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/al-mayyas.html" class="mobileMenuList__link" style="padding-left: 12px;">Al Mayyas Tower</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/corallia.html" class="mobileMenuList__link" style="padding-left: 12px;">Corallia Lease-to-Own</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/marbella.html" class="mobileMenuList__link" style="padding-left: 12px;">Marbella Residence</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/bliss-tower.html" class="mobileMenuList__link" style="padding-left: 12px;">Bliss Tower</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/miran-tower.html" class="mobileMenuList__link" style="padding-left: 12px;">Miran Tower</a></li>
+                    </ul>
+                </div>
+                <!-- Level 1: Buy Submenu -->
+                <div class="mobileMenu__panel" data-panel="level1-1">
+                    <div class="mobileMenuHeader">
+                        <button class="mobileMenuHeader__back" data-goto-panel="root" aria-label="Go back">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="currentColor"><use href="#svgIcon-chevron-left"/></svg>
+                        </button>
+                        <span class="mobileMenuHeader__title">Buy</span>
+                        <button class="mobileMenuHeader__close" data-mobile-menu-close aria-label="Close menu">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 14 14" fill="none"><use href="#svgIcon-close"/></svg>
+                        </button>
+                    </div>
+                    <span class="mobileMenuList__heading" style="color: #c9a84c; font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-top: 14px; margin-bottom: 6px; display: block; padding-left: 12px;">PRIME INVESTMENT TOWERS</span>
+                    <ul class="mobileMenuList">
+                        <li class="mobileMenuList__item"><a href="/en/development/rivan.html" class="mobileMenuList__link" style="padding-left: 12px;">Rivan Tower</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/city-avenue.html" class="mobileMenuList__link" style="padding-left: 12px;">City Avenue</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/orjuwan.html" class="mobileMenuList__link" style="padding-left: 12px;">Orjuwan Tower</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/elite-residence.html" class="mobileMenuList__link" style="padding-left: 12px;">Elite Residence</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/boulevard-residence.html" class="mobileMenuList__link" style="padding-left: 12px;">Boulevard Residence</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/bliss-residences.html" class="mobileMenuList__link" style="padding-left: 12px;">Bliss Residences</a></li>
+                    </ul>
+                    <span class="mobileMenuList__heading" style="color: #c9a84c; font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-top: 14px; margin-bottom: 6px; display: block; padding-left: 12px;">THE PEARL & ISLAND HOMES</span>
+                    <ul class="mobileMenuList">
+                        <li class="mobileMenuList__item"><a href="/en/development/al-mayyas.html" class="mobileMenuList__link" style="padding-left: 12px;">Al Mayyas Tower</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/milos.html" class="mobileMenuList__link" style="padding-left: 12px;">Milos Residence</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/coralia-villas.html" class="mobileMenuList__link" style="padding-left: 12px;">Coralia Villas</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/floresta-105.html" class="mobileMenuList__link" style="padding-left: 12px;">Floresta 105</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/corallia.html" class="mobileMenuList__link" style="padding-left: 12px;">Corallia Lease-to-Own</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/marbella.html" class="mobileMenuList__link" style="padding-left: 12px;">Marbella Residence</a></li>
+                    </ul>
+                    <span class="mobileMenuList__heading" style="color: #c9a84c; font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-top: 14px; margin-bottom: 6px; display: block; padding-left: 12px;">EXCLUSIVE FREEHOLD VILLAS</span>
+                    <ul class="mobileMenuList">
+                        <li class="mobileMenuList__item"><a href="/en/development/bliss-gardens.html" class="mobileMenuList__link" style="padding-left: 12px;">Bliss Gardens (New Salata)</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/bliss-gardens-2.html" class="mobileMenuList__link" style="padding-left: 12px;">Bliss Gardens (Al Muraikh)</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/flora-villas.html" class="mobileMenuList__link" style="padding-left: 12px;">Flora Villas</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/via-doro.html" class="mobileMenuList__link" style="padding-left: 12px;">Via D'Oro Villas</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/skala-villas.html" class="mobileMenuList__link" style="padding-left: 12px;">Skala Villas</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/voya-residence.html" class="mobileMenuList__link" style="padding-left: 12px;">Voya Waterfront</a></li>
+                    </ul>
+                    <span class="mobileMenuList__heading" style="color: #c9a84c; font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-top: 14px; margin-bottom: 6px; display: block; padding-left: 12px;">COASTAL & BEACHFRONT ASSETS</span>
+                    <ul class="mobileMenuList">
+                        <li class="mobileMenuList__item"><a href="/en/development/skala-tower.html" class="mobileMenuList__link" style="padding-left: 12px;">Skala Tower</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/la-mer-tower.html" class="mobileMenuList__link" style="padding-left: 12px;">La Mer Tower</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/canal-bay.html" class="mobileMenuList__link" style="padding-left: 12px;">Canal Bay</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/carlton-house.html" class="mobileMenuList__link" style="padding-left: 12px;">Carlton House</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/bliss-tower.html" class="mobileMenuList__link" style="padding-left: 12px;">Bliss Tower</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/miran-tower.html" class="mobileMenuList__link" style="padding-left: 12px;">Miran Tower</a></li>
+                    </ul>
+                </div>
+                <!-- Level 1: Commercial Submenu -->
+                <div class="mobileMenu__panel" data-panel="level1-2">
+                    <div class="mobileMenuHeader">
+                        <button class="mobileMenuHeader__back" data-goto-panel="root" aria-label="Go back">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="currentColor"><use href="#svgIcon-chevron-left"/></svg>
+                        </button>
+                        <span class="mobileMenuHeader__title">Commercial</span>
+                        <button class="mobileMenuHeader__close" data-mobile-menu-close aria-label="Close menu">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 14 14" fill="none"><use href="#svgIcon-close"/></svg>
+                        </button>
+                    </div>
+                    <span class="mobileMenuList__heading" style="color: #c9a84c; font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-top: 14px; margin-bottom: 6px; display: block; padding-left: 12px;">CORPORATE HIGH-RISES</span>
+                    <ul class="mobileMenuList">
+                        <li class="mobileMenuList__item"><a href="/en/development/carlton-house.html" class="mobileMenuList__link" style="padding-left: 12px;">Carlton House</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/skala-tower.html" class="mobileMenuList__link" style="padding-left: 12px;">Skala Tower</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/rivan.html" class="mobileMenuList__link" style="padding-left: 12px;">Rivan Tower</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/orjuwan.html" class="mobileMenuList__link" style="padding-left: 12px;">Orjuwan Tower</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/la-mer-tower.html" class="mobileMenuList__link" style="padding-left: 12px;">La Mer Tower</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/miran-tower.html" class="mobileMenuList__link" style="padding-left: 12px;">Miran Tower</a></li>
+                    </ul>
+                    <span class="mobileMenuList__heading" style="color: #c9a84c; font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-top: 14px; margin-bottom: 6px; display: block; padding-left: 12px;">COMMERCIAL WATERFRONT</span>
+                    <ul class="mobileMenuList">
+                        <li class="mobileMenuList__item"><a href="/en/development/canal-bay.html" class="mobileMenuList__link" style="padding-left: 12px;">Canal Bay</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/via-doro.html" class="mobileMenuList__link" style="padding-left: 12px;">Via D'Oro Villas</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/voya-residence.html" class="mobileMenuList__link" style="padding-left: 12px;">Voya Waterfront</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/skala-villas.html" class="mobileMenuList__link" style="padding-left: 12px;">Skala Villas</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/milos.html" class="mobileMenuList__link" style="padding-left: 12px;">Milos Residence</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/bliss-tower.html" class="mobileMenuList__link" style="padding-left: 12px;">Bliss Tower</a></li>
+                    </ul>
+                    <span class="mobileMenuList__heading" style="color: #c9a84c; font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-top: 14px; margin-bottom: 6px; display: block; padding-left: 12px;">MIXED-USE & RETAIL TRACTS</span>
+                    <ul class="mobileMenuList">
+                        <li class="mobileMenuList__item"><a href="/en/development/city-avenue.html" class="mobileMenuList__link" style="padding-left: 12px;">City Avenue</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/boulevard-residence.html" class="mobileMenuList__link" style="padding-left: 12px;">Boulevard Residence</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/elite-residence.html" class="mobileMenuList__link" style="padding-left: 12px;">Elite Residence</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/bliss-residences.html" class="mobileMenuList__link" style="padding-left: 12px;">Bliss Residences</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/marbella.html" class="mobileMenuList__link" style="padding-left: 12px;">Marbella Residence</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/floresta-105.html" class="mobileMenuList__link" style="padding-left: 12px;">Floresta 105</a></li>
+                    </ul>
+                    <span class="mobileMenuList__heading" style="color: #c9a84c; font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-top: 14px; margin-bottom: 6px; display: block; padding-left: 12px;">EXECUTIVE HEADQUARTERS & ESTATES</span>
+                    <ul class="mobileMenuList">
+                        <li class="mobileMenuList__item"><a href="/en/development/coralia-villas.html" class="mobileMenuList__link" style="padding-left: 12px;">Coralia Villas</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/flora-villas.html" class="mobileMenuList__link" style="padding-left: 12px;">Flora Villas</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/bliss-gardens.html" class="mobileMenuList__link" style="padding-left: 12px;">Bliss Gardens (New Salata)</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/bliss-gardens-2.html" class="mobileMenuList__link" style="padding-left: 12px;">Bliss Gardens (Al Muraikh)</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/al-mayyas.html" class="mobileMenuList__link" style="padding-left: 12px;">Al Mayyas Tower</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/corallia.html" class="mobileMenuList__link" style="padding-left: 12px;">Corallia Lease-to-Own</a></li>
+                    </ul>
+                </div>
+                <!-- Level 1: Developments Submenu -->
+                <div class="mobileMenu__panel" data-panel="level1-3">
+                    <div class="mobileMenuHeader">
+                        <button class="mobileMenuHeader__back" data-goto-panel="root" aria-label="Go back">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="currentColor"><use href="#svgIcon-chevron-left"/></svg>
+                        </button>
+                        <span class="mobileMenuHeader__title">Developments</span>
+                        <button class="mobileMenuHeader__close" data-mobile-menu-close aria-label="Close menu">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 14 14" fill="none"><use href="#svgIcon-close"/></svg>
+                        </button>
+                    </div>
+                    <span class="mobileMenuList__heading" style="color: #b89c4c; font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-top: 14px; margin-bottom: 6px; display: block;">Waterfront Estates</span>
+                    <ul class="mobileMenuList">
+                        <li class="mobileMenuList__item"><a href="/en/development/skala-villas.html" class="mobileMenuList__link" style="padding-left: 12px;">Skala Villas</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/via-doro.html" class="mobileMenuList__link" style="padding-left: 12px;">Via D'Oro Villas</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/carlton-house.html" class="mobileMenuList__link" style="padding-left: 12px;">Carlton House</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/canal-bay.html" class="mobileMenuList__link" style="padding-left: 12px;">Canal Bay</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/skala-tower.html" class="mobileMenuList__link" style="padding-left: 12px;">Skala Tower</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/la-mer-tower.html" class="mobileMenuList__link" style="padding-left: 12px;">La Mer Tower</a></li>
+                    </ul>
+                    <span class="mobileMenuList__heading" style="color: #b89c4c; font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-top: 14px; margin-bottom: 6px; display: block;">Lusail City Heights</span>
+                    <ul class="mobileMenuList">
+                        <li class="mobileMenuList__item"><a href="/en/development/city-avenue.html" class="mobileMenuList__link" style="padding-left: 12px;">City Avenue</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/rivan.html" class="mobileMenuList__link" style="padding-left: 12px;">Rivan Tower</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/elite-residence.html" class="mobileMenuList__link" style="padding-left: 12px;">Elite Residence</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/boulevard-residence.html" class="mobileMenuList__link" style="padding-left: 12px;">Boulevard Residence</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/orjuwan.html" class="mobileMenuList__link" style="padding-left: 12px;">Orjuwan Tower</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/bliss-residences.html" class="mobileMenuList__link" style="padding-left: 12px;">Bliss Residences</a></li>
+                    </ul>
+                    <span class="mobileMenuList__heading" style="color: #b89c4c; font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-top: 14px; margin-bottom: 6px; display: block;">The Pearl Island Collection</span>
+                    <ul class="mobileMenuList">
+                        <li class="mobileMenuList__item"><a href="/en/development/milos.html" class="mobileMenuList__link" style="padding-left: 12px;">Milos Residence</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/floresta-105.html" class="mobileMenuList__link" style="padding-left: 12px;">Floresta 105</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/al-mayyas.html" class="mobileMenuList__link" style="padding-left: 12px;">Al Mayyas Tower</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/coralia-villas.html" class="mobileMenuList__link" style="padding-left: 12px;">Coralia Villas</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/corallia.html" class="mobileMenuList__link" style="padding-left: 12px;">Corallia Lease-to-Own</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/marbella.html" class="mobileMenuList__link" style="padding-left: 12px;">Marbella Residence</a></li>
+                    </ul>
+                    <span class="mobileMenuList__heading" style="color: #b89c4c; font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-top: 14px; margin-bottom: 6px; display: block;">Villa Estates & Retreats</span>
+                    <ul class="mobileMenuList">
+                        <li class="mobileMenuList__item"><a href="/en/development/flora-villas.html" class="mobileMenuList__link" style="padding-left: 12px;">Flora Villas</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/bliss-gardens.html" class="mobileMenuList__link" style="padding-left: 12px;">Bliss Gardens (New Salata)</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/bliss-gardens-2.html" class="mobileMenuList__link" style="padding-left: 12px;">Bliss Gardens (Al Muraikh)</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/voya-residence.html" class="mobileMenuList__link" style="padding-left: 12px;">Voya Waterfront</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/bliss-tower.html" class="mobileMenuList__link" style="padding-left: 12px;">Bliss Tower</a></li>
+                        <li class="mobileMenuList__item"><a href="/en/development/miran-tower.html" class="mobileMenuList__link" style="padding-left: 12px;">Miran Tower</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+2. SVG Icons (Place before </body>)
+html
+
+
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute" aria-hidden="true">
+    <!-- Menu / Hamburger Icon -->
+    <symbol id="svgIcon-menu" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M3 18h18v-2H3zm0-5h18v-2H3zm0-7v2h18V6z"/>
+    </symbol>
+    <!-- Chevron Down Icon -->
+    <symbol id="svgIcon-chevron-down-menu" viewBox="0 0 12 12">
+        <path fill="currentColor" d="M11.504 4.515 6.003 9.467.5 4.515 1.504 3.4l4.499 4.048L10.5 3.4z"/>
+    </symbol>
+    <!-- Close Icon -->
+    <symbol id="svgIcon-close" viewBox="0 0 14 14">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 1 1 13M1 1l12 12"/>
+    </symbol>
+    <!-- Chevron Left / Back Icon -->
+    <symbol id="svgIcon-chevron-left" viewBox="0 0 20 20">
+        <path d="m13 4.324-5.339 5.932L13 16.188l-1.47 1.323L5 10.256 11.53 3z"/>
+    </symbol>
+</svg>
+3. Complete CSS Styles
