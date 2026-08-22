@@ -1,5 +1,4 @@
 const http = require('http');
-const https = require('https');
 const fs = require('fs');
 const path = require('path');
 const zlib = require('zlib');
@@ -83,7 +82,7 @@ function serveFileFromDiskOrCache(req, res, filePath) {
     const isSvg = ext === '.svg';
     const isCss = ext === '.css';
     const isJs = ext === '.js';
-    const isNoCacheAsset = isHtml || isSvg || isCss || isJs || ext === '.ico' || filePath.includes('favicon') || filePath.includes('\\video\\') || filePath.includes('/video/') || filePath.includes('\\hero\\') || filePath.includes('/hero/');
+    const isNoCacheAsset = isHtml || isSvg || isCss || isJs || ext === '.ico' || filePath.includes('favicon') || filePath.includes('hero');
 
     const cacheKey = filePath;
     if (!isNoCacheAsset && fileCache.has(cacheKey)) {
@@ -130,10 +129,10 @@ const server = http.createServer((req, res) => {
         reqPath = rawPath;
     }
 
-    // Fast-stub third party tracking/analytics requests & unregister lingering Service Workers
+    // Fast-stub analytics / service workers
     if (reqPath.includes('gtm.js') || reqPath.includes('analytics') || reqPath.includes('facebook') || reqPath.includes('stape')) {
         res.writeHead(200, { 'Content-Type': 'application/javascript' });
-        return res.end('/* Analytics stub */');
+        return res.end('/* Analytics disabled */');
     }
     if (reqPath.endsWith('/sw.js') || reqPath.endsWith('/service-worker.js')) {
         res.writeHead(200, { 'Content-Type': 'application/javascript' });
@@ -143,43 +142,23 @@ const server = http.createServer((req, res) => {
     if (reqPath === '/' || reqPath === '') reqPath = '/index.html';
 
     // Direct clean route rewrites
-    if (reqPath === '/en/privacy-policy' || reqPath === '/privacy-policy') {
-        const p = path.join(PUBLIC_DIR, 'en', 'privacy-policy.html');
-        if (fs.existsSync(p)) return serveFileFromDiskOrCache(req, res, p);
-    }
-    if (reqPath === '/en/terms-and-conditions' || reqPath === '/terms-and-conditions') {
-        const p = path.join(PUBLIC_DIR, 'en', 'terms-and-conditions.html');
-        if (fs.existsSync(p)) return serveFileFromDiskOrCache(req, res, p);
-    }
-    if (reqPath === '/en/developments' || reqPath === '/developments') {
-        const p = path.join(PUBLIC_DIR, 'en', 'developments.html');
-        if (fs.existsSync(p)) return serveFileFromDiskOrCache(req, res, p);
-    }
-    if (reqPath === '/en/areas' || reqPath === '/areas') {
-        const p = path.join(PUBLIC_DIR, 'en', 'areas.html');
-        if (fs.existsSync(p)) return serveFileFromDiskOrCache(req, res, p);
-    }
-    if (reqPath === '/en/about' || reqPath === '/about') {
-        const p = path.join(PUBLIC_DIR, 'en', 'about.html');
-        if (fs.existsSync(p)) return serveFileFromDiskOrCache(req, res, p);
-    }
-    if (reqPath === '/en/contact' || reqPath === '/contact') {
-        const p = path.join(PUBLIC_DIR, 'en', 'contact.html');
-        if (fs.existsSync(p)) return serveFileFromDiskOrCache(req, res, p);
-    }
+    const cleanRouteMap = {
+        '/en/privacy-policy': path.join(PUBLIC_DIR, 'en', 'privacy-policy.html'),
+        '/privacy-policy': path.join(PUBLIC_DIR, 'en', 'privacy-policy.html'),
+        '/en/terms-and-conditions': path.join(PUBLIC_DIR, 'en', 'terms-and-conditions.html'),
+        '/terms-and-conditions': path.join(PUBLIC_DIR, 'en', 'terms-and-conditions.html'),
+        '/en/developments': path.join(PUBLIC_DIR, 'en', 'developments.html'),
+        '/developments': path.join(PUBLIC_DIR, 'en', 'developments.html'),
+        '/en/areas': path.join(PUBLIC_DIR, 'en', 'areas.html'),
+        '/areas': path.join(PUBLIC_DIR, 'en', 'areas.html'),
+        '/en/about': path.join(PUBLIC_DIR, 'en', 'about.html'),
+        '/about': path.join(PUBLIC_DIR, 'en', 'about.html'),
+        '/en/contact': path.join(PUBLIC_DIR, 'en', 'contact.html'),
+        '/contact': path.join(PUBLIC_DIR, 'en', 'contact.html')
+    };
 
-    // Cookie policy, legacy buy/rent listings, and old portals redirect
-    if (reqPath.startsWith('/en/cookie-policy') || reqPath.startsWith('/cookie-policy')) {
-        res.writeHead(302, { 'Location': '/en/privacy-policy.html' });
-        return res.end();
-    }
-    if (reqPath.startsWith('/en/buy') || reqPath.startsWith('/en/rent') || reqPath.startsWith('/buy') || reqPath.startsWith('/rent')) {
-        res.writeHead(302, { 'Location': '/en/developments.html' });
-        return res.end();
-    }
-    if (reqPath.startsWith('/account') || reqPath.startsWith('/en/international') || reqPath.startsWith('/learn') || reqPath.startsWith('/en/find-agent') || reqPath.startsWith('/en/careers') || reqPath.startsWith('/find-agent') || reqPath.startsWith('/careers')) {
-        res.writeHead(302, { 'Location': '/' });
-        return res.end();
+    if (cleanRouteMap[reqPath] && fs.existsSync(cleanRouteMap[reqPath])) {
+        return serveFileFromDiskOrCache(req, res, cleanRouteMap[reqPath]);
     }
 
     let filePath;
@@ -189,7 +168,7 @@ const server = http.createServer((req, res) => {
         filePath = path.join(PUBLIC_DIR, reqPath);
     }
 
-    // 1. If request has no extension, prioritize filePath + .html file check first
+    // 1. If request has no extension, check filePath + .html first
     const hasExt = path.extname(filePath).length > 0;
     if (!hasExt) {
         const htmlPath = filePath + '.html';
@@ -215,51 +194,25 @@ const server = http.createServer((req, res) => {
         return serveFileFromDiskOrCache(req, res, filePath);
     }
 
-    // 4. If an HTML page / page route is not found, redirect to home - never proxy HTML routes
-    const isHtmlRoute = !hasExt || reqPath.endsWith('.html');
-    if (isHtmlRoute) {
-        res.writeHead(302, { 'Location': '/' });
-        return res.end();
+    // 4. Missing image fallback: return local agent avatar or fallback logo instead of 404/proxy
+    if (reqPath.match(/\.(png|jpg|jpeg|webp|avif)$/i)) {
+        const fallbackAvatar = path.join(PUBLIC_DIR, 'images', 'agent-avatar.svg');
+        if (fs.existsSync(fallbackAvatar)) {
+            return serveFileFromDiskOrCache(req, res, fallbackAvatar);
+        }
     }
 
-    // 5. Fallback auto-caching for missing static assets (images, fonts, media only)
-    const targetUrl = 'https://www.fgrealty.qa' + reqPath;
-    https.get(targetUrl, { headers: { 'User-Agent': 'Mozilla/5.0' } }, (proxyRes) => {
-        if (proxyRes.statusCode === 200) {
-            const chunks = [];
-            proxyRes.on('data', c => chunks.push(c));
-            proxyRes.on('end', () => {
-                try {
-                    const buffer = Buffer.concat(chunks);
-                    let savePath = filePath;
-                    if (fs.existsSync(savePath) && fs.statSync(savePath).isDirectory()) {
-                        savePath = path.join(savePath, 'index.html');
-                    }
-
-                    const dir = path.dirname(savePath);
-                    if (!fs.existsSync(dir)) {
-                        fs.mkdirSync(dir, { recursive: true });
-                    }
-                    
-                    fs.writeFile(savePath, buffer, (err) => {
-                        if (err) console.error(`[SAVE ERROR] Failed to save ${savePath}:`, err.message);
-                    });
-
-                    const mimeType = proxyRes.headers['content-type'] || 'application/octet-stream';
-                    sendResponse(req, res, 200, { 'Content-Type': mimeType }, buffer);
-                } catch(e) {
-                    res.writeHead(500, { 'Content-Type': 'text/plain' });
-                    res.end(`Internal Server Error: ${e.message}`);
-                }
-            });
-        } else {
-            res.writeHead(proxyRes.statusCode, { 'Content-Type': 'text/plain' });
-            res.end(`404 Not Found (${proxyRes.statusCode})`);
+    // 5. Final fallback: If not found, return 404 or index.html for page navigations
+    const isHtmlRoute = !hasExt || reqPath.endsWith('.html');
+    if (isHtmlRoute) {
+        const homePath = path.join(PUBLIC_DIR, 'index.html');
+        if (fs.existsSync(homePath)) {
+            return serveFileFromDiskOrCache(req, res, homePath);
         }
-    }).on('error', (proxyErr) => {
-        res.writeHead(500, { 'Content-Type': 'text/plain' });
-        res.end(`Fetch error: ${proxyErr.message}`);
-    });
+    }
+
+    res.writeHead(404, { 'Content-Type': 'text/plain' });
+    res.end('404 Not Found');
 });
 
 process.on('uncaughtException', (err) => {
@@ -271,5 +224,5 @@ process.on('unhandledRejection', (reason, promise) => {
 });
 
 server.listen(PORT, () => {
-    console.log(`⚡ Prime View Real Estate High-Performance Server running at: http://localhost:${PORT}/`);
+    console.log(`⚡ Prime View Real Estate 100% Local Server running at: http://localhost:${PORT}/`);
 });
