@@ -18,6 +18,8 @@ const MIME_TYPES = {
     '.js': 'application/javascript; charset=utf-8',
     '.json': 'application/json; charset=utf-8',
     '.svg': 'image/svg+xml',
+    '.xml': 'application/xml; charset=utf-8',
+    '.txt': 'text/plain; charset=utf-8',
     '.ico': 'image/x-icon',
     '.png': 'image/png',
     '.jpg': 'image/jpeg',
