@@ -17,7 +17,7 @@ const p = "modulepreload",
             };
             document.getElementsByTagName("link");
             const r = document.querySelector("meta[property=csp-nonce]"),
-                t = r ? .nonce || r ? .getAttribute("nonce");
+                t = r ?.nonce || r ?.getAttribute("nonce");
             i = f(c.map(e => {
                 if (e = v(e), e in u) return;
                 u[e] = !0;

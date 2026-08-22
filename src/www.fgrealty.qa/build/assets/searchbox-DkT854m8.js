@@ -7,10 +7,10 @@ if (t) {
     let s = !1,
         u = !1;
     const d = r => {
-        const n = r.target ? .closest(".searchBox__searchBtn");
+        const n = r.target ?.closest(".searchBox__searchBtn");
         if (!n || !t.contains(n)) return;
         const a = t.querySelector(".searchBoxDropdown"),
-            i = a ? .getAttribute("data-operation") || a ? .querySelector(".searchBoxDropdown__text") ? .textContent ? .trim().toLowerCase(),
+            i = a ?.getAttribute("data-operation") || a ?.querySelector(".searchBoxDropdown__text") ?.textContent ?.trim().toLowerCase(),
             o = i === "buy" || i === "شراء" ? t.getAttribute("data-buy-url") : t.getAttribute("data-rent-url");
         o && (r.preventDefault(), r.stopPropagation(), r.stopImmediatePropagation(), window.location.href = o)
     };
@@ -32,7 +32,7 @@ if (t) {
             operationType: p
         });
         o.use(a), o.mount(t), u && requestAnimationFrame(() => {
-            t.querySelector(".searchBox__input") ? .focus()
+            t.querySelector(".searchBox__input") ?.focus()
         })
     };
     t.addEventListener("click", e), t.addEventListener("focusin", e), t.addEventListener("mouseenter", e, {

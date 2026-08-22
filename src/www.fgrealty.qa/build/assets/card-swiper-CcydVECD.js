@@ -40,7 +40,7 @@ function _(e) {
         i = t.length,
         o = [r, (r + 1) % i, (r - 1 + i) % i];
     for (const s of o) {
-        const n = t[s] ? .querySelector("img[data-src]");
+        const n = t[s] ?.querySelector("img[data-src]");
         n && (n.src = n.dataset.src, n.removeAttribute("data-src"))
     }
 }
@@ -81,7 +81,7 @@ function S(e) {
         return a.on("slideChange", () => {
             _(a), C()
         }), _(a), e.classList.add("is-swiperReady"), r.addEventListener("click", () => {
-            const l = r.closest(".listingCard") ? .querySelector(".listingCard__mainA");
+            const l = r.closest(".listingCard") ?.querySelector(".listingCard__mainA");
             l && l.click()
         }), a
     });

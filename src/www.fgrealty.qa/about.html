@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Prime View Real Estate | Luxury Properties in Qatar</title>
+    <meta name="description" content="Prime View Real Estate is Qatar's premier luxury real estate advisory, specializing in prime freehold residences across Lusail, The Pearl-Qatar, and West Bay.">
+    <link rel="canonical" href="/en/about.html">
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    
+    <link rel="preload" as="style" href="/build/assets/core-BJlXrooN.css" />
+    <link rel="stylesheet" href="/build/assets/core-BJlXrooN.css" />
+    <link rel="preload" as="style" href="/build/assets/homepage-MnitYSA3.css" />
+    <link rel="stylesheet" href="/build/assets/homepage-MnitYSA3.css" />
+    <link rel="stylesheet" href="/index.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/index.css">
+    <style>
+        :root {
+            --gold: #C9A84C;
+            --gold-light: #E7CF8A;
+            --gold-dark: #9A7727;
+            --gold-glow: rgba(201, 168, 76, 0.35);
+            --bg-dark: #08080B;
+            --bg-card: rgba(18, 18, 24, 0.75);
+            --bg-glass: rgba(12, 12, 16, 0.72);
+            --border-glass: rgba(201, 168, 76, 0.22);
+            --text-primary: #FFFFFF;
+            --text-secondary: rgba(255, 255, 255, 0.75);
+            --radius-md: 14px;
+            --radius-lg: 20px;
+            --transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            --pv-gold: #c9a84c;
+            --pv-gold-light: #e7cf8a;
+            --pv-gold-dark: #9a7727;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+
+        /* Top Navbar */
+        .top-navbar-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 16px 4%;
+            transition: var(--transition);
+        }
+
+        .top-navbar-container {
+            max-width: 1380px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 28px;
+            border-radius: 40px;
+            background: rgba(14, 14, 18, 0.75);
+            backdrop-filter: blur(22px);
+            -webkit-backdrop-filter: blur(22px);
+            border: 1px solid var(--border-glass);
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5);
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .nav-links-wrap {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            gap: 8px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-link-item a {
+            color: var(--text-secondary);
+            font-size: 0.88rem;
+            font-weight: 500;
+            text-decoration: none;
+            padding: 8px 18px;
+            border-radius: 20px;
+            transition: var(--transition);
+        }
+
+        .nav-link-item a:hover, .nav-link-item.active a {
+            color: #FFFFFF;
+            background: rgba(201, 168, 76, 0.15);
+            border: 1px solid rgba(201, 168, 76, 0.35);
+        }
+
+        .nav-cta-btn {
+            background: linear-gradient(135deg, var(--gold-dark), var(--gold)) !important;
+            color: #000000 !important;
+            font-weight: 700 !important;
+            padding: 8px 22px !important;
+            border-radius: 20px !important;
+            border: none !important;
+            text-decoration: none;
+            font-size: 0.86rem;
+            letter-spacing: 0.5px;
+            transition: var(--transition);
+        }
+
+        .nav-cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px var(--gold-glow);
+        }
+
+        /* Hero */
+        .about-hero {
+            position: relative;
+            min-height: 58vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 160px 5% 70px;
+            background: linear-gradient(180deg, rgba(8,8,11,0.65) 0%, rgba(8,8,11,0.98) 100%),
+                        url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 18px;
+            border-radius: 30px;
+            background: rgba(201, 168, 76, 0.12);
+            border: 1px solid rgba(201, 168, 76, 0.35);
+            color: var(--gold-light);
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .about-hero h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: 16px;
+        }
+
+        .gold-grad {
+            background: linear-gradient(135deg, #FFF 20%, var(--gold-light) 60%, var(--gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .about-hero p {
+            color: var(--text-secondary);
+            max-width: 680px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        /* Container & Sections */
+        .section-wrap {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 90px 5%;
+        }
+
+        .sec-badge {
+            font-size: 0.74rem;
+            color: var(--gold);
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .sec-title {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.9rem, 3.8vw, 2.7rem);
+            font-weight: 700;
+            color: #FFFFFF;
+            margin-bottom: 18px;
+            line-height: 1.25;
+        }
+
+        /* Story Two Column */
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 90px;
+        }
+
+        .story-visual {
+            position: relative;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--border-glass);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+        }
+
+        .story-visual img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.6s ease;
+        }
+
+        .story-visual:hover img {
+            transform: scale(1.04);
+        }
+
+        .floating-badge {
+            position: absolute;
+            bottom: 22px;
+            left: 22px;
+            background: rgba(14, 14, 20, 0.85);
+            backdrop-filter: blur(14px);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-md);
+            padding: 18px 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .floating-badge h4 {
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            color: var(--gold);
+            margin: 0;
+            font-weight: 800;
+        }
+
+        .floating-badge p {
+            font-size: 0.72rem;
+            color: var(--text-secondary);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 2px 0 0;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+            margin-bottom: 90px;
+        }
+
+        .stat-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-md);
+            padding: 34px 24px;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--gold);
+            box-shadow: 0 15px 35px rgba(201, 168, 76, 0.15);
+        }
+
+        .stat-num {
+            font-family: 'Cinzel', serif;
+            font-size: 2.6rem;
+            font-weight: 800;
+            color: var(--gold-light);
+            margin-bottom: 6px;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Pillars 3 Grid */
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 26px;
+            margin-bottom: 90px;
+        }
+
+        .pillar-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-lg);
+            padding: 40px 32px;
+            transition: var(--transition);
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--gold);
+            box-shadow: 0 20px 45px rgba(0,0,0,0.6);
+        }
+
+        .pillar-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 12px;
+            background: rgba(201, 168, 76, 0.12);
+            border: 1px solid rgba(201, 168, 76, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-size: 1.45rem;
+            margin-bottom: 24px;
+        }
+
+        .pillar-card h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            color: #FFFFFF;
+            margin-bottom: 12px;
+        }
+
+        .pillar-card p {
+            color: var(--text-secondary);
+            font-size: 0.92rem;
+            line-height: 1.75;
+            margin: 0;
+        }
+
+        /* Team Grid */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            margin-bottom: 90px;
+        }
+
+        .team-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .team-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--gold);
+            box-shadow: 0 20px 45px rgba(0,0,0,0.6);
+        }
+
+        .team-img {
+            width: 100%;
+            height: 290px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .team-info {
+            padding: 24px;
+            text-align: center;
+        }
+
+        .team-name {
+            font-family: 'Cinzel', serif;
+            font-size: 1.25rem;
+            color: #FFFFFF;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .team-role {
+            color: var(--gold);
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.3px;
+        }
+
+        /* CTA Banner */
+        .cta-banner {
+            background: linear-gradient(135deg, rgba(20, 20, 28, 0.9), rgba(12, 12, 16, 0.95));
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-lg);
+            padding: 65px 40px;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+        }
+
+        .btn-gold {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--gold-light));
+            color: #000;
+            font-weight: 700;
+            font-size: 0.88rem;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            padding: 14px 34px;
+            border-radius: 30px;
+            text-decoration: none;
+            box-shadow: 0 4px 18px var(--gold-glow);
+            transition: var(--transition);
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba(201, 168, 76, 0.55);
+            color: #000;
+        }
+
+        @media (max-width: 992px) {
+            .story-grid, .pillars-grid, .team-grid { grid-template-columns: 1fr; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .nav-links-wrap { display: none; }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- TOP NAVBAR -->
+    <div class="top-navbar-wrapper">
+        <div class="top-navbar-container">
+            <a href="/" class="brand-logo">
+                <img src="/images/prime-view-logo.png" alt="Prime View Real Estate" style="height: 42px; width: auto; display: block;">
+            </a>
+            <ul class="nav-links-wrap">
+                <li class="nav-link-item"><a href="/">Home</a></li>
+                <li class="nav-link-item"><a href="/en/rent/properties-for-rent">Rent</a></li>
+                <li class="nav-link-item"><a href="/en/buy/properties-for-sale">Buy</a></li>
+                <li class="nav-link-item"><a href="/en/developments.html">Developments</a></li>
+                <li class="nav-link-item active"><a href="/en/about.html">About Us</a></li>
+            </ul>
+            <a href="/en/contact.html" class="nav-cta-btn">Contact Desk</a>
+        </div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="about-hero">
+        <div>
+            <span class="hero-badge"><i class="fas fa-crown"></i> Prime View Real Estate • Qatar</span>
+            <h1>Redefining <span class="gold-grad">Luxury Living</span> in Qatar</h1>
+            <p>Connecting visionary developers with discerning buyers seeking the highest expression of elegance in Doha and beyond.</p>
+        </div>
+    </section>
+
+    <!-- MAIN SECTION -->
+    <div class="section-wrap">
+        <!-- STORY -->
+        <div class="story-grid">
+            <div>
+                <span class="sec-badge">Our Heritage & Mission</span>
+                <h2 class="sec-title">A Legacy Built on <span class="gold-grad">Trust & Vision</span></h2>
+                <p style="color: var(--text-secondary); margin-bottom: 18px; font-size: 0.98rem;">
+                    Prime View Real Estate was founded with a singular ambition: to elevate the standard of real estate consultancy in Qatar to match the nation's bold, forward-looking architectural evolution.
+                </p>
+                <p style="color: var(--text-secondary); margin-bottom: 30px; font-size: 0.95rem;">
+                    Today, we stand as one of Qatar's most distinguished luxury real estate firms, trusted by royalty, international investors, diplomats, and discerning families seeking the finest homes in the Arabian Gulf.
+                </p>
+                <a href="/en/contact.html" class="btn-gold">
+                    <i class="fas fa-handshake"></i> Meet With Our Advisory Team
+                </a>
+            </div>
+            <div class="story-visual">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80" alt="Prime View Real Estate Heritage">
+                <div class="floating-badge">
+                    <h4>10+</h4>
+                    <p>Years of Excellence</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- STATS -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <span class="stat-num">10+</span>
+                <span class="stat-label">Years in Qatar</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-num">$2B+</span>
+                <span class="stat-label">Real Estate Transacted</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-num">500+</span>
+                <span class="stat-label">Luxury Clients Served</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-num">98%</span>
+                <span class="stat-label">Client Satisfaction</span>
+            </div>
+        </div>
+
+        <!-- CORE PILLARS -->
+        <div style="text-align: center; max-width: 680px; margin: 0 auto 40px;">
+            <span class="sec-badge">Foundational Pillars</span>
+            <h2 class="sec-title">Our Guiding <span class="gold-grad">Principles</span></h2>
+            <p style="color: var(--text-secondary); font-size: 0.96rem;">Our foundation rests on unshakeable pillars that guide every client interaction and property curation.</p>
+        </div>
+
+        <div class="pillars-grid">
+            <div class="pillar-card">
+                <div class="pillar-icon"><i class="fas fa-gem"></i></div>
+                <h3>Excellence in Curation</h3>
+                <p>We curate only the exceptional — properties that embody architectural distinction, prime locations, and undeniable investment merit.</p>
+            </div>
+            <div class="pillar-card">
+                <div class="pillar-icon"><i class="fas fa-handshake"></i></div>
+                <h3>Client-Centric Advisory</h3>
+                <p>We act as trusted fiduciaries, prioritizing our clients' long-term prosperity over short-term transactions with discretion, integrity, and insight.</p>
+            </div>
+            <div class="pillar-card">
+                <div class="pillar-icon"><i class="fas fa-chess-knight"></i></div>
+                <h3>Strategic Vision</h3>
+                <p>Leveraging proprietary market analytics and deep local intelligence to forecast opportunities and unlock superior value across Qatar.</p>
+            </div>
+        </div>
+
+        <!-- LEADERSHIP TEAM -->
+        <div style="text-align: center; max-width: 680px; margin: 0 auto 40px;">
+            <span class="sec-badge">Executive Advisory</span>
+            <h2 class="sec-title">Executive <span class="gold-grad">Leadership</span></h2>
+            <p style="color: var(--text-secondary); font-size: 0.96rem;">Decades of collective experience in prime real estate, finance, and luxury asset management across the GCC.</p>
+        </div>
+
+        <div class="team-grid">
+            <div class="team-card">
+                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80" class="team-img" alt="Managing Director">
+                <div class="team-info">
+                    <div class="team-name">Tariq Al-Mansoor</div>
+                    <div class="team-role">Chief Executive Officer</div>
+                </div>
+            </div>
+            <div class="team-card">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" class="team-img" alt="Head of Luxury Sales">
+                <div class="team-info">
+                    <div class="team-name">Amira Rahman</div>
+                    <div class="team-role">Head of Luxury Sales</div>
+                </div>
+            </div>
+            <div class="team-card">
+                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80" class="team-img" alt="Senior Investment Advisor">
+                <div class="team-info">
+                    <div class="team-name">Jean-Pierre Dupont</div>
+                    <div class="team-role">Investment Director</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA BANNER -->
+        <div class="cta-banner">
+            <span class="sec-badge">Private Client Advisory</span>
+            <h2 class="sec-title" style="margin-bottom: 14px;">Ready to Find Your <span class="gold-grad">Dream Property?</span></h2>
+            <p style="color: var(--text-secondary); max-width: 640px; margin: 0 auto 30px; font-size: 1.02rem; line-height: 1.75;">
+                Our expert team is ready to guide you through Qatar's finest real estate opportunities. Official Inquiries: <a href="mailto:info@primeviewrealestate.qa" style="color: var(--gold); text-decoration: none; font-weight: 700;">info@primeviewrealestate.qa</a>
+            </p>
+            <a href="/en/contact.html" class="btn-gold">
+                <i class="fas fa-envelope"></i> Contact Advisory Desk
+            </a>
+        </div>
+    </div>
+
+    <!-- MASTER SITE FOOTER -->
+    <div class="footerWrapper" style="background: #0d0d12; border-top: 1px solid var(--border-glass); padding: 75px 5% 35px;">
+        <footer class="footer">
+            <div class="footer__row2">
+                <div class="footer__row2-left flex flex-col gap-3xl">
+                    <div class="text-grey-200">
+                        <img src="/images/prime-view-logo.png" alt="Prime View Real Estate" style="height: 44px; width: auto; max-width: 220px; display: block;" loading="lazy" decoding="async" />
+                    </div>
+                    <span class="text-grey-600 text-sm font-primary" style="color: var(--text-secondary);">
+                        Founded in Doha, Qatar, Prime View Real Estate is a licensed real estate brokerage built on a technology-driven approach to luxury property services. Official Inquiries: <a href="mailto:info@primeviewrealestate.qa" style="color: var(--gold); text-decoration: none; font-weight: 600;">info@primeviewrealestate.qa</a>
+                    </span>
+                    <div class="footerTrustRow">
+                        <div class="footerTrustRow__awards">
+                            <img src="/images/footer/footer-awards@2x.png" alt="Property Awards" width="300" height="43" loading="lazy" decoding="async" />
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__row2-right footerLinkColumns">
+                    <div class="footerLinkColumns__left flex flex-col gap-lg">
+                        <span class="text-md text-grey-800" style="color: #fff; font-weight: 700;">Discover</span>
+                        <div class="flex flex-col gap-sm">
+                            <a href="/" class="text-sm text-grey-50 text-decoration-none" style="color: var(--text-secondary);">Home</a>
+                            <a href="/en/areas" class="text-sm text-grey-50 text-decoration-none" style="color: var(--text-secondary);">Qatar's Areas</a>
+                            <a href="/en/developments.html" class="text-sm text-grey-50 text-decoration-none" style="color: var(--text-secondary);">New Developments</a>
+                            <a href="/en/search/exclusive" class="text-sm text-grey-50 text-decoration-none" style="color: var(--text-secondary);">Exclusive Properties</a>
+                        </div>
+                    </div>
+                    <div class="footerLinkColumns__right flex">
+                        <div class="flex flex-col flex-1 gap-lg">
+                            <span class="text-md text-grey-800" style="color: #fff; font-weight: 700;">Company</span>
+                            <div class="flex flex-col gap-sm">
+                                <a href="/en/about.html" class="text-sm text-grey-50 text-decoration-none" style="color: var(--text-secondary);">About Us</a>
+                                <a href="/en/contact.html" class="text-sm text-grey-50 text-decoration-none" style="color: var(--text-secondary);">Contact</a>
+                                <a href="/en/find-agent" class="text-sm text-grey-50 text-decoration-none" style="color: var(--text-secondary);">Agents</a>
+                                <a href="/en/careers" class="text-sm text-grey-50 text-decoration-none" style="color: var(--text-secondary);">Careers</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom" style="margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 25px;">
+                <div class="text-xs text-grey-800" style="color: var(--text-secondary);">&copy; 2026 Prime View Real Estate. Lusail Marina, Doha, Qatar. Licensed Brokerage in the State of Qatar.</div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
