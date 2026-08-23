@@ -143,7 +143,15 @@ const server = http.createServer((req, res) => {
 
     if (reqPath === '/' || reqPath === '') reqPath = '/index.html';
 
-    // Direct clean route rewrites
+    // 1. Permanent 301 Redirects for Legacy / Old Project URLs
+    const isLegacyRoute = /^\/(?:en\/)?(?:buy|rent|property|lp|learn|blog)(?:\/.*)?$/i.test(reqPath) ||
+                          /^\/(?:en\/)?development\/(?:the-lofts|the-seef|the-weekend-by-elie-saab|lusail-marina-heights|valencia-residence)(?:\.html)?$/i.test(reqPath);
+    if (isLegacyRoute) {
+        res.writeHead(301, { 'Location': '/developments' });
+        return res.end();
+    }
+
+    // 2. Direct clean route rewrites
     const cleanRouteMap = {
         '/en/privacy-policy': path.join(PUBLIC_DIR, 'en', 'privacy-policy.html'),
         '/privacy-policy': path.join(PUBLIC_DIR, 'en', 'privacy-policy.html'),
@@ -151,6 +159,8 @@ const server = http.createServer((req, res) => {
         '/terms-and-conditions': path.join(PUBLIC_DIR, 'en', 'terms-and-conditions.html'),
         '/en/developments': path.join(PUBLIC_DIR, 'en', 'developments.html'),
         '/developments': path.join(PUBLIC_DIR, 'en', 'developments.html'),
+        '/en/projects': path.join(PUBLIC_DIR, 'en', 'developments.html'),
+        '/projects': path.join(PUBLIC_DIR, 'en', 'developments.html'),
         '/en/areas': path.join(PUBLIC_DIR, 'en', 'areas.html'),
         '/areas': path.join(PUBLIC_DIR, 'en', 'areas.html'),
         '/en/about': path.join(PUBLIC_DIR, 'en', 'about.html'),
@@ -161,6 +171,16 @@ const server = http.createServer((req, res) => {
 
     if (cleanRouteMap[reqPath] && fs.existsSync(cleanRouteMap[reqPath])) {
         return serveFileFromDiskOrCache(req, res, cleanRouteMap[reqPath]);
+    }
+
+    // 3. Direct project slug rewrites: /developments/:slug, /projects/:slug, /en/development/:slug
+    const devSlugMatch = reqPath.match(/^\/(?:en\/)?(?:developments|development|projects)\/([a-zA-Z0-9\-_]+)(?:\.html)?$/i);
+    if (devSlugMatch) {
+        const slug = devSlugMatch[1];
+        const devFilePath = path.join(PUBLIC_DIR, 'en', 'development', `${slug}.html`);
+        if (fs.existsSync(devFilePath)) {
+            return serveFileFromDiskOrCache(req, res, devFilePath);
+        }
     }
 
     let filePath;
@@ -221,10 +241,11 @@ process.on('uncaughtException', (err) => {
     console.error('Uncaught Exception:', err);
 });
 
-process.on('unhandledRejection', (reason, promise) => {
-    console.error('Unhandled Rejection at:', promise, 'reason:', reason);
-});
+if (!process.env.VERCEL) {
+    server.listen(PORT, () => {
+        console.log(`⚡ Prime View Real Estate 100% Local Server running at: http://localhost:${PORT}/`);
+    });
+}
 
-server.listen(PORT, () => {
-    console.log(`⚡ Prime View Real Estate 100% Local Server running at: http://localhost:${PORT}/`);
-});
+module.exports = server;
+

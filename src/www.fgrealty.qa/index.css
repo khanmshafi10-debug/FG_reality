@@ -921,3 +921,34 @@ a.navMegaMenu__column-link:hover {
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.65), 0 0 25px rgba(201, 168, 76, 0.3) !important;
   border-color: rgba(201, 168, 76, 0.7) !important;
 }
+
+/* ══════════════════════════════════════════════════════
+   GUARANTEED SINGLE LOGO SYSTEM FOR DESKTOP & MOBILE
+   ══════════════════════════════════════════════════════ */
+.navigationMobile__logo {
+  display: inline-flex !important;
+  align-items: center !important;
+  text-decoration: none !important;
+}
+
+.navigationMobile__logo .brand-logo-img {
+  height: 44px !important;
+  width: auto !important;
+  max-width: 250px !important;
+  display: block !important;
+  object-fit: contain !important;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.35)) !important;
+}
+
+@media (max-width: 1024px) {
+  .navigationMobile__logo .brand-logo-img {
+    height: 36px !important;
+    max-width: 190px !important;
+  }
+}
+
+/* Eliminate any possibility of duplicate logos */
+.navigationMobile__left-mobileLogo,
+.navigationMobile__left-desktopLogo {
+  display: none !important;
+}

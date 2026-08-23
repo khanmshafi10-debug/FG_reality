@@ -1,1 +1,0 @@
-No Content: https://www.googletagmanager.com/gtm.js?id=GTM-WPD3N3NC&is_td=1&v=3&t=t&pid=2081103515&gtm=45He67v1v9174132272za200zd9174132272&seq=1&exp=115616985~115938466~115938468~118395334~118897920~118897930~119896802&dl=www.fgrealty.qa%2F&tdp=GTM-WPD3N3NC;174132272;0;0;0&frm=0&rtg=174132272&slo=0&hlo=4&lst=1&bt=0&ct=3&mde=AW-756456160;0_1&z=0
