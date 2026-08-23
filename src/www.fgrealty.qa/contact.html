@@ -13,7 +13,28 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="preload" as="style" href="/build/assets/core-BJlXrooN.css" />
     <link rel="stylesheet" href="/build/assets/core-BJlXrooN.css" />
-    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="/index.css?v=20260823">
+    <style id="luxuryMobileMenuOverride">
+    .mobileMenu { position: fixed !important; inset: 0 !important; width: 100vw !important; height: 100vh !important; height: 100dvh !important; z-index: 9999999 !important; display: none !important; }
+    .mobileMenu.mobileMenu--open, .mobileMenu--open { display: block !important; }
+    .mobileMenu__overlay { position: fixed !important; inset: 0 !important; width: 100% !important; height: 100% !important; background: rgba(0, 0, 0, 0.65) !important; backdrop-filter: blur(4px) !important; -webkit-backdrop-filter: blur(4px) !important; z-index: 1 !important; cursor: pointer !important; }
+    .mobileMenu__drawer { position: fixed !important; top: 0 !important; left: 0 !important; bottom: 0 !important; width: 85vw !important; max-width: 360px !important; height: 100vh !important; height: 100dvh !important; background: #0e0d11 !important; color: #ffffff !important; border-right: 1.5px solid rgba(201, 168, 76, 0.4) !important; box-shadow: 10px 0 40px rgba(0, 0, 0, 0.8) !important; z-index: 1000 !important; transform: translateX(0) !important; display: flex !important; flex-direction: column !important; overflow: hidden !important; padding: 0 !important; box-sizing: border-box !important; }
+    .mobileMenu__panels { position: relative !important; flex: 1 !important; width: 100% !important; height: 100% !important; overflow-y: auto !important; -webkit-overflow-scrolling: touch !important; padding: 20px 18px 40px !important; box-sizing: border-box !important; background: #0e0d11 !important; }
+    .mobileMenu__panel { width: 100% !important; color: #ffffff !important; }
+    .mobileMenuHeader { display: flex !important; justify-content: space-between !important; align-items: center !important; border-bottom: 1px solid rgba(201, 168, 76, 0.3) !important; padding-bottom: 16px !important; margin-bottom: 18px !important; }
+    .mobileMenuHeader__title { color: #ffffff !important; font-size: 1.15rem !important; font-weight: 700 !important; font-family: 'Cinzel', 'Optima', sans-serif !important; }
+    .mobileMenuHeader__close, .mobileMenuHeader__back { background: rgba(201, 168, 76, 0.12) !important; border: 1px solid rgba(201, 168, 76, 0.3) !important; border-radius: 8px !important; color: #c9a84c !important; font-size: 1.1rem !important; cursor: pointer !important; display: flex !important; align-items: center !important; justify-content: center !important; gap: 6px !important; padding: 6px 12px !important; transition: all 0.2s ease !important; }
+    .mobileMenuList { list-style: none !important; padding: 0 !important; margin: 0 !important; display: flex !important; flex-direction: column !important; gap: 8px !important; }
+    .mobileMenuList__item { border-bottom: 1px solid rgba(255, 255, 255, 0.07) !important; }
+    .mobileMenuList__button, .mobileMenuList__link { width: 100% !important; display: flex !important; justify-content: space-between !important; align-items: center !important; background: transparent !important; border: none !important; color: #ffffff !important; font-size: 1.05rem !important; font-weight: 600 !important; padding: 12px 10px !important; border-radius: 8px !important; cursor: pointer !important; text-align: left !important; text-decoration: none !important; transition: all 0.2s ease !important; }
+    .mobileMenuList__button span, .mobileMenuList__link span { color: #ffffff !important; }
+    .mobileMenuList__button:hover, .mobileMenuList__link:hover, .mobileMenuList__button:active, .mobileMenuList__link:active { background: rgba(201, 168, 76, 0.15) !important; color: #c9a84c !important; }
+    .mobileMenuList__button:hover span, .mobileMenuList__link:hover span { color: #c9a84c !important; }
+    .mobileMenuList__button svg, .mobileMenuList__link svg { stroke: #c9a84c !important; flex-shrink: 0 !important; }
+    .mobileMenuList__button[onclick*="developments"] span { color: #c9a84c !important; }
+    .mobileMenu__panel a { display: block !important; color: #e5e7eb !important; font-size: 0.95rem !important; padding: 10px 12px !important; text-decoration: none !important; border-radius: 6px !important; border-bottom: 1px solid rgba(255, 255, 255, 0.04) !important; transition: all 0.15s ease !important; }
+    .mobileMenu__panel a:hover { background: rgba(201, 168, 76, 0.15) !important; color: #c9a84c !important; padding-left: 16px !important; }
+    </style>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1381,7 +1402,7 @@
         })();
     </script>
 <div class="mobileMenu" id="mobileMenu" aria-hidden="true">
-    <div class="mobileMenu__overlay" onclick="document.getElementById('mobileMenu')?.classList.remove('mobileMenu--open')"></div>
+    <div class="mobileMenu__overlay" onclick="closeMobileMenu()"></div>
     <div class="mobileMenu__drawer" style="background: #0e0d11; color: #ffffff; width: 340px; max-width: 90vw; height: 100vh; overflow-y: auto; padding: 24px 20px; box-sizing: border-box;">
         <div class="mobileMenu__panels" id="mobileMenuPanels">
             
@@ -1389,7 +1410,7 @@
             <div class="mobileMenu__panel mobileMenuPanel--active" data-panel="root" id="panel-root">
                 <div class="mobileMenuHeader" style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(201,168,76,0.3); padding-bottom: 16px; margin-bottom: 20px;">
                     <a href="/" style="display: block;"><img src="/images/prime-view-logo.png" alt="Prime View" style="height: 36px;"></a>
-                    <button class="mobileMenuHeader__close" onclick="document.getElementById('mobileMenu')?.classList.remove('mobileMenu--open')" aria-label="Close menu" style="background: none; border: none; color: #c9a84c; font-size: 1.5rem; cursor: pointer; padding: 4px;">
+                    <button class="mobileMenuHeader__close" onclick="closeMobileMenu()" aria-label="Close menu" style="background: none; border: none; color: #c9a84c; font-size: 1.5rem; cursor: pointer; padding: 4px;">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 14 14" fill="none"><use href="#svgIcon-close"/></svg>
                     </button>
                 </div>
@@ -1436,7 +1457,7 @@
                 <span>Back</span>
             </button>
             <span class="mobileMenuHeader__title" style="color: #ffffff; font-weight: 700; font-size: 1.1rem;">Rent</span>
-            <button class="mobileMenuHeader__close" onclick="document.getElementById('mobileMenu')?.classList.remove('mobileMenu--open')" aria-label="Close menu" style="background: none; border: none; color: #c9a84c; font-size: 1.5rem; cursor: pointer; padding: 4px;">
+            <button class="mobileMenuHeader__close" onclick="closeMobileMenu()" aria-label="Close menu" style="background: none; border: none; color: #c9a84c; font-size: 1.5rem; cursor: pointer; padding: 4px;">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 14 14" fill="none"><use href="#svgIcon-close"/></svg>
             </button>
         </div>
@@ -1521,7 +1542,7 @@
                 <span>Back</span>
             </button>
             <span class="mobileMenuHeader__title" style="color: #ffffff; font-weight: 700; font-size: 1.1rem;">Buy</span>
-            <button class="mobileMenuHeader__close" onclick="document.getElementById('mobileMenu')?.classList.remove('mobileMenu--open')" aria-label="Close menu" style="background: none; border: none; color: #c9a84c; font-size: 1.5rem; cursor: pointer; padding: 4px;">
+            <button class="mobileMenuHeader__close" onclick="closeMobileMenu()" aria-label="Close menu" style="background: none; border: none; color: #c9a84c; font-size: 1.5rem; cursor: pointer; padding: 4px;">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 14 14" fill="none"><use href="#svgIcon-close"/></svg>
             </button>
         </div>
@@ -1606,7 +1627,7 @@
                 <span>Back</span>
             </button>
             <span class="mobileMenuHeader__title" style="color: #ffffff; font-weight: 700; font-size: 1.1rem;">Commercial</span>
-            <button class="mobileMenuHeader__close" onclick="document.getElementById('mobileMenu')?.classList.remove('mobileMenu--open')" aria-label="Close menu" style="background: none; border: none; color: #c9a84c; font-size: 1.5rem; cursor: pointer; padding: 4px;">
+            <button class="mobileMenuHeader__close" onclick="closeMobileMenu()" aria-label="Close menu" style="background: none; border: none; color: #c9a84c; font-size: 1.5rem; cursor: pointer; padding: 4px;">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 14 14" fill="none"><use href="#svgIcon-close"/></svg>
             </button>
         </div>
@@ -1691,7 +1712,7 @@
                 <span>Back</span>
             </button>
             <span class="mobileMenuHeader__title" style="color: #ffffff; font-weight: 700; font-size: 1.1rem;">Developments</span>
-            <button class="mobileMenuHeader__close" onclick="document.getElementById('mobileMenu')?.classList.remove('mobileMenu--open')" aria-label="Close menu" style="background: none; border: none; color: #c9a84c; font-size: 1.5rem; cursor: pointer; padding: 4px;">
+            <button class="mobileMenuHeader__close" onclick="closeMobileMenu()" aria-label="Close menu" style="background: none; border: none; color: #c9a84c; font-size: 1.5rem; cursor: pointer; padding: 4px;">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 14 14" fill="none"><use href="#svgIcon-close"/></svg>
             </button>
         </div>
@@ -1776,8 +1797,19 @@
 function toggleMobileMenu() {
   const menu = document.getElementById('mobileMenu');
   if (menu) {
-    menu.classList.toggle('mobileMenu--open');
-    showMobilePanel('root');
+    const isOpen = menu.classList.toggle('mobileMenu--open');
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+    if (isOpen && typeof showMobilePanel === 'function') {
+      showMobilePanel('root');
+    }
+  }
+}
+
+function closeMobileMenu() {
+  const menu = document.getElementById('mobileMenu');
+  if (menu) {
+    menu.classList.remove('mobileMenu--open');
+    document.body.style.overflow = '';
   }
 }
 function showMobilePanel(panelId) {
@@ -1790,7 +1822,7 @@ function showMobilePanel(panelId) {
 document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('[data-mobile-menu-close]').forEach(btn => {
     btn.addEventListener('click', function() {
-      document.getElementById('mobileMenu')?.classList.remove('mobileMenu--open');
+      closeMobileMenu();
     });
   });
 });
@@ -1798,3 +1830,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
 </body>
 </html>
+

@@ -650,3 +650,559 @@ a.navMegaMenu__column-link {
 a.navMegaMenu__column-link:hover {
   color: #c9a84c !important;
 }
+
+
+/* ==========================================================================
+   PRIME VIEW REAL ESTATE - DROPDOWN STACKING CONTEXT & HERO VIDEO FIX
+   ========================================================================== */
+
+/* 1. Homepage Hero Header & Navigation Bar Stacking Context */
+.hero,
+.hero__content {
+    position: relative !important;
+    overflow: visible !important;
+}
+
+.hero__content-top {
+    position: relative !important;
+    z-index: 999999 !important;
+    overflow: visible !important;
+}
+
+.hero__content-middle {
+    position: relative !important;
+    z-index: 10 !important;
+}
+
+.hero__content-bottom {
+    position: relative !important;
+    z-index: 10 !important;
+}
+
+.hero__video,
+.hero__video-container,
+.hero__overlay,
+.hero__background {
+    z-index: 1 !important;
+}
+
+/* 2. Universal Navigation Bar (Regular Pages, Listing Pages, Project Detail Pages) */
+.listingPageMenuWrapper,
+.listingPageMenuWrapper--withDivider,
+.navigationMobile,
+.navigationMobile--colorInverted,
+.navigationMobile--regularPage,
+.project-top-nav,
+header.site-header {
+    position: relative !important;
+    z-index: 999999 !important;
+    overflow: visible !important;
+}
+
+.navigationMobile__right,
+.navigationMobile__left,
+.headerNavLinks {
+    position: relative !important;
+    z-index: 999999 !important;
+    overflow: visible !important;
+}
+
+.headerNavLink,
+.headerNavLink--withSubmenu {
+    position: relative !important;
+    z-index: 999999 !important;
+    overflow: visible !important;
+}
+
+/* 3. Mega Menus & Submenus - Absolute Highest Z-Index & Visibility */
+.navMegaMenu,
+.navSubmenu,
+.devMegaMenuCustom,
+.navMegaMenuCustom,
+[data-submenu],
+.headerNavLink--withSubmenu .navMegaMenu,
+.headerNavLink .navMegaMenu {
+    position: absolute !important;
+    top: 100% !important;
+    z-index: 10000000 !important;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35), 0 0 24px rgba(201, 168, 76, 0.2) !important;
+    pointer-events: auto !important;
+}
+
+.headerNavLink:hover > .navMegaMenu,
+.headerNavLink--withSubmenu:hover > .navMegaMenu,
+.headerNavLink:hover > [data-submenu],
+.headerNavLink--withSubmenu:hover > [data-submenu],
+.headerNavLink.headerNavLink--open > .navMegaMenu {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 10000000 !important;
+}
+
+/* 4. Ensure Hero Sections on all subpages stay below dropdown */
+.areas-hero,
+.about-hero,
+.contact-hero,
+.dev-hero,
+.project-hero,
+.hero-section {
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+.areas-hero .hero-badge,
+.areas-hero h1,
+.areas-hero p,
+.areas-stats-strip,
+.dev-hero__content,
+.about-hero div,
+.contact-hero div {
+    position: relative !important;
+    z-index: 2 !important;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   PRIME VIEW REAL ESTATE - MASTER ULTRA-RESPONSIVE MOBILE & TABLET SYSTEM
+   ══════════════════════════════════════════════════════════════════════════════ */
+
+/* ── Global Viewport & Reset ── */
+html, body {
+  width: 100% !important;
+  max-width: 100vw !important;
+  overflow-x: hidden !important;
+  -webkit-text-size-adjust: 100% !important;
+  touch-action: manipulation;
+}
+
+img, picture, video, iframe, svg {
+  max-width: 100% !important;
+  height: auto;
+}
+
+/* ── Navigation Bar: Desktop vs Mobile Visibility ── */
+@media (min-width: 1025px) {
+  .navigationMobile__left-hamburger {
+    display: none !important;
+  }
+  .headerNavLinks {
+    display: flex !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  /* Hide Desktop Horizontal Links on Tablet/Mobile to prevent header overflow */
+  .headerNavLinks,
+  .hero__content-top .headerNavLinks,
+  .listingPageMenuWrapper .headerNavLinks {
+    display: none !important;
+  }
+
+  /* Hamburger Menu Button - Prominent & Touch Friendly */
+  .navigationMobile__left-hamburger,
+  .hero__content-top .navigationMobile__left-hamburger,
+  .listingPageMenuWrapper .navigationMobile__left-hamburger {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
+    background: rgba(14, 13, 17, 0.85) !important;
+    border: 1px solid rgba(201, 168, 76, 0.45) !important;
+    border-radius: 10px !important;
+    cursor: pointer !important;
+    padding: 0 !important;
+    margin-right: 12px !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3) !important;
+    transition: all 0.2s ease !important;
+  }
+
+  .navigationMobile__left-hamburger:hover,
+  .navigationMobile__left-hamburger:active {
+    background: #c9a84c !important;
+    border-color: #c9a84c !important;
+    transform: scale(1.05);
+  }
+
+  .navigationMobile__left-hamburger svg,
+  .navigationMobile__left-hamburger i {
+    fill: #ffffff !important;
+    color: #ffffff !important;
+    width: 20px !important;
+    height: 20px !important;
+    transition: fill 0.2s ease !important;
+  }
+
+  .navigationMobile__left-hamburger:hover svg,
+  .navigationMobile__left-hamburger:active svg {
+    fill: #0e0d11 !important;
+  }
+
+  /* Mobile Navbar Sizing */
+  .navigationMobile,
+  .navigationMobile--regularPage,
+  .listingPageMenuWrapper .navigationMobile {
+    height: 64px !important;
+    padding: 0 16px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+
+  .navigationMobile__left {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+  }
+
+  .navigationMobile__logo img,
+  .brand-logo-img {
+    height: 36px !important;
+    max-width: 170px !important;
+  }
+
+  /* ── Slide-in Mobile Drawer Menu ── */
+  .mobileMenu {
+    position: fixed !important;
+    inset: 0 !important;
+    z-index: 99999999 !important;
+    display: none;
+    width: 100vw !important;
+    height: 100vh !important;
+  }
+
+  .mobileMenu.mobileMenu--open {
+    display: block !important;
+  }
+
+  .mobileMenu__overlay {
+    position: absolute !important;
+    inset: 0 !important;
+    background: rgba(0, 0, 0, 0.85) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+  }
+
+  .mobileMenu__drawer {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    width: 88vw !important;
+    max-width: 380px !important;
+    background: #0e0d11 !important;
+    border-right: 1.5px solid rgba(201, 168, 76, 0.4) !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    padding: 24px 20px 40px !important;
+    box-shadow: 8px 0 40px rgba(0,0,0,0.8) !important;
+    z-index: 2 !important;
+  }
+
+  .mobileMenuHeader {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    border-bottom: 1px solid rgba(201, 168, 76, 0.3) !important;
+    padding-bottom: 16px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .mobileMenuHeader__title {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    font-size: 1.05rem !important;
+    font-family: 'Cinzel', serif !important;
+  }
+
+  .mobileMenuHeader__close,
+  .mobileMenuHeader__back {
+    background: none !important;
+    border: none !important;
+    color: #c9a84c !important;
+    font-size: 1.2rem !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    padding: 6px !important;
+  }
+
+  .mobileMenuList {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+
+  .mobileMenuList__button,
+  .mobileMenuList__link {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 12px 14px !important;
+    background: rgba(255, 255, 255, 0.04) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 10px !important;
+    color: #f1f5f9 !important;
+    font-size: 0.95rem !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    width: 100% !important;
+    text-align: left !important;
+    transition: all 0.2s ease !important;
+  }
+
+  .mobileMenuList__button:hover,
+  .mobileMenuList__link:hover,
+  .mobileMenuList__button:active,
+  .mobileMenuList__link:active {
+    background: rgba(201, 168, 76, 0.15) !important;
+    border-color: #c9a84c !important;
+    color: #e2c068 !important;
+  }
+
+  .mobileMenuList__button svg,
+  .mobileMenuList__link svg {
+    color: #c9a84c !important;
+    fill: #c9a84c !important;
+  }
+}
+
+/* ── Tablet & Mobile General Typography & Containers (< 768px) ── */
+@media (max-width: 768px) {
+  .container,
+  .contentWrapper,
+  .section-wrap,
+  .contact-container,
+  .dev-grid-section,
+  .areas-main-section,
+  .pvContainer {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    max-width: 100% !important;
+  }
+
+  /* ── Hero Sections on Mobile ── */
+  .areas-hero,
+  .about-hero,
+  .contact-hero,
+  .dev-hero {
+    min-height: auto !important;
+    padding: 120px 16px 45px !important;
+  }
+
+  .areas-hero h1,
+  .about-hero h1,
+  .contact-hero h1,
+  .dev-hero__title {
+    font-size: clamp(1.85rem, 6vw, 2.5rem) !important;
+    line-height: 1.2 !important;
+    margin-bottom: 12px !important;
+  }
+
+  .areas-hero p,
+  .about-hero p,
+  .contact-hero p,
+  .dev-hero__subtitle {
+    font-size: 0.92rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 24px !important;
+    padding: 0 4px !important;
+  }
+
+  .hero-badge,
+  .dev-hero__badge {
+    font-size: 0.7rem !important;
+    padding: 5px 14px !important;
+    letter-spacing: 1.5px !important;
+    margin-bottom: 14px !important;
+  }
+
+  /* ── Stats Strip Responsive ── */
+  .areas-stats-strip,
+  .dev-stats-strip {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 10px !important;
+    padding: 14px 20px !important;
+    border-radius: 16px !important;
+    width: 100% !important;
+    max-width: 360px !important;
+    margin: 0 auto !important;
+  }
+
+  .areas-stat-item,
+  .dev-stat-item {
+    font-size: 0.82rem !important;
+    justify-content: center !important;
+  }
+
+  /* ── Filter & Search Bars on Mobile ── */
+  .areas-controls-wrapper,
+  .dev-controls-wrapper {
+    top: 64px !important;
+    padding: 12px 0 !important;
+  }
+
+  .areas-controls-container,
+  .dev-controls-container {
+    padding: 0 16px !important;
+    gap: 10px !important;
+  }
+
+  .areas-search-row,
+  .dev-search-row {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+  }
+
+  .areas-search-input-wrap,
+  .dev-search-input-wrap {
+    flex: 1 1 100% !important;
+    width: 100% !important;
+  }
+
+  .areas-search-input,
+  .dev-search-input {
+    font-size: 0.88rem !important;
+    padding: 11px 14px 11px 40px !important;
+  }
+
+  .areas-filter-tabs,
+  .dev-tabs {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    gap: 6px !important;
+    padding-bottom: 4px !important;
+    width: 100% !important;
+  }
+
+  .area-tab-btn,
+  .dev-tab-btn {
+    font-size: 0.78rem !important;
+    padding: 7px 14px !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* ── Grids & Cards: Single Column on Mobile ── */
+  .lux-areas-grid,
+  .dev-grid,
+  .pvGrid,
+  .areasGrid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  .lux-area-card__image-wrap {
+    height: 210px !important;
+  }
+
+  .lux-area-card__body {
+    padding: 16px 18px !important;
+  }
+
+  .lux-area-card__title {
+    font-size: 1.08rem !important;
+  }
+
+  /* ── About Us & Story Section Mobile ── */
+  .story-grid {
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+    margin-bottom: 40px !important;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 14px !important;
+  }
+
+  .stat-card {
+    padding: 20px 14px !important;
+  }
+
+  .stat-num {
+    font-size: 1.8rem !important;
+  }
+
+  /* ── Contact Page Mobile ── */
+  .contact-container {
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+    padding: 30px 16px 60px !important;
+  }
+
+  .contact-form-card {
+    padding: 28px 18px !important;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
+  }
+
+  .form-input,
+  .form-select,
+  .form-textarea {
+    font-size: 16px !important; /* Prevents auto-zoom on iOS */
+    padding: 12px 14px !important;
+  }
+
+  .btn-submit {
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 14px 20px !important;
+  }
+
+  /* ── Footer Responsive Mobile ── */
+  .footer {
+    padding: 40px 16px 24px !important;
+  }
+
+  .footer > div:first-child {
+    flex-direction: column !important;
+    gap: 30px !important;
+  }
+
+  .footer > div:first-child > div:last-child {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  .footerSocialMedia {
+    justify-content: center !important;
+    width: 100% !important;
+    margin-bottom: 12px !important;
+  }
+
+  .footer__bottom {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 10px !important;
+  }
+}
+
+/* ── Ultra-Small Phones (< 480px) ── */
+@media (max-width: 480px) {
+  .areas-hero h1,
+  .about-hero h1,
+  .contact-hero h1,
+  .dev-hero__title {
+    font-size: 1.7rem !important;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .lux-area-card__image-wrap {
+    height: 190px !important;
+  }
+}
