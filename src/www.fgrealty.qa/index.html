@@ -532,6 +532,10 @@
     <meta name="twitter:title" content="Exclusive Luxury Real Estate Developments in Qatar | Prime View with Prime View Real Estate QA | Prime View Real Estate">
     <meta name="twitter:description" content="Find property for rent or buy in Qatar with Prime View Real Estate, properties and real estate finder. Search verified homes, apartments in Doha, Lusail &amp; more with top real estate agents.">
     <meta name="twitter:image" content="https://primeview.qa/images/prime-view-logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -2779,45 +2783,43 @@
 
 
 
+
+
 <style id="pvLightThemeProjectsCSS">
 /* ════════════════════════════════════════════════════════════════
-   PRIME VIEW REAL ESTATE - ELEGANT LUXURY LIGHT THEME SHOWCASE
+   LUXURY CARD & LIGHT THEME STYLING
    ════════════════════════════════════════════════════════════════ */
-
 :root {
   --pv-gold: #c5a880;
-  --pv-gold-dark: #a38438;
-  --pv-gold-hover: #b89c4c;
-  --pv-dark-text: #111827;
-  --pv-slate-text: #475569;
+  --pv-gold-dark: #b8902a;
+  --pv-gold-light: #e2c068;
   --pv-bg-white: #ffffff;
-  --pv-bg-cream: #fbf9f5;
-  --pv-bg-pearl: #f6f4ee;
-  --pv-border-light: #eae6df;
-  --pv-radius: 18px;
+  --pv-bg-cream: #faf8f5;
+  --pv-bg-pearl: #f5f3ee;
+  --pv-dark-text: #111827;
+  --pv-slate-text: #4b5563;
+  --pv-border-light: #e5e7eb;
+  --pv-radius: 20px;
 }
 
 .pvSecLight {
-  padding: 80px 0;
+  padding: 85px 0;
   position: relative;
-  overflow: hidden;
-  font-family: var(--font-primary, "Plus Jakarta Sans", sans-serif);
 }
-
 .pvSecLight--white { background: var(--pv-bg-white); }
 .pvSecLight--cream { background: var(--pv-bg-cream); border-top: 1px solid var(--pv-border-light); }
 .pvSecLight--pearl { background: var(--pv-bg-pearl); border-top: 1px solid var(--pv-border-light); }
 
 .pvContainer {
-  max-width: 1360px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
 .pvSecHeader {
   text-align: center;
-  max-width: 740px;
-  margin: 0 auto 48px;
+  max-width: 860px;
+  margin: 0 auto 52px;
 }
 
 .pvPill {
@@ -2825,32 +2827,38 @@
   align-items: center;
   gap: 8px;
   padding: 7px 20px;
-  border-radius: 30px;
-  background: rgba(197, 168, 128, 0.12);
-  border: 1px solid rgba(197, 168, 128, 0.4);
+  border-radius: 50px;
+  background: rgba(197, 168, 128, 0.14);
+  border: 1px solid rgba(197, 168, 128, 0.35);
   color: var(--pv-gold-dark);
   font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 2px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
   margin-bottom: 16px;
 }
 
 .pvPillDot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
+  width: 7px;
+  height: 7px;
   background: var(--pv-gold-dark);
-  box-shadow: 0 0 8px var(--pv-gold);
+  border-radius: 50%;
+  animation: pvPulseDot 2s infinite ease-in-out;
+}
+
+@keyframes pvPulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.8); }
 }
 
 .pvSecTitle {
-  font-size: 2.5rem;
-  font-weight: 800;
+  font-family: 'Cinzel', serif;
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 700;
   color: var(--pv-dark-text);
   letter-spacing: -0.5px;
-  margin: 0 0 12px;
-  line-height: 1.2;
+  margin: 0 0 14px;
+  line-height: 1.25;
 }
 
 .pvSecSub {
@@ -2860,7 +2868,7 @@
   margin: 0;
 }
 
-/* ── REELS SCROLL CAROUSEL (LIGHT THEME) ── */
+/* ── REELS SCROLL CAROUSEL ── */
 .pvReelsSec {
   padding: 80px 0;
   background: linear-gradient(180deg, #fbf9f5 0%, #f4f0e6 100%);
@@ -2952,6 +2960,25 @@
   justify-content: space-between;
 }
 
+.pvBadge {
+  padding: 5px 14px;
+  border-radius: 25px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.pvBadge.badge--offplan, .pvBadge--offplan {
+  background: linear-gradient(135deg, #c5a880 0%, #96742c 100%);
+  color: #ffffff;
+}
+
+.pvBadge.badge--ready, .pvBadge--ready {
+  background: #10b981;
+  color: #ffffff;
+}
+
 .pvReelBody {
   position: relative;
   z-index: 3;
@@ -3040,15 +3067,13 @@
 .pvReelNav--prev { left: 24px; }
 .pvReelNav--next { right: 24px; }
 
-
 /* ════════════════════════════════════════════════════════════════
-   ULTRA-RESPONSIVE MOBILE STYLING & COMPATIBILITY FIXES
+   LUXURY PROJECT CARDS GRID (P-CARD)
    ════════════════════════════════════════════════════════════════ */
-
 .pvGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  gap: 32px;
 }
 
 @media (max-width: 1100px) {
@@ -3059,420 +3084,265 @@
 }
 
 @media (max-width: 768px) {
-  .pvSecLight {
-    padding: 48px 0;
-  }
-
-  .pvContainer {
-    padding: 0 16px;
-  }
-
-  .pvSecHeader {
-    margin-bottom: 30px;
-    padding: 0 8px;
-  }
-
-  .pvPill {
-    font-size: 0.7rem;
-    padding: 6px 16px;
-    letter-spacing: 1.2px;
-  }
-
-  .pvSecTitle {
-    font-size: 1.65rem;
-    line-height: 1.25;
-    margin-bottom: 8px;
-  }
-
-  .pvSecSub {
-    font-size: 0.92rem;
-    line-height: 1.55;
-  }
-
-  /* Carousel Reel Mobile Optimization */
-  .pvReelsSec {
-    padding: 48px 0;
-  }
-
-  .pvReelsTrack {
-    padding: 16px 20px 24px;
-    gap: 16px;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .pvReelCard {
-    flex: 0 0 82vw;
-    max-width: 280px;
-    scroll-snap-align: center;
-  }
-
-  .pvReelFrame {
-    height: 440px;
-    border-radius: 28px;
-    border-width: 3px;
-  }
-
-  .pvReelTitle {
-    font-size: 1.15rem;
-  }
-
-  .pvReelBody {
-    padding: 16px 14px 18px;
-  }
-
-  .pvReelCta {
-    padding: 9px;
-    font-size: 0.78rem;
-  }
-
-  /* Grid Cards Mobile Optimization */
   .pvGrid {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 22px;
   }
-
-  .pvLightCard {
-    border-radius: 16px;
-  }
-
-  .pvLightCard__media {
-    height: 200px;
-  }
-
-  .pvLightCard__content {
-    padding: 18px 16px;
-  }
-
-  .pvLightCard__title {
-    font-size: 1.18rem;
-    margin-bottom: 2px;
-  }
-
-  .pvLightCard__sub {
-    font-size: 0.8rem;
-    margin-bottom: 10px;
-  }
-
-  .pvLightCard__desc {
-    font-size: 0.82rem;
-    line-height: 1.5;
-    margin-bottom: 14px;
-  }
-
-  .pvLightCard__specs {
-    gap: 8px;
-    padding: 10px 12px;
-    margin-bottom: 16px;
-  }
-
-  .pvSpec__label {
-    font-size: 0.6rem;
-  }
-
-  .pvSpec__val {
-    font-size: 0.8rem;
-  }
-
-  .pvSpec--price .pvSpec__val {
-    font-size: 0.9rem;
-  }
-
-  .pvLightCard__actions {
-    gap: 8px;
-  }
-
-  .pvLightBtn {
-    padding: 11px 12px;
-    font-size: 0.8rem;
-  }
-
-  .pvReelNav {
-    display: none;
-  }
-}
-
-@media (max-width: 480px) {
-  .pvSecTitle {
-    font-size: 1.45rem;
-  }
-
-  .pvReelCard {
-    flex: 0 0 85vw;
-    max-width: 270px;
-  }
-
-  .pvReelFrame {
-    height: 420px;
-  }
-
-  .pvLightCard__media {
-    height: 185px;
-  }
-
-  .pvLightCard__actions {
-    flex-direction: row;
-  }
-
-  .pvLightBtn--wa {
-    padding: 11px 14px;
-  }
-}
-
+  .pvSecLight { padding: 50px 0; }
   .pvContainer { padding: 0 16px; }
-  .pvSecHeader { margin-bottom: 30px; padding: 0 8px; }
-  .pvPill { font-size: 0.7rem; padding: 6px 16px; letter-spacing: 1.2px; }
-  .pvSecTitle { font-size: 1.65rem; line-height: 1.25; margin-bottom: 8px; }
-  .pvSecSub { font-size: 0.92rem; line-height: 1.55; }
-  .pvReelsSec { padding: 48px 0; }
-  .pvReelsTrack { padding: 16px 20px 24px; gap: 16px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; }
-  .pvReelCard { flex: 0 0 82vw; max-width: 280px; scroll-snap-align: center; }
-  .pvReelFrame { height: 440px; border-radius: 28px; border-width: 3px; }
-  .pvReelTitle { font-size: 1.15rem; }
-  .pvReelBody { padding: 16px 14px 18px; }
-  .pvReelCta { padding: 9px; font-size: 0.78rem; }
-  .pvGrid { grid-template-columns: 1fr; gap: 20px; }
-  .pvLightCard { border-radius: 16px; }
-  .pvLightCard__media { height: 200px; }
-  .pvLightCard__content { padding: 18px 16px; }
-  .pvLightCard__title { font-size: 1.18rem; margin-bottom: 2px; }
-  .pvLightCard__sub { font-size: 0.8rem; margin-bottom: 10px; }
-  .pvLightCard__desc { font-size: 0.82rem; line-height: 1.5; margin-bottom: 14px; }
-  .pvLightCard__specs { gap: 8px; padding: 10px 12px; margin-bottom: 16px; }
-  .pvSpec__label { font-size: 0.6rem; }
-  .pvSpec__val { font-size: 0.8rem; }
-  .pvSpec--price .pvSpec__val { font-size: 0.9rem; }
-  .pvLightCard__actions { gap: 8px; }
-  .pvLightBtn { padding: 11px 12px; font-size: 0.8rem; }
-  .pvReelNav { display: none; }
+  .pvSecTitle { font-size: 1.65rem; }
 }
 
-@media (max-width: 480px) {
-  .pvSecTitle { font-size: 1.45rem; }
-  .pvReelCard { flex: 0 0 85vw; max-width: 270px; }
-  .pvReelFrame { height: 420px; }
-  .pvLightCard__media { height: 185px; }
-  .pvLightCard__actions { flex-direction: row; }
-  .pvLightBtn--wa { padding: 11px 14px; }
-}
-
-.pvLightCard {
+.p-card {
   background: #ffffff;
-  border: 1px solid var(--pv-border-light);
-  border-radius: var(--pv-radius);
+  border-radius: 20px;
+  border: 1px solid #e8e4dc;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
-}
-
-.pvLightCard:hover {
-  transform: translateY(-8px);
-  border-color: rgba(197, 168, 128, 0.7);
-  box-shadow: 0 20px 45px rgba(197, 168, 128, 0.22);
-}
-
-.pvLightCard__media {
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.04);
   position: relative;
-  height: 230px;
-  overflow: hidden;
 }
 
-.pvLightCard__img {
+.p-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border-color: rgba(197, 168, 128, 0.6);
+}
+
+.p-card__image-wrapper {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+  background: #181818;
+}
+
+.p-card__img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.pvLightCard:hover .pvLightCard__img { transform: scale(1.07); }
+.p-card:hover .p-card__img {
+  transform: scale(1.08);
+}
 
-.pvLightCard__overlay {
+.p-card__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.55) 100%);
+  background: linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0) 40%, rgba(0,0,0,0.75) 100%);
   pointer-events: none;
 }
 
-.pvLightCard__top {
+.p-card__tags-top {
   position: absolute;
   top: 14px;
   left: 14px;
+  right: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   z-index: 2;
 }
 
-.pvBadge {
-  padding: 5px 14px;
-  border-radius: 25px;
+.p-card__badge {
+  padding: 5px 12px;
+  border-radius: 30px;
   font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.5px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
   text-transform: uppercase;
 }
 
-.pvBadge--offplan {
-  background: linear-gradient(135deg, #c5a880 0%, #96742c 100%);
-  color: #ffffff;
+.badge--offplan {
+  background: linear-gradient(135deg, #c5a85c 0%, #a38438 100%);
+  color: #FFFFFF;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
-.pvBadge--ready {
-  background: #10b981;
-  color: #ffffff;
+.badge--ready {
+  background: #10B981;
+  color: #FFFFFF;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
-.pvBadge--lease {
-  background: #3b82f6;
-  color: #ffffff;
+.p-card__category-tag {
+  background: rgba(15, 13, 10, 0.75);
+  backdrop-filter: blur(8px);
+  color: #E2C068;
+  border: 1px solid rgba(226, 192, 104, 0.35);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 600;
 }
 
-.pvBadge--luxury {
-  background: linear-gradient(135deg, #e0a96d 0%, #8c5319 100%);
-  color: #ffffff;
-  box-shadow: 0 0 10px rgba(224, 169, 109, 0.5);
-}
-
-.pvLightCard__location {
+.p-card__image-bottom {
   position: absolute;
   bottom: 12px;
-  left: 16px;
+  left: 14px;
+  right: 14px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 6px;
-  color: #ffffff;
-  font-size: 0.82rem;
-  font-weight: 600;
   z-index: 2;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.7);
 }
 
-.pvLightCard__content {
-  padding: 24px;
+.p-card__dp-pill, .p-card__handover-pill {
+  background: rgba(0, 0, 0, 0.68);
+  backdrop-filter: blur(8px);
+  color: #FFFFFF;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.p-card__dp-pill i, .p-card__handover-pill i {
+  color: #d4a843;
+}
+
+.p-card__body {
+  padding: 24px 22px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
 
-.pvLightCard__title {
-  font-size: 1.3rem;
-  font-weight: 800;
-  color: var(--pv-dark-text);
-  margin: 0 0 4px;
-  letter-spacing: -0.2px;
+.p-card__header {
+  margin-bottom: 8px;
 }
 
-.pvLightCard__sub {
-  font-size: 0.84rem;
-  color: var(--pv-gold-dark);
+.p-card__location {
+  color: #b8902a;
+  font-size: 0.78rem;
   font-weight: 700;
-  margin: 0 0 12px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
 }
 
-.pvLightCard__desc {
-  font-size: 0.85rem;
-  color: var(--pv-slate-text);
+.p-card__title {
+  font-family: 'Cinzel', serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.35;
+  margin: 0 0 6px;
+}
+
+.p-card__title a {
+  color: #1c1a16;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.p-card__title a:hover {
+  color: #b8902a;
+}
+
+.p-card__type-beds {
+  font-size: 0.84rem;
+  color: #5c5648;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.p-card__desc {
+  font-size: 0.86rem;
+  color: #5c5648;
   line-height: 1.6;
-  margin: 0 0 18px;
+  margin-bottom: 20px;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  flex-grow: 1;
 }
 
-.pvLightCard__specs {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  background: #f9f8f4;
-  border: 1px solid #eae6df;
-  padding: 12px 14px;
-  border-radius: 12px;
-  margin-bottom: 20px;
+.p-card__footer {
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid #e8e4dc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
 }
 
-.pvSpec {
+.p-card__price-box {
   display: flex;
   flex-direction: column;
-  gap: 2px;
 }
 
-.pvSpec__label {
-  font-size: 0.63rem;
-  font-weight: 800;
-  color: #64748b;
+.p-card__price-label {
+  font-size: 0.68rem;
+  text-transform: uppercase;
   letter-spacing: 0.8px;
+  color: #8a8278;
+  font-weight: 600;
 }
 
-.pvSpec__val {
-  font-size: 0.84rem;
-  font-weight: 700;
-  color: #1e293b;
-}
-
-.pvSpec--price .pvSpec__val {
-  color: var(--pv-gold-dark);
-  font-size: 0.95rem;
+.p-card__price-val {
+  font-size: 1.15rem;
   font-weight: 800;
+  color: #b8902a;
+  font-family: 'Cinzel', serif;
 }
 
-.pvLightCard__actions {
+.p-card__actions {
   display: flex;
-  gap: 10px;
-  margin-top: auto;
+  align-items: center;
+  gap: 8px;
 }
 
-.pvLightBtn {
-  flex: 1;
+.p-card__btn-wa {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #25D366;
+  color: #FFFFFF;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  padding: 12px 14px;
-  border-radius: 12px;
-  font-size: 0.82rem;
-  font-weight: 800;
   text-decoration: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  font-size: 1.15rem;
+  transition: transform 0.2s ease, background 0.2s ease;
 }
 
-.pvLightBtn--primary {
-  background: linear-gradient(135deg, #c5a880 0%, #a38438 100%);
-  color: #ffffff;
+.p-card__btn-wa:hover {
+  background: #1eb956;
+  transform: scale(1.06);
 }
 
-.pvLightBtn--primary:hover {
-  background: linear-gradient(135deg, #d4b97a 0%, #b89c4c 100%);
-  box-shadow: 0 4px 14px rgba(197, 168, 128, 0.35);
-  transform: translateY(-1px);
+.p-card__btn-explore {
+  padding: 10px 18px;
+  border-radius: 10px;
+  background: #111111;
+  color: #FFFFFF;
+  font-size: 0.84rem;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
 }
 
-.pvLightBtn--modal {
-  background: #f1ede5;
-  border: 1px solid #dcd6cb;
-  color: #1e293b;
-}
-
-.pvLightBtn--modal:hover {
-  background: #e6e0d3;
-  border-color: #c5a880;
-  color: var(--pv-gold-dark);
-}
-
-.pvLightBtn--wa {
-  flex: none;
-  padding: 12px 18px;
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-  color: #ffffff;
-  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.22);
-}
-
-.pvLightBtn--wa:hover {
-  background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(16, 185, 129, 0.35);
+.p-card__btn-explore:hover {
+  background: #b8902a;
+  color: #FFFFFF;
+  transform: translateX(2px);
 }
 </style>
+
 
 <!-- ════════════════════════════════════════════════════════════════
      REELS HORIZONTAL CAROUSEL SHOWCASE (LIGHT THEME)
@@ -3496,14 +3366,14 @@
 
     <div class="pvReelsTrack" id="fgReelsTrack">
       
-    <div class="pvReelCard" onclick="window.location.href='/en/development/skala-villas'">
+    <div class="pvReelCard" onclick="window.location.href='/en/development/skala-villas.html'">
       <div class="pvReelFrame">
         <div class="pvReelNotch"></div>
         <img decoding="async" src="/images/developments/skala-villas/hero.jpg" alt="Skala Villas & Waterfront Luxury" class="pvReelImg" loading="lazy">
         <div class="pvReelOverlay"></div>
         
         <div class="pvReelTop">
-          <span class="pvBadge pvBadge--offplan">Flagship</span>
+          <span class="pvBadge badge--offplan">Off-Plan</span>
         </div>
 
         <div class="pvReelBody">
@@ -3519,14 +3389,14 @@
     </div>
   
 
-    <div class="pvReelCard" onclick="openFgProjectModal('via-doro')">
+    <div class="pvReelCard" onclick="window.location.href='/en/development/via-doro.html'">
       <div class="pvReelFrame">
         <div class="pvReelNotch"></div>
         <img decoding="async" src="/images/developments/skala-villas/sk-feature-1.jpg" alt="Via D'Oro Signature Villas" class="pvReelImg" loading="lazy">
         <div class="pvReelOverlay"></div>
         
         <div class="pvReelTop">
-          <span class="pvBadge pvBadge--offplan">Off-Plan</span>
+          <span class="pvBadge badge--offplan">Off-Plan</span>
         </div>
 
         <div class="pvReelBody">
@@ -3542,14 +3412,14 @@
     </div>
   
 
-    <div class="pvReelCard" onclick="openFgProjectModal('carlton-house')">
+    <div class="pvReelCard" onclick="window.location.href='/en/development/carlton-house.html'">
       <div class="pvReelFrame">
         <div class="pvReelNotch"></div>
         <img decoding="async" src="/images/developments/skala-villas/sk-feature-4.jpg" alt="Carlton House Waterfront" class="pvReelImg" loading="lazy">
         <div class="pvReelOverlay"></div>
         
         <div class="pvReelTop">
-          <span class="pvBadge pvBadge--offplan">Off-Plan</span>
+          <span class="pvBadge badge--offplan">Off-Plan</span>
         </div>
 
         <div class="pvReelBody">
@@ -3565,14 +3435,14 @@
     </div>
   
 
-    <div class="pvReelCard" onclick="openFgProjectModal('canal-bay')">
+    <div class="pvReelCard" onclick="window.location.href='/en/development/canal-bay.html'">
       <div class="pvReelFrame">
         <div class="pvReelNotch"></div>
         <img decoding="async" src="/images/developments/skala-villas/sk-feature-5.jpg" alt="Canal Bay Beachfront" class="pvReelImg" loading="lazy">
         <div class="pvReelOverlay"></div>
         
         <div class="pvReelTop">
-          <span class="pvBadge pvBadge--offplan">Off-Plan</span>
+          <span class="pvBadge badge--offplan">Off-Plan</span>
         </div>
 
         <div class="pvReelBody">
@@ -3588,14 +3458,14 @@
     </div>
   
 
-    <div class="pvReelCard" onclick="openFgProjectModal('skala-tower')">
+    <div class="pvReelCard" onclick="window.location.href='/en/development/skala-tower.html'">
       <div class="pvReelFrame">
         <div class="pvReelNotch"></div>
-        <img decoding="async" src="/images/developments/skala-villas/sk-feature-2.jpg" alt="Skala Tower 33-Story Icon" class="pvReelImg" loading="lazy">
+        <img decoding="async" src="/images/developments/skala-tower/hero.jpg" alt="Skala Tower 33-Story Icon" class="pvReelImg" loading="lazy">
         <div class="pvReelOverlay"></div>
         
         <div class="pvReelTop">
-          <span class="pvBadge pvBadge--offplan">Off-Plan</span>
+          <span class="pvBadge badge--offplan">Off-Plan</span>
         </div>
 
         <div class="pvReelBody">
@@ -3611,21 +3481,21 @@
     </div>
   
 
-    <div class="pvReelCard" onclick="openFgProjectModal('la-mer-tower')">
+    <div class="pvReelCard" onclick="window.location.href='/en/development/la-mer-tower.html'">
       <div class="pvReelFrame">
         <div class="pvReelNotch"></div>
-        <img decoding="async" src="/images/developments/skala-villas/sk-feature-6.jpg" alt="La Mer Coastal Tower" class="pvReelImg" loading="lazy">
+        <img decoding="async" src="/images/developments/milos/milos_real_3.jpg" alt="La Mer Waterfront Tower" class="pvReelImg" loading="lazy">
         <div class="pvReelOverlay"></div>
         
         <div class="pvReelTop">
-          <span class="pvBadge pvBadge--offplan">Off-Plan</span>
+          <span class="pvBadge badge--offplan">Off-Plan</span>
         </div>
 
         <div class="pvReelBody">
-          <h3 class="pvReelTitle">La Mer Coastal Tower</h3>
+          <h3 class="pvReelTitle">La Mer Waterfront Tower</h3>
           <p class="pvReelLoc">📍 Lusail Waterfront</p>
           <div class="pvReelSpecs">
-            <span class="pvReelType">Coastal Glass High-Rise</span>
+            <span class="pvReelType">Waterfront High-Rise</span>
             <span class="pvReelPrice">QAR 1,000,000</span>
           </div>
           <button type="button" class="pvReelCta">View Details →</button>
@@ -3634,18 +3504,18 @@
     </div>
   
 
-    <div class="pvReelCard" onclick="window.location.href='/en/development/city-avenue'">
+    <div class="pvReelCard" onclick="window.location.href='/en/development/city-avenue.html'">
       <div class="pvReelFrame">
         <div class="pvReelNotch"></div>
-        <img decoding="async" src="/images/developments/city-avenue/city_hero_new.jpg" alt="City Avenue Residences" class="pvReelImg" loading="lazy">
+        <img decoding="async" src="/images/developments/city-avenue/city_hero_new.jpg" alt="City Avenue & Commercial Boulevard" class="pvReelImg" loading="lazy">
         <div class="pvReelOverlay"></div>
         
         <div class="pvReelTop">
-          <span class="pvBadge pvBadge--ready">Flagship</span>
+          <span class="pvBadge badge--ready">Ready to Move</span>
         </div>
 
         <div class="pvReelBody">
-          <h3 class="pvReelTitle">City Avenue Residences</h3>
+          <h3 class="pvReelTitle">City Avenue & Commercial Boulevard</h3>
           <p class="pvReelLoc">📍 Al Erkyah City</p>
           <div class="pvReelSpecs">
             <span class="pvReelType">Urban Luxury Apartments</span>
@@ -3657,14 +3527,14 @@
     </div>
   
 
-    <div class="pvReelCard" onclick="window.location.href='/en/development/rivan'">
+    <div class="pvReelCard" onclick="window.location.href='/en/development/rivan.html'">
       <div class="pvReelFrame">
         <div class="pvReelNotch"></div>
         <img decoding="async" src="/images/developments/rivan/hero.jpg" alt="Rivan Tower & Sky Suites" class="pvReelImg" loading="lazy">
         <div class="pvReelOverlay"></div>
         
         <div class="pvReelTop">
-          <span class="pvBadge pvBadge--offplan">Flagship</span>
+          <span class="pvBadge badge--offplan">Off-Plan</span>
         </div>
 
         <div class="pvReelBody">
@@ -3680,14 +3550,14 @@
     </div>
   
 
-    <div class="pvReelCard" onclick="openFgProjectModal('elite-residence')">
+    <div class="pvReelCard" onclick="window.location.href='/en/development/elite-residence.html'">
       <div class="pvReelFrame">
         <div class="pvReelNotch"></div>
         <img decoding="async" src="/images/developments/city-avenue/city_feature_1.jpg" alt="Elite Residence" class="pvReelImg" loading="lazy">
         <div class="pvReelOverlay"></div>
         
         <div class="pvReelTop">
-          <span class="pvBadge pvBadge--offplan">Off-Plan</span>
+          <span class="pvBadge badge--offplan">Off-Plan</span>
         </div>
 
         <div class="pvReelBody">
@@ -3703,14 +3573,14 @@
     </div>
   
 
-    <div class="pvReelCard" onclick="openFgProjectModal('boulevard-residence')">
+    <div class="pvReelCard" onclick="window.location.href='/en/development/boulevard-residence.html'">
       <div class="pvReelFrame">
         <div class="pvReelNotch"></div>
         <img decoding="async" src="/images/developments/city-avenue/city_feature_2.jpg" alt="Boulevard Residence" class="pvReelImg" loading="lazy">
         <div class="pvReelOverlay"></div>
         
         <div class="pvReelTop">
-          <span class="pvBadge pvBadge--offplan">Off-Plan</span>
+          <span class="pvBadge badge--offplan">Off-Plan</span>
         </div>
 
         <div class="pvReelBody">
@@ -3726,14 +3596,14 @@
     </div>
   
 
-    <div class="pvReelCard" onclick="openFgProjectModal('orjuwan')">
+    <div class="pvReelCard" onclick="window.location.href='/en/development/orjuwan.html'">
       <div class="pvReelFrame">
         <div class="pvReelNotch"></div>
         <img decoding="async" src="/images/developments/city-avenue/city_feature_3.jpg" alt="Orjuwan Tower" class="pvReelImg" loading="lazy">
         <div class="pvReelOverlay"></div>
         
         <div class="pvReelTop">
-          <span class="pvBadge pvBadge--offplan">Off-Plan</span>
+          <span class="pvBadge badge--offplan">Off-Plan</span>
         </div>
 
         <div class="pvReelBody">
@@ -3749,14 +3619,14 @@
     </div>
   
 
-    <div class="pvReelCard" onclick="openFgProjectModal('bliss-residences')">
+    <div class="pvReelCard" onclick="window.location.href='/en/development/bliss-residences.html'">
       <div class="pvReelFrame">
         <div class="pvReelNotch"></div>
         <img decoding="async" src="/images/developments/milos/milos_real_12.jpg" alt="Bliss Residences" class="pvReelImg" loading="lazy">
         <div class="pvReelOverlay"></div>
         
         <div class="pvReelTop">
-          <span class="pvBadge pvBadge--ready">Ready</span>
+          <span class="pvBadge badge--ready">Ready to Move</span>
         </div>
 
         <div class="pvReelBody">
@@ -3772,14 +3642,14 @@
     </div>
   
 
-    <div class="pvReelCard" onclick="window.location.href='/en/development/milos'">
+    <div class="pvReelCard" onclick="window.location.href='/en/development/milos.html'">
       <div class="pvReelFrame">
         <div class="pvReelNotch"></div>
         <img decoding="async" src="/images/developments/milos/hero.jpg" alt="Milos Residence & Coastal Living" class="pvReelImg" loading="lazy">
         <div class="pvReelOverlay"></div>
         
         <div class="pvReelTop">
-          <span class="pvBadge pvBadge--offplan">Flagship</span>
+          <span class="pvBadge badge--offplan">Off-Plan</span>
         </div>
 
         <div class="pvReelBody">
@@ -3795,21 +3665,21 @@
     </div>
   
 
-    <div class="pvReelCard" onclick="openFgProjectModal('floresta-105')">
+    <div class="pvReelCard" onclick="window.location.href='/en/development/floresta-105.html'">
       <div class="pvReelFrame">
         <div class="pvReelNotch"></div>
-        <img decoding="async" src="/images/developments/milos/milos_real_1.jpg" alt="Floresta 105 Tower" class="pvReelImg" loading="lazy">
+        <img decoding="async" src="/images/developments/milos/milos_real_6.jpg" alt="Floresta 105 Luxury Tower" class="pvReelImg" loading="lazy">
         <div class="pvReelOverlay"></div>
         
         <div class="pvReelTop">
-          <span class="pvBadge pvBadge--ready">Ready</span>
+          <span class="pvBadge badge--ready">Ready to Move</span>
         </div>
 
         <div class="pvReelBody">
-          <h3 class="pvReelTitle">Floresta 105 Tower</h3>
+          <h3 class="pvReelTitle">Floresta 105 Luxury Tower</h3>
           <p class="pvReelLoc">📍 Floresta Gardens</p>
           <div class="pvReelSpecs">
-            <span class="pvReelType">Mid-Rise Garden Residences</span>
+            <span class="pvReelType">Island High-Rise Tower</span>
             <span class="pvReelPrice">QAR 1,770,000</span>
           </div>
           <button type="button" class="pvReelCta">View Details →</button>
@@ -3818,21 +3688,21 @@
     </div>
   
 
-    <div class="pvReelCard" onclick="openFgProjectModal('al-mayyas')">
+    <div class="pvReelCard" onclick="window.location.href='/en/development/al-mayyas.html'">
       <div class="pvReelFrame">
         <div class="pvReelNotch"></div>
-        <img decoding="async" src="/images/developments/milos/milos_real_3.jpg" alt="Al Mayyas Tower" class="pvReelImg" loading="lazy">
+        <img decoding="async" src="/images/developments/flora-villas/unit_1.jpg" alt="Al Mayyas Tower" class="pvReelImg" loading="lazy">
         <div class="pvReelOverlay"></div>
         
         <div class="pvReelTop">
-          <span class="pvBadge pvBadge--offplan">Off-Plan</span>
+          <span class="pvBadge badge--offplan">Off-Plan</span>
         </div>
 
         <div class="pvReelBody">
           <h3 class="pvReelTitle">Al Mayyas Tower</h3>
           <p class="pvReelLoc">📍 The Pearl-Qatar</p>
           <div class="pvReelSpecs">
-            <span class="pvReelType">Luxury Sea View Apartments</span>
+            <span class="pvReelType">Mediterranean Residences</span>
             <span class="pvReelPrice">QAR 2,110,000</span>
           </div>
           <button type="button" class="pvReelCta">View Details →</button>
@@ -3841,22 +3711,22 @@
     </div>
   
 
-    <div class="pvReelCard" onclick="openFgProjectModal('coralia-villas')">
+    <div class="pvReelCard" onclick="window.location.href='/en/development/coralia-villas.html'">
       <div class="pvReelFrame">
         <div class="pvReelNotch"></div>
-        <img decoding="async" src="/images/developments/flora-villas/unit_1.jpg" alt="Coralia Compound Villas" class="pvReelImg" loading="lazy">
+        <img decoding="async" src="/images/developments/flora-villas/img_1.jpg" alt="Coralia Compound Villas" class="pvReelImg" loading="lazy">
         <div class="pvReelOverlay"></div>
         
         <div class="pvReelTop">
-          <span class="pvBadge pvBadge--luxury">Ultra Luxury</span>
+          <span class="pvBadge badge--ready">Ready to Move</span>
         </div>
 
         <div class="pvReelBody">
           <h3 class="pvReelTitle">Coralia Compound Villas</h3>
           <p class="pvReelLoc">📍 The Pearl-Qatar</p>
           <div class="pvReelSpecs">
-            <span class="pvReelType">Ultra-Luxury Island Villa</span>
-            <span class="pvReelPrice">QAR 55,000,000</span>
+            <span class="pvReelType">Exclusive Gated Villas</span>
+            <span class="pvReelPrice">QAR 5,500,000</span>
           </div>
           <button type="button" class="pvReelCta">View Details →</button>
         </div>
@@ -3864,22 +3734,22 @@
     </div>
   
 
-    <div class="pvReelCard" onclick="openFgProjectModal('corallia')">
+    <div class="pvReelCard" onclick="window.location.href='/en/development/corallia.html'">
       <div class="pvReelFrame">
         <div class="pvReelNotch"></div>
-        <img decoding="async" src="/images/developments/milos/milos_real_4.jpg" alt="Corallia Lease to Own" class="pvReelImg" loading="lazy">
+        <img decoding="async" src="/images/developments/milos/milos_real_8.jpg" alt="Corallia Lease to Own" class="pvReelImg" loading="lazy">
         <div class="pvReelOverlay"></div>
         
         <div class="pvReelTop">
-          <span class="pvBadge pvBadge--lease">Lease to Own</span>
+          <span class="pvBadge badge--ready">Ready to Move</span>
         </div>
 
         <div class="pvReelBody">
           <h3 class="pvReelTitle">Corallia Lease to Own</h3>
           <p class="pvReelLoc">📍 The Pearl-Qatar</p>
           <div class="pvReelSpecs">
-            <span class="pvReelType">20-Year Lease to Own</span>
-            <span class="pvReelPrice">QAR 3,650,000</span>
+            <span class="pvReelType">Lease to Own Residences</span>
+            <span class="pvReelPrice">QAR 1,950,000</span>
           </div>
           <button type="button" class="pvReelCta">View Details →</button>
         </div>
@@ -3887,22 +3757,22 @@
     </div>
   
 
-    <div class="pvReelCard" onclick="openFgProjectModal('marbella')">
+    <div class="pvReelCard" onclick="window.location.href='/en/development/marbella.html'">
       <div class="pvReelFrame">
         <div class="pvReelNotch"></div>
-        <img decoding="async" src="/images/developments/milos/milos_real_6.jpg" alt="Marbella Residence" class="pvReelImg" loading="lazy">
+        <img decoding="async" src="/images/developments/city-avenue/city_feature_1.jpg" alt="Marbella Residence" class="pvReelImg" loading="lazy">
         <div class="pvReelOverlay"></div>
         
         <div class="pvReelTop">
-          <span class="pvBadge pvBadge--offplan">Off-Plan</span>
+          <span class="pvBadge badge--offplan">Off-Plan</span>
         </div>
 
         <div class="pvReelBody">
           <h3 class="pvReelTitle">Marbella Residence</h3>
           <p class="pvReelLoc">📍 Entertainment City</p>
           <div class="pvReelSpecs">
-            <span class="pvReelType">Lifestyle Residences</span>
-            <span class="pvReelPrice">QAR 1,670,000</span>
+            <span class="pvReelType">Resort-Style Living</span>
+            <span class="pvReelPrice">QAR 1,350,000</span>
           </div>
           <button type="button" class="pvReelCta">View Details →</button>
         </div>
@@ -3910,14 +3780,14 @@
     </div>
   
 
-    <div class="pvReelCard" onclick="window.location.href='/en/development/flora-villas'">
+    <div class="pvReelCard" onclick="window.location.href='/en/development/flora-villas.html'">
       <div class="pvReelFrame">
         <div class="pvReelNotch"></div>
         <img decoding="async" src="/images/developments/flora-villas/hero.jpg" alt="Flora Standalone Villas" class="pvReelImg" loading="lazy">
         <div class="pvReelOverlay"></div>
         
         <div class="pvReelTop">
-          <span class="pvBadge pvBadge--offplan">Flagship</span>
+          <span class="pvBadge badge--offplan">Off-Plan</span>
         </div>
 
         <div class="pvReelBody">
@@ -3933,14 +3803,14 @@
     </div>
   
 
-    <div class="pvReelCard" onclick="openFgProjectModal('bliss-gardens')">
+    <div class="pvReelCard" onclick="window.location.href='/en/development/bliss-gardens.html'">
       <div class="pvReelFrame">
         <div class="pvReelNotch"></div>
         <img decoding="async" src="/images/developments/flora-villas/unit_2.jpg" alt="Bliss Gardens Compound" class="pvReelImg" loading="lazy">
         <div class="pvReelOverlay"></div>
         
         <div class="pvReelTop">
-          <span class="pvBadge pvBadge--offplan">Off-Plan</span>
+          <span class="pvBadge badge--offplan">Off-Plan</span>
         </div>
 
         <div class="pvReelBody">
@@ -3956,14 +3826,14 @@
     </div>
   
 
-    <div class="pvReelCard" onclick="openFgProjectModal('bliss-gardens-2')">
+    <div class="pvReelCard" onclick="window.location.href='/en/development/bliss-gardens-2.html'">
       <div class="pvReelFrame">
         <div class="pvReelNotch"></div>
         <img decoding="async" src="/images/developments/flora-villas/unit_3.jpg" alt="Bliss Gardens II" class="pvReelImg" loading="lazy">
         <div class="pvReelOverlay"></div>
         
         <div class="pvReelTop">
-          <span class="pvBadge pvBadge--offplan">Off-Plan</span>
+          <span class="pvBadge badge--offplan">Off-Plan</span>
         </div>
 
         <div class="pvReelBody">
@@ -3979,14 +3849,14 @@
     </div>
   
 
-    <div class="pvReelCard" onclick="openFgProjectModal('voya-residence')">
+    <div class="pvReelCard" onclick="window.location.href='/en/development/voya-residence.html'">
       <div class="pvReelFrame">
         <div class="pvReelNotch"></div>
         <img decoding="async" src="/images/developments/valencia-residence/hero.jpg" alt="Voya Waterfront Chalets" class="pvReelImg" loading="lazy">
         <div class="pvReelOverlay"></div>
         
         <div class="pvReelTop">
-          <span class="pvBadge pvBadge--ready">Ready</span>
+          <span class="pvBadge badge--ready">Ready to Move</span>
         </div>
 
         <div class="pvReelBody">
@@ -4002,14 +3872,14 @@
     </div>
   
 
-    <div class="pvReelCard" onclick="openFgProjectModal('bliss-tower')">
+    <div class="pvReelCard" onclick="window.location.href='/en/development/bliss-tower.html'">
       <div class="pvReelFrame">
         <div class="pvReelNotch"></div>
         <img decoding="async" src="/images/developments/milos/milos_real_15.jpg" alt="Bliss Tower Duplexes" class="pvReelImg" loading="lazy">
         <div class="pvReelOverlay"></div>
         
         <div class="pvReelTop">
-          <span class="pvBadge pvBadge--offplan">Off-Plan</span>
+          <span class="pvBadge badge--offplan">Off-Plan</span>
         </div>
 
         <div class="pvReelBody">
@@ -4025,14 +3895,14 @@
     </div>
   
 
-    <div class="pvReelCard" onclick="openFgProjectModal('miran-tower')">
+    <div class="pvReelCard" onclick="window.location.href='/en/development/miran-tower.html'">
       <div class="pvReelFrame">
         <div class="pvReelNotch"></div>
         <img decoding="async" src="/images/developments/milos/milos_real_18.jpg" alt="Miran Tower Smart Units" class="pvReelImg" loading="lazy">
         <div class="pvReelOverlay"></div>
         
         <div class="pvReelTop">
-          <span class="pvBadge pvBadge--offplan">Off-Plan</span>
+          <span class="pvBadge badge--offplan">Off-Plan</span>
         </div>
 
         <div class="pvReelBody">
@@ -4055,228 +3925,283 @@
   </div>
 </section>
 
+
 <!-- ════════════════════════════════════════════════════════════════
-     SECTION 1: 🌊 SIGNATURE WATERFRONT & ISLAND ESTATES (6 CARDS)
+     SECTION: 🌊 Waterfront Estates & Island Living (6 CARDS)
      ════════════════════════════════════════════════════════════════ -->
 <section class="pvSecLight pvSecLight--white" id="waterfront-estates">
   <div class="pvContainer">
     <div class="pvSecHeader">
       <span class="pvPill">
         <span class="pvPillDot"></span>
-        Qetaifan Island & Coastal Horizons (6 Projects)
+        Waterfront & Private Beach (6 Projects)
       </span>
-      <h2 class="pvSecTitle">🌊 Waterfront & Island Estates</h2>
+      <h2 class="pvSecTitle">🌊 Waterfront Estates & Island Living</h2>
       <p class="pvSecSub">
-        Discover ultra-exclusive beachfront villas, curved architectural glass towers, and waterfront master developments across Qetaifan Island North and Lusail Waterfront.
+        Bespoke shoreline villas, curved architectural high-rises, and private beach towers located along Qetaifan Island North and Lusail Waterfront.
       </p>
     </div>
     <div class="pvGrid">
       
-    <article class="pvLightCard">
-      <div class="pvLightCard__media">
-        <img decoding="async" src="/images/developments/skala-villas/hero.jpg" alt="Skala Villas & Waterfront Luxury" class="pvLightCard__img" loading="lazy">
-        <div class="pvLightCard__overlay"></div>
-        <div class="pvLightCard__top">
-          <span class="pvBadge pvBadge--offplan">Flagship</span>
-        </div>
-        <div class="pvLightCard__location">
-          <svg width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M6 0C2.68629 0 0 2.68629 0 6C0 10.5 6 14 6 14C6 14 12 10.5 12 6C12 2.68629 9.31371 0 6 0ZM6 8.5C4.61929 8.5 3.5 7.38071 3.5 6C3.5 4.61929 4.61929 3.5 6 3.5C7.38071 3.5 8.5 4.61929 8.5 6C8.5 7.38071 7.38071 8.5 6 8.5Z" fill="#c5a880"/></svg>
-          <span>Qetaifan Island North, Lusail</span>
-        </div>
-      </div>
-      <div class="pvLightCard__content">
-        <h3 class="pvLightCard__title">Skala Villas & Waterfront Luxury</h3>
-        <p class="pvLightCard__sub">Waterfront Signature Villas</p>
-        <p class="pvLightCard__desc">Bespoke waterfront villas and private shorefront residences on Qetaifan Island North. Features private infinity pools, marine docks, and panoramic sea balconies.</p>
+    <article class="p-card">
+      <div class="p-card__image-wrapper">
+        <img decoding="async" src="/images/developments/skala-villas/hero.jpg" alt="Skala Villas & Waterfront Luxury" class="p-card__img" loading="lazy">
+        <div class="p-card__overlay"></div>
         
-        <div class="pvLightCard__specs">
-          <div class="pvSpec"><span class="pvSpec__label">BEDROOMS</span><span class="pvSpec__val">4 - 5 Bedroom Villas</span></div>
-          <div class="pvSpec"><span class="pvSpec__label">HANDOVER</span><span class="pvSpec__val">Q4 2026</span></div>
-          <div class="pvSpec"><span class="pvSpec__label">DOWN PAYMENT</span><span class="pvSpec__val">10% Down Payment</span></div>
-          <div class="pvSpec pvSpec--price"><span class="pvSpec__label">STARTING FROM</span><span class="pvSpec__val">QAR 3,800,000</span></div>
+        <div class="p-card__tags-top">
+          <span class="p-card__badge badge--offplan">Off-Plan</span>
+          <span class="p-card__category-tag">Waterfront Estates</span>
         </div>
 
-        <div class="pvLightCard__actions">
-          <a href="/en/development/skala-villas" class="pvLightBtn pvLightBtn--primary"><span>View Project</span><svg width="14" height="12" viewBox="0 0 14 12" fill="none"><path d="M8 1L13 6M13 6L8 11M13 6H1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-          <a href="https://wa.me/97460005054?text=Hello%20Prime%20View%20Real%20Estate%2C%20I%20am%20interested%20in%20inquiring%20about%20Skala%20Villas%20%26%20Waterfront%20Luxury%20(Qetaifan%20Island%20North)" target="_blank" rel="noopener" class="pvLightBtn pvLightBtn--wa" aria-label="Inquire via WhatsApp">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.099 4.019 4.027-1.056z"/></svg>
-            <span>Inquire</span>
-          </a>
+        <div class="p-card__image-bottom">
+          <span class="p-card__dp-pill"><i class="fa-solid fa-credit-card"></i> 10% Down Payment</span>
+          <span class="p-card__handover-pill"><i class="fa-regular fa-calendar-check"></i> Q4 2026</span>
+        </div>
+      </div>
+
+      <div class="p-card__body">
+        <div class="p-card__header">
+          <span class="p-card__location"><i class="fa-solid fa-location-dot"></i> Qetaifan Island North, Lusail</span>
+          <h3 class="p-card__title"><a href="/en/development/skala-villas.html">Skala Villas & Waterfront Luxury</a></h3>
+          <span class="p-card__type-beds">Waterfront Signature Villas • <strong>4 - 5 Bedroom Villas</strong></span>
+        </div>
+
+        <p class="p-card__desc">Bespoke waterfront villas and private shorefront residences on Qetaifan Island North. Features private infinity pools, marine docks, and panoramic sea balconies.</p>
+
+        <div class="p-card__footer">
+          <div class="p-card__price-box">
+            <span class="p-card__price-label">Starting Price</span>
+            <span class="p-card__price-val">QAR 3,800,000</span>
+          </div>
+
+          <div class="p-card__actions">
+            <a href="https://wa.me/97460005054?text=Hello%20Prime%20View%20Real%20Estate%2C%20I%20would%20like%20to%20receive%20the%20brochure%2C%20payment%20plan%2C%20and%20available%20inventory%20for%20Skala%20Villas%20%26%20Waterfront%20Luxury%20in%20Qetaifan%20Island%20North%2C%20Lusail." target="_blank" rel="noopener" class="p-card__btn-wa" aria-label="Inquire via WhatsApp for Skala Villas & Waterfront Luxury">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="/en/development/skala-villas.html" class="p-card__btn-explore">
+              Explore <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
       </div>
     </article>
   
 
-    <article class="pvLightCard">
-      <div class="pvLightCard__media">
-        <img decoding="async" src="/images/developments/skala-villas/sk-feature-1.jpg" alt="Via D'Oro Signature Villas" class="pvLightCard__img" loading="lazy">
-        <div class="pvLightCard__overlay"></div>
-        <div class="pvLightCard__top">
-          <span class="pvBadge pvBadge--offplan">Off-Plan</span>
-        </div>
-        <div class="pvLightCard__location">
-          <svg width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M6 0C2.68629 0 0 2.68629 0 6C0 10.5 6 14 6 14C6 14 12 10.5 12 6C12 2.68629 9.31371 0 6 0ZM6 8.5C4.61929 8.5 3.5 7.38071 3.5 6C3.5 4.61929 4.61929 3.5 6 3.5C7.38071 3.5 8.5 4.61929 8.5 6C8.5 7.38071 7.38071 8.5 6 8.5Z" fill="#c5a880"/></svg>
-          <span>Qetaifan Island North, Lusail</span>
-        </div>
-      </div>
-      <div class="pvLightCard__content">
-        <h3 class="pvLightCard__title">Via D'Oro Signature Villas</h3>
-        <p class="pvLightCard__sub">Mediterranean Compound Villas</p>
-        <p class="pvLightCard__desc">Luxury Mediterranean compound featuring 34 signature villas. Includes private elevator, fully equipped backyard with private waterfall, barbecue grill, and pergola.</p>
+    <article class="p-card">
+      <div class="p-card__image-wrapper">
+        <img decoding="async" src="/images/developments/skala-villas/sk-feature-1.jpg" alt="Via D'Oro Signature Villas" class="p-card__img" loading="lazy">
+        <div class="p-card__overlay"></div>
         
-        <div class="pvLightCard__specs">
-          <div class="pvSpec"><span class="pvSpec__label">BEDROOMS</span><span class="pvSpec__val">4+ Maid Villas</span></div>
-          <div class="pvSpec"><span class="pvSpec__label">HANDOVER</span><span class="pvSpec__val">Q2 2028</span></div>
-          <div class="pvSpec"><span class="pvSpec__label">DOWN PAYMENT</span><span class="pvSpec__val">10% Down Payment</span></div>
-          <div class="pvSpec pvSpec--price"><span class="pvSpec__label">STARTING FROM</span><span class="pvSpec__val">QAR 4,250,000</span></div>
+        <div class="p-card__tags-top">
+          <span class="p-card__badge badge--offplan">Off-Plan</span>
+          <span class="p-card__category-tag">Waterfront Estates</span>
         </div>
 
-        <div class="pvLightCard__actions">
-          <button type="button" class="pvLightBtn pvLightBtn--modal" onclick="openFgProjectModal('via-doro')"><span>Quick Details</span><svg width="14" height="12" viewBox="0 0 14 12" fill="none"><path d="M8 1L13 6M13 6L8 11M13 6H1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-          <a href="https://wa.me/97460005054?text=Hello%20Prime%20View%20Real%20Estate%2C%20I%20am%20interested%20in%20inquiring%20about%20Via%20D'Oro%20Signature%20Villas%20(Qetaifan%20Island%20North)" target="_blank" rel="noopener" class="pvLightBtn pvLightBtn--wa" aria-label="Inquire via WhatsApp">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.099 4.019 4.027-1.056z"/></svg>
-            <span>Inquire</span>
-          </a>
+        <div class="p-card__image-bottom">
+          <span class="p-card__dp-pill"><i class="fa-solid fa-credit-card"></i> 10% Down Payment</span>
+          <span class="p-card__handover-pill"><i class="fa-regular fa-calendar-check"></i> Q2 2028</span>
+        </div>
+      </div>
+
+      <div class="p-card__body">
+        <div class="p-card__header">
+          <span class="p-card__location"><i class="fa-solid fa-location-dot"></i> Qetaifan Island North, Lusail</span>
+          <h3 class="p-card__title"><a href="/en/development/via-doro.html">Via D'Oro Signature Villas</a></h3>
+          <span class="p-card__type-beds">Mediterranean Compound Villas • <strong>4+ Maid Villas</strong></span>
+        </div>
+
+        <p class="p-card__desc">Luxury Mediterranean compound featuring 34 signature villas. Includes private elevator, fully equipped backyard with private waterfall, and pergola.</p>
+
+        <div class="p-card__footer">
+          <div class="p-card__price-box">
+            <span class="p-card__price-label">Starting Price</span>
+            <span class="p-card__price-val">QAR 4,250,000</span>
+          </div>
+
+          <div class="p-card__actions">
+            <a href="https://wa.me/97460005054?text=Hello%20Prime%20View%20Real%20Estate%2C%20I%20would%20like%20to%20receive%20the%20brochure%2C%20payment%20plan%2C%20and%20available%20inventory%20for%20Via%20D'Oro%20Signature%20Villas%20in%20Qetaifan%20Island%20North%2C%20Lusail." target="_blank" rel="noopener" class="p-card__btn-wa" aria-label="Inquire via WhatsApp for Via D'Oro Signature Villas">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="/en/development/via-doro.html" class="p-card__btn-explore">
+              Explore <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
       </div>
     </article>
   
 
-    <article class="pvLightCard">
-      <div class="pvLightCard__media">
-        <img decoding="async" src="/images/developments/skala-villas/sk-feature-4.jpg" alt="Carlton House Waterfront" class="pvLightCard__img" loading="lazy">
-        <div class="pvLightCard__overlay"></div>
-        <div class="pvLightCard__top">
-          <span class="pvBadge pvBadge--offplan">Off-Plan</span>
-        </div>
-        <div class="pvLightCard__location">
-          <svg width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M6 0C2.68629 0 0 2.68629 0 6C0 10.5 6 14 6 14C6 14 12 10.5 12 6C12 2.68629 9.31371 0 6 0ZM6 8.5C4.61929 8.5 3.5 7.38071 3.5 6C3.5 4.61929 4.61929 3.5 6 3.5C7.38071 3.5 8.5 4.61929 8.5 6C8.5 7.38071 7.38071 8.5 6 8.5Z" fill="#c5a880"/></svg>
-          <span>Qetaifan Island North, Lusail</span>
-        </div>
-      </div>
-      <div class="pvLightCard__content">
-        <h3 class="pvLightCard__title">Carlton House Waterfront</h3>
-        <p class="pvLightCard__sub">Curved Glass High-Rise</p>
-        <p class="pvLightCard__desc">Iconic curved waterfront tower on Qetaifan Island featuring studios to 3-bedroom luxury apartments with sea views, smart automation, and payment plans till 2033.</p>
+    <article class="p-card">
+      <div class="p-card__image-wrapper">
+        <img decoding="async" src="/images/developments/skala-villas/sk-feature-4.jpg" alt="Carlton House Waterfront" class="p-card__img" loading="lazy">
+        <div class="p-card__overlay"></div>
         
-        <div class="pvLightCard__specs">
-          <div class="pvSpec"><span class="pvSpec__label">BEDROOMS</span><span class="pvSpec__val">Studio - 3 BR</span></div>
-          <div class="pvSpec"><span class="pvSpec__label">HANDOVER</span><span class="pvSpec__val">Q4 2028</span></div>
-          <div class="pvSpec"><span class="pvSpec__label">DOWN PAYMENT</span><span class="pvSpec__val">2% Down Payment</span></div>
-          <div class="pvSpec pvSpec--price"><span class="pvSpec__label">STARTING FROM</span><span class="pvSpec__val">QAR 1,460,000</span></div>
+        <div class="p-card__tags-top">
+          <span class="p-card__badge badge--offplan">Off-Plan</span>
+          <span class="p-card__category-tag">Waterfront Estates</span>
         </div>
 
-        <div class="pvLightCard__actions">
-          <button type="button" class="pvLightBtn pvLightBtn--modal" onclick="openFgProjectModal('carlton-house')"><span>Quick Details</span><svg width="14" height="12" viewBox="0 0 14 12" fill="none"><path d="M8 1L13 6M13 6L8 11M13 6H1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-          <a href="https://wa.me/97460005054?text=Hello%20Prime%20View%20Real%20Estate%2C%20I%20am%20interested%20in%20inquiring%20about%20Carlton%20House%20Waterfront%20(Qetaifan%20Island%20North)" target="_blank" rel="noopener" class="pvLightBtn pvLightBtn--wa" aria-label="Inquire via WhatsApp">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.099 4.019 4.027-1.056z"/></svg>
-            <span>Inquire</span>
-          </a>
+        <div class="p-card__image-bottom">
+          <span class="p-card__dp-pill"><i class="fa-solid fa-credit-card"></i> 2% Down Payment</span>
+          <span class="p-card__handover-pill"><i class="fa-regular fa-calendar-check"></i> Q4 2028</span>
+        </div>
+      </div>
+
+      <div class="p-card__body">
+        <div class="p-card__header">
+          <span class="p-card__location"><i class="fa-solid fa-location-dot"></i> Qetaifan Island North, Lusail</span>
+          <h3 class="p-card__title"><a href="/en/development/carlton-house.html">Carlton House Waterfront</a></h3>
+          <span class="p-card__type-beds">Curved Glass High-Rise • <strong>Studio - 3 BR</strong></span>
+        </div>
+
+        <p class="p-card__desc">Iconic curved waterfront tower on Qetaifan Island featuring studios to 3-bedroom luxury apartments with sea views, smart automation, and payment plans till 2033.</p>
+
+        <div class="p-card__footer">
+          <div class="p-card__price-box">
+            <span class="p-card__price-label">Starting Price</span>
+            <span class="p-card__price-val">QAR 1,460,000</span>
+          </div>
+
+          <div class="p-card__actions">
+            <a href="https://wa.me/97460005054?text=Hello%20Prime%20View%20Real%20Estate%2C%20I%20would%20like%20to%20receive%20the%20brochure%2C%20payment%20plan%2C%20and%20available%20inventory%20for%20Carlton%20House%20Waterfront%20in%20Qetaifan%20Island%20North%2C%20Lusail." target="_blank" rel="noopener" class="p-card__btn-wa" aria-label="Inquire via WhatsApp for Carlton House Waterfront">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="/en/development/carlton-house.html" class="p-card__btn-explore">
+              Explore <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
       </div>
     </article>
   
 
-    <article class="pvLightCard">
-      <div class="pvLightCard__media">
-        <img decoding="async" src="/images/developments/skala-villas/sk-feature-5.jpg" alt="Canal Bay Beachfront" class="pvLightCard__img" loading="lazy">
-        <div class="pvLightCard__overlay"></div>
-        <div class="pvLightCard__top">
-          <span class="pvBadge pvBadge--offplan">Off-Plan</span>
-        </div>
-        <div class="pvLightCard__location">
-          <svg width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M6 0C2.68629 0 0 2.68629 0 6C0 10.5 6 14 6 14C6 14 12 10.5 12 6C12 2.68629 9.31371 0 6 0ZM6 8.5C4.61929 8.5 3.5 7.38071 3.5 6C3.5 4.61929 4.61929 3.5 6 3.5C7.38071 3.5 8.5 4.61929 8.5 6C8.5 7.38071 7.38071 8.5 6 8.5Z" fill="#c5a880"/></svg>
-          <span>Qetaifan Island North, Lusail</span>
-        </div>
-      </div>
-      <div class="pvLightCard__content">
-        <h3 class="pvLightCard__title">Canal Bay Beachfront</h3>
-        <p class="pvLightCard__sub">Architectural Waterfront Tower</p>
-        <p class="pvLightCard__desc">Striking architectural waterfront tower on Qetaifan Island with 2-bedroom apartments, organic curved glass facades, private beach access, and 8-year payment plan.</p>
+    <article class="p-card">
+      <div class="p-card__image-wrapper">
+        <img decoding="async" src="/images/developments/skala-villas/sk-feature-5.jpg" alt="Canal Bay Beachfront" class="p-card__img" loading="lazy">
+        <div class="p-card__overlay"></div>
         
-        <div class="pvLightCard__specs">
-          <div class="pvSpec"><span class="pvSpec__label">BEDROOMS</span><span class="pvSpec__val">2 Bedrooms</span></div>
-          <div class="pvSpec"><span class="pvSpec__label">HANDOVER</span><span class="pvSpec__val">Q4 2028</span></div>
-          <div class="pvSpec"><span class="pvSpec__label">DOWN PAYMENT</span><span class="pvSpec__val">2% Down Payment</span></div>
-          <div class="pvSpec pvSpec--price"><span class="pvSpec__label">STARTING FROM</span><span class="pvSpec__val">QAR 2,000,000</span></div>
+        <div class="p-card__tags-top">
+          <span class="p-card__badge badge--offplan">Off-Plan</span>
+          <span class="p-card__category-tag">Waterfront Estates</span>
         </div>
 
-        <div class="pvLightCard__actions">
-          <button type="button" class="pvLightBtn pvLightBtn--modal" onclick="openFgProjectModal('canal-bay')"><span>Quick Details</span><svg width="14" height="12" viewBox="0 0 14 12" fill="none"><path d="M8 1L13 6M13 6L8 11M13 6H1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-          <a href="https://wa.me/97460005054?text=Hello%20Prime%20View%20Real%20Estate%2C%20I%20am%20interested%20in%20inquiring%20about%20Canal%20Bay%20Beachfront%20(Qetaifan%20Island%20North)" target="_blank" rel="noopener" class="pvLightBtn pvLightBtn--wa" aria-label="Inquire via WhatsApp">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.099 4.019 4.027-1.056z"/></svg>
-            <span>Inquire</span>
-          </a>
+        <div class="p-card__image-bottom">
+          <span class="p-card__dp-pill"><i class="fa-solid fa-credit-card"></i> 2% Down Payment</span>
+          <span class="p-card__handover-pill"><i class="fa-regular fa-calendar-check"></i> Q4 2028</span>
+        </div>
+      </div>
+
+      <div class="p-card__body">
+        <div class="p-card__header">
+          <span class="p-card__location"><i class="fa-solid fa-location-dot"></i> Qetaifan Island North, Lusail</span>
+          <h3 class="p-card__title"><a href="/en/development/canal-bay.html">Canal Bay Beachfront</a></h3>
+          <span class="p-card__type-beds">Architectural Waterfront Tower • <strong>2 Bedrooms</strong></span>
+        </div>
+
+        <p class="p-card__desc">Striking architectural waterfront tower on Qetaifan Island with 2-bedroom apartments, organic curved glass facades, private beach access, and 8-year payment plan.</p>
+
+        <div class="p-card__footer">
+          <div class="p-card__price-box">
+            <span class="p-card__price-label">Starting Price</span>
+            <span class="p-card__price-val">QAR 2,000,000</span>
+          </div>
+
+          <div class="p-card__actions">
+            <a href="https://wa.me/97460005054?text=Hello%20Prime%20View%20Real%20Estate%2C%20I%20would%20like%20to%20receive%20the%20brochure%2C%20payment%20plan%2C%20and%20available%20inventory%20for%20Canal%20Bay%20Beachfront%20in%20Qetaifan%20Island%20North%2C%20Lusail." target="_blank" rel="noopener" class="p-card__btn-wa" aria-label="Inquire via WhatsApp for Canal Bay Beachfront">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="/en/development/canal-bay.html" class="p-card__btn-explore">
+              Explore <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
       </div>
     </article>
   
 
-    <article class="pvLightCard">
-      <div class="pvLightCard__media">
-        <img decoding="async" src="/images/developments/skala-villas/sk-feature-2.jpg" alt="Skala Tower 33-Story Icon" class="pvLightCard__img" loading="lazy">
-        <div class="pvLightCard__overlay"></div>
-        <div class="pvLightCard__top">
-          <span class="pvBadge pvBadge--offplan">Off-Plan</span>
-        </div>
-        <div class="pvLightCard__location">
-          <svg width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M6 0C2.68629 0 0 2.68629 0 6C0 10.5 6 14 6 14C6 14 12 10.5 12 6C12 2.68629 9.31371 0 6 0ZM6 8.5C4.61929 8.5 3.5 7.38071 3.5 6C3.5 4.61929 4.61929 3.5 6 3.5C7.38071 3.5 8.5 4.61929 8.5 6C8.5 7.38071 7.38071 8.5 6 8.5Z" fill="#c5a880"/></svg>
-          <span>Lusail Waterfront, Lusail</span>
-        </div>
-      </div>
-      <div class="pvLightCard__content">
-        <h3 class="pvLightCard__title">Skala Tower 33-Story Icon</h3>
-        <p class="pvLightCard__sub">33-Story Beachfront Tower</p>
-        <p class="pvLightCard__desc">Iconic 33-story luxury waterfront tower featuring 189 smart residences, private beach club access, infinity sky pool, and payment plan till 2031.</p>
+    <article class="p-card">
+      <div class="p-card__image-wrapper">
+        <img decoding="async" src="/images/developments/skala-tower/hero.jpg" alt="Skala Tower 33-Story Icon" class="p-card__img" loading="lazy">
+        <div class="p-card__overlay"></div>
         
-        <div class="pvLightCard__specs">
-          <div class="pvSpec"><span class="pvSpec__label">BEDROOMS</span><span class="pvSpec__val">1 - 2 Bedrooms</span></div>
-          <div class="pvSpec"><span class="pvSpec__label">HANDOVER</span><span class="pvSpec__val">Q4 2026</span></div>
-          <div class="pvSpec"><span class="pvSpec__label">DOWN PAYMENT</span><span class="pvSpec__val">5% Down Payment</span></div>
-          <div class="pvSpec pvSpec--price"><span class="pvSpec__label">STARTING FROM</span><span class="pvSpec__val">QAR 2,000,000</span></div>
+        <div class="p-card__tags-top">
+          <span class="p-card__badge badge--offplan">Off-Plan</span>
+          <span class="p-card__category-tag">Waterfront Estates</span>
         </div>
 
-        <div class="pvLightCard__actions">
-          <button type="button" class="pvLightBtn pvLightBtn--modal" onclick="openFgProjectModal('skala-tower')"><span>Quick Details</span><svg width="14" height="12" viewBox="0 0 14 12" fill="none"><path d="M8 1L13 6M13 6L8 11M13 6H1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-          <a href="https://wa.me/97460005054?text=Hello%20Prime%20View%20Real%20Estate%2C%20I%20am%20interested%20in%20inquiring%20about%20Skala%20Tower%2033-Story%20Icon%20(Lusail%20Waterfront)" target="_blank" rel="noopener" class="pvLightBtn pvLightBtn--wa" aria-label="Inquire via WhatsApp">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.099 4.019 4.027-1.056z"/></svg>
-            <span>Inquire</span>
-          </a>
+        <div class="p-card__image-bottom">
+          <span class="p-card__dp-pill"><i class="fa-solid fa-credit-card"></i> 5% Down Payment</span>
+          <span class="p-card__handover-pill"><i class="fa-regular fa-calendar-check"></i> December 2028</span>
+        </div>
+      </div>
+
+      <div class="p-card__body">
+        <div class="p-card__header">
+          <span class="p-card__location"><i class="fa-solid fa-location-dot"></i> Lusail Waterfront, Lusail</span>
+          <h3 class="p-card__title"><a href="/en/development/skala-tower.html">Skala Tower 33-Story Icon</a></h3>
+          <span class="p-card__type-beds">33-Story Beachfront Tower • <strong>1 - 2 Bedrooms</strong></span>
+        </div>
+
+        <p class="p-card__desc">33-story beachfront architectural landmark in Seef Lusail with 6-year payment plan until 2032, offering direct promenade access and sea views.</p>
+
+        <div class="p-card__footer">
+          <div class="p-card__price-box">
+            <span class="p-card__price-label">Starting Price</span>
+            <span class="p-card__price-val">QAR 2,000,000</span>
+          </div>
+
+          <div class="p-card__actions">
+            <a href="https://wa.me/97460005054?text=Hello%20Prime%20View%20Real%20Estate%2C%20I%20would%20like%20to%20receive%20the%20brochure%2C%20payment%20plan%2C%20and%20available%20inventory%20for%20Skala%20Tower%2033-Story%20Icon%20in%20Lusail%20Waterfront%2C%20Lusail." target="_blank" rel="noopener" class="p-card__btn-wa" aria-label="Inquire via WhatsApp for Skala Tower 33-Story Icon">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="/en/development/skala-tower.html" class="p-card__btn-explore">
+              Explore <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
       </div>
     </article>
   
 
-    <article class="pvLightCard">
-      <div class="pvLightCard__media">
-        <img decoding="async" src="/images/developments/skala-villas/sk-feature-6.jpg" alt="La Mer Coastal Tower" class="pvLightCard__img" loading="lazy">
-        <div class="pvLightCard__overlay"></div>
-        <div class="pvLightCard__top">
-          <span class="pvBadge pvBadge--offplan">Off-Plan</span>
-        </div>
-        <div class="pvLightCard__location">
-          <svg width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M6 0C2.68629 0 0 2.68629 0 6C0 10.5 6 14 6 14C6 14 12 10.5 12 6C12 2.68629 9.31371 0 6 0ZM6 8.5C4.61929 8.5 3.5 7.38071 3.5 6C3.5 4.61929 4.61929 3.5 6 3.5C7.38071 3.5 8.5 4.61929 8.5 6C8.5 7.38071 7.38071 8.5 6 8.5Z" fill="#c5a880"/></svg>
-          <span>Lusail Waterfront, Lusail</span>
-        </div>
-      </div>
-      <div class="pvLightCard__content">
-        <h3 class="pvLightCard__title">La Mer Coastal Tower</h3>
-        <p class="pvLightCard__sub">Coastal Glass High-Rise</p>
-        <p class="pvLightCard__desc">Sleek waterfront tower on Lusail Waterfront offering studios from QAR 1M and 1-bedrooms from QAR 2M. Features modern coastal design, rooftop pool, and plan till 2032.</p>
+    <article class="p-card">
+      <div class="p-card__image-wrapper">
+        <img decoding="async" src="/images/developments/milos/milos_real_3.jpg" alt="La Mer Waterfront Tower" class="p-card__img" loading="lazy">
+        <div class="p-card__overlay"></div>
         
-        <div class="pvLightCard__specs">
-          <div class="pvSpec"><span class="pvSpec__label">BEDROOMS</span><span class="pvSpec__val">Studio & 1 BR</span></div>
-          <div class="pvSpec"><span class="pvSpec__label">HANDOVER</span><span class="pvSpec__val">Q4 2027</span></div>
-          <div class="pvSpec"><span class="pvSpec__label">DOWN PAYMENT</span><span class="pvSpec__val">2% Down Payment</span></div>
-          <div class="pvSpec pvSpec--price"><span class="pvSpec__label">STARTING FROM</span><span class="pvSpec__val">QAR 1,000,000</span></div>
+        <div class="p-card__tags-top">
+          <span class="p-card__badge badge--offplan">Off-Plan</span>
+          <span class="p-card__category-tag">Waterfront Estates</span>
         </div>
 
-        <div class="pvLightCard__actions">
-          <button type="button" class="pvLightBtn pvLightBtn--modal" onclick="openFgProjectModal('la-mer-tower')"><span>Quick Details</span><svg width="14" height="12" viewBox="0 0 14 12" fill="none"><path d="M8 1L13 6M13 6L8 11M13 6H1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-          <a href="https://wa.me/97460005054?text=Hello%20Prime%20View%20Real%20Estate%2C%20I%20am%20interested%20in%20inquiring%20about%20La%20Mer%20Coastal%20Tower%20(Lusail%20Waterfront)" target="_blank" rel="noopener" class="pvLightBtn pvLightBtn--wa" aria-label="Inquire via WhatsApp">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.099 4.019 4.027-1.056z"/></svg>
-            <span>Inquire</span>
-          </a>
+        <div class="p-card__image-bottom">
+          <span class="p-card__dp-pill"><i class="fa-solid fa-credit-card"></i> 5% Down Payment</span>
+          <span class="p-card__handover-pill"><i class="fa-regular fa-calendar-check"></i> Q4 2028</span>
+        </div>
+      </div>
+
+      <div class="p-card__body">
+        <div class="p-card__header">
+          <span class="p-card__location"><i class="fa-solid fa-location-dot"></i> Lusail Waterfront, Lusail</span>
+          <h3 class="p-card__title"><a href="/en/development/la-mer-tower.html">La Mer Waterfront Tower</a></h3>
+          <span class="p-card__type-beds">Waterfront High-Rise • <strong>1 - 3 Bedrooms</strong></span>
+        </div>
+
+        <p class="p-card__desc">Waterfront residential tower in Seef Lusail offering private beach access, infinity pool decks, and scenic sea views with payment plans up to 7 years.</p>
+
+        <div class="p-card__footer">
+          <div class="p-card__price-box">
+            <span class="p-card__price-label">Starting Price</span>
+            <span class="p-card__price-val">QAR 1,000,000</span>
+          </div>
+
+          <div class="p-card__actions">
+            <a href="https://wa.me/97460005054?text=Hello%20Prime%20View%20Real%20Estate%2C%20I%20would%20like%20to%20receive%20the%20brochure%2C%20payment%20plan%2C%20and%20available%20inventory%20for%20La%20Mer%20Waterfront%20Tower%20in%20Lusail%20Waterfront%2C%20Lusail." target="_blank" rel="noopener" class="p-card__btn-wa" aria-label="Inquire via WhatsApp for La Mer Waterfront Tower">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="/en/development/la-mer-tower.html" class="p-card__btn-explore">
+              Explore <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
       </div>
     </article>
@@ -4286,227 +4211,281 @@
 </section>
 
 <!-- ════════════════════════════════════════════════════════════════
-     SECTION 2: 🏙️ LUSAIL CITY MASTERPIECE COLLECTION (6 CARDS)
+     SECTION: 🏙️ Lusail City Heights & Towers (6 CARDS)
      ════════════════════════════════════════════════════════════════ -->
 <section class="pvSecLight pvSecLight--cream" id="lusail-masterpieces">
   <div class="pvContainer">
     <div class="pvSecHeader">
       <span class="pvPill">
         <span class="pvPillDot"></span>
-        Al Erkyah, Fox Hills & Seef Lusail (6 Projects)
+        Al Erkyah & Fox Hills (6 Projects)
       </span>
-      <h2 class="pvSecTitle">🏙️ Lusail City Masterpiece Collection</h2>
+      <h2 class="pvSecTitle">🏙️ Lusail City Heights & Towers</h2>
       <p class="pvSecSub">
-        Smart residential towers, skyline duplexes, and luxury residences situated in Qatar's futuristic metropolis of Lusail City with flexible multi-year payment plans.
+        High-yield freehold investments and contemporary high-rise towers in Qatar’s prime smart metropolis, situated near Lusail Boulevard and Lusail Stadium.
       </p>
     </div>
     <div class="pvGrid">
       
-    <article class="pvLightCard">
-      <div class="pvLightCard__media">
-        <img decoding="async" src="/images/developments/city-avenue/city_hero_new.jpg" alt="City Avenue Residences" class="pvLightCard__img" loading="lazy">
-        <div class="pvLightCard__overlay"></div>
-        <div class="pvLightCard__top">
-          <span class="pvBadge pvBadge--ready">Flagship</span>
-        </div>
-        <div class="pvLightCard__location">
-          <svg width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M6 0C2.68629 0 0 2.68629 0 6C0 10.5 6 14 6 14C6 14 12 10.5 12 6C12 2.68629 9.31371 0 6 0ZM6 8.5C4.61929 8.5 3.5 7.38071 3.5 6C3.5 4.61929 4.61929 3.5 6 3.5C7.38071 3.5 8.5 4.61929 8.5 6C8.5 7.38071 7.38071 8.5 6 8.5Z" fill="#c5a880"/></svg>
-          <span>Al Erkyah City, Lusail</span>
-        </div>
-      </div>
-      <div class="pvLightCard__content">
-        <h3 class="pvLightCard__title">City Avenue Residences</h3>
-        <p class="pvLightCard__sub">Urban Luxury Apartments</p>
-        <p class="pvLightCard__desc">High-end urban residential tower in Al Erkyah City, Lusail. Features state-of-the-art gym, rooftop infinity pool, and seamless connection to Lusail Boulevard.</p>
+    <article class="p-card">
+      <div class="p-card__image-wrapper">
+        <img decoding="async" src="/images/developments/city-avenue/city_hero_new.jpg" alt="City Avenue & Commercial Boulevard" class="p-card__img" loading="lazy">
+        <div class="p-card__overlay"></div>
         
-        <div class="pvLightCard__specs">
-          <div class="pvSpec"><span class="pvSpec__label">BEDROOMS</span><span class="pvSpec__val">1 - 3 Bedrooms</span></div>
-          <div class="pvSpec"><span class="pvSpec__label">HANDOVER</span><span class="pvSpec__val">Ready / 2026</span></div>
-          <div class="pvSpec"><span class="pvSpec__label">DOWN PAYMENT</span><span class="pvSpec__val">10% Down Payment</span></div>
-          <div class="pvSpec pvSpec--price"><span class="pvSpec__label">STARTING FROM</span><span class="pvSpec__val">QAR 1,200,000</span></div>
+        <div class="p-card__tags-top">
+          <span class="p-card__badge badge--ready">Ready to Move</span>
+          <span class="p-card__category-tag">Lusail Heights</span>
         </div>
 
-        <div class="pvLightCard__actions">
-          <a href="/en/development/city-avenue" class="pvLightBtn pvLightBtn--primary"><span>View Project</span><svg width="14" height="12" viewBox="0 0 14 12" fill="none"><path d="M8 1L13 6M13 6L8 11M13 6H1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-          <a href="https://wa.me/97460005054?text=Hello%20Prime%20View%20Real%20Estate%2C%20I%20am%20interested%20in%20inquiring%20about%20City%20Avenue%20Residences%20(Al%20Erkyah%20City)" target="_blank" rel="noopener" class="pvLightBtn pvLightBtn--wa" aria-label="Inquire via WhatsApp">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.099 4.019 4.027-1.056z"/></svg>
-            <span>Inquire</span>
-          </a>
+        <div class="p-card__image-bottom">
+          <span class="p-card__dp-pill"><i class="fa-solid fa-credit-card"></i> 20% Down Payment</span>
+          <span class="p-card__handover-pill"><i class="fa-regular fa-calendar-check"></i> Ready Move-In</span>
+        </div>
+      </div>
+
+      <div class="p-card__body">
+        <div class="p-card__header">
+          <span class="p-card__location"><i class="fa-solid fa-location-dot"></i> Al Erkyah City, Lusail</span>
+          <h3 class="p-card__title"><a href="/en/development/city-avenue.html">City Avenue & Commercial Boulevard</a></h3>
+          <span class="p-card__type-beds">Urban Luxury Apartments • <strong>1 - 3 Bedrooms</strong></span>
+        </div>
+
+        <p class="p-card__desc">Iconic mixed-use master development in Al Erkyah City facing Lusail Stadium with hotel-grade amenities, retail boulevard, and 6-year flexible plan.</p>
+
+        <div class="p-card__footer">
+          <div class="p-card__price-box">
+            <span class="p-card__price-label">Starting Price</span>
+            <span class="p-card__price-val">QAR 1,200,000</span>
+          </div>
+
+          <div class="p-card__actions">
+            <a href="https://wa.me/97460005054?text=Hello%20Prime%20View%20Real%20Estate%2C%20I%20would%20like%20to%20receive%20the%20brochure%2C%20payment%20plan%2C%20and%20available%20inventory%20for%20City%20Avenue%20%26%20Commercial%20Boulevard%20in%20Al%20Erkyah%20City%2C%20Lusail." target="_blank" rel="noopener" class="p-card__btn-wa" aria-label="Inquire via WhatsApp for City Avenue & Commercial Boulevard">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="/en/development/city-avenue.html" class="p-card__btn-explore">
+              Explore <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
       </div>
     </article>
   
 
-    <article class="pvLightCard">
-      <div class="pvLightCard__media">
-        <img decoding="async" src="/images/developments/rivan/hero.jpg" alt="Rivan Tower & Sky Suites" class="pvLightCard__img" loading="lazy">
-        <div class="pvLightCard__overlay"></div>
-        <div class="pvLightCard__top">
-          <span class="pvBadge pvBadge--offplan">Flagship</span>
-        </div>
-        <div class="pvLightCard__location">
-          <svg width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M6 0C2.68629 0 0 2.68629 0 6C0 10.5 6 14 6 14C6 14 12 10.5 12 6C12 2.68629 9.31371 0 6 0ZM6 8.5C4.61929 8.5 3.5 7.38071 3.5 6C3.5 4.61929 4.61929 3.5 6 3.5C7.38071 3.5 8.5 4.61929 8.5 6C8.5 7.38071 7.38071 8.5 6 8.5Z" fill="#c5a880"/></svg>
-          <span>Lusail City, Lusail</span>
-        </div>
-      </div>
-      <div class="pvLightCard__content">
-        <h3 class="pvLightCard__title">Rivan Tower & Sky Suites</h3>
-        <p class="pvLightCard__sub">Sky Suites & Residences</p>
-        <p class="pvLightCard__desc">Architectural landmark in Lusail City offering sky suites with double-height panoramic glass windows, wellness spa, and skyline city views.</p>
+    <article class="p-card">
+      <div class="p-card__image-wrapper">
+        <img decoding="async" src="/images/developments/rivan/hero.jpg" alt="Rivan Tower & Sky Suites" class="p-card__img" loading="lazy">
+        <div class="p-card__overlay"></div>
         
-        <div class="pvLightCard__specs">
-          <div class="pvSpec"><span class="pvSpec__label">BEDROOMS</span><span class="pvSpec__val">1 - 3 Bedroom Suites</span></div>
-          <div class="pvSpec"><span class="pvSpec__label">HANDOVER</span><span class="pvSpec__val">Q4 2026</span></div>
-          <div class="pvSpec"><span class="pvSpec__label">DOWN PAYMENT</span><span class="pvSpec__val">10% Down Payment</span></div>
-          <div class="pvSpec pvSpec--price"><span class="pvSpec__label">STARTING FROM</span><span class="pvSpec__val">QAR 1,650,000</span></div>
+        <div class="p-card__tags-top">
+          <span class="p-card__badge badge--offplan">Off-Plan</span>
+          <span class="p-card__category-tag">Lusail Heights</span>
         </div>
 
-        <div class="pvLightCard__actions">
-          <a href="/en/development/rivan" class="pvLightBtn pvLightBtn--primary"><span>View Project</span><svg width="14" height="12" viewBox="0 0 14 12" fill="none"><path d="M8 1L13 6M13 6L8 11M13 6H1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-          <a href="https://wa.me/97460005054?text=Hello%20Prime%20View%20Real%20Estate%2C%20I%20am%20interested%20in%20inquiring%20about%20Rivan%20Tower%20%26%20Sky%20Suites%20(Lusail%20City)" target="_blank" rel="noopener" class="pvLightBtn pvLightBtn--wa" aria-label="Inquire via WhatsApp">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.099 4.019 4.027-1.056z"/></svg>
-            <span>Inquire</span>
-          </a>
+        <div class="p-card__image-bottom">
+          <span class="p-card__dp-pill"><i class="fa-solid fa-credit-card"></i> 10% Down Payment</span>
+          <span class="p-card__handover-pill"><i class="fa-regular fa-calendar-check"></i> Q4 2026</span>
+        </div>
+      </div>
+
+      <div class="p-card__body">
+        <div class="p-card__header">
+          <span class="p-card__location"><i class="fa-solid fa-location-dot"></i> Lusail City, Lusail</span>
+          <h3 class="p-card__title"><a href="/en/development/rivan.html">Rivan Tower & Sky Suites</a></h3>
+          <span class="p-card__type-beds">Sky Suites & Residences • <strong>1 - 3 Bedrooms</strong></span>
+        </div>
+
+        <p class="p-card__desc">High-rise residential tower in the heart of Lusail featuring sky infinity pools, panoramic city vistas, and private concierge services.</p>
+
+        <div class="p-card__footer">
+          <div class="p-card__price-box">
+            <span class="p-card__price-label">Starting Price</span>
+            <span class="p-card__price-val">QAR 1,650,000</span>
+          </div>
+
+          <div class="p-card__actions">
+            <a href="https://wa.me/97460005054?text=Hello%20Prime%20View%20Real%20Estate%2C%20I%20would%20like%20to%20receive%20the%20brochure%2C%20payment%20plan%2C%20and%20available%20inventory%20for%20Rivan%20Tower%20%26%20Sky%20Suites%20in%20Lusail%20City%2C%20Lusail." target="_blank" rel="noopener" class="p-card__btn-wa" aria-label="Inquire via WhatsApp for Rivan Tower & Sky Suites">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="/en/development/rivan.html" class="p-card__btn-explore">
+              Explore <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
       </div>
     </article>
   
 
-    <article class="pvLightCard">
-      <div class="pvLightCard__media">
-        <img decoding="async" src="/images/developments/city-avenue/city_feature_1.jpg" alt="Elite Residence" class="pvLightCard__img" loading="lazy">
-        <div class="pvLightCard__overlay"></div>
-        <div class="pvLightCard__top">
-          <span class="pvBadge pvBadge--offplan">Off-Plan</span>
-        </div>
-        <div class="pvLightCard__location">
-          <svg width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M6 0C2.68629 0 0 2.68629 0 6C0 10.5 6 14 6 14C6 14 12 10.5 12 6C12 2.68629 9.31371 0 6 0ZM6 8.5C4.61929 8.5 3.5 7.38071 3.5 6C3.5 4.61929 4.61929 3.5 6 3.5C7.38071 3.5 8.5 4.61929 8.5 6C8.5 7.38071 7.38071 8.5 6 8.5Z" fill="#c5a880"/></svg>
-          <span>Al Erkyah City, Lusail</span>
-        </div>
-      </div>
-      <div class="pvLightCard__content">
-        <h3 class="pvLightCard__title">Elite Residence</h3>
-        <p class="pvLightCard__sub">Smart 1BR Apartments</p>
-        <p class="pvLightCard__desc">Modern residential tower offering stylish 1-bedroom apartments with smart layouts, premium finishes, and a 6-year flexible payment plan starting from QAR 825,000.</p>
+    <article class="p-card">
+      <div class="p-card__image-wrapper">
+        <img decoding="async" src="/images/developments/city-avenue/city_feature_1.jpg" alt="Elite Residence" class="p-card__img" loading="lazy">
+        <div class="p-card__overlay"></div>
         
-        <div class="pvLightCard__specs">
-          <div class="pvSpec"><span class="pvSpec__label">BEDROOMS</span><span class="pvSpec__val">1 Bedroom</span></div>
-          <div class="pvSpec"><span class="pvSpec__label">HANDOVER</span><span class="pvSpec__val">Q4 2027</span></div>
-          <div class="pvSpec"><span class="pvSpec__label">DOWN PAYMENT</span><span class="pvSpec__val">QAR 50K Fixed DP</span></div>
-          <div class="pvSpec pvSpec--price"><span class="pvSpec__label">STARTING FROM</span><span class="pvSpec__val">QAR 825,000</span></div>
+        <div class="p-card__tags-top">
+          <span class="p-card__badge badge--offplan">Off-Plan</span>
+          <span class="p-card__category-tag">Lusail Heights</span>
         </div>
 
-        <div class="pvLightCard__actions">
-          <button type="button" class="pvLightBtn pvLightBtn--modal" onclick="openFgProjectModal('elite-residence')"><span>Quick Details</span><svg width="14" height="12" viewBox="0 0 14 12" fill="none"><path d="M8 1L13 6M13 6L8 11M13 6H1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-          <a href="https://wa.me/97460005054?text=Hello%20Prime%20View%20Real%20Estate%2C%20I%20am%20interested%20in%20inquiring%20about%20Elite%20Residence%20(Al%20Erkyah%20City)" target="_blank" rel="noopener" class="pvLightBtn pvLightBtn--wa" aria-label="Inquire via WhatsApp">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.099 4.019 4.027-1.056z"/></svg>
-            <span>Inquire</span>
-          </a>
+        <div class="p-card__image-bottom">
+          <span class="p-card__dp-pill"><i class="fa-solid fa-credit-card"></i> 10% Down Payment</span>
+          <span class="p-card__handover-pill"><i class="fa-regular fa-calendar-check"></i> Q4 2027</span>
+        </div>
+      </div>
+
+      <div class="p-card__body">
+        <div class="p-card__header">
+          <span class="p-card__location"><i class="fa-solid fa-location-dot"></i> Al Erkyah City, Lusail</span>
+          <h3 class="p-card__title"><a href="/en/development/elite-residence.html">Elite Residence</a></h3>
+          <span class="p-card__type-beds">Smart 1BR Apartments • <strong>1 Bedroom</strong></span>
+        </div>
+
+        <p class="p-card__desc">Modern smart-home residential tower in Al Erkyah City with fully fitted kitchens, swimming pool, gym, and 6-year payment terms.</p>
+
+        <div class="p-card__footer">
+          <div class="p-card__price-box">
+            <span class="p-card__price-label">Starting Price</span>
+            <span class="p-card__price-val">QAR 825,000</span>
+          </div>
+
+          <div class="p-card__actions">
+            <a href="https://wa.me/97460005054?text=Hello%20Prime%20View%20Real%20Estate%2C%20I%20would%20like%20to%20receive%20the%20brochure%2C%20payment%20plan%2C%20and%20available%20inventory%20for%20Elite%20Residence%20in%20Al%20Erkyah%20City%2C%20Lusail." target="_blank" rel="noopener" class="p-card__btn-wa" aria-label="Inquire via WhatsApp for Elite Residence">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="/en/development/elite-residence.html" class="p-card__btn-explore">
+              Explore <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
       </div>
     </article>
   
 
-    <article class="pvLightCard">
-      <div class="pvLightCard__media">
-        <img decoding="async" src="/images/developments/city-avenue/city_feature_2.jpg" alt="Boulevard Residence" class="pvLightCard__img" loading="lazy">
-        <div class="pvLightCard__overlay"></div>
-        <div class="pvLightCard__top">
-          <span class="pvBadge pvBadge--offplan">Off-Plan</span>
-        </div>
-        <div class="pvLightCard__location">
-          <svg width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M6 0C2.68629 0 0 2.68629 0 6C0 10.5 6 14 6 14C6 14 12 10.5 12 6C12 2.68629 9.31371 0 6 0ZM6 8.5C4.61929 8.5 3.5 7.38071 3.5 6C3.5 4.61929 4.61929 3.5 6 3.5C7.38071 3.5 8.5 4.61929 8.5 6C8.5 7.38071 7.38071 8.5 6 8.5Z" fill="#c5a880"/></svg>
-          <span>Fox Hills, Lusail</span>
-        </div>
-      </div>
-      <div class="pvLightCard__content">
-        <h3 class="pvLightCard__title">Boulevard Residence</h3>
-        <p class="pvLightCard__sub">1 & 2 BR Apartments</p>
-        <p class="pvLightCard__desc">Contemporary residential tower in Fox Hills, Lusail offering elegantly designed 1 and 2-bedroom apartments with a 7-year payment plan and rooftop pool.</p>
+    <article class="p-card">
+      <div class="p-card__image-wrapper">
+        <img decoding="async" src="/images/developments/city-avenue/city_feature_2.jpg" alt="Boulevard Residence" class="p-card__img" loading="lazy">
+        <div class="p-card__overlay"></div>
         
-        <div class="pvLightCard__specs">
-          <div class="pvSpec"><span class="pvSpec__label">BEDROOMS</span><span class="pvSpec__val">1 - 2 Bedrooms</span></div>
-          <div class="pvSpec"><span class="pvSpec__label">HANDOVER</span><span class="pvSpec__val">July 2027</span></div>
-          <div class="pvSpec"><span class="pvSpec__label">DOWN PAYMENT</span><span class="pvSpec__val">5% Down Payment</span></div>
-          <div class="pvSpec pvSpec--price"><span class="pvSpec__label">STARTING FROM</span><span class="pvSpec__val">QAR 1,000,000</span></div>
+        <div class="p-card__tags-top">
+          <span class="p-card__badge badge--offplan">Off-Plan</span>
+          <span class="p-card__category-tag">Lusail Heights</span>
         </div>
 
-        <div class="pvLightCard__actions">
-          <button type="button" class="pvLightBtn pvLightBtn--modal" onclick="openFgProjectModal('boulevard-residence')"><span>Quick Details</span><svg width="14" height="12" viewBox="0 0 14 12" fill="none"><path d="M8 1L13 6M13 6L8 11M13 6H1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-          <a href="https://wa.me/97460005054?text=Hello%20Prime%20View%20Real%20Estate%2C%20I%20am%20interested%20in%20inquiring%20about%20Boulevard%20Residence%20(Fox%20Hills)" target="_blank" rel="noopener" class="pvLightBtn pvLightBtn--wa" aria-label="Inquire via WhatsApp">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.099 4.019 4.027-1.056z"/></svg>
-            <span>Inquire</span>
-          </a>
+        <div class="p-card__image-bottom">
+          <span class="p-card__dp-pill"><i class="fa-solid fa-credit-card"></i> 10% Down Payment</span>
+          <span class="p-card__handover-pill"><i class="fa-regular fa-calendar-check"></i> Q4 2027</span>
+        </div>
+      </div>
+
+      <div class="p-card__body">
+        <div class="p-card__header">
+          <span class="p-card__location"><i class="fa-solid fa-location-dot"></i> Fox Hills, Lusail</span>
+          <h3 class="p-card__title"><a href="/en/development/boulevard-residence.html">Boulevard Residence</a></h3>
+          <span class="p-card__type-beds">1 & 2 BR Apartments • <strong>1 - 2 Bedrooms</strong></span>
+        </div>
+
+        <p class="p-card__desc">Prime residential apartments situated right on Lusail Commercial Boulevard with immediate access to luxury dining, retail, and Metro.</p>
+
+        <div class="p-card__footer">
+          <div class="p-card__price-box">
+            <span class="p-card__price-label">Starting Price</span>
+            <span class="p-card__price-val">QAR 1,000,000</span>
+          </div>
+
+          <div class="p-card__actions">
+            <a href="https://wa.me/97460005054?text=Hello%20Prime%20View%20Real%20Estate%2C%20I%20would%20like%20to%20receive%20the%20brochure%2C%20payment%20plan%2C%20and%20available%20inventory%20for%20Boulevard%20Residence%20in%20Fox%20Hills%2C%20Lusail." target="_blank" rel="noopener" class="p-card__btn-wa" aria-label="Inquire via WhatsApp for Boulevard Residence">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="/en/development/boulevard-residence.html" class="p-card__btn-explore">
+              Explore <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
       </div>
     </article>
   
 
-    <article class="pvLightCard">
-      <div class="pvLightCard__media">
-        <img decoding="async" src="/images/developments/city-avenue/city_feature_3.jpg" alt="Orjuwan Tower" class="pvLightCard__img" loading="lazy">
-        <div class="pvLightCard__overlay"></div>
-        <div class="pvLightCard__top">
-          <span class="pvBadge pvBadge--offplan">Off-Plan</span>
-        </div>
-        <div class="pvLightCard__location">
-          <svg width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M6 0C2.68629 0 0 2.68629 0 6C0 10.5 6 14 6 14C6 14 12 10.5 12 6C12 2.68629 9.31371 0 6 0ZM6 8.5C4.61929 8.5 3.5 7.38071 3.5 6C3.5 4.61929 4.61929 3.5 6 3.5C7.38071 3.5 8.5 4.61929 8.5 6C8.5 7.38071 7.38071 8.5 6 8.5Z" fill="#c5a880"/></svg>
-          <span>Al Erkyah City, Lusail</span>
-        </div>
-      </div>
-      <div class="pvLightCard__content">
-        <h3 class="pvLightCard__title">Orjuwan Tower</h3>
-        <p class="pvLightCard__sub">Modern Residences</p>
-        <p class="pvLightCard__desc">Premium residential tower in Al Erkyah City offering 1-bedroom apartments starting at QAR 1.1M with flexible terms — 30% before handover and 70% post-handover till 2032.</p>
+    <article class="p-card">
+      <div class="p-card__image-wrapper">
+        <img decoding="async" src="/images/developments/city-avenue/city_feature_3.jpg" alt="Orjuwan Tower" class="p-card__img" loading="lazy">
+        <div class="p-card__overlay"></div>
         
-        <div class="pvLightCard__specs">
-          <div class="pvSpec"><span class="pvSpec__label">BEDROOMS</span><span class="pvSpec__val">1 Bedroom</span></div>
-          <div class="pvSpec"><span class="pvSpec__label">HANDOVER</span><span class="pvSpec__val">October 2026</span></div>
-          <div class="pvSpec"><span class="pvSpec__label">DOWN PAYMENT</span><span class="pvSpec__val">30% Before Handover</span></div>
-          <div class="pvSpec pvSpec--price"><span class="pvSpec__label">STARTING FROM</span><span class="pvSpec__val">QAR 1,100,000</span></div>
+        <div class="p-card__tags-top">
+          <span class="p-card__badge badge--offplan">Off-Plan</span>
+          <span class="p-card__category-tag">Lusail Heights</span>
         </div>
 
-        <div class="pvLightCard__actions">
-          <button type="button" class="pvLightBtn pvLightBtn--modal" onclick="openFgProjectModal('orjuwan')"><span>Quick Details</span><svg width="14" height="12" viewBox="0 0 14 12" fill="none"><path d="M8 1L13 6M13 6L8 11M13 6H1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-          <a href="https://wa.me/97460005054?text=Hello%20Prime%20View%20Real%20Estate%2C%20I%20am%20interested%20in%20inquiring%20about%20Orjuwan%20Tower%20(Al%20Erkyah%20City)" target="_blank" rel="noopener" class="pvLightBtn pvLightBtn--wa" aria-label="Inquire via WhatsApp">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.099 4.019 4.027-1.056z"/></svg>
-            <span>Inquire</span>
-          </a>
+        <div class="p-card__image-bottom">
+          <span class="p-card__dp-pill"><i class="fa-solid fa-credit-card"></i> 10% Down Payment</span>
+          <span class="p-card__handover-pill"><i class="fa-regular fa-calendar-check"></i> Q4 2027</span>
+        </div>
+      </div>
+
+      <div class="p-card__body">
+        <div class="p-card__header">
+          <span class="p-card__location"><i class="fa-solid fa-location-dot"></i> Al Erkyah City, Lusail</span>
+          <h3 class="p-card__title"><a href="/en/development/orjuwan.html">Orjuwan Tower</a></h3>
+          <span class="p-card__type-beds">Modern Residences • <strong>1 - 3 Bedrooms</strong></span>
+        </div>
+
+        <p class="p-card__desc">Contemporary residential tower in Al Erkyah offering luxury balconies, gym facilities, covered parking, and 5-year installment terms.</p>
+
+        <div class="p-card__footer">
+          <div class="p-card__price-box">
+            <span class="p-card__price-label">Starting Price</span>
+            <span class="p-card__price-val">QAR 1,100,000</span>
+          </div>
+
+          <div class="p-card__actions">
+            <a href="https://wa.me/97460005054?text=Hello%20Prime%20View%20Real%20Estate%2C%20I%20would%20like%20to%20receive%20the%20brochure%2C%20payment%20plan%2C%20and%20available%20inventory%20for%20Orjuwan%20Tower%20in%20Al%20Erkyah%20City%2C%20Lusail." target="_blank" rel="noopener" class="p-card__btn-wa" aria-label="Inquire via WhatsApp for Orjuwan Tower">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="/en/development/orjuwan.html" class="p-card__btn-explore">
+              Explore <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
       </div>
     </article>
   
 
-    <article class="pvLightCard">
-      <div class="pvLightCard__media">
-        <img decoding="async" src="/images/developments/milos/milos_real_12.jpg" alt="Bliss Residences" class="pvLightCard__img" loading="lazy">
-        <div class="pvLightCard__overlay"></div>
-        <div class="pvLightCard__top">
-          <span class="pvBadge pvBadge--ready">Ready</span>
-        </div>
-        <div class="pvLightCard__location">
-          <svg width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M6 0C2.68629 0 0 2.68629 0 6C0 10.5 6 14 6 14C6 14 12 10.5 12 6C12 2.68629 9.31371 0 6 0ZM6 8.5C4.61929 8.5 3.5 7.38071 3.5 6C3.5 4.61929 4.61929 3.5 6 3.5C7.38071 3.5 8.5 4.61929 8.5 6C8.5 7.38071 7.38071 8.5 6 8.5Z" fill="#c5a880"/></svg>
-          <span>Fox Hills, Lusail</span>
-        </div>
-      </div>
-      <div class="pvLightCard__content">
-        <h3 class="pvLightCard__title">Bliss Residences</h3>
-        <p class="pvLightCard__sub">Ready Luxury Apartments</p>
-        <p class="pvLightCard__desc">Ready-to-move-in luxury residences in Fox Hills with high-end designer finishes, 5-year post-handover payment plan, and immediate move-in key delivery.</p>
+    <article class="p-card">
+      <div class="p-card__image-wrapper">
+        <img decoding="async" src="/images/developments/milos/milos_real_12.jpg" alt="Bliss Residences" class="p-card__img" loading="lazy">
+        <div class="p-card__overlay"></div>
         
-        <div class="pvLightCard__specs">
-          <div class="pvSpec"><span class="pvSpec__label">BEDROOMS</span><span class="pvSpec__val">1 - 3 Bedrooms</span></div>
-          <div class="pvSpec"><span class="pvSpec__label">HANDOVER</span><span class="pvSpec__val">Ready Move-In</span></div>
-          <div class="pvSpec"><span class="pvSpec__label">DOWN PAYMENT</span><span class="pvSpec__val">35% Down Payment</span></div>
-          <div class="pvSpec pvSpec--price"><span class="pvSpec__label">STARTING FROM</span><span class="pvSpec__val">QAR 1,540,000</span></div>
+        <div class="p-card__tags-top">
+          <span class="p-card__badge badge--ready">Ready to Move</span>
+          <span class="p-card__category-tag">Lusail Heights</span>
         </div>
 
-        <div class="pvLightCard__actions">
-          <button type="button" class="pvLightBtn pvLightBtn--modal" onclick="openFgProjectModal('bliss-residences')"><span>Quick Details</span><svg width="14" height="12" viewBox="0 0 14 12" fill="none"><path d="M8 1L13 6M13 6L8 11M13 6H1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-          <a href="https://wa.me/97460005054?text=Hello%20Prime%20View%20Real%20Estate%2C%20I%20am%20interested%20in%20inquiring%20about%20Bliss%20Residences%20(Fox%20Hills)" target="_blank" rel="noopener" class="pvLightBtn pvLightBtn--wa" aria-label="Inquire via WhatsApp">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.099 4.019 4.027-1.056z"/></svg>
-            <span>Inquire</span>
-          </a>
+        <div class="p-card__image-bottom">
+          <span class="p-card__dp-pill"><i class="fa-solid fa-credit-card"></i> 35% Down Payment</span>
+          <span class="p-card__handover-pill"><i class="fa-regular fa-calendar-check"></i> Ready Move-In</span>
+        </div>
+      </div>
+
+      <div class="p-card__body">
+        <div class="p-card__header">
+          <span class="p-card__location"><i class="fa-solid fa-location-dot"></i> Fox Hills, Lusail</span>
+          <h3 class="p-card__title"><a href="/en/development/bliss-residences.html">Bliss Residences</a></h3>
+          <span class="p-card__type-beds">Ready Luxury Apartments • <strong>1 - 3 Bedrooms</strong></span>
+        </div>
+
+        <p class="p-card__desc">Ready-to-move-in luxury residences in Fox Hills with high-end designer finishes, 5-year post-handover payment plan, and immediate move-in key delivery.</p>
+
+        <div class="p-card__footer">
+          <div class="p-card__price-box">
+            <span class="p-card__price-label">Starting Price</span>
+            <span class="p-card__price-val">QAR 1,540,000</span>
+          </div>
+
+          <div class="p-card__actions">
+            <a href="https://wa.me/97460005054?text=Hello%20Prime%20View%20Real%20Estate%2C%20I%20would%20like%20to%20receive%20the%20brochure%2C%20payment%20plan%2C%20and%20available%20inventory%20for%20Bliss%20Residences%20in%20Fox%20Hills%2C%20Lusail." target="_blank" rel="noopener" class="p-card__btn-wa" aria-label="Inquire via WhatsApp for Bliss Residences">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="/en/development/bliss-residences.html" class="p-card__btn-explore">
+              Explore <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
       </div>
     </article>
@@ -4516,7 +4495,7 @@
 </section>
 
 <!-- ════════════════════════════════════════════════════════════════
-     SECTION 3: 💎 THE PEARL ISLAND COLLECTION (6 CARDS)
+     SECTION: 💎 The Pearl Island Collection (6 CARDS)
      ════════════════════════════════════════════════════════════════ -->
 <section class="pvSecLight pvSecLight--white" id="pearl-island-collection">
   <div class="pvContainer">
@@ -4527,216 +4506,270 @@
       </span>
       <h2 class="pvSecTitle">💎 The Pearl Island Collection</h2>
       <p class="pvSecSub">
-        World-class island living featuring QAR 55M beachfront compound villas, ready-to-move mid-rise towers, and unique 20-year Lease-to-Own investment opportunities.
+        World-class island living featuring beachfront compound villas, ready-to-move mid-rise towers, and unique 20-year Lease-to-Own investment opportunities.
       </p>
     </div>
     <div class="pvGrid">
       
-    <article class="pvLightCard">
-      <div class="pvLightCard__media">
-        <img decoding="async" src="/images/developments/milos/hero.jpg" alt="Milos Residence & Coastal Living" class="pvLightCard__img" loading="lazy">
-        <div class="pvLightCard__overlay"></div>
-        <div class="pvLightCard__top">
-          <span class="pvBadge pvBadge--offplan">Flagship</span>
-        </div>
-        <div class="pvLightCard__location">
-          <svg width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M6 0C2.68629 0 0 2.68629 0 6C0 10.5 6 14 6 14C6 14 12 10.5 12 6C12 2.68629 9.31371 0 6 0ZM6 8.5C4.61929 8.5 3.5 7.38071 3.5 6C3.5 4.61929 4.61929 3.5 6 3.5C7.38071 3.5 8.5 4.61929 8.5 6C8.5 7.38071 7.38071 8.5 6 8.5Z" fill="#c5a880"/></svg>
-          <span>Legtaifiya / Pearl Gateway, Doha</span>
-        </div>
-      </div>
-      <div class="pvLightCard__content">
-        <h3 class="pvLightCard__title">Milos Residence & Coastal Living</h3>
-        <p class="pvLightCard__sub">Coastal High-Rise Tower</p>
-        <p class="pvLightCard__desc">Architectural masterpiece at the Legtaifiya coastal corridor facing The Pearl Island. Offers private beach access, sky lounges, and marine vistas.</p>
+    <article class="p-card">
+      <div class="p-card__image-wrapper">
+        <img decoding="async" src="/images/developments/milos/hero.jpg" alt="Milos Residence & Coastal Living" class="p-card__img" loading="lazy">
+        <div class="p-card__overlay"></div>
         
-        <div class="pvLightCard__specs">
-          <div class="pvSpec"><span class="pvSpec__label">BEDROOMS</span><span class="pvSpec__val">1 - 3 Bedrooms</span></div>
-          <div class="pvSpec"><span class="pvSpec__label">HANDOVER</span><span class="pvSpec__val">Q4 2026</span></div>
-          <div class="pvSpec"><span class="pvSpec__label">DOWN PAYMENT</span><span class="pvSpec__val">10% Down Payment</span></div>
-          <div class="pvSpec pvSpec--price"><span class="pvSpec__label">STARTING FROM</span><span class="pvSpec__val">QAR 1,850,000</span></div>
+        <div class="p-card__tags-top">
+          <span class="p-card__badge badge--offplan">Off-Plan</span>
+          <span class="p-card__category-tag">The Pearl Island</span>
         </div>
 
-        <div class="pvLightCard__actions">
-          <a href="/en/development/milos" class="pvLightBtn pvLightBtn--primary"><span>View Project</span><svg width="14" height="12" viewBox="0 0 14 12" fill="none"><path d="M8 1L13 6M13 6L8 11M13 6H1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-          <a href="https://wa.me/97460005054?text=Hello%20Prime%20View%20Real%20Estate%2C%20I%20am%20interested%20in%20inquiring%20about%20Milos%20Residence%20%26%20Coastal%20Living%20(Legtaifiya%20%2F%20Pearl%20Gateway)" target="_blank" rel="noopener" class="pvLightBtn pvLightBtn--wa" aria-label="Inquire via WhatsApp">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.099 4.019 4.027-1.056z"/></svg>
-            <span>Inquire</span>
-          </a>
+        <div class="p-card__image-bottom">
+          <span class="p-card__dp-pill"><i class="fa-solid fa-credit-card"></i> 10% Down Payment</span>
+          <span class="p-card__handover-pill"><i class="fa-regular fa-calendar-check"></i> Q4 2026</span>
+        </div>
+      </div>
+
+      <div class="p-card__body">
+        <div class="p-card__header">
+          <span class="p-card__location"><i class="fa-solid fa-location-dot"></i> Legtaifiya / Pearl Gateway, Doha</span>
+          <h3 class="p-card__title"><a href="/en/development/milos.html">Milos Residence & Coastal Living</a></h3>
+          <span class="p-card__type-beds">Coastal High-Rise Tower • <strong>1 - 3 Bedrooms</strong></span>
+        </div>
+
+        <p class="p-card__desc">Architectural masterpiece at the Legtaifiya coastal corridor facing The Pearl Island. Offers private beach access, sky lounges, and marine vistas.</p>
+
+        <div class="p-card__footer">
+          <div class="p-card__price-box">
+            <span class="p-card__price-label">Starting Price</span>
+            <span class="p-card__price-val">QAR 1,850,000</span>
+          </div>
+
+          <div class="p-card__actions">
+            <a href="https://wa.me/97460005054?text=Hello%20Prime%20View%20Real%20Estate%2C%20I%20would%20like%20to%20receive%20the%20brochure%2C%20payment%20plan%2C%20and%20available%20inventory%20for%20Milos%20Residence%20%26%20Coastal%20Living%20in%20Legtaifiya%20%2F%20Pearl%20Gateway%2C%20Doha." target="_blank" rel="noopener" class="p-card__btn-wa" aria-label="Inquire via WhatsApp for Milos Residence & Coastal Living">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="/en/development/milos.html" class="p-card__btn-explore">
+              Explore <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
       </div>
     </article>
   
 
-    <article class="pvLightCard">
-      <div class="pvLightCard__media">
-        <img decoding="async" src="/images/developments/milos/milos_real_1.jpg" alt="Floresta 105 Tower" class="pvLightCard__img" loading="lazy">
-        <div class="pvLightCard__overlay"></div>
-        <div class="pvLightCard__top">
-          <span class="pvBadge pvBadge--ready">Ready</span>
-        </div>
-        <div class="pvLightCard__location">
-          <svg width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M6 0C2.68629 0 0 2.68629 0 6C0 10.5 6 14 6 14C6 14 12 10.5 12 6C12 2.68629 9.31371 0 6 0ZM6 8.5C4.61929 8.5 3.5 7.38071 3.5 6C3.5 4.61929 4.61929 3.5 6 3.5C7.38071 3.5 8.5 4.61929 8.5 6C8.5 7.38071 7.38071 8.5 6 8.5Z" fill="#c5a880"/></svg>
-          <span>Floresta Gardens, The Pearl-Qatar</span>
-        </div>
-      </div>
-      <div class="pvLightCard__content">
-        <h3 class="pvLightCard__title">Floresta 105 Tower</h3>
-        <p class="pvLightCard__sub">Mid-Rise Garden Residences</p>
-        <p class="pvLightCard__desc">Located in Floresta Gardens precinct of The Pearl Island. Mid-rise residential tower with master suites, maid rooms, and private balconies overlooking green parks.</p>
+    <article class="p-card">
+      <div class="p-card__image-wrapper">
+        <img decoding="async" src="/images/developments/milos/milos_real_6.jpg" alt="Floresta 105 Luxury Tower" class="p-card__img" loading="lazy">
+        <div class="p-card__overlay"></div>
         
-        <div class="pvLightCard__specs">
-          <div class="pvSpec"><span class="pvSpec__label">BEDROOMS</span><span class="pvSpec__val">1 - 3 Bedrooms</span></div>
-          <div class="pvSpec"><span class="pvSpec__label">HANDOVER</span><span class="pvSpec__val">Immediate / Ready</span></div>
-          <div class="pvSpec"><span class="pvSpec__label">DOWN PAYMENT</span><span class="pvSpec__val">Ready Move-In</span></div>
-          <div class="pvSpec pvSpec--price"><span class="pvSpec__label">STARTING FROM</span><span class="pvSpec__val">QAR 1,770,000</span></div>
+        <div class="p-card__tags-top">
+          <span class="p-card__badge badge--ready">Ready to Move</span>
+          <span class="p-card__category-tag">The Pearl Island</span>
         </div>
 
-        <div class="pvLightCard__actions">
-          <button type="button" class="pvLightBtn pvLightBtn--modal" onclick="openFgProjectModal('floresta-105')"><span>Quick Details</span><svg width="14" height="12" viewBox="0 0 14 12" fill="none"><path d="M8 1L13 6M13 6L8 11M13 6H1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-          <a href="https://wa.me/97460005054?text=Hello%20Prime%20View%20Real%20Estate%2C%20I%20am%20interested%20in%20inquiring%20about%20Floresta%20105%20Tower%20(Floresta%20Gardens)" target="_blank" rel="noopener" class="pvLightBtn pvLightBtn--wa" aria-label="Inquire via WhatsApp">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.099 4.019 4.027-1.056z"/></svg>
-            <span>Inquire</span>
-          </a>
+        <div class="p-card__image-bottom">
+          <span class="p-card__dp-pill"><i class="fa-solid fa-credit-card"></i> Ready Move-In</span>
+          <span class="p-card__handover-pill"><i class="fa-regular fa-calendar-check"></i> Ready Move-In</span>
+        </div>
+      </div>
+
+      <div class="p-card__body">
+        <div class="p-card__header">
+          <span class="p-card__location"><i class="fa-solid fa-location-dot"></i> Floresta Gardens, The Pearl-Qatar</span>
+          <h3 class="p-card__title"><a href="/en/development/floresta-105.html">Floresta 105 Luxury Tower</a></h3>
+          <span class="p-card__type-beds">Island High-Rise Tower • <strong>1 - 3 Bedrooms</strong></span>
+        </div>
+
+        <p class="p-card__desc">Mid-rise luxury residential tower in Floresta Gardens offering marina views, concierge services, and immediate title deed issuance upon purchase.</p>
+
+        <div class="p-card__footer">
+          <div class="p-card__price-box">
+            <span class="p-card__price-label">Starting Price</span>
+            <span class="p-card__price-val">QAR 1,770,000</span>
+          </div>
+
+          <div class="p-card__actions">
+            <a href="https://wa.me/97460005054?text=Hello%20Prime%20View%20Real%20Estate%2C%20I%20would%20like%20to%20receive%20the%20brochure%2C%20payment%20plan%2C%20and%20available%20inventory%20for%20Floresta%20105%20Luxury%20Tower%20in%20Floresta%20Gardens%2C%20The%20Pearl-Qatar." target="_blank" rel="noopener" class="p-card__btn-wa" aria-label="Inquire via WhatsApp for Floresta 105 Luxury Tower">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="/en/development/floresta-105.html" class="p-card__btn-explore">
+              Explore <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
       </div>
     </article>
   
 
-    <article class="pvLightCard">
-      <div class="pvLightCard__media">
-        <img decoding="async" src="/images/developments/milos/milos_real_3.jpg" alt="Al Mayyas Tower" class="pvLightCard__img" loading="lazy">
-        <div class="pvLightCard__overlay"></div>
-        <div class="pvLightCard__top">
-          <span class="pvBadge pvBadge--offplan">Off-Plan</span>
-        </div>
-        <div class="pvLightCard__location">
-          <svg width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M6 0C2.68629 0 0 2.68629 0 6C0 10.5 6 14 6 14C6 14 12 10.5 12 6C12 2.68629 9.31371 0 6 0ZM6 8.5C4.61929 8.5 3.5 7.38071 3.5 6C3.5 4.61929 4.61929 3.5 6 3.5C7.38071 3.5 8.5 4.61929 8.5 6C8.5 7.38071 7.38071 8.5 6 8.5Z" fill="#c5a880"/></svg>
-          <span>The Pearl-Qatar, The Pearl</span>
-        </div>
-      </div>
-      <div class="pvLightCard__content">
-        <h3 class="pvLightCard__title">Al Mayyas Tower</h3>
-        <p class="pvLightCard__sub">Luxury Sea View Apartments</p>
-        <p class="pvLightCard__desc">Luxury residential tower at The Pearl with panoramic Arabian Gulf views, world-class spa facilities, and handover by Q4 2026 with 10% down payment.</p>
+    <article class="p-card">
+      <div class="p-card__image-wrapper">
+        <img decoding="async" src="/images/developments/flora-villas/unit_1.jpg" alt="Al Mayyas Tower" class="p-card__img" loading="lazy">
+        <div class="p-card__overlay"></div>
         
-        <div class="pvLightCard__specs">
-          <div class="pvSpec"><span class="pvSpec__label">BEDROOMS</span><span class="pvSpec__val">1 - 3 Bedrooms</span></div>
-          <div class="pvSpec"><span class="pvSpec__label">HANDOVER</span><span class="pvSpec__val">Q4 2026</span></div>
-          <div class="pvSpec"><span class="pvSpec__label">DOWN PAYMENT</span><span class="pvSpec__val">10% Down Payment</span></div>
-          <div class="pvSpec pvSpec--price"><span class="pvSpec__label">STARTING FROM</span><span class="pvSpec__val">QAR 2,110,000</span></div>
+        <div class="p-card__tags-top">
+          <span class="p-card__badge badge--offplan">Off-Plan</span>
+          <span class="p-card__category-tag">The Pearl Island</span>
         </div>
 
-        <div class="pvLightCard__actions">
-          <button type="button" class="pvLightBtn pvLightBtn--modal" onclick="openFgProjectModal('al-mayyas')"><span>Quick Details</span><svg width="14" height="12" viewBox="0 0 14 12" fill="none"><path d="M8 1L13 6M13 6L8 11M13 6H1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-          <a href="https://wa.me/97460005054?text=Hello%20Prime%20View%20Real%20Estate%2C%20I%20am%20interested%20in%20inquiring%20about%20Al%20Mayyas%20Tower%20(The%20Pearl-Qatar)" target="_blank" rel="noopener" class="pvLightBtn pvLightBtn--wa" aria-label="Inquire via WhatsApp">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.099 4.019 4.027-1.056z"/></svg>
-            <span>Inquire</span>
-          </a>
+        <div class="p-card__image-bottom">
+          <span class="p-card__dp-pill"><i class="fa-solid fa-credit-card"></i> 10% Down Payment</span>
+          <span class="p-card__handover-pill"><i class="fa-regular fa-calendar-check"></i> Q4 2027</span>
+        </div>
+      </div>
+
+      <div class="p-card__body">
+        <div class="p-card__header">
+          <span class="p-card__location"><i class="fa-solid fa-location-dot"></i> The Pearl-Qatar, The Pearl</span>
+          <h3 class="p-card__title"><a href="/en/development/al-mayyas.html">Al Mayyas Tower</a></h3>
+          <span class="p-card__type-beds">Mediterranean Residences • <strong>1 - 3 Bedrooms</strong></span>
+        </div>
+
+        <p class="p-card__desc">Mediterranean-inspired architectural residence at The Pearl-Qatar featuring private swimming pool, marina views, and wellness spa.</p>
+
+        <div class="p-card__footer">
+          <div class="p-card__price-box">
+            <span class="p-card__price-label">Starting Price</span>
+            <span class="p-card__price-val">QAR 2,110,000</span>
+          </div>
+
+          <div class="p-card__actions">
+            <a href="https://wa.me/97460005054?text=Hello%20Prime%20View%20Real%20Estate%2C%20I%20would%20like%20to%20receive%20the%20brochure%2C%20payment%20plan%2C%20and%20available%20inventory%20for%20Al%20Mayyas%20Tower%20in%20The%20Pearl-Qatar%2C%20The%20Pearl." target="_blank" rel="noopener" class="p-card__btn-wa" aria-label="Inquire via WhatsApp for Al Mayyas Tower">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="/en/development/al-mayyas.html" class="p-card__btn-explore">
+              Explore <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
       </div>
     </article>
   
 
-    <article class="pvLightCard">
-      <div class="pvLightCard__media">
-        <img decoding="async" src="/images/developments/flora-villas/unit_1.jpg" alt="Coralia Compound Villas" class="pvLightCard__img" loading="lazy">
-        <div class="pvLightCard__overlay"></div>
-        <div class="pvLightCard__top">
-          <span class="pvBadge pvBadge--luxury">Ultra Luxury</span>
-        </div>
-        <div class="pvLightCard__location">
-          <svg width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M6 0C2.68629 0 0 2.68629 0 6C0 10.5 6 14 6 14C6 14 12 10.5 12 6C12 2.68629 9.31371 0 6 0ZM6 8.5C4.61929 8.5 3.5 7.38071 3.5 6C3.5 4.61929 4.61929 3.5 6 3.5C7.38071 3.5 8.5 4.61929 8.5 6C8.5 7.38071 7.38071 8.5 6 8.5Z" fill="#c5a880"/></svg>
-          <span>The Pearl-Qatar, The Pearl</span>
-        </div>
-      </div>
-      <div class="pvLightCard__content">
-        <h3 class="pvLightCard__title">Coralia Compound Villas</h3>
-        <p class="pvLightCard__sub">Ultra-Luxury Island Villa</p>
-        <p class="pvLightCard__desc">Ultra-luxury 5-bedroom waterfront villas at The Pearl featuring exclusive island living, private beach access, grand architectural design, and direct marina views.</p>
+    <article class="p-card">
+      <div class="p-card__image-wrapper">
+        <img decoding="async" src="/images/developments/flora-villas/img_1.jpg" alt="Coralia Compound Villas" class="p-card__img" loading="lazy">
+        <div class="p-card__overlay"></div>
         
-        <div class="pvLightCard__specs">
-          <div class="pvSpec"><span class="pvSpec__label">BEDROOMS</span><span class="pvSpec__val">5 BR + Maid + Pool</span></div>
-          <div class="pvSpec"><span class="pvSpec__label">HANDOVER</span><span class="pvSpec__val">Q4 2026</span></div>
-          <div class="pvSpec"><span class="pvSpec__label">DOWN PAYMENT</span><span class="pvSpec__val">50% Booking</span></div>
-          <div class="pvSpec pvSpec--price"><span class="pvSpec__label">STARTING FROM</span><span class="pvSpec__val">QAR 55,000,000</span></div>
+        <div class="p-card__tags-top">
+          <span class="p-card__badge badge--ready">Ready to Move</span>
+          <span class="p-card__category-tag">The Pearl Island</span>
         </div>
 
-        <div class="pvLightCard__actions">
-          <button type="button" class="pvLightBtn pvLightBtn--modal" onclick="openFgProjectModal('coralia-villas')"><span>Quick Details</span><svg width="14" height="12" viewBox="0 0 14 12" fill="none"><path d="M8 1L13 6M13 6L8 11M13 6H1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-          <a href="https://wa.me/97460005054?text=Hello%20Prime%20View%20Real%20Estate%2C%20I%20am%20interested%20in%20inquiring%20about%20Coralia%20Compound%20Villas%20(The%20Pearl-Qatar)" target="_blank" rel="noopener" class="pvLightBtn pvLightBtn--wa" aria-label="Inquire via WhatsApp">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.099 4.019 4.027-1.056z"/></svg>
-            <span>Inquire</span>
-          </a>
+        <div class="p-card__image-bottom">
+          <span class="p-card__dp-pill"><i class="fa-solid fa-credit-card"></i> Ready Move-In</span>
+          <span class="p-card__handover-pill"><i class="fa-regular fa-calendar-check"></i> Immediate / Ready</span>
+        </div>
+      </div>
+
+      <div class="p-card__body">
+        <div class="p-card__header">
+          <span class="p-card__location"><i class="fa-solid fa-location-dot"></i> The Pearl-Qatar, The Pearl</span>
+          <h3 class="p-card__title"><a href="/en/development/coralia-villas.html">Coralia Compound Villas</a></h3>
+          <span class="p-card__type-beds">Exclusive Gated Villas • <strong>4 - 5 Bedrooms</strong></span>
+        </div>
+
+        <p class="p-card__desc">Gated compound villas located within The Pearl-Qatar featuring private swimming pools, landscaped gardens, and 24/7 security.</p>
+
+        <div class="p-card__footer">
+          <div class="p-card__price-box">
+            <span class="p-card__price-label">Starting Price</span>
+            <span class="p-card__price-val">QAR 5,500,000</span>
+          </div>
+
+          <div class="p-card__actions">
+            <a href="https://wa.me/97460005054?text=Hello%20Prime%20View%20Real%20Estate%2C%20I%20would%20like%20to%20receive%20the%20brochure%2C%20payment%20plan%2C%20and%20available%20inventory%20for%20Coralia%20Compound%20Villas%20in%20The%20Pearl-Qatar%2C%20The%20Pearl." target="_blank" rel="noopener" class="p-card__btn-wa" aria-label="Inquire via WhatsApp for Coralia Compound Villas">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="/en/development/coralia-villas.html" class="p-card__btn-explore">
+              Explore <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
       </div>
     </article>
   
 
-    <article class="pvLightCard">
-      <div class="pvLightCard__media">
-        <img decoding="async" src="/images/developments/milos/milos_real_4.jpg" alt="Corallia Lease to Own" class="pvLightCard__img" loading="lazy">
-        <div class="pvLightCard__overlay"></div>
-        <div class="pvLightCard__top">
-          <span class="pvBadge pvBadge--lease">Lease to Own</span>
-        </div>
-        <div class="pvLightCard__location">
-          <svg width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M6 0C2.68629 0 0 2.68629 0 6C0 10.5 6 14 6 14C6 14 12 10.5 12 6C12 2.68629 9.31371 0 6 0ZM6 8.5C4.61929 8.5 3.5 7.38071 3.5 6C3.5 4.61929 4.61929 3.5 6 3.5C7.38071 3.5 8.5 4.61929 8.5 6C8.5 7.38071 7.38071 8.5 6 8.5Z" fill="#c5a880"/></svg>
-          <span>The Pearl-Qatar, The Pearl</span>
-        </div>
-      </div>
-      <div class="pvLightCard__content">
-        <h3 class="pvLightCard__title">Corallia Lease to Own</h3>
-        <p class="pvLightCard__sub">20-Year Lease to Own</p>
-        <p class="pvLightCard__desc">Premium residences at The Pearl offering a unique 20-year Lease to Own model with only 2% down payment. Studios from QAR 3.65M, 1-bedrooms from QAR 3.72M.</p>
+    <article class="p-card">
+      <div class="p-card__image-wrapper">
+        <img decoding="async" src="/images/developments/milos/milos_real_8.jpg" alt="Corallia Lease to Own" class="p-card__img" loading="lazy">
+        <div class="p-card__overlay"></div>
         
-        <div class="pvLightCard__specs">
-          <div class="pvSpec"><span class="pvSpec__label">BEDROOMS</span><span class="pvSpec__val">Studio - 2 BR</span></div>
-          <div class="pvSpec"><span class="pvSpec__label">HANDOVER</span><span class="pvSpec__val">Immediate Lease-to-Own</span></div>
-          <div class="pvSpec"><span class="pvSpec__label">DOWN PAYMENT</span><span class="pvSpec__val">2% Down Payment</span></div>
-          <div class="pvSpec pvSpec--price"><span class="pvSpec__label">STARTING FROM</span><span class="pvSpec__val">QAR 3,650,000</span></div>
+        <div class="p-card__tags-top">
+          <span class="p-card__badge badge--ready">Ready to Move</span>
+          <span class="p-card__category-tag">The Pearl Island</span>
         </div>
 
-        <div class="pvLightCard__actions">
-          <button type="button" class="pvLightBtn pvLightBtn--modal" onclick="openFgProjectModal('corallia')"><span>Quick Details</span><svg width="14" height="12" viewBox="0 0 14 12" fill="none"><path d="M8 1L13 6M13 6L8 11M13 6H1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-          <a href="https://wa.me/97460005054?text=Hello%20Prime%20View%20Real%20Estate%2C%20I%20am%20interested%20in%20inquiring%20about%20Corallia%20Lease%20to%20Own%20(The%20Pearl-Qatar)" target="_blank" rel="noopener" class="pvLightBtn pvLightBtn--wa" aria-label="Inquire via WhatsApp">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.099 4.019 4.027-1.056z"/></svg>
-            <span>Inquire</span>
-          </a>
+        <div class="p-card__image-bottom">
+          <span class="p-card__dp-pill"><i class="fa-solid fa-credit-card"></i> Flexible Lease-to-Own</span>
+          <span class="p-card__handover-pill"><i class="fa-regular fa-calendar-check"></i> Immediate Handover</span>
+        </div>
+      </div>
+
+      <div class="p-card__body">
+        <div class="p-card__header">
+          <span class="p-card__location"><i class="fa-solid fa-location-dot"></i> The Pearl-Qatar, The Pearl</span>
+          <h3 class="p-card__title"><a href="/en/development/corallia.html">Corallia Lease to Own</a></h3>
+          <span class="p-card__type-beds">Lease to Own Residences • <strong>1 - 3 Bedrooms</strong></span>
+        </div>
+
+        <p class="p-card__desc">Exclusive lease-to-own residential opportunity on The Pearl Island offering direct transition from rental to full title deed ownership.</p>
+
+        <div class="p-card__footer">
+          <div class="p-card__price-box">
+            <span class="p-card__price-label">Starting Price</span>
+            <span class="p-card__price-val">QAR 1,950,000</span>
+          </div>
+
+          <div class="p-card__actions">
+            <a href="https://wa.me/97460005054?text=Hello%20Prime%20View%20Real%20Estate%2C%20I%20would%20like%20to%20receive%20the%20brochure%2C%20payment%20plan%2C%20and%20available%20inventory%20for%20Corallia%20Lease%20to%20Own%20in%20The%20Pearl-Qatar%2C%20The%20Pearl." target="_blank" rel="noopener" class="p-card__btn-wa" aria-label="Inquire via WhatsApp for Corallia Lease to Own">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="/en/development/corallia.html" class="p-card__btn-explore">
+              Explore <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
       </div>
     </article>
   
 
-    <article class="pvLightCard">
-      <div class="pvLightCard__media">
-        <img decoding="async" src="/images/developments/milos/milos_real_6.jpg" alt="Marbella Residence" class="pvLightCard__img" loading="lazy">
-        <div class="pvLightCard__overlay"></div>
-        <div class="pvLightCard__top">
-          <span class="pvBadge pvBadge--offplan">Off-Plan</span>
-        </div>
-        <div class="pvLightCard__location">
-          <svg width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M6 0C2.68629 0 0 2.68629 0 6C0 10.5 6 14 6 14C6 14 12 10.5 12 6C12 2.68629 9.31371 0 6 0ZM6 8.5C4.61929 8.5 3.5 7.38071 3.5 6C3.5 4.61929 4.61929 3.5 6 3.5C7.38071 3.5 8.5 4.61929 8.5 6C8.5 7.38071 7.38071 8.5 6 8.5Z" fill="#c5a880"/></svg>
-          <span>Entertainment City, Lusail</span>
-        </div>
-      </div>
-      <div class="pvLightCard__content">
-        <h3 class="pvLightCard__title">Marbella Residence</h3>
-        <p class="pvLightCard__sub">Lifestyle Residences</p>
-        <p class="pvLightCard__desc">Modern residential tower in Lusail Entertainment City offering 1-3 bedroom units with maid rooms, 7-year payment plan, and proximity to theme parks & boulevard.</p>
+    <article class="p-card">
+      <div class="p-card__image-wrapper">
+        <img decoding="async" src="/images/developments/city-avenue/city_feature_1.jpg" alt="Marbella Residence" class="p-card__img" loading="lazy">
+        <div class="p-card__overlay"></div>
         
-        <div class="pvLightCard__specs">
-          <div class="pvSpec"><span class="pvSpec__label">BEDROOMS</span><span class="pvSpec__val">1 - 3 Bedrooms</span></div>
-          <div class="pvSpec"><span class="pvSpec__label">HANDOVER</span><span class="pvSpec__val">Q3 2027</span></div>
-          <div class="pvSpec"><span class="pvSpec__label">DOWN PAYMENT</span><span class="pvSpec__val">10% Down Payment</span></div>
-          <div class="pvSpec pvSpec--price"><span class="pvSpec__label">STARTING FROM</span><span class="pvSpec__val">QAR 1,670,000</span></div>
+        <div class="p-card__tags-top">
+          <span class="p-card__badge badge--offplan">Off-Plan</span>
+          <span class="p-card__category-tag">The Pearl Island</span>
         </div>
 
-        <div class="pvLightCard__actions">
-          <button type="button" class="pvLightBtn pvLightBtn--modal" onclick="openFgProjectModal('marbella')"><span>Quick Details</span><svg width="14" height="12" viewBox="0 0 14 12" fill="none"><path d="M8 1L13 6M13 6L8 11M13 6H1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-          <a href="https://wa.me/97460005054?text=Hello%20Prime%20View%20Real%20Estate%2C%20I%20am%20interested%20in%20inquiring%20about%20Marbella%20Residence%20(Entertainment%20City)" target="_blank" rel="noopener" class="pvLightBtn pvLightBtn--wa" aria-label="Inquire via WhatsApp">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.099 4.019 4.027-1.056z"/></svg>
-            <span>Inquire</span>
-          </a>
+        <div class="p-card__image-bottom">
+          <span class="p-card__dp-pill"><i class="fa-solid fa-credit-card"></i> 10% Down Payment</span>
+          <span class="p-card__handover-pill"><i class="fa-regular fa-calendar-check"></i> Q4 2027</span>
+        </div>
+      </div>
+
+      <div class="p-card__body">
+        <div class="p-card__header">
+          <span class="p-card__location"><i class="fa-solid fa-location-dot"></i> Entertainment City, Lusail</span>
+          <h3 class="p-card__title"><a href="/en/development/marbella.html">Marbella Residence</a></h3>
+          <span class="p-card__type-beds">Resort-Style Living • <strong>1 - 3 Bedrooms</strong></span>
+        </div>
+
+        <p class="p-card__desc">Resort-style luxury living in Lusail Entertainment City featuring expansive terraces, swimming lagoons, and clubhouse amenities.</p>
+
+        <div class="p-card__footer">
+          <div class="p-card__price-box">
+            <span class="p-card__price-label">Starting Price</span>
+            <span class="p-card__price-val">QAR 1,350,000</span>
+          </div>
+
+          <div class="p-card__actions">
+            <a href="https://wa.me/97460005054?text=Hello%20Prime%20View%20Real%20Estate%2C%20I%20would%20like%20to%20receive%20the%20brochure%2C%20payment%20plan%2C%20and%20available%20inventory%20for%20Marbella%20Residence%20in%20Entertainment%20City%2C%20Lusail." target="_blank" rel="noopener" class="p-card__btn-wa" aria-label="Inquire via WhatsApp for Marbella Residence">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="/en/development/marbella.html" class="p-card__btn-explore">
+              Explore <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
       </div>
     </article>
@@ -4746,227 +4779,281 @@
 </section>
 
 <!-- ════════════════════════════════════════════════════════════════
-     SECTION 4: 🏡 PRIVATE VILLA ESTATES & RETREATS (6 CARDS)
+     SECTION: 🏡 Private Villa Estates & Luxury Towers (6 CARDS)
      ════════════════════════════════════════════════════════════════ -->
 <section class="pvSecLight pvSecLight--pearl" id="private-villa-estates">
   <div class="pvContainer">
     <div class="pvSecHeader">
       <span class="pvPill">
         <span class="pvPillDot"></span>
-        Standalone Compounds & Beach Chalets (6 Projects)
+        Standalone Compounds & Smart Towers (6 Projects)
       </span>
-      <h2 class="pvSecTitle">🏡 Private Villa Estates & Retreats</h2>
+      <h2 class="pvSecTitle">🏡 Private Villa Estates & Luxury Towers</h2>
       <p class="pvSecSub">
-        Gated private villa compounds in New Salata & Al Muraikh, standalone estate sanctuaries in Huzoom North Lusail, and beachfront chalets in Seef Lusail.
+        Spacious gated residential compounds in Doha and North Lusail with private pools, maid quarters, and fully furnished smart duplex units.
       </p>
     </div>
     <div class="pvGrid">
       
-    <article class="pvLightCard">
-      <div class="pvLightCard__media">
-        <img decoding="async" src="/images/developments/flora-villas/hero.jpg" alt="Flora Standalone Villas" class="pvLightCard__img" loading="lazy">
-        <div class="pvLightCard__overlay"></div>
-        <div class="pvLightCard__top">
-          <span class="pvBadge pvBadge--offplan">Flagship</span>
-        </div>
-        <div class="pvLightCard__location">
-          <svg width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M6 0C2.68629 0 0 2.68629 0 6C0 10.5 6 14 6 14C6 14 12 10.5 12 6C12 2.68629 9.31371 0 6 0ZM6 8.5C4.61929 8.5 3.5 7.38071 3.5 6C3.5 4.61929 4.61929 3.5 6 3.5C7.38071 3.5 8.5 4.61929 8.5 6C8.5 7.38071 7.38071 8.5 6 8.5Z" fill="#c5a880"/></svg>
-          <span>Huzoom District, North Lusail</span>
-        </div>
-      </div>
-      <div class="pvLightCard__content">
-        <h3 class="pvLightCard__title">Flora Standalone Villas</h3>
-        <p class="pvLightCard__sub">Private Sanctuary Villas</p>
-        <p class="pvLightCard__desc">Private standalone villa sanctuary in North Lusail. Features lush private gardens, swimming pool, elevator, driver room, and high-security gated entrance.</p>
+    <article class="p-card">
+      <div class="p-card__image-wrapper">
+        <img decoding="async" src="/images/developments/flora-villas/hero.jpg" alt="Flora Standalone Villas" class="p-card__img" loading="lazy">
+        <div class="p-card__overlay"></div>
         
-        <div class="pvLightCard__specs">
-          <div class="pvSpec"><span class="pvSpec__label">BEDROOMS</span><span class="pvSpec__val">5 BR + Private Pool</span></div>
-          <div class="pvSpec"><span class="pvSpec__label">HANDOVER</span><span class="pvSpec__val">Q4 2026</span></div>
-          <div class="pvSpec"><span class="pvSpec__label">DOWN PAYMENT</span><span class="pvSpec__val">10% Down Payment</span></div>
-          <div class="pvSpec pvSpec--price"><span class="pvSpec__label">STARTING FROM</span><span class="pvSpec__val">QAR 4,100,000</span></div>
+        <div class="p-card__tags-top">
+          <span class="p-card__badge badge--offplan">Off-Plan</span>
+          <span class="p-card__category-tag">Villa Estates & Towers</span>
         </div>
 
-        <div class="pvLightCard__actions">
-          <a href="/en/development/flora-villas" class="pvLightBtn pvLightBtn--primary"><span>View Project</span><svg width="14" height="12" viewBox="0 0 14 12" fill="none"><path d="M8 1L13 6M13 6L8 11M13 6H1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-          <a href="https://wa.me/97460005054?text=Hello%20Prime%20View%20Real%20Estate%2C%20I%20am%20interested%20in%20inquiring%20about%20Flora%20Standalone%20Villas%20(Huzoom%20District)" target="_blank" rel="noopener" class="pvLightBtn pvLightBtn--wa" aria-label="Inquire via WhatsApp">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.099 4.019 4.027-1.056z"/></svg>
-            <span>Inquire</span>
-          </a>
+        <div class="p-card__image-bottom">
+          <span class="p-card__dp-pill"><i class="fa-solid fa-credit-card"></i> 10% Down Payment</span>
+          <span class="p-card__handover-pill"><i class="fa-regular fa-calendar-check"></i> Q4 2026</span>
+        </div>
+      </div>
+
+      <div class="p-card__body">
+        <div class="p-card__header">
+          <span class="p-card__location"><i class="fa-solid fa-location-dot"></i> Huzoom District, North Lusail</span>
+          <h3 class="p-card__title"><a href="/en/development/flora-villas.html">Flora Standalone Villas</a></h3>
+          <span class="p-card__type-beds">Private Sanctuary Villas • <strong>5 BR + Private Pool</strong></span>
+        </div>
+
+        <p class="p-card__desc">Private standalone villa sanctuary in North Lusail with private gardens, swimming pool, double-height living areas, and driver quarters.</p>
+
+        <div class="p-card__footer">
+          <div class="p-card__price-box">
+            <span class="p-card__price-label">Starting Price</span>
+            <span class="p-card__price-val">QAR 4,100,000</span>
+          </div>
+
+          <div class="p-card__actions">
+            <a href="https://wa.me/97460005054?text=Hello%20Prime%20View%20Real%20Estate%2C%20I%20would%20like%20to%20receive%20the%20brochure%2C%20payment%20plan%2C%20and%20available%20inventory%20for%20Flora%20Standalone%20Villas%20in%20Huzoom%20District%2C%20North%20Lusail." target="_blank" rel="noopener" class="p-card__btn-wa" aria-label="Inquire via WhatsApp for Flora Standalone Villas">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="/en/development/flora-villas.html" class="p-card__btn-explore">
+              Explore <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
       </div>
     </article>
   
 
-    <article class="pvLightCard">
-      <div class="pvLightCard__media">
-        <img decoding="async" src="/images/developments/flora-villas/unit_2.jpg" alt="Bliss Gardens Compound" class="pvLightCard__img" loading="lazy">
-        <div class="pvLightCard__overlay"></div>
-        <div class="pvLightCard__top">
-          <span class="pvBadge pvBadge--offplan">Off-Plan</span>
-        </div>
-        <div class="pvLightCard__location">
-          <svg width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M6 0C2.68629 0 0 2.68629 0 6C0 10.5 6 14 6 14C6 14 12 10.5 12 6C12 2.68629 9.31371 0 6 0ZM6 8.5C4.61929 8.5 3.5 7.38071 3.5 6C3.5 4.61929 4.61929 3.5 6 3.5C7.38071 3.5 8.5 4.61929 8.5 6C8.5 7.38071 7.38071 8.5 6 8.5Z" fill="#c5a880"/></svg>
-          <span>New Salata, Doha</span>
-        </div>
-      </div>
-      <div class="pvLightCard__content">
-        <h3 class="pvLightCard__title">Bliss Gardens Compound</h3>
-        <p class="pvLightCard__sub">Private Gated Villa Compound</p>
-        <p class="pvLightCard__desc">Exclusive villa compound in New Salata featuring 5-bedroom luxury villas with maid quarters, private swimming pools, and 5-year payment plan.</p>
+    <article class="p-card">
+      <div class="p-card__image-wrapper">
+        <img decoding="async" src="/images/developments/flora-villas/unit_2.jpg" alt="Bliss Gardens Compound" class="p-card__img" loading="lazy">
+        <div class="p-card__overlay"></div>
         
-        <div class="pvLightCard__specs">
-          <div class="pvSpec"><span class="pvSpec__label">BEDROOMS</span><span class="pvSpec__val">5 BR + Maid</span></div>
-          <div class="pvSpec"><span class="pvSpec__label">HANDOVER</span><span class="pvSpec__val">October 2027</span></div>
-          <div class="pvSpec"><span class="pvSpec__label">DOWN PAYMENT</span><span class="pvSpec__val">10% Down Payment</span></div>
-          <div class="pvSpec pvSpec--price"><span class="pvSpec__label">STARTING FROM</span><span class="pvSpec__val">QAR 4,290,000</span></div>
+        <div class="p-card__tags-top">
+          <span class="p-card__badge badge--offplan">Off-Plan</span>
+          <span class="p-card__category-tag">Villa Estates & Towers</span>
         </div>
 
-        <div class="pvLightCard__actions">
-          <button type="button" class="pvLightBtn pvLightBtn--modal" onclick="openFgProjectModal('bliss-gardens')"><span>Quick Details</span><svg width="14" height="12" viewBox="0 0 14 12" fill="none"><path d="M8 1L13 6M13 6L8 11M13 6H1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-          <a href="https://wa.me/97460005054?text=Hello%20Prime%20View%20Real%20Estate%2C%20I%20am%20interested%20in%20inquiring%20about%20Bliss%20Gardens%20Compound%20(New%20Salata)" target="_blank" rel="noopener" class="pvLightBtn pvLightBtn--wa" aria-label="Inquire via WhatsApp">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.099 4.019 4.027-1.056z"/></svg>
-            <span>Inquire</span>
-          </a>
+        <div class="p-card__image-bottom">
+          <span class="p-card__dp-pill"><i class="fa-solid fa-credit-card"></i> 10% Down Payment</span>
+          <span class="p-card__handover-pill"><i class="fa-regular fa-calendar-check"></i> October 2027</span>
+        </div>
+      </div>
+
+      <div class="p-card__body">
+        <div class="p-card__header">
+          <span class="p-card__location"><i class="fa-solid fa-location-dot"></i> New Salata, Doha</span>
+          <h3 class="p-card__title"><a href="/en/development/bliss-gardens.html">Bliss Gardens Compound</a></h3>
+          <span class="p-card__type-beds">Private Gated Villa Compound • <strong>5 BR + Maid</strong></span>
+        </div>
+
+        <p class="p-card__desc">Exclusive villa compound in New Salata featuring 5-bedroom luxury villas with private gardens, clubhouse, gym, and central security.</p>
+
+        <div class="p-card__footer">
+          <div class="p-card__price-box">
+            <span class="p-card__price-label">Starting Price</span>
+            <span class="p-card__price-val">QAR 4,290,000</span>
+          </div>
+
+          <div class="p-card__actions">
+            <a href="https://wa.me/97460005054?text=Hello%20Prime%20View%20Real%20Estate%2C%20I%20would%20like%20to%20receive%20the%20brochure%2C%20payment%20plan%2C%20and%20available%20inventory%20for%20Bliss%20Gardens%20Compound%20in%20New%20Salata%2C%20Doha." target="_blank" rel="noopener" class="p-card__btn-wa" aria-label="Inquire via WhatsApp for Bliss Gardens Compound">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="/en/development/bliss-gardens.html" class="p-card__btn-explore">
+              Explore <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
       </div>
     </article>
   
 
-    <article class="pvLightCard">
-      <div class="pvLightCard__media">
-        <img decoding="async" src="/images/developments/flora-villas/unit_3.jpg" alt="Bliss Gardens II" class="pvLightCard__img" loading="lazy">
-        <div class="pvLightCard__overlay"></div>
-        <div class="pvLightCard__top">
-          <span class="pvBadge pvBadge--offplan">Off-Plan</span>
-        </div>
-        <div class="pvLightCard__location">
-          <svg width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M6 0C2.68629 0 0 2.68629 0 6C0 10.5 6 14 6 14C6 14 12 10.5 12 6C12 2.68629 9.31371 0 6 0ZM6 8.5C4.61929 8.5 3.5 7.38071 3.5 6C3.5 4.61929 4.61929 3.5 6 3.5C7.38071 3.5 8.5 4.61929 8.5 6C8.5 7.38071 7.38071 8.5 6 8.5Z" fill="#c5a880"/></svg>
-          <span>Al Muraikh, Doha</span>
-        </div>
-      </div>
-      <div class="pvLightCard__content">
-        <h3 class="pvLightCard__title">Bliss Gardens II</h3>
-        <p class="pvLightCard__sub">Standalone Villa Community</p>
-        <p class="pvLightCard__desc">Premium standalone villa community in Al Muraikh offering 5-bedroom residences with private gardens, driver room, and 5-year flexible plan.</p>
+    <article class="p-card">
+      <div class="p-card__image-wrapper">
+        <img decoding="async" src="/images/developments/flora-villas/unit_3.jpg" alt="Bliss Gardens II" class="p-card__img" loading="lazy">
+        <div class="p-card__overlay"></div>
         
-        <div class="pvLightCard__specs">
-          <div class="pvSpec"><span class="pvSpec__label">BEDROOMS</span><span class="pvSpec__val">5 BR + Maid</span></div>
-          <div class="pvSpec"><span class="pvSpec__label">HANDOVER</span><span class="pvSpec__val">December 2027</span></div>
-          <div class="pvSpec"><span class="pvSpec__label">DOWN PAYMENT</span><span class="pvSpec__val">10% Down Payment</span></div>
-          <div class="pvSpec pvSpec--price"><span class="pvSpec__label">STARTING FROM</span><span class="pvSpec__val">QAR 4,080,000</span></div>
+        <div class="p-card__tags-top">
+          <span class="p-card__badge badge--offplan">Off-Plan</span>
+          <span class="p-card__category-tag">Villa Estates & Towers</span>
         </div>
 
-        <div class="pvLightCard__actions">
-          <button type="button" class="pvLightBtn pvLightBtn--modal" onclick="openFgProjectModal('bliss-gardens-2')"><span>Quick Details</span><svg width="14" height="12" viewBox="0 0 14 12" fill="none"><path d="M8 1L13 6M13 6L8 11M13 6H1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-          <a href="https://wa.me/97460005054?text=Hello%20Prime%20View%20Real%20Estate%2C%20I%20am%20interested%20in%20inquiring%20about%20Bliss%20Gardens%20II%20(Al%20Muraikh)" target="_blank" rel="noopener" class="pvLightBtn pvLightBtn--wa" aria-label="Inquire via WhatsApp">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.099 4.019 4.027-1.056z"/></svg>
-            <span>Inquire</span>
-          </a>
+        <div class="p-card__image-bottom">
+          <span class="p-card__dp-pill"><i class="fa-solid fa-credit-card"></i> 10% Down Payment</span>
+          <span class="p-card__handover-pill"><i class="fa-regular fa-calendar-check"></i> December 2027</span>
+        </div>
+      </div>
+
+      <div class="p-card__body">
+        <div class="p-card__header">
+          <span class="p-card__location"><i class="fa-solid fa-location-dot"></i> Al Muraikh, Doha</span>
+          <h3 class="p-card__title"><a href="/en/development/bliss-gardens-2.html">Bliss Gardens II</a></h3>
+          <span class="p-card__type-beds">Standalone Villa Community • <strong>5 BR + Maid</strong></span>
+        </div>
+
+        <p class="p-card__desc">Premium standalone villa community in Al Muraikh offering 5-bedroom luxury residences with spacious layouts and modern architecture.</p>
+
+        <div class="p-card__footer">
+          <div class="p-card__price-box">
+            <span class="p-card__price-label">Starting Price</span>
+            <span class="p-card__price-val">QAR 4,080,000</span>
+          </div>
+
+          <div class="p-card__actions">
+            <a href="https://wa.me/97460005054?text=Hello%20Prime%20View%20Real%20Estate%2C%20I%20would%20like%20to%20receive%20the%20brochure%2C%20payment%20plan%2C%20and%20available%20inventory%20for%20Bliss%20Gardens%20II%20in%20Al%20Muraikh%2C%20Doha." target="_blank" rel="noopener" class="p-card__btn-wa" aria-label="Inquire via WhatsApp for Bliss Gardens II">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="/en/development/bliss-gardens-2.html" class="p-card__btn-explore">
+              Explore <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
       </div>
     </article>
   
 
-    <article class="pvLightCard">
-      <div class="pvLightCard__media">
-        <img decoding="async" src="/images/developments/valencia-residence/hero.jpg" alt="Voya Waterfront Chalets" class="pvLightCard__img" loading="lazy">
-        <div class="pvLightCard__overlay"></div>
-        <div class="pvLightCard__top">
-          <span class="pvBadge pvBadge--ready">Ready</span>
-        </div>
-        <div class="pvLightCard__location">
-          <svg width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M6 0C2.68629 0 0 2.68629 0 6C0 10.5 6 14 6 14C6 14 12 10.5 12 6C12 2.68629 9.31371 0 6 0ZM6 8.5C4.61929 8.5 3.5 7.38071 3.5 6C3.5 4.61929 4.61929 3.5 6 3.5C7.38071 3.5 8.5 4.61929 8.5 6C8.5 7.38071 7.38071 8.5 6 8.5Z" fill="#c5a880"/></svg>
-          <span>Al Kharaej (Seef Lusail), Lusail</span>
-        </div>
-      </div>
-      <div class="pvLightCard__content">
-        <h3 class="pvLightCard__title">Voya Waterfront Chalets</h3>
-        <p class="pvLightCard__sub">Coastal Waterfront Chalets</p>
-        <p class="pvLightCard__desc">Coastal architectural marvel on Lusail Waterfront with 119 luxury apartments and private chalets, direct beach access, infinity pool, and wellness spa.</p>
+    <article class="p-card">
+      <div class="p-card__image-wrapper">
+        <img decoding="async" src="/images/developments/valencia-residence/hero.jpg" alt="Voya Waterfront Chalets" class="p-card__img" loading="lazy">
+        <div class="p-card__overlay"></div>
         
-        <div class="pvLightCard__specs">
-          <div class="pvSpec"><span class="pvSpec__label">BEDROOMS</span><span class="pvSpec__val">1 - 4 BR & Chalets</span></div>
-          <div class="pvSpec"><span class="pvSpec__label">HANDOVER</span><span class="pvSpec__val">Immediate / Ready</span></div>
-          <div class="pvSpec"><span class="pvSpec__label">DOWN PAYMENT</span><span class="pvSpec__val">60% Down Payment</span></div>
-          <div class="pvSpec pvSpec--price"><span class="pvSpec__label">STARTING FROM</span><span class="pvSpec__val">QAR 1,458,000</span></div>
+        <div class="p-card__tags-top">
+          <span class="p-card__badge badge--ready">Ready to Move</span>
+          <span class="p-card__category-tag">Villa Estates & Towers</span>
         </div>
 
-        <div class="pvLightCard__actions">
-          <button type="button" class="pvLightBtn pvLightBtn--modal" onclick="openFgProjectModal('voya-residence')"><span>Quick Details</span><svg width="14" height="12" viewBox="0 0 14 12" fill="none"><path d="M8 1L13 6M13 6L8 11M13 6H1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-          <a href="https://wa.me/97460005054?text=Hello%20Prime%20View%20Real%20Estate%2C%20I%20am%20interested%20in%20inquiring%20about%20Voya%20Waterfront%20Chalets%20(Al%20Kharaej%20(Seef%20Lusail))" target="_blank" rel="noopener" class="pvLightBtn pvLightBtn--wa" aria-label="Inquire via WhatsApp">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.099 4.019 4.027-1.056z"/></svg>
-            <span>Inquire</span>
-          </a>
+        <div class="p-card__image-bottom">
+          <span class="p-card__dp-pill"><i class="fa-solid fa-credit-card"></i> 60% Down Payment</span>
+          <span class="p-card__handover-pill"><i class="fa-regular fa-calendar-check"></i> Immediate / Ready</span>
+        </div>
+      </div>
+
+      <div class="p-card__body">
+        <div class="p-card__header">
+          <span class="p-card__location"><i class="fa-solid fa-location-dot"></i> Al Kharaej (Seef Lusail), Lusail</span>
+          <h3 class="p-card__title"><a href="/en/development/voya-residence.html">Voya Waterfront Chalets</a></h3>
+          <span class="p-card__type-beds">Coastal Waterfront Chalets • <strong>1 - 4 BR & Chalets</strong></span>
+        </div>
+
+        <p class="p-card__desc">Coastal architectural marvel on Lusail Waterfront offering luxury apartments & chalets with panoramic sea vistas.</p>
+
+        <div class="p-card__footer">
+          <div class="p-card__price-box">
+            <span class="p-card__price-label">Starting Price</span>
+            <span class="p-card__price-val">QAR 1,458,000</span>
+          </div>
+
+          <div class="p-card__actions">
+            <a href="https://wa.me/97460005054?text=Hello%20Prime%20View%20Real%20Estate%2C%20I%20would%20like%20to%20receive%20the%20brochure%2C%20payment%20plan%2C%20and%20available%20inventory%20for%20Voya%20Waterfront%20Chalets%20in%20Al%20Kharaej%20(Seef%20Lusail)%2C%20Lusail." target="_blank" rel="noopener" class="p-card__btn-wa" aria-label="Inquire via WhatsApp for Voya Waterfront Chalets">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="/en/development/voya-residence.html" class="p-card__btn-explore">
+              Explore <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
       </div>
     </article>
   
 
-    <article class="pvLightCard">
-      <div class="pvLightCard__media">
-        <img decoding="async" src="/images/developments/milos/milos_real_15.jpg" alt="Bliss Tower Duplexes" class="pvLightCard__img" loading="lazy">
-        <div class="pvLightCard__overlay"></div>
-        <div class="pvLightCard__top">
-          <span class="pvBadge pvBadge--offplan">Off-Plan</span>
-        </div>
-        <div class="pvLightCard__location">
-          <svg width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M6 0C2.68629 0 0 2.68629 0 6C0 10.5 6 14 6 14C6 14 12 10.5 12 6C12 2.68629 9.31371 0 6 0ZM6 8.5C4.61929 8.5 3.5 7.38071 3.5 6C3.5 4.61929 4.61929 3.5 6 3.5C7.38071 3.5 8.5 4.61929 8.5 6C8.5 7.38071 7.38071 8.5 6 8.5Z" fill="#c5a880"/></svg>
-          <span>Al Kharaej, Lusail</span>
-        </div>
-      </div>
-      <div class="pvLightCard__content">
-        <h3 class="pvLightCard__title">Bliss Tower Duplexes</h3>
-        <p class="pvLightCard__sub">Duplex High-Rise</p>
-        <p class="pvLightCard__desc">Premium residential tower in Al Kharaej offering 1-3 bedroom duplex apartments with double-height ceilings, 6-year payment plan, and 5% initial booking.</p>
+    <article class="p-card">
+      <div class="p-card__image-wrapper">
+        <img decoding="async" src="/images/developments/milos/milos_real_15.jpg" alt="Bliss Tower Duplexes" class="p-card__img" loading="lazy">
+        <div class="p-card__overlay"></div>
         
-        <div class="pvLightCard__specs">
-          <div class="pvSpec"><span class="pvSpec__label">BEDROOMS</span><span class="pvSpec__val">1 - 3 BR Duplex</span></div>
-          <div class="pvSpec"><span class="pvSpec__label">HANDOVER</span><span class="pvSpec__val">December 2028</span></div>
-          <div class="pvSpec"><span class="pvSpec__label">DOWN PAYMENT</span><span class="pvSpec__val">5% Down Payment</span></div>
-          <div class="pvSpec pvSpec--price"><span class="pvSpec__label">STARTING FROM</span><span class="pvSpec__val">QAR 1,520,000</span></div>
+        <div class="p-card__tags-top">
+          <span class="p-card__badge badge--offplan">Off-Plan</span>
+          <span class="p-card__category-tag">Villa Estates & Towers</span>
         </div>
 
-        <div class="pvLightCard__actions">
-          <button type="button" class="pvLightBtn pvLightBtn--modal" onclick="openFgProjectModal('bliss-tower')"><span>Quick Details</span><svg width="14" height="12" viewBox="0 0 14 12" fill="none"><path d="M8 1L13 6M13 6L8 11M13 6H1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-          <a href="https://wa.me/97460005054?text=Hello%20Prime%20View%20Real%20Estate%2C%20I%20am%20interested%20in%20inquiring%20about%20Bliss%20Tower%20Duplexes%20(Al%20Kharaej)" target="_blank" rel="noopener" class="pvLightBtn pvLightBtn--wa" aria-label="Inquire via WhatsApp">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.099 4.019 4.027-1.056z"/></svg>
-            <span>Inquire</span>
-          </a>
+        <div class="p-card__image-bottom">
+          <span class="p-card__dp-pill"><i class="fa-solid fa-credit-card"></i> 5% Down Payment</span>
+          <span class="p-card__handover-pill"><i class="fa-regular fa-calendar-check"></i> December 2028</span>
+        </div>
+      </div>
+
+      <div class="p-card__body">
+        <div class="p-card__header">
+          <span class="p-card__location"><i class="fa-solid fa-location-dot"></i> Al Kharaej, Lusail</span>
+          <h3 class="p-card__title"><a href="/en/development/bliss-tower.html">Bliss Tower Duplexes</a></h3>
+          <span class="p-card__type-beds">Duplex High-Rise • <strong>1 - 3 BR Duplex</strong></span>
+        </div>
+
+        <p class="p-card__desc">Premium residential tower in Al Kharaej offering 1-3 bedroom duplex apartments with double-height ceilings and 6-year payment plans.</p>
+
+        <div class="p-card__footer">
+          <div class="p-card__price-box">
+            <span class="p-card__price-label">Starting Price</span>
+            <span class="p-card__price-val">QAR 1,520,000</span>
+          </div>
+
+          <div class="p-card__actions">
+            <a href="https://wa.me/97460005054?text=Hello%20Prime%20View%20Real%20Estate%2C%20I%20would%20like%20to%20receive%20the%20brochure%2C%20payment%20plan%2C%20and%20available%20inventory%20for%20Bliss%20Tower%20Duplexes%20in%20Al%20Kharaej%2C%20Lusail." target="_blank" rel="noopener" class="p-card__btn-wa" aria-label="Inquire via WhatsApp for Bliss Tower Duplexes">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="/en/development/bliss-tower.html" class="p-card__btn-explore">
+              Explore <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
       </div>
     </article>
   
 
-    <article class="pvLightCard">
-      <div class="pvLightCard__media">
-        <img decoding="async" src="/images/developments/milos/milos_real_18.jpg" alt="Miran Tower Smart Units" class="pvLightCard__img" loading="lazy">
-        <div class="pvLightCard__overlay"></div>
-        <div class="pvLightCard__top">
-          <span class="pvBadge pvBadge--offplan">Off-Plan</span>
-        </div>
-        <div class="pvLightCard__location">
-          <svg width="12" height="14" viewBox="0 0 12 14" fill="none"><path d="M6 0C2.68629 0 0 2.68629 0 6C0 10.5 6 14 6 14C6 14 12 10.5 12 6C12 2.68629 9.31371 0 6 0ZM6 8.5C4.61929 8.5 3.5 7.38071 3.5 6C3.5 4.61929 4.61929 3.5 6 3.5C7.38071 3.5 8.5 4.61929 8.5 6C8.5 7.38071 7.38071 8.5 6 8.5Z" fill="#c5a880"/></svg>
-          <span>Al Kharaej (Seef Lusail), Lusail</span>
-        </div>
-      </div>
-      <div class="pvLightCard__content">
-        <h3 class="pvLightCard__title">Miran Tower Smart Units</h3>
-        <p class="pvLightCard__sub">Fully Furnished Smart Tower</p>
-        <p class="pvLightCard__desc">Mazaya Real Estate development in Seef Lusail featuring fully furnished smart apartments with open-plan layouts, rooftop pools, and promenade access.</p>
+    <article class="p-card">
+      <div class="p-card__image-wrapper">
+        <img decoding="async" src="/images/developments/milos/milos_real_18.jpg" alt="Miran Tower Smart Units" class="p-card__img" loading="lazy">
+        <div class="p-card__overlay"></div>
         
-        <div class="pvLightCard__specs">
-          <div class="pvSpec"><span class="pvSpec__label">BEDROOMS</span><span class="pvSpec__val">2 Bedrooms</span></div>
-          <div class="pvSpec"><span class="pvSpec__label">HANDOVER</span><span class="pvSpec__val">March 2028</span></div>
-          <div class="pvSpec"><span class="pvSpec__label">DOWN PAYMENT</span><span class="pvSpec__val">10% Down Payment</span></div>
-          <div class="pvSpec pvSpec--price"><span class="pvSpec__label">STARTING FROM</span><span class="pvSpec__val">QAR 1,590,000</span></div>
+        <div class="p-card__tags-top">
+          <span class="p-card__badge badge--offplan">Off-Plan</span>
+          <span class="p-card__category-tag">Villa Estates & Towers</span>
         </div>
 
-        <div class="pvLightCard__actions">
-          <button type="button" class="pvLightBtn pvLightBtn--modal" onclick="openFgProjectModal('miran-tower')"><span>Quick Details</span><svg width="14" height="12" viewBox="0 0 14 12" fill="none"><path d="M8 1L13 6M13 6L8 11M13 6H1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-          <a href="https://wa.me/97460005054?text=Hello%20Prime%20View%20Real%20Estate%2C%20I%20am%20interested%20in%20inquiring%20about%20Miran%20Tower%20Smart%20Units%20(Al%20Kharaej%20(Seef%20Lusail))" target="_blank" rel="noopener" class="pvLightBtn pvLightBtn--wa" aria-label="Inquire via WhatsApp">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.099 4.019 4.027-1.056z"/></svg>
-            <span>Inquire</span>
-          </a>
+        <div class="p-card__image-bottom">
+          <span class="p-card__dp-pill"><i class="fa-solid fa-credit-card"></i> 10% Down Payment</span>
+          <span class="p-card__handover-pill"><i class="fa-regular fa-calendar-check"></i> March 2028</span>
+        </div>
+      </div>
+
+      <div class="p-card__body">
+        <div class="p-card__header">
+          <span class="p-card__location"><i class="fa-solid fa-location-dot"></i> Al Kharaej (Seef Lusail), Lusail</span>
+          <h3 class="p-card__title"><a href="/en/development/miran-tower.html">Miran Tower Smart Units</a></h3>
+          <span class="p-card__type-beds">Fully Furnished Smart Tower • <strong>2 Bedrooms</strong></span>
+        </div>
+
+        <p class="p-card__desc">Mazaya Real Estate development in Seef Lusail featuring fully furnished smart home units with concierge and resort facilities.</p>
+
+        <div class="p-card__footer">
+          <div class="p-card__price-box">
+            <span class="p-card__price-label">Starting Price</span>
+            <span class="p-card__price-val">QAR 1,590,000</span>
+          </div>
+
+          <div class="p-card__actions">
+            <a href="https://wa.me/97460005054?text=Hello%20Prime%20View%20Real%20Estate%2C%20I%20would%20like%20to%20receive%20the%20brochure%2C%20payment%20plan%2C%20and%20available%20inventory%20for%20Miran%20Tower%20Smart%20Units%20in%20Al%20Kharaej%20(Seef%20Lusail)%2C%20Lusail." target="_blank" rel="noopener" class="p-card__btn-wa" aria-label="Inquire via WhatsApp for Miran Tower Smart Units">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="/en/development/miran-tower.html" class="p-card__btn-explore">
+              Explore <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
       </div>
     </article>
