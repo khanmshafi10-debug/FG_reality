@@ -435,7 +435,7 @@ img, picture, video, canvas, svg {
 }
 
 .listingPageMenuWrapper .headerNavLinks .headerNavLink > a {
-  color: #1c1a16 !important;
+  color: #ffffff !important;
   font-size: 0.88rem !important;
   font-weight: 600 !important;
   letter-spacing: 0.3px !important;
@@ -454,20 +454,16 @@ img, picture, video, canvas, svg {
   background: rgba(184, 144, 42, 0.08) !important;
 }
 
-.listingPageMenuWrapper .headerNavLinks .chevron {
-  color: #1c1a16 !important;
-  fill: #1c1a16 !important;
-  stroke: #1c1a16 !important;
-}
+.listingPageMenuWrapper 
 
 .listingPageMenuWrapper .navigationMobile__left-hamburger {
-  color: #1c1a16 !important;
+  color: #ffffff !important;
   background: none !important;
   border: none !important;
 }
 .listingPageMenuWrapper .navigationMobile__left-hamburger svg {
   fill: #1c1a16 !important;
-  color: #1c1a16 !important;
+  color: #ffffff !important;
 }
 
 
@@ -1231,4 +1227,107 @@ a.navMegaMenu__column-link:hover {
 .navMegaMenu__column-link:hover {
   color: #c9a84c !important;
   transform: translateX(4px) !important;
+}
+
+/* ══════════════════════════════════════════════════════
+   MASTER HIGH-VISIBILITY LUXURY FLOATING NAVBAR
+   ══════════════════════════════════════════════════════ */
+.navigationMobile {
+  background: rgba(14, 13, 17, 0.96) !important;
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+  border-bottom: 1.5px solid rgba(201, 168, 76, 0.45) !important;
+  box-shadow: 0 8px 36px rgba(0, 0, 0, 0.55), 0 0 20px rgba(201, 168, 76, 0.15) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 0 2.5rem !important;
+  height: 76px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  z-index: 99999 !important;
+}
+
+.headerNavLinks {
+  display: flex !important;
+  gap: 2.25rem !important;
+  align-items: center !important;
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.headerNavLinks .headerNavLink {
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.35rem !important;
+}
+
+.headerNavLinks .headerNavLink a {
+  color: #ffffff !important;
+  font-family: 'Noto Kufi Arabic', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-size: 0.92rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.8px !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease !important;
+  display: inline-block !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8) !important;
+}
+
+.headerNavLinks .headerNavLink a:hover,
+.headerNavLinks .headerNavLink:hover > a,
+.headerNavLinks .headerNavLink--active > a {
+  color: #c9a84c !important;
+  text-shadow: 0 0 12px rgba(201, 168, 76, 0.6) !important;
+}
+
+.headerNavLinks .chevron {
+  width: 12px !important;
+  height: 12px !important;
+  color: #c9a84c !important;
+  stroke: #c9a84c !important;
+  fill: none !important;
+  transition: transform 0.25s ease !important;
+  display: inline-block !important;
+  opacity: 0.9 !important;
+}
+
+.headerNavLinks .headerNavLink:hover .chevron,
+.headerNavLinks .headerNavLink--active .chevron {
+  transform: rotate(180deg) !important;
+  color: #f3d78c !important;
+  stroke: #f3d78c !important;
+}
+
+.navigationMobile__left-hamburger {
+  background: none !important;
+  border: none !important;
+  color: #c9a84c !important;
+  cursor: pointer !important;
+  padding: 6px !important;
+  display: none !important;
+}
+
+.navigationMobile__left-hamburger svg {
+  color: #c9a84c !important;
+  stroke: #c9a84c !important;
+  width: 26px !important;
+  height: 26px !important;
+}
+
+@media (max-width: 1024px) {
+  .navigationMobile__left-hamburger {
+    display: flex !important;
+    align-items: center !important;
+  }
+  .headerNavLinks {
+    display: none !important;
+  }
+  .navigationMobile {
+    padding: 0 1.25rem !important;
+    height: 68px !important;
+  }
 }
