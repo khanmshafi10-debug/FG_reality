@@ -15,24 +15,15 @@ const sharp = require('sharp');
 const fs = require('fs');
 const path = require('path');
 
-const SOURCE = 'C:/Users/AR LAPTOP/Downloads/ChatGPT Image Aug 7, 2026, 03_54_35 AM.png';
+const SOURCE = 'C:/Users/AR LAPTOP/Downloads/ChatGPT Image Aug 23, 2026, 05_26_27 AM.png';
 const WEB_ROOT = path.join(__dirname, 'src', 'www.fgrealty.qa');
-
-// Subject bounding box in the 1024x1024 source, squared off and centred on the head.
-const CROP = { left: 98, top: 35, width: 865, height: 865 };
-
-// Nested copies referenced by the learn/ and lp/ pages (icon links + msapplication-TileImage).
-const NESTED_SVGS = [
-    'learn/wp-content/uploads/2024/03/favicon.svg',
-    'lp/wp-content/uploads/2024/05/favicon.svg',
-];
 
 const PNG_SIZES = [16, 32, 48, 64, 96, 128, 192, 512];
 const ICO_SIZES = [16, 32, 48, 64];
 
-/** Cropped master, kept at 1024 so every downscale is a clean reduction. */
+/** Master, resized cleanly from source */
 function master() {
-    return sharp(SOURCE).extract(CROP).resize(1024, 1024, { fit: 'cover' });
+    return sharp(SOURCE).resize(1024, 1024, { fit: 'cover' });
 }
 
 function pngAt(size, opts = {}) {
@@ -88,10 +79,9 @@ function write(relPath, data) {
 
 (async () => {
     const meta = await sharp(SOURCE).metadata();
-    console.log(`source ${meta.width}x${meta.height} ${meta.format}`);
-    console.log(`crop   ${CROP.width}x${CROP.height} at (${CROP.left},${CROP.top})\n`);
+    console.log(`source ${meta.width}x${meta.height} ${meta.format}\n`);
 
-    // Small sizes stay full-colour: palette quantisation muddies the face at 16-32px.
+    // Small sizes stay full-colour: palette quantisation muddies the mark at 16-32px.
     for (const size of PNG_SIZES) {
         write(`favicon-${size}x${size}.png`, await pngAt(size, { palette: false }));
     }
@@ -108,12 +98,8 @@ function write(relPath, data) {
     write('favicon.ico', buildIco(icoEntries));
 
     // 256px raster inside the SVG: sharp enough for large surfaces without bloating
-    // a file that every page loads.
     const svg = buildSvg(await pngAt(256, { palette: false }), 256);
     write('favicon.svg', svg);
-    for (const nested of NESTED_SVGS) {
-        if (fs.existsSync(path.join(WEB_ROOT, nested))) write(nested, svg);
-    }
 
     console.log('\ndone');
 })().catch((err) => {
