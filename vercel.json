@@ -1,9 +1,68 @@
 {
   "version": 2,
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/en/buy/(.*)",
+      "destination": "/developments",
+      "permanent": true
+    },
+    {
+      "source": "/buy/(.*)",
+      "destination": "/developments",
+      "permanent": true
+    },
+    {
+      "source": "/en/rent/(.*)",
+      "destination": "/developments",
+      "permanent": true
+    },
+    {
+      "source": "/rent/(.*)",
+      "destination": "/developments",
+      "permanent": true
+    },
+    {
+      "source": "/commercial/(.*)",
+      "destination": "/developments",
+      "permanent": true
+    },
+    {
+      "source": "/property/(.*)",
+      "destination": "/developments",
+      "permanent": true
+    },
+    {
+      "source": "/en/property/(.*)",
+      "destination": "/developments",
+      "permanent": true
+    },
+    {
+      "source": "/lp/(.*)",
+      "destination": "/developments",
+      "permanent": true
+    },
+    {
+      "source": "/learn/(.*)",
+      "destination": "/developments",
+      "permanent": true
+    },
+    {
+      "source": "/blog/(.*)",
+      "destination": "/developments",
+      "permanent": true
+    }
+  ],
   "builds": [
     {
       "src": "server.js",
-      "use": "@vercel/node"
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": [
+          "src/**"
+        ]
+      }
     }
   ],
   "routes": [
