@@ -1052,3 +1052,63 @@ a.navMegaMenu__column-link:hover {
     font-size: 0.88rem;
   }
 }
+
+/* ══════════════════════════════════════════════════════
+   RESTORED MEGA MENUS & MOBILE DRAWER INTERACTIVITY
+   ══════════════════════════════════════════════════════ */
+.headerNavLink--withSubmenu {
+  position: relative;
+}
+
+.headerNavLink--withSubmenu .navMegaMenu {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+  top: 100%;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateX(-50%) translateY(8px);
+  z-index: 1000;
+}
+
+.headerNavLink--withSubmenu:hover .navMegaMenu,
+.headerNavLink--withSubmenu:focus-within .navMegaMenu {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  transform: translateX(-50%) translateY(0) !important;
+}
+
+.mobileMenu {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: none;
+}
+
+.mobileMenu.mobileMenu--open {
+  display: block !important;
+}
+
+.mobileMenu__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.mobileMenu__drawer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  box-shadow: 4px 0 30px rgba(0, 0, 0, 0.7);
+  animation: slideDrawerIn 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideDrawerIn {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
