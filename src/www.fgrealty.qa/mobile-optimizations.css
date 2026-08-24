@@ -123,3 +123,23 @@ and font sizes scale properly on all mobile devices.
         font-size: 1.5rem !important;
     }
 }
+
+/* AMENITIES UI FIX (Global for Desktop & Mobile) */
+.amenityIcon {
+    white-space: normal !important;
+    text-align: center !important;
+    justify-content: center !important;
+    min-height: 48px !important;
+    padding: 10px !important;
+    height: auto !important;
+}
+.amenityIcon__icon {
+    display: none !important;
+}
+.amenityIcon span:not(.amenityIcon__icon) {
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    line-height: 1.4 !important;
+}
+
