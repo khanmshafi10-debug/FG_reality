@@ -145,7 +145,7 @@ const server = http.createServer((req, res) => {
 
     // 1. Permanent 301 Redirects for Legacy / Old Project URLs
     const isLegacyRoute = /^\/(?:en\/)?(?:buy|rent|property|lp|learn|blog)(?:\/.*)?$/i.test(reqPath) ||
-                          /^\/(?:en\/)?development\/(?:the-lofts|the-seef|the-weekend-by-elie-saab|lusail-marina-heights|valencia-residence)(?:\.html)?$/i.test(reqPath);
+                          /^\/(?:en\/)?development\/(?:the-lofts|the-seef|the-weekend-by-elie-saab|lusail-marina-heights)(?:\.html)?$/i.test(reqPath);
     if (isLegacyRoute) {
         res.writeHead(301, { 'Location': '/developments' });
         return res.end();
