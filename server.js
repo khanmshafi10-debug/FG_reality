@@ -166,7 +166,11 @@ const server = http.createServer((req, res) => {
         '/en/about': path.join(PUBLIC_DIR, 'en', 'about.html'),
         '/about': path.join(PUBLIC_DIR, 'en', 'about.html'),
         '/en/contact': path.join(PUBLIC_DIR, 'en', 'contact.html'),
-        '/contact': path.join(PUBLIC_DIR, 'en', 'contact.html')
+        '/contact': path.join(PUBLIC_DIR, 'en', 'contact.html'),
+        '/en/development/valencia-residence': path.join(PUBLIC_DIR, 'en', 'development', 'valencia-residence.html'),
+        '/en/development/valencia-residence.html': path.join(PUBLIC_DIR, 'en', 'development', 'valencia-residence.html'),
+        '/development/valencia-residence': path.join(PUBLIC_DIR, 'en', 'development', 'valencia-residence.html'),
+        '/development/valencia-residence.html': path.join(PUBLIC_DIR, 'en', 'development', 'valencia-residence.html')
     };
 
     if (cleanRouteMap[reqPath] && fs.existsSync(cleanRouteMap[reqPath])) {
