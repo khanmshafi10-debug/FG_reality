@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const zlib = require('zlib');
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const PUBLIC_DIR = path.join(__dirname, 'src', 'www.fgrealty.qa');
 const SRC_DIR = path.join(__dirname, 'src');
 
