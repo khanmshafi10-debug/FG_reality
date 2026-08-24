@@ -1,0 +1,125 @@
+/* 
+=====================================================
+GLOBAL MOBILE OPTIMIZATIONS & RESPONSIVE FIXES
+===================================================== 
+This file acts as a failsafe to ensure grids, flex layouts,
+and font sizes scale properly on all mobile devices.
+*/
+
+:root {
+    --mobile-padding: 15px;
+}
+
+@media (max-width: 768px) {
+    /* Base Body / Overflows */
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+        max-width: 100vw;
+    }
+
+    /* Typography Scaling */
+    h1, .pvSecTitle {
+        font-size: clamp(1.8rem, 5vw, 2.5rem) !important;
+        line-height: 1.3 !important;
+        padding: 0 10px;
+    }
+
+    h2 {
+        font-size: clamp(1.5rem, 4vw, 2rem) !important;
+        line-height: 1.3 !important;
+    }
+
+    p {
+        font-size: clamp(0.9rem, 2.5vw, 1rem) !important;
+        line-height: 1.6;
+    }
+
+    /* Grids & Layouts */
+    .grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    /* Hotel Banner specific fixes */
+    .fgHotelsBanner {
+        min-height: 250px !important;
+        border-radius: 12px !important;
+        padding: 20px 10px !important;
+    }
+
+    .hotelBannerContent {
+        max-width: 100% !important;
+        padding: 0 15px !important;
+    }
+
+    .hotelBannerHeading {
+        font-size: 2rem !important;
+        line-height: 1.2 !important;
+    }
+
+    .hotelBannerLogo {
+        height: 60px !important;
+    }
+
+    .hotelBannerSub {
+        font-size: 0.95rem !important;
+    }
+
+    .hotelBannerBtn {
+        padding: 12px 24px !important;
+        font-size: 0.9rem !important;
+    }
+
+    /* Container adjustments */
+    .container, .pvContainer, .developmentCard, .areaCard {
+        padding-left: var(--mobile-padding) !important;
+        padding-right: var(--mobile-padding) !important;
+    }
+
+    /* Cards */
+    .developmentCard, .areaCard {
+        margin-bottom: 20px;
+    }
+
+    /* Filter tabs on developments.html */
+    .filter-tabs {
+        flex-wrap: wrap !important;
+        gap: 10px !important;
+        justify-content: center !important;
+    }
+    
+    .filter-btn {
+        flex: 1 1 auto;
+        font-size: 14px !important;
+        padding: 8px 12px !important;
+        text-align: center;
+    }
+
+    /* Navbar / Mega Menu (if any absolute positioning is breaking) */
+    .megaMenu {
+        max-width: 100vw !important;
+        overflow-x: hidden !important;
+    }
+    
+    /* Footer */
+    footer .flex {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    footer .flex > div {
+        margin-bottom: 20px !important;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .hotelBannerHeading {
+        font-size: 1.7rem !important;
+    }
+    .pvSecTitle {
+        font-size: 1.5rem !important;
+    }
+}

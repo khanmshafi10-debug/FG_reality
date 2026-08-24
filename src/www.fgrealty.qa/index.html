@@ -536,6 +536,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Global Mobile Fixes -->
+    <link rel="stylesheet" href="./mobile-optimizations.css">
 </head>
 
 <body>
@@ -551,7 +554,7 @@
                         <source media="(max-width: 1279px)" type="image/webp" srcset="/images/hero/hero-tablet.webp?v=1787000000" />
                         <source media="(min-width: 1280px)" type="image/avif" srcset="/images/hero/hero-desktop.avif?v=1787000000" />
                         <source media="(min-width: 1280px)" type="image/webp" srcset="/images/hero/hero-desktop.webp?v=1787000000" />
-                        <img loading="lazy" decoding="async" src="/images/hero/hero-desktop.jpg?v=1787000000" alt="Prime View Real Estate Hero" fetchpriority="high" decoding="async" width="1920" height="1080" />
+                        <img decoding="async" src="/images/hero/hero-desktop.jpg?v=1787000000" alt="Prime View Real Estate Hero" fetchpriority="high" decoding="async" width="1920" height="1080" />
                     </picture>
                     <video class="hero__splash-video" autoplay muted loop playsinline preload="auto" poster="/video/poster.jpg?v=6">
                         <source src="/video/hero-video.webm?v=6" type="video/webm" />
@@ -1685,7 +1688,7 @@
                         <a href="/en/development/voya-residence.html" class="developmentCard">
                             <section class="developmentCard__image">
                                 <picture>
-                                    <img src="/images/developments/valencia-residence/hero.jpg" alt="Valencia Residence" loading="lazy" decoding="async" width="300" height="380" class="developmentCard__img">
+                                    <img src="/images/developments/valencia-residence/hero.webp" alt="Valencia Residence" loading="lazy" decoding="async" width="300" height="380" class="developmentCard__img">
                                 </picture>
                             </section>
                             <section class="developmentCard__overlay"></section>
@@ -1704,7 +1707,7 @@
                         <a href="/en/development/flora-villas" class="developmentCard">
                             <section class="developmentCard__image">
                                 <picture>
-                                    <img src="/images/developments/flora-villas/hero.jpg" alt="Flora Villas" loading="lazy" decoding="async" width="300" height="380" class="developmentCard__img">
+                                    <img src="/images/developments/flora-villas/hero.webp" alt="Flora Villas" loading="lazy" decoding="async" width="300" height="380" class="developmentCard__img">
                                 </picture>
                             </section>
                             <section class="developmentCard__overlay"></section>
@@ -1723,7 +1726,7 @@
                         <a href="/en/development/skala-villas" class="developmentCard">
                             <section class="developmentCard__image">
                                 <picture>
-                                    <img src="/images/developments/skala-villas/hero.jpg" alt="Skala Villas" loading="lazy" decoding="async" width="300" height="380" class="developmentCard__img">
+                                    <img src="/images/developments/skala-villas/hero.webp" alt="Skala Villas" loading="lazy" decoding="async" width="300" height="380" class="developmentCard__img">
                                 </picture>
                             </section>
                             <section class="developmentCard__overlay"></section>
@@ -1761,7 +1764,7 @@
                         <a href="/en/development/milos" class="developmentCard">
                             <section class="developmentCard__image">
                                 <picture>
-                                    <img src="/images/developments/milos/hero.jpg" alt="Milos Residence" loading="lazy" decoding="async" width="300" height="380" class="developmentCard__img">
+                                    <img src="/images/developments/milos/hero.webp" alt="Milos Residence" loading="lazy" decoding="async" width="300" height="380" class="developmentCard__img">
                                 </picture>
                             </section>
                             <section class="developmentCard__overlay"></section>
@@ -1780,7 +1783,7 @@
                         <a href="/en/development/rivan" class="developmentCard">
                             <section class="developmentCard__image">
                                 <picture>
-                                    <img src="/images/developments/rivan/hero.jpg" alt="Rivan Tower" loading="lazy" decoding="async" width="300" height="380" class="developmentCard__img">
+                                    <img src="/images/developments/rivan/hero.webp" alt="Rivan Tower" loading="lazy" decoding="async" width="300" height="380" class="developmentCard__img">
                                 </picture>
                             </section>
                             <section class="developmentCard__overlay"></section>
@@ -1912,7 +1915,7 @@
                         <a href="/en/development/voya-residence.html" class="areaCard">
                             <section class="areaCard__image">
                                 <picture>
-                                    <img src="/images/developments/valencia-residence/hero.jpg" alt="Fox Hills South, Lusail" loading="lazy" decoding="async" width="790" height="427">
+                                    <img src="/images/developments/valencia-residence/hero.webp" alt="Fox Hills South, Lusail" loading="lazy" decoding="async" width="790" height="427">
                                 </picture>
                             </section>
                             <section class="areaCard__overlay"></section>
@@ -1935,7 +1938,7 @@
                         <a href="/en/development/flora-villas" class="areaCard">
                             <section class="areaCard__image">
                                 <picture>
-                                    <img src="/images/developments/flora-villas/hero.jpg" alt="Huzoom District, North Lusail" loading="lazy" decoding="async" width="790" height="427">
+                                    <img src="/images/developments/flora-villas/hero.webp" alt="Huzoom District, North Lusail" loading="lazy" decoding="async" width="790" height="427">
                                 </picture>
                             </section>
                             <section class="areaCard__overlay"></section>
@@ -1958,7 +1961,7 @@
                         <a href="/en/development/skala-villas" class="areaCard">
                             <section class="areaCard__image">
                                 <picture>
-                                    <img src="/images/developments/skala-villas/hero.jpg" alt="Qetaifan Island North" loading="lazy" decoding="async" width="790" height="427">
+                                    <img src="/images/developments/skala-villas/hero.webp" alt="Qetaifan Island North" loading="lazy" decoding="async" width="790" height="427">
                                 </picture>
                             </section>
                             <section class="areaCard__overlay"></section>
@@ -2004,7 +2007,7 @@
                         <a href="/en/development/milos" class="areaCard">
                             <section class="areaCard__image">
                                 <picture>
-                                    <img src="/images/developments/milos/hero.jpg" alt="Legtaifiya, Doha" loading="lazy" decoding="async" width="790" height="427">
+                                    <img src="/images/developments/milos/hero.webp" alt="Legtaifiya, Doha" loading="lazy" decoding="async" width="790" height="427">
                                 </picture>
                             </section>
                             <section class="areaCard__overlay"></section>
@@ -2027,7 +2030,7 @@
                         <a href="/en/development/rivan" class="areaCard">
                             <section class="areaCard__image">
                                 <picture>
-                                    <img src="/images/developments/rivan/hero.jpg" alt="Lusail City, Qatar" loading="lazy" decoding="async" width="790" height="427">
+                                    <img src="/images/developments/rivan/hero.webp" alt="Lusail City, Qatar" loading="lazy" decoding="async" width="790" height="427">
                                 </picture>
                             </section>
                             <section class="areaCard__overlay"></section>
@@ -2596,7 +2599,7 @@
                         <!-- ROW 1 & 2 (8 + 4 = 12 cols, 2 rows height) -->
                         <!-- Card 1: Large Hero -->
                         <a href="/en/development/voya-residence.html" class="galleryCard galleryCard--large" data-category="penthouses">
-                            <img decoding="async" src="/images/developments/valencia-residence/hero.jpg" alt="Valencia Residence Exterior" class="galleryCard__img" loading="lazy">
+                            <img decoding="async" src="/images/developments/valencia-residence/hero.webp" alt="Valencia Residence Exterior" class="galleryCard__img" loading="lazy">
                             <div class="galleryCard__overlay"></div>
                             <span class="galleryCard__tag">Fox Hills South, Lusail</span>
                             <div class="galleryCard__content">
@@ -2612,7 +2615,7 @@
 
                         <!-- Card 2: Tall Hero -->
                         <a href="/en/development/flora-villas" class="galleryCard galleryCard--tall" data-category="villas">
-                            <img decoding="async" src="/images/developments/flora-villas/hero.jpg" alt="Flora Standalone Villas" class="galleryCard__img" loading="lazy">
+                            <img decoding="async" src="/images/developments/flora-villas/hero.webp" alt="Flora Standalone Villas" class="galleryCard__img" loading="lazy">
                             <div class="galleryCard__overlay"></div>
                             <span class="galleryCard__tag">Huzoom District</span>
                             <div class="galleryCard__content">
@@ -2629,7 +2632,7 @@
                         <!-- ROW 3 (4 + 4 + 4 = 12 cols) -->
                         <!-- Card 3: Skala Villa Real Interior Living Room (sk-feature-2.jpg) -->
                         <a href="/en/development/skala-villas" class="galleryCard galleryCard--medium" data-category="interiors">
-                            <img decoding="async" src="/images/developments/skala-villas/sk-feature-2.jpg" alt="Skala Villa Living Salon" class="galleryCard__img" loading="lazy">
+                            <img decoding="async" src="/images/developments/skala-villas/sk-feature-2.webp" alt="Skala Villa Living Salon" class="galleryCard__img" loading="lazy">
                             <div class="galleryCard__overlay"></div>
                             <span class="galleryCard__tag">Qetaifan Island</span>
                             <div class="galleryCard__content">
@@ -2645,7 +2648,7 @@
 
                         <!-- Card 4: Skala Villa Sea View Bedroom Suite (sk-feature-1.jpg) -->
                         <a href="/en/development/skala-villas" class="galleryCard galleryCard--medium" data-category="villas">
-                            <img decoding="async" src="/images/developments/skala-villas/sk-feature-1.jpg" alt="Skala Villa Sea View Suite" class="galleryCard__img" loading="lazy">
+                            <img decoding="async" src="/images/developments/skala-villas/sk-feature-1.webp" alt="Skala Villa Sea View Suite" class="galleryCard__img" loading="lazy">
                             <div class="galleryCard__overlay"></div>
                             <span class="galleryCard__tag">Beachfront Suite</span>
                             <div class="galleryCard__content">
@@ -2661,7 +2664,7 @@
 
                         <!-- Card 5: Medium Interior Villa Lounge -->
                         <a href="/en/development/flora-villas" class="galleryCard galleryCard--medium" data-category="interiors">
-                            <img decoding="async" src="/images/developments/flora-villas/unit_1.jpg" alt="Flora Villa Living Interior" class="galleryCard__img" loading="lazy">
+                            <img decoding="async" src="/images/developments/flora-villas/unit_1.webp" alt="Flora Villa Living Interior" class="galleryCard__img" loading="lazy">
                             <div class="galleryCard__overlay"></div>
                             <span class="galleryCard__tag">Villa Interior</span>
                             <div class="galleryCard__content">
@@ -2678,7 +2681,7 @@
                         <!-- ROW 4 (8 + 4 = 12 cols) -->
                         <!-- Card 6: Wide Rivan Tower -->
                         <a href="/en/development/rivan" class="galleryCard galleryCard--wide" data-category="penthouses">
-                            <img decoding="async" src="/images/developments/rivan/hero.jpg" alt="Rivan Tower" class="galleryCard__img" loading="lazy">
+                            <img decoding="async" src="/images/developments/rivan/hero.webp" alt="Rivan Tower" class="galleryCard__img" loading="lazy">
                             <div class="galleryCard__overlay"></div>
                             <span class="galleryCard__tag">Lusail City</span>
                             <div class="galleryCard__content">
@@ -2694,7 +2697,7 @@
 
                         <!-- Card 7: Medium Milos Residence -->
                         <a href="/en/development/milos" class="galleryCard galleryCard--medium" data-category="penthouses">
-                            <img decoding="async" src="/images/developments/milos/hero.jpg" alt="Milos Residence" class="galleryCard__img" loading="lazy">
+                            <img decoding="async" src="/images/developments/milos/hero.webp" alt="Milos Residence" class="galleryCard__img" loading="lazy">
                             <div class="galleryCard__overlay"></div>
                             <span class="galleryCard__tag">Legtaifiya</span>
                             <div class="galleryCard__content">
@@ -2711,7 +2714,7 @@
                         <!-- ROW 5 (4 + 4 + 4 = 12 cols) -->
                         <!-- Card 8: Medium Valencia Bedroom Interior -->
                         <a href="/en/development/voya-residence.html" class="galleryCard galleryCard--medium" data-category="interiors">
-                            <img decoding="async" src="/images/developments/valencia-residence/unit_2.jpg" alt="Valencia Master Bedroom Interior" class="galleryCard__img" loading="lazy">
+                            <img decoding="async" src="/images/developments/valencia-residence/unit_2.webp" alt="Valencia Master Bedroom Interior" class="galleryCard__img" loading="lazy">
                             <div class="galleryCard__overlay"></div>
                             <span class="galleryCard__tag">Bedroom Suite</span>
                             <div class="galleryCard__content">
@@ -2727,7 +2730,7 @@
 
                         <!-- Card 9: Skala Corner Living Lounge (sk-feature-4.jpg) -->
                         <a href="/en/development/skala-villas" class="galleryCard galleryCard--medium" data-category="interiors">
-                            <img decoding="async" src="/images/developments/skala-villas/sk-feature-4.jpg" alt="Skala Corner Living Salon" class="galleryCard__img" loading="lazy">
+                            <img decoding="async" src="/images/developments/skala-villas/sk-feature-4.webp" alt="Skala Corner Living Salon" class="galleryCard__img" loading="lazy">
                             <div class="galleryCard__overlay"></div>
                             <span class="galleryCard__tag">Interior Suite</span>
                             <div class="galleryCard__content">
@@ -2743,7 +2746,7 @@
 
                         <!-- Card 10: Medium Flora Villa Bedroom Interior -->
                         <a href="/en/development/flora-villas" class="galleryCard galleryCard--medium" data-category="villas">
-                            <img decoding="async" src="/images/developments/flora-villas/unit_2.jpg" alt="Flora Villa Bedroom Interior" class="galleryCard__img" loading="lazy">
+                            <img decoding="async" src="/images/developments/flora-villas/unit_2.webp" alt="Flora Villa Bedroom Interior" class="galleryCard__img" loading="lazy">
                             <div class="galleryCard__overlay"></div>
                             <span class="galleryCard__tag">Villa Suite</span>
                             <div class="galleryCard__content">
@@ -3737,7 +3740,7 @@
     <div class="pvReelCard" onclick="window.location.href='/en/development/skala-villas.html'">
       <div class="pvReelFrame">
         <div class="pvReelNotch"></div>
-        <img decoding="async" src="/images/developments/skala-villas/hero.jpg" alt="Skala Villas & Waterfront Luxury" class="pvReelImg" loading="lazy">
+        <img decoding="async" src="/images/developments/skala-villas/hero.webp" alt="Skala Villas & Waterfront Luxury" class="pvReelImg" loading="lazy">
         <div class="pvReelOverlay"></div>
         
         <div class="pvReelTop">
@@ -3760,7 +3763,7 @@
     <div class="pvReelCard" onclick="window.location.href='/en/development/via-doro.html'">
       <div class="pvReelFrame">
         <div class="pvReelNotch"></div>
-        <img decoding="async" src="/images/developments/skala-villas/sk-feature-1.jpg" alt="Via D'Oro Signature Villas" class="pvReelImg" loading="lazy">
+        <img decoding="async" src="/images/developments/skala-villas/sk-feature-1.webp" alt="Via D'Oro Signature Villas" class="pvReelImg" loading="lazy">
         <div class="pvReelOverlay"></div>
         
         <div class="pvReelTop">
@@ -3783,7 +3786,7 @@
     <div class="pvReelCard" onclick="window.location.href='/en/development/carlton-house.html'">
       <div class="pvReelFrame">
         <div class="pvReelNotch"></div>
-        <img decoding="async" src="/images/developments/skala-villas/sk-feature-4.jpg" alt="Carlton House Waterfront" class="pvReelImg" loading="lazy">
+        <img decoding="async" src="/images/developments/skala-villas/sk-feature-4.webp" alt="Carlton House Waterfront" class="pvReelImg" loading="lazy">
         <div class="pvReelOverlay"></div>
         
         <div class="pvReelTop">
@@ -3852,7 +3855,7 @@
     <div class="pvReelCard" onclick="window.location.href='/en/development/la-mer-tower.html'">
       <div class="pvReelFrame">
         <div class="pvReelNotch"></div>
-        <img decoding="async" src="/images/developments/milos/milos_real_3.jpg" alt="La Mer Waterfront Tower" class="pvReelImg" loading="lazy">
+        <img decoding="async" src="/images/developments/milos/milos_real_3.webp" alt="La Mer Waterfront Tower" class="pvReelImg" loading="lazy">
         <div class="pvReelOverlay"></div>
         
         <div class="pvReelTop">
@@ -3898,7 +3901,7 @@
     <div class="pvReelCard" onclick="window.location.href='/en/development/rivan.html'">
       <div class="pvReelFrame">
         <div class="pvReelNotch"></div>
-        <img decoding="async" src="/images/developments/rivan/hero.jpg" alt="Rivan Tower & Sky Suites" class="pvReelImg" loading="lazy">
+        <img decoding="async" src="/images/developments/rivan/hero.webp" alt="Rivan Tower & Sky Suites" class="pvReelImg" loading="lazy">
         <div class="pvReelOverlay"></div>
         
         <div class="pvReelTop">
@@ -3921,7 +3924,7 @@
     <div class="pvReelCard" onclick="window.location.href='/en/development/elite-residence.html'">
       <div class="pvReelFrame">
         <div class="pvReelNotch"></div>
-        <img decoding="async" src="/images/developments/city-avenue/city_feature_1.jpg" alt="Elite Residence" class="pvReelImg" loading="lazy">
+        <img decoding="async" src="/images/developments/city-avenue/city_feature_1.webp" alt="Elite Residence" class="pvReelImg" loading="lazy">
         <div class="pvReelOverlay"></div>
         
         <div class="pvReelTop">
@@ -3944,7 +3947,7 @@
     <div class="pvReelCard" onclick="window.location.href='/en/development/boulevard-residence.html'">
       <div class="pvReelFrame">
         <div class="pvReelNotch"></div>
-        <img decoding="async" src="/images/developments/city-avenue/city_feature_2.jpg" alt="Boulevard Residence" class="pvReelImg" loading="lazy">
+        <img decoding="async" src="/images/developments/city-avenue/city_feature_2.webp" alt="Boulevard Residence" class="pvReelImg" loading="lazy">
         <div class="pvReelOverlay"></div>
         
         <div class="pvReelTop">
@@ -3990,7 +3993,7 @@
     <div class="pvReelCard" onclick="window.location.href='/en/development/bliss-residences.html'">
       <div class="pvReelFrame">
         <div class="pvReelNotch"></div>
-        <img decoding="async" src="/images/developments/milos/milos_real_12.jpg" alt="Bliss Residences" class="pvReelImg" loading="lazy">
+        <img decoding="async" src="/images/developments/milos/milos_real_12.webp" alt="Bliss Residences" class="pvReelImg" loading="lazy">
         <div class="pvReelOverlay"></div>
         
         <div class="pvReelTop">
@@ -4013,7 +4016,7 @@
     <div class="pvReelCard" onclick="window.location.href='/en/development/milos.html'">
       <div class="pvReelFrame">
         <div class="pvReelNotch"></div>
-        <img decoding="async" src="/images/developments/milos/hero.jpg" alt="Milos Residence & Coastal Living" class="pvReelImg" loading="lazy">
+        <img decoding="async" src="/images/developments/milos/hero.webp" alt="Milos Residence & Coastal Living" class="pvReelImg" loading="lazy">
         <div class="pvReelOverlay"></div>
         
         <div class="pvReelTop">
@@ -4036,7 +4039,7 @@
     <div class="pvReelCard" onclick="window.location.href='/en/development/floresta-105.html'">
       <div class="pvReelFrame">
         <div class="pvReelNotch"></div>
-        <img decoding="async" src="/images/developments/milos/milos_real_6.jpg" alt="Floresta 105 Luxury Tower" class="pvReelImg" loading="lazy">
+        <img decoding="async" src="/images/developments/milos/milos_real_6.webp" alt="Floresta 105 Luxury Tower" class="pvReelImg" loading="lazy">
         <div class="pvReelOverlay"></div>
         
         <div class="pvReelTop">
@@ -4059,7 +4062,7 @@
     <div class="pvReelCard" onclick="window.location.href='/en/development/al-mayyas.html'">
       <div class="pvReelFrame">
         <div class="pvReelNotch"></div>
-        <img decoding="async" src="/images/developments/flora-villas/unit_1.jpg" alt="Al Mayyas Tower" class="pvReelImg" loading="lazy">
+        <img decoding="async" src="/images/developments/flora-villas/unit_1.webp" alt="Al Mayyas Tower" class="pvReelImg" loading="lazy">
         <div class="pvReelOverlay"></div>
         
         <div class="pvReelTop">
@@ -4082,7 +4085,7 @@
     <div class="pvReelCard" onclick="window.location.href='/en/development/coralia-villas.html'">
       <div class="pvReelFrame">
         <div class="pvReelNotch"></div>
-        <img decoding="async" src="/images/developments/flora-villas/img_1.jpg" alt="Coralia Compound Villas" class="pvReelImg" loading="lazy">
+        <img decoding="async" src="/images/developments/flora-villas/img_1.webp" alt="Coralia Compound Villas" class="pvReelImg" loading="lazy">
         <div class="pvReelOverlay"></div>
         
         <div class="pvReelTop">
@@ -4105,7 +4108,7 @@
     <div class="pvReelCard" onclick="window.location.href='/en/development/corallia.html'">
       <div class="pvReelFrame">
         <div class="pvReelNotch"></div>
-        <img decoding="async" src="/images/developments/milos/milos_real_8.jpg" alt="Corallia Lease to Own" class="pvReelImg" loading="lazy">
+        <img decoding="async" src="/images/developments/milos/milos_real_8.webp" alt="Corallia Lease to Own" class="pvReelImg" loading="lazy">
         <div class="pvReelOverlay"></div>
         
         <div class="pvReelTop">
@@ -4128,7 +4131,7 @@
     <div class="pvReelCard" onclick="window.location.href='/en/development/marbella.html'">
       <div class="pvReelFrame">
         <div class="pvReelNotch"></div>
-        <img decoding="async" src="/images/developments/city-avenue/city_feature_1.jpg" alt="Marbella Residence" class="pvReelImg" loading="lazy">
+        <img decoding="async" src="/images/developments/city-avenue/city_feature_1.webp" alt="Marbella Residence" class="pvReelImg" loading="lazy">
         <div class="pvReelOverlay"></div>
         
         <div class="pvReelTop">
@@ -4151,7 +4154,7 @@
     <div class="pvReelCard" onclick="window.location.href='/en/development/flora-villas.html'">
       <div class="pvReelFrame">
         <div class="pvReelNotch"></div>
-        <img decoding="async" src="/images/developments/flora-villas/hero.jpg" alt="Flora Standalone Villas" class="pvReelImg" loading="lazy">
+        <img decoding="async" src="/images/developments/flora-villas/hero.webp" alt="Flora Standalone Villas" class="pvReelImg" loading="lazy">
         <div class="pvReelOverlay"></div>
         
         <div class="pvReelTop">
@@ -4174,7 +4177,7 @@
     <div class="pvReelCard" onclick="window.location.href='/en/development/bliss-gardens.html'">
       <div class="pvReelFrame">
         <div class="pvReelNotch"></div>
-        <img decoding="async" src="/images/developments/flora-villas/unit_2.jpg" alt="Bliss Gardens Compound" class="pvReelImg" loading="lazy">
+        <img decoding="async" src="/images/developments/flora-villas/unit_2.webp" alt="Bliss Gardens Compound" class="pvReelImg" loading="lazy">
         <div class="pvReelOverlay"></div>
         
         <div class="pvReelTop">
@@ -4197,7 +4200,7 @@
     <div class="pvReelCard" onclick="window.location.href='/en/development/bliss-gardens-2.html'">
       <div class="pvReelFrame">
         <div class="pvReelNotch"></div>
-        <img decoding="async" src="/images/developments/flora-villas/unit_3.jpg" alt="Bliss Gardens II" class="pvReelImg" loading="lazy">
+        <img decoding="async" src="/images/developments/flora-villas/unit_3.webp" alt="Bliss Gardens II" class="pvReelImg" loading="lazy">
         <div class="pvReelOverlay"></div>
         
         <div class="pvReelTop">
@@ -4220,7 +4223,7 @@
     <div class="pvReelCard" onclick="window.location.href='/en/development/voya-residence.html'">
       <div class="pvReelFrame">
         <div class="pvReelNotch"></div>
-        <img decoding="async" src="/images/developments/valencia-residence/hero.jpg" alt="Voya Waterfront Chalets" class="pvReelImg" loading="lazy">
+        <img decoding="async" src="/images/developments/valencia-residence/hero.webp" alt="Voya Waterfront Chalets" class="pvReelImg" loading="lazy">
         <div class="pvReelOverlay"></div>
         
         <div class="pvReelTop">
@@ -4243,7 +4246,7 @@
     <div class="pvReelCard" onclick="window.location.href='/en/development/bliss-tower.html'">
       <div class="pvReelFrame">
         <div class="pvReelNotch"></div>
-        <img decoding="async" src="/images/developments/milos/milos_real_15.jpg" alt="Bliss Tower Duplexes" class="pvReelImg" loading="lazy">
+        <img decoding="async" src="/images/developments/milos/milos_real_15.webp" alt="Bliss Tower Duplexes" class="pvReelImg" loading="lazy">
         <div class="pvReelOverlay"></div>
         
         <div class="pvReelTop">
@@ -4314,7 +4317,7 @@
       
     <article class="p-card">
       <div class="p-card__image-wrapper">
-        <img decoding="async" src="/images/developments/skala-villas/hero.jpg" alt="Skala Villas & Waterfront Luxury" class="p-card__img" loading="lazy">
+        <img decoding="async" src="/images/developments/skala-villas/hero.webp" alt="Skala Villas & Waterfront Luxury" class="p-card__img" loading="lazy">
         <div class="p-card__overlay"></div>
         
         <div class="p-card__tags-top">
@@ -4358,7 +4361,7 @@
 
     <article class="p-card">
       <div class="p-card__image-wrapper">
-        <img decoding="async" src="/images/developments/skala-villas/sk-feature-1.jpg" alt="Via D'Oro Signature Villas" class="p-card__img" loading="lazy">
+        <img decoding="async" src="/images/developments/skala-villas/sk-feature-1.webp" alt="Via D'Oro Signature Villas" class="p-card__img" loading="lazy">
         <div class="p-card__overlay"></div>
         
         <div class="p-card__tags-top">
@@ -4402,7 +4405,7 @@
 
     <article class="p-card">
       <div class="p-card__image-wrapper">
-        <img decoding="async" src="/images/developments/skala-villas/sk-feature-4.jpg" alt="Carlton House Waterfront" class="p-card__img" loading="lazy">
+        <img decoding="async" src="/images/developments/skala-villas/sk-feature-4.webp" alt="Carlton House Waterfront" class="p-card__img" loading="lazy">
         <div class="p-card__overlay"></div>
         
         <div class="p-card__tags-top">
@@ -4534,7 +4537,7 @@
 
     <article class="p-card">
       <div class="p-card__image-wrapper">
-        <img decoding="async" src="/images/developments/milos/milos_real_3.jpg" alt="La Mer Waterfront Tower" class="p-card__img" loading="lazy">
+        <img decoding="async" src="/images/developments/milos/milos_real_3.webp" alt="La Mer Waterfront Tower" class="p-card__img" loading="lazy">
         <div class="p-card__overlay"></div>
         
         <div class="p-card__tags-top">
@@ -4642,7 +4645,7 @@
 
     <article class="p-card">
       <div class="p-card__image-wrapper">
-        <img decoding="async" src="/images/developments/rivan/hero.jpg" alt="Rivan Tower & Sky Suites" class="p-card__img" loading="lazy">
+        <img decoding="async" src="/images/developments/rivan/hero.webp" alt="Rivan Tower & Sky Suites" class="p-card__img" loading="lazy">
         <div class="p-card__overlay"></div>
         
         <div class="p-card__tags-top">
@@ -4686,7 +4689,7 @@
 
     <article class="p-card">
       <div class="p-card__image-wrapper">
-        <img decoding="async" src="/images/developments/city-avenue/city_feature_1.jpg" alt="Elite Residence" class="p-card__img" loading="lazy">
+        <img decoding="async" src="/images/developments/city-avenue/city_feature_1.webp" alt="Elite Residence" class="p-card__img" loading="lazy">
         <div class="p-card__overlay"></div>
         
         <div class="p-card__tags-top">
@@ -4730,7 +4733,7 @@
 
     <article class="p-card">
       <div class="p-card__image-wrapper">
-        <img decoding="async" src="/images/developments/city-avenue/city_feature_2.jpg" alt="Boulevard Residence" class="p-card__img" loading="lazy">
+        <img decoding="async" src="/images/developments/city-avenue/city_feature_2.webp" alt="Boulevard Residence" class="p-card__img" loading="lazy">
         <div class="p-card__overlay"></div>
         
         <div class="p-card__tags-top">
@@ -4818,7 +4821,7 @@
 
     <article class="p-card">
       <div class="p-card__image-wrapper">
-        <img decoding="async" src="/images/developments/milos/milos_real_12.jpg" alt="Bliss Residences" class="p-card__img" loading="lazy">
+        <img decoding="async" src="/images/developments/milos/milos_real_12.webp" alt="Bliss Residences" class="p-card__img" loading="lazy">
         <div class="p-card__overlay"></div>
         
         <div class="p-card__tags-top">
@@ -4882,7 +4885,7 @@
       
     <article class="p-card">
       <div class="p-card__image-wrapper">
-        <img decoding="async" src="/images/developments/milos/hero.jpg" alt="Milos Residence & Coastal Living" class="p-card__img" loading="lazy">
+        <img decoding="async" src="/images/developments/milos/hero.webp" alt="Milos Residence & Coastal Living" class="p-card__img" loading="lazy">
         <div class="p-card__overlay"></div>
         
         <div class="p-card__tags-top">
@@ -4926,7 +4929,7 @@
 
     <article class="p-card">
       <div class="p-card__image-wrapper">
-        <img decoding="async" src="/images/developments/milos/milos_real_6.jpg" alt="Floresta 105 Luxury Tower" class="p-card__img" loading="lazy">
+        <img decoding="async" src="/images/developments/milos/milos_real_6.webp" alt="Floresta 105 Luxury Tower" class="p-card__img" loading="lazy">
         <div class="p-card__overlay"></div>
         
         <div class="p-card__tags-top">
@@ -4970,7 +4973,7 @@
 
     <article class="p-card">
       <div class="p-card__image-wrapper">
-        <img decoding="async" src="/images/developments/flora-villas/unit_1.jpg" alt="Al Mayyas Tower" class="p-card__img" loading="lazy">
+        <img decoding="async" src="/images/developments/flora-villas/unit_1.webp" alt="Al Mayyas Tower" class="p-card__img" loading="lazy">
         <div class="p-card__overlay"></div>
         
         <div class="p-card__tags-top">
@@ -5014,7 +5017,7 @@
 
     <article class="p-card">
       <div class="p-card__image-wrapper">
-        <img decoding="async" src="/images/developments/flora-villas/img_1.jpg" alt="Coralia Compound Villas" class="p-card__img" loading="lazy">
+        <img decoding="async" src="/images/developments/flora-villas/img_1.webp" alt="Coralia Compound Villas" class="p-card__img" loading="lazy">
         <div class="p-card__overlay"></div>
         
         <div class="p-card__tags-top">
@@ -5058,7 +5061,7 @@
 
     <article class="p-card">
       <div class="p-card__image-wrapper">
-        <img decoding="async" src="/images/developments/milos/milos_real_8.jpg" alt="Corallia Lease to Own" class="p-card__img" loading="lazy">
+        <img decoding="async" src="/images/developments/milos/milos_real_8.webp" alt="Corallia Lease to Own" class="p-card__img" loading="lazy">
         <div class="p-card__overlay"></div>
         
         <div class="p-card__tags-top">
@@ -5102,7 +5105,7 @@
 
     <article class="p-card">
       <div class="p-card__image-wrapper">
-        <img decoding="async" src="/images/developments/city-avenue/city_feature_1.jpg" alt="Marbella Residence" class="p-card__img" loading="lazy">
+        <img decoding="async" src="/images/developments/city-avenue/city_feature_1.webp" alt="Marbella Residence" class="p-card__img" loading="lazy">
         <div class="p-card__overlay"></div>
         
         <div class="p-card__tags-top">
@@ -5166,7 +5169,7 @@
       
     <article class="p-card">
       <div class="p-card__image-wrapper">
-        <img decoding="async" src="/images/developments/flora-villas/hero.jpg" alt="Flora Standalone Villas" class="p-card__img" loading="lazy">
+        <img decoding="async" src="/images/developments/flora-villas/hero.webp" alt="Flora Standalone Villas" class="p-card__img" loading="lazy">
         <div class="p-card__overlay"></div>
         
         <div class="p-card__tags-top">
@@ -5210,7 +5213,7 @@
 
     <article class="p-card">
       <div class="p-card__image-wrapper">
-        <img decoding="async" src="/images/developments/flora-villas/unit_2.jpg" alt="Bliss Gardens Compound" class="p-card__img" loading="lazy">
+        <img decoding="async" src="/images/developments/flora-villas/unit_2.webp" alt="Bliss Gardens Compound" class="p-card__img" loading="lazy">
         <div class="p-card__overlay"></div>
         
         <div class="p-card__tags-top">
@@ -5254,7 +5257,7 @@
 
     <article class="p-card">
       <div class="p-card__image-wrapper">
-        <img decoding="async" src="/images/developments/flora-villas/unit_3.jpg" alt="Bliss Gardens II" class="p-card__img" loading="lazy">
+        <img decoding="async" src="/images/developments/flora-villas/unit_3.webp" alt="Bliss Gardens II" class="p-card__img" loading="lazy">
         <div class="p-card__overlay"></div>
         
         <div class="p-card__tags-top">
@@ -5298,7 +5301,7 @@
 
     <article class="p-card">
       <div class="p-card__image-wrapper">
-        <img decoding="async" src="/images/developments/valencia-residence/hero.jpg" alt="Voya Waterfront Chalets" class="p-card__img" loading="lazy">
+        <img decoding="async" src="/images/developments/valencia-residence/hero.webp" alt="Voya Waterfront Chalets" class="p-card__img" loading="lazy">
         <div class="p-card__overlay"></div>
         
         <div class="p-card__tags-top">
@@ -5342,7 +5345,7 @@
 
     <article class="p-card">
       <div class="p-card__image-wrapper">
-        <img decoding="async" src="/images/developments/milos/milos_real_15.jpg" alt="Bliss Tower Duplexes" class="p-card__img" loading="lazy">
+        <img decoding="async" src="/images/developments/milos/milos_real_15.webp" alt="Bliss Tower Duplexes" class="p-card__img" loading="lazy">
         <div class="p-card__overlay"></div>
         
         <div class="p-card__tags-top">
