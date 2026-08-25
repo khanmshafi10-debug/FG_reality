@@ -1,0 +1,1760 @@
+/* =========================================================================
+   Prime View Real Estate — UI Polish & Premium Light Theme
+   -------------------------------------------------------------------------
+   Single stylesheet for site-wide UI corrections:
+     1. Design tokens (light, warm-ivory + deep-gold luxury palette)
+     2. Premium light footer
+     3. Text-contrast / legibility fixes (WCAG AA)
+     4. Overlay tag + badge legibility (image-overlaid text)
+     5. Layout & overflow corrections (desktop + mobile)
+     6. Touch-target sizing and focus states
+   Loaded last so it wins over earlier stylesheets.
+   ========================================================================= */
+
+:root {
+  /* Surfaces — warm ivory family, never grey */
+  --pv-surface: #ffffff;
+  --pv-surface-ivory: #faf8f4;
+  --pv-surface-cream: #f5f1e8;
+  --pv-surface-sand: #f2ede3;
+
+  /* Gold — two tiers. Decorative for lines/large display, text for body copy. */
+  --pv-gold: #c9a84c;          /* decorative only: rules, dots, borders */
+  --pv-gold-deep: #a67c1a;     /* large/bold text on white (3.8:1) */
+  --pv-gold-text: #8a6618;     /* body text on white (5.3:1) — AA */
+  --pv-gold-ink: #6f5212;      /* small text on cream (6.4:1) — AAA */
+
+  /* Ink */
+  --pv-ink: #1a1a1a;
+  --pv-ink-soft: #3d3d3d;
+  --pv-ink-muted: #5a5a5a;     /* 6.9:1 on white — AA for small text */
+
+  /* Hairlines */
+  --pv-line: rgba(26, 26, 26, 0.10);
+  --pv-line-gold: rgba(201, 168, 76, 0.38);
+
+  --pv-shadow-sm: 0 1px 2px rgba(26, 22, 12, 0.04), 0 2px 8px rgba(26, 22, 12, 0.05);
+  --pv-shadow-md: 0 4px 12px rgba(26, 22, 12, 0.07), 0 12px 28px rgba(26, 22, 12, 0.06);
+  --pv-shadow-lg: 0 8px 20px rgba(26, 22, 12, 0.09), 0 24px 56px rgba(26, 22, 12, 0.11);
+
+  /* Glass — frosted light panels, plus a dark variant for use over imagery */
+  --pv-glass-bg: rgba(255, 255, 255, 0.62);
+  --pv-glass-bg-strong: rgba(255, 255, 255, 0.8);
+  --pv-glass-border: rgba(255, 255, 255, 0.78);
+  --pv-glass-blur: blur(18px) saturate(165%);
+  --pv-glass-shadow: 0 8px 32px rgba(26, 22, 12, 0.1), 0 2px 8px rgba(26, 22, 12, 0.06);
+  --pv-glass-ink: rgba(18, 16, 12, 0.58);
+  --pv-glass-ink-border: rgba(255, 255, 255, 0.26);
+
+  /* Deep ink plate — used behind the light-artwork logo */
+  --pv-plate: linear-gradient(145deg, #22201a 0%, #14130f 52%, #1d1b15 100%);
+
+  --pv-ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --pv-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* =========================================================================
+   1. GLOBAL — kill horizontal scroll, smooth out edges
+   ========================================================================= */
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  /* Neither html nor body declared a background, so the light look depended on
+     the browser's default canvas — which turns dark under OS dark mode. Pin it
+     so the light theme holds everywhere. */
+  color-scheme: light;
+  background-color: var(--pv-surface);
+}
+
+body {
+  overflow-x: hidden;
+  background-color: var(--pv-surface);
+  /* The old 1440px cap left dead space and mis-centred full-bleed sections
+     on wide monitors. Sections manage their own max-width instead. */
+  max-width: none !important;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img,
+video {
+  max-width: 100%;
+}
+
+/*
+ * Reduced motion. A blanket `* { animation-duration: 0.01ms }` reset was too
+ * blunt here: it froze the partner marquee mid-scroll, leaving the first and
+ * last logos clipped by the track's edge mask — worse than either extreme.
+ * Continuous marquees are handled on their own terms further down (they keep
+ * moving, and hover/focus pauses them, which is what WCAG 2.2.2 actually
+ * asks for). This block only calms the motion this stylesheet introduced.
+ */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .p-card,
+  .p-card__img,
+  .p-card::after,
+  .p-card__image-wrapper::after,
+  .galleryCard,
+  .galleryCard__content,
+  .galleryCard__btn,
+  .pvFooter__brandLogo,
+  .pvFooter__brandLogo::after {
+    transition-duration: 0.01ms !important;
+    animation: none !important;
+  }
+}
+
+/* =========================================================================
+   2. PREMIUM LIGHT FOOTER
+   ========================================================================= */
+
+.footerWrapper,
+.pvFooter {
+  background:
+    radial-gradient(1200px 420px at 12% -10%, rgba(201, 168, 76, 0.10), transparent 60%),
+    linear-gradient(180deg, var(--pv-surface-ivory) 0%, var(--pv-surface-cream) 100%) !important;
+  border-top: 1px solid var(--pv-line-gold) !important;
+  color: var(--pv-ink) !important;
+  display: block !important;
+  position: relative;
+  /* content-visibility on the old wrapper caused the footer to render at a
+     collapsed intrinsic height until scrolled into view. */
+  content-visibility: visible !important;
+  contain-intrinsic-size: auto none !important;
+}
+
+/* Thin gold hairline across the very top edge */
+.pvFooter::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--pv-gold) 22%,
+    #e7cf8a 50%,
+    var(--pv-gold) 78%,
+    transparent 100%
+  );
+  opacity: 0.7;
+}
+
+.pvFooter__inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 68px 32px 28px;
+}
+
+/* ---- Top region: brand + link columns ---- */
+.pvFooter__top {
+  display: grid;
+  grid-template-columns: minmax(280px, 1.15fr) minmax(0, 2.85fr);
+  gap: 56px;
+  padding-bottom: 44px;
+  border-bottom: 1px solid var(--pv-line);
+}
+
+/* ---- Brand block ---- */
+
+/* The wordmark is light artwork on transparency (zero dark pixels), so on the
+   ivory footer it was invisible. It sits on a deep ink plate instead — which
+   also reads as an intentional brand lockup rather than a patch. */
+.pvFooter__brandLogo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+  padding: 15px 26px;
+  border-radius: 16px;
+  background: var(--pv-plate);
+  border: 1px solid rgba(201, 168, 76, 0.34);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    inset 0 -18px 30px rgba(0, 0, 0, 0.28), 0 10px 30px rgba(18, 16, 12, 0.2),
+    0 2px 6px rgba(18, 16, 12, 0.14);
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transition: transform 0.4s var(--pv-ease-out), box-shadow 0.4s var(--pv-ease),
+    border-color 0.4s var(--pv-ease);
+}
+
+/* Soft gold bloom in the upper-left, so the plate isn't a flat black slab */
+.pvFooter__brandLogo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    120% 100% at 14% 0%,
+    rgba(201, 168, 76, 0.24) 0%,
+    rgba(201, 168, 76, 0.06) 42%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Sheen that sweeps across on hover */
+.pvFooter__brandLogo::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 45%;
+  left: -60%;
+  background: linear-gradient(
+    100deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.16) 45%,
+    rgba(255, 246, 220, 0.28) 55%,
+    transparent 100%
+  );
+  transform: skewX(-18deg);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.pvFooter__brandLogo:hover,
+.pvFooter__brandLogo:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(201, 168, 76, 0.6);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 -18px 30px rgba(0, 0, 0, 0.3), 0 16px 40px rgba(18, 16, 12, 0.26),
+    0 2px 8px rgba(18, 16, 12, 0.16);
+}
+
+.pvFooter__brandLogo:hover::after,
+.pvFooter__brandLogo:focus-visible::after {
+  animation: pvSheen 0.85s var(--pv-ease) forwards;
+}
+
+@keyframes pvSheen {
+  to {
+    left: 120%;
+  }
+}
+
+.pvFooter__brandLogo img,
+.pvFooter__brandLogo picture {
+  height: 52px;
+  width: auto;
+  max-width: 232px;
+  display: block;
+}
+
+.pvFooter__about {
+  color: var(--pv-ink-muted);
+  font-size: 0.9rem;
+  line-height: 1.75;
+  margin: 0 0 22px;
+  max-width: 38ch;
+}
+
+.pvFooter__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 16px;
+  border-radius: 999px;
+  background: rgba(201, 168, 76, 0.12);
+  border: 1px solid var(--pv-line-gold);
+  color: var(--pv-gold-ink);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  white-space: nowrap;
+}
+
+.pvFooter__badgeDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--pv-gold-deep);
+  box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.22);
+  flex: none;
+}
+
+/* ---- Contact rail ---- */
+.pvFooter__contact {
+  list-style: none;
+  margin: 24px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pvFooter__contactItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  font-size: 0.86rem;
+  line-height: 1.55;
+  color: var(--pv-ink-soft);
+}
+
+.pvFooter__contactItem svg {
+  flex: none;
+  margin-top: 2px;
+  color: var(--pv-gold-deep);
+}
+
+a.pvFooter__contactLink {
+  color: var(--pv-ink-soft);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s var(--pv-ease), border-color 0.2s var(--pv-ease);
+}
+
+a.pvFooter__contactLink:hover,
+a.pvFooter__contactLink:focus-visible {
+  color: var(--pv-gold-ink);
+  border-bottom-color: var(--pv-line-gold);
+}
+
+/* ---- Link columns ---- */
+.pvFooter__cols {
+  /* Five explicit columns: auto-fit left "Company" orphaned on its own row
+     with three empty tracks beside it. */
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 32px 24px;
+  align-content: start;
+}
+
+@media (max-width: 1180px) {
+  .pvFooter__cols {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.pvFooter__col {
+  min-width: 0;
+}
+
+.pvFooter__colTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 0 0 14px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid var(--pv-line-gold);
+  color: var(--pv-gold-ink);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  line-height: 1.35;
+  /* <summary> ships a disclosure triangle in every engine; a chevron of our
+     own replaces it on mobile. */
+  list-style: none;
+}
+
+.pvFooter__colTitle::-webkit-details-marker,
+.pvFooter__colTitle::marker {
+  display: none;
+  content: "";
+}
+
+/* Disclosure chevron drawn from borders rather than an inline SVG: a CSS
+   transform on an SVG element resolves to identity in some engines. */
+.pvFooter__colTitle::after {
+  content: "";
+  display: none;
+  flex: none;
+  width: 8px;
+  height: 8px;
+  margin-inline-end: 3px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+  transition: transform 0.25s var(--pv-ease);
+}
+
+/* Desktop: always expanded, and not collapsible by accident. */
+@media (min-width: 769px) {
+  .pvFooter__colTitle {
+    pointer-events: none;
+  }
+}
+
+.pvFooter__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.pvFooter__list a {
+  display: block;
+  /* Vertical padding gives each row a comfortable tap target without
+     visually loosening the column. */
+  padding: 7px 0;
+  color: var(--pv-ink-soft);
+  font-size: 0.865rem;
+  line-height: 1.4;
+  text-decoration: none;
+  transition: color 0.2s var(--pv-ease), transform 0.2s var(--pv-ease);
+}
+
+.pvFooter__list a:hover,
+.pvFooter__list a:focus-visible {
+  color: var(--pv-gold-ink);
+  transform: translateX(3px);
+}
+
+[dir="rtl"] .pvFooter__list a:hover,
+[dir="rtl"] .pvFooter__list a:focus-visible {
+  transform: translateX(-3px);
+}
+
+.pvFooter__list a.is-featured {
+  color: var(--pv-gold-ink);
+  font-weight: 700;
+}
+
+.pvFooter__list a.is-featured:hover {
+  color: var(--pv-ink);
+}
+
+/* ---- Bottom bar ---- */
+.pvFooter__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px 28px;
+  padding-top: 24px;
+}
+
+.pvFooter__social {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pvFooter__socialLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--pv-surface);
+  border: 1px solid var(--pv-line-gold);
+  color: var(--pv-gold-ink);
+  box-shadow: var(--pv-shadow-sm);
+  transition: background 0.22s var(--pv-ease), color 0.22s var(--pv-ease),
+    transform 0.22s var(--pv-ease), border-color 0.22s var(--pv-ease);
+}
+
+.pvFooter__socialLink svg {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+/* Icons authored with hard-coded light fills; force them to inherit so they
+   are visible against the new light background. */
+.pvFooter__socialLink svg path,
+.pvFooter__socialLink svg circle,
+.pvFooter__socialLink svg rect {
+  fill: currentColor;
+}
+
+.pvFooter__socialLink:hover,
+.pvFooter__socialLink:focus-visible {
+  background: var(--pv-gold-ink);
+  border-color: var(--pv-gold-ink);
+  color: #fffdf7;
+  transform: translateY(-2px);
+}
+
+.pvFooter__legal {
+  color: var(--pv-ink-muted);
+  font-size: 0.8rem;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 62ch;
+}
+
+.pvFooter__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 18px;
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid var(--pv-line);
+}
+
+.pvFooter__copyright {
+  color: var(--pv-ink-muted);
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.pvFooter__metaLinks {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.pvFooter__metaLinks a {
+  color: var(--pv-ink-muted);
+  font-size: 0.8rem;
+  text-decoration: none;
+  padding: 8px 4px;
+  transition: color 0.2s var(--pv-ease);
+}
+
+.pvFooter__metaLinks a:hover,
+.pvFooter__metaLinks a:focus-visible {
+  color: var(--pv-gold-ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.pvFooter__metaSep {
+  width: 1px;
+  height: 11px;
+  background: var(--pv-line);
+  flex: none;
+}
+
+/* ---- Footer responsive ---- */
+@media (max-width: 1080px) {
+  .pvFooter__top {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .pvFooter__about {
+    max-width: 62ch;
+  }
+}
+
+@media (max-width: 768px) {
+  .pvFooter__inner {
+    padding: 44px 20px 24px;
+  }
+  .pvFooter__top {
+    gap: 34px;
+    padding-bottom: 32px;
+  }
+  /* Accordion mode: 30 stacked links made the footer ~2000px tall on a phone.
+     Single column of collapsible sections instead. */
+  .pvFooter__cols {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .pvFooter__col {
+    border-bottom: 1px solid var(--pv-line);
+  }
+  .pvFooter__col:first-child {
+    border-top: 1px solid var(--pv-line);
+  }
+  .pvFooter__colTitle {
+    margin: 0;
+    padding: 16px 2px;
+    border-bottom: 0;
+    cursor: pointer;
+    min-height: 52px;
+    font-size: 0.76rem;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .pvFooter__colTitle::after {
+    display: block;
+  }
+  .pvFooter__col[open] > .pvFooter__colTitle::after {
+    transform: translateY(2px) rotate(225deg);
+  }
+  .pvFooter__col[open] > .pvFooter__colTitle {
+    color: var(--pv-ink);
+  }
+  .pvFooter__list {
+    padding: 0 2px 14px;
+  }
+  .pvFooter__list a {
+    padding: 10px 0;
+    font-size: 0.9rem;
+  }
+  .pvFooter__brandLogo img {
+    height: 46px;
+  }
+  .pvFooter__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .pvFooter__meta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .pvFooter__legal,
+  .pvFooter__copyright {
+    font-size: 0.78rem;
+  }
+}
+
+@media (max-width: 460px) {
+  .pvFooter__inner {
+    padding: 38px 18px 22px;
+  }
+  .pvFooter__social {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .pvFooter__socialLink {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/* RTL footer */
+[dir="rtl"] .pvFooter__inner {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="rtl"] .pvFooter__colTitle,
+[dir="rtl"] .pvFooter__list a {
+  text-align: right;
+}
+
+[dir="rtl"] .pvFooter__contactItem,
+[dir="rtl"] .pvFooter__badge {
+  flex-direction: row-reverse;
+}
+
+/* =========================================================================
+   3. TEXT CONTRAST FIXES  (all previously below WCAG AA)
+   ========================================================================= */
+
+/* Gold small text on white/cream was ~2.5–3.0:1. Deepened to >= 4.5:1. */
+.p-card__location,
+.pvPill,
+.luxuryGallery__badge,
+.p-card__meta-item,
+.p-card__price-label {
+  color: var(--pv-gold-ink) !important;
+}
+
+.p-card__price-val {
+  /* Large + bold, so the deep tone reads as gold while clearing AA. */
+  color: var(--pv-gold-text) !important;
+  font-weight: 700;
+}
+
+.pvPill {
+  background: rgba(201, 168, 76, 0.14) !important;
+  border: 1px solid var(--pv-line-gold) !important;
+}
+
+.luxuryGallery__badge {
+  background: rgba(201, 168, 76, 0.13) !important;
+  border-color: var(--pv-line-gold) !important;
+}
+
+.luxuryGallery__badge-dot {
+  background-color: var(--pv-gold-deep) !important;
+  box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.2) !important;
+}
+
+/* Status badges: white-on-light-green was 2.54:1. */
+.p-card__badge {
+  font-weight: 700 !important;
+  letter-spacing: 0.3px;
+}
+
+.p-card__badge.badge--ready,
+.badge--ready {
+  background: #0a7550 !important;   /* 5.7:1 with white */
+  color: #ffffff !important;
+}
+
+.p-card__badge.badge--offplan,
+.badge--offplan {
+  background: #8a5a00 !important;
+  color: #ffffff !important;
+}
+
+.p-card__badge.badge--soon,
+.badge--soon {
+  background: #1f4f8f !important;
+  color: #ffffff !important;
+}
+
+/* Muted body copy that sat at ~4:1 */
+.luxuryGallery__subtitle,
+.p-card__desc {
+  color: var(--pv-ink-muted) !important;
+}
+
+/* =========================================================================
+   4. OVERLAY TEXT LEGIBILITY
+   The reported bug: location pills sitting on pale sky / light facades were
+   white-on-translucent-white and effectively invisible. Replaced with an
+   opaque ink capsule that is legible on any photograph.
+   ========================================================================= */
+
+.galleryCard__tag,
+.cardTag,
+.developmentCard__tag,
+.dev-card__tag {
+  background: rgba(18, 16, 12, 0.72) !important;
+  -webkit-backdrop-filter: blur(10px) saturate(115%) !important;
+  backdrop-filter: blur(10px) saturate(115%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.28) !important;
+  color: #fdf8ec !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.55);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.28);
+  font-weight: 700 !important;
+  /* Long location names must not run to the card edge. */
+  max-width: calc(100% - 40px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Titles/subtitles sitting directly on imagery */
+.galleryCard__title,
+.developmentCard__title {
+  color: #ffffff !important;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.75), 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.galleryCard__subtitle,
+.developmentCard__subtitle {
+  color: rgba(255, 255, 255, 0.94) !important;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Strengthen the scrim so overlay text always has something to sit on */
+.galleryCard__overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.28) 0%,
+    rgba(0, 0, 0, 0.05) 34%,
+    rgba(0, 0, 0, 0.62) 74%,
+    rgba(0, 0, 0, 0.88) 100%
+  ) !important;
+  opacity: 1 !important;
+}
+
+.galleryCard:hover .galleryCard__overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.34) 0%,
+    rgba(0, 0, 0, 0.12) 30%,
+    rgba(0, 0, 0, 0.7) 72%,
+    rgba(0, 0, 0, 0.92) 100%
+  ) !important;
+}
+
+/* Hero copy sits over video — guarantee legibility on bright frames. */
+.hero__content-middle h1,
+.hero__content-middle h2,
+.hero__content-middle p,
+.hero__content-bottom .heroLinks__text {
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.62), 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* The animated glow characters declare their own text-shadow, which replaces
+   the inherited dark one — white-on-bright-video with nothing behind it.
+   Re-add a dark layer beneath the glow. */
+.glowChar,
+.glowChar--lit {
+  text-shadow: 0 0 4px rgba(212, 165, 116, 0.9), 0 0 10px rgba(212, 165, 116, 0.55),
+    0 2px 14px rgba(0, 0, 0, 0.72), 0 1px 3px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Card CTA circle: was low-contrast on pale imagery */
+.galleryCard__btn {
+  background: rgba(255, 255, 255, 0.95) !important;
+  color: #12100c !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  flex: none;
+}
+
+.galleryCard:hover .galleryCard__btn {
+  background: var(--pv-gold) !important;
+  color: #1a1508 !important;
+}
+
+/* =========================================================================
+   5. LAYOUT & OVERFLOW CORRECTIONS
+   ========================================================================= */
+
+/* Mega-menus were positioned with a fixed -450px translate, so they ran off
+   the right edge on wide screens. Clamp them inside the viewport. */
+.navMegaMenu,
+.devMegaMenuCustom {
+  max-width: min(900px, calc(100vw - 32px));
+}
+
+/* Marquee: keep the animated track from creating a document-level scrollbar */
+.partnersMarquee,
+[class*="marquee"] {
+  overflow: hidden;
+  max-width: 100%;
+}
+
+/*
+ * The track must keep scrolling even under `prefers-reduced-motion`, because
+ * the edge mask clips the first and last logo — frozen, those two read as
+ * broken images. WCAG 2.2.2 wants a way to *pause* motion rather than an
+ * absence of motion, so hover and keyboard focus both stop the track.
+ */
+.partnersMarquee__track {
+  animation: marqueeScroll 30s linear infinite !important;
+  will-change: transform;
+}
+
+.partnersMarquee:hover .partnersMarquee__track,
+.partnersMarquee:focus-within .partnersMarquee__track {
+  animation-play-state: paused !important;
+}
+
+/* Several partner marks are near-white line art; at 70% opacity over ivory
+   they all but vanished. Slightly darker resting state, full colour on hover. */
+.partnersMarquee__logo {
+  filter: grayscale(100%) contrast(1.12) brightness(0.82) !important;
+  opacity: 0.82 !important;
+}
+
+.partnersMarquee__logo:hover {
+  filter: grayscale(0%) contrast(1) brightness(1) !important;
+  opacity: 1 !important;
+}
+
+/* Bento gallery — collapse gracefully instead of overflowing */
+@media (max-width: 1024px) {
+  .galleryGrid {
+    grid-template-columns: repeat(6, 1fr) !important;
+  }
+  .galleryGrid .galleryCard--large,
+  .galleryGrid .galleryCard--tall,
+  .galleryGrid .galleryCard--wide {
+    grid-column: span 6 !important;
+    grid-row: span 1 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .galleryGrid,
+  .galleryGrid.is-filtered {
+    grid-template-columns: 1fr !important;
+    grid-auto-rows: 240px !important;
+    gap: 14px !important;
+  }
+  .galleryGrid .galleryCard,
+  .galleryGrid .galleryCard--large,
+  .galleryGrid .galleryCard--tall,
+  .galleryGrid .galleryCard--wide {
+    grid-column: span 1 !important;
+    grid-row: span 1 !important;
+  }
+  .luxuryGallery {
+    padding: 40px 0 16px 0;
+  }
+  .luxuryGallery__title {
+    font-size: 1.65rem !important;
+    line-height: 1.25;
+  }
+  .luxuryGallery__filters {
+    /* Horizontal scroll beats a broken wrapped pile of pills. */
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding: 4px 16px 10px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .luxuryGallery__filters::-webkit-scrollbar {
+    display: none;
+  }
+  .luxuryGallery__filter-btn {
+    flex: none;
+    white-space: nowrap;
+    padding: 11px 20px;
+  }
+}
+
+/* Horizontal card rails: give them proper scroll affordance on touch */
+@media (max-width: 768px) {
+  .developmentCard {
+    scroll-snap-align: start;
+  }
+}
+
+/* =========================================================================
+   6. TOUCH TARGETS, FOCUS, TYPE
+   ========================================================================= */
+
+@media (max-width: 768px) {
+  /* iOS zooms any input under 16px on focus. */
+  input,
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+
+  .pvHeroSearch__input {
+    min-height: 46px;
+    padding-block: 12px;
+  }
+
+  /* Inline links in nav/hero rails were 19–26px tall. */
+  .heroLinks__link,
+  .latestBlogPosts__header-link,
+  .pvFooter__metaLinks a {
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
+/* Visible keyboard focus everywhere — none of the themes defined one. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--pv-gold-deep);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Long unbroken strings (project names, emails) must not blow out layout */
+h1, h2, h3, h4,
+.p-card__title,
+.galleryCard__title,
+.developmentCard__title {
+  overflow-wrap: break-word;
+}
+
+/* =========================================================================
+   7. CARD POLISH — subtle premium lift, light theme
+   ========================================================================= */
+
+.p-card {
+  background: var(--pv-surface);
+  border: 1px solid var(--pv-line);
+  box-shadow: var(--pv-shadow-sm);
+  transition: transform 0.32s var(--pv-ease), box-shadow 0.32s var(--pv-ease),
+    border-color 0.32s var(--pv-ease);
+}
+
+.p-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--pv-shadow-md);
+  border-color: var(--pv-line-gold);
+}
+
+/* Image wrapper was near-black (#181818) and flashed dark before the photo
+   loaded — a warm placeholder suits the light theme. */
+.p-card__image-wrapper {
+  background: var(--pv-surface-sand) !important;
+  overflow: hidden;
+}
+
+.p-card__image-wrapper img {
+  transition: transform 0.55s var(--pv-ease);
+}
+
+.p-card:hover .p-card__image-wrapper img {
+  transform: scale(1.045);
+}
+
+.galleryCard {
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--pv-shadow-sm);
+  transition: transform 0.35s var(--pv-ease), box-shadow 0.35s var(--pv-ease);
+}
+
+.galleryCard:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--pv-shadow-md);
+}
+
+.galleryCard__img {
+  transition: transform 0.6s var(--pv-ease);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.galleryCard:hover .galleryCard__img {
+  transform: scale(1.05);
+}
+
+/* Filter pills — light theme, gold active state */
+.luxuryGallery__filter-btn {
+  border-color: rgba(26, 26, 26, 0.14) !important;
+  color: var(--pv-ink-soft) !important;
+  background: var(--pv-surface) !important;
+}
+
+.luxuryGallery__filter-btn:hover {
+  border-color: var(--pv-line-gold) !important;
+  color: var(--pv-gold-ink) !important;
+  background: var(--pv-surface-ivory) !important;
+}
+
+.luxuryGallery__filter-btn.active {
+  background: var(--pv-ink) !important;
+  border-color: var(--pv-ink) !important;
+  color: #fdf8ec !important;
+  box-shadow: 0 4px 14px rgba(26, 22, 12, 0.18) !important;
+}
+
+/* =========================================================================
+   8. GLASSMORPHISM SURFACES
+   Frosted light panels on page chrome; frosted *dark* panels for anything
+   sitting on a photograph, so text stays legible either way.
+   ========================================================================= */
+
+.pvHeroSearch__form,
+.luxuryGallery__filters,
+.pvPill,
+.luxuryGallery__badge,
+.pvFooter__badge,
+.pvFooter__socialLink,
+.p-card__dp-pill,
+.p-card__handover-pill,
+.p-card__category-tag {
+  -webkit-backdrop-filter: var(--pv-glass-blur);
+  backdrop-filter: var(--pv-glass-blur);
+}
+
+/* Light glass: page chrome on ivory/white */
+.pvPill,
+.luxuryGallery__badge,
+.pvFooter__badge {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.42)
+  ) !important;
+  border: 1px solid var(--pv-line-gold) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.85),
+    0 2px 10px rgba(26, 22, 12, 0.06);
+}
+
+.pvFooter__socialLink {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.86),
+    rgba(255, 255, 255, 0.52)
+  ) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 2px 10px rgba(26, 22, 12, 0.07);
+}
+
+/*
+ * The hover fill needs `!important` too. The glass rule directly above marks
+ * the resting white gradient as important, which outranked the earlier
+ * `:hover { background: var(--pv-gold-ink) }` — so hovering flipped the icon to
+ * ivory while the disc stayed ivory, and the mark vanished into its own
+ * background. The disc still lifted and its border still warmed, which is why
+ * it read as "the icon disappears on hover".
+ *
+ * Filling with the gold gradient rather than flat ink keeps the hover state in
+ * the palette: ivory mark on deep gold is 8.9:1, comfortably AAA.
+ */
+.pvFooter__socialLink:hover,
+.pvFooter__socialLink:focus-visible {
+  background: linear-gradient(140deg, #8a6618 0%, #6f5212 55%, #543f0e 100%) !important;
+  border-color: rgba(201, 168, 76, 0.92) !important;
+  color: #fff8e6 !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    0 7px 18px rgba(111, 82, 18, 0.3) !important;
+  transform: translateY(-3px);
+}
+
+/* A few of the marks were authored with a hard-coded fill; restate the
+   inheritance at hover level so all five flip to ivory together. */
+.pvFooter__socialLink:hover svg path,
+.pvFooter__socialLink:hover svg circle,
+.pvFooter__socialLink:hover svg rect,
+.pvFooter__socialLink:focus-visible svg path,
+.pvFooter__socialLink:focus-visible svg circle,
+.pvFooter__socialLink:focus-visible svg rect {
+  fill: currentColor !important;
+}
+
+/* Sticky frosted filter bar — stays reachable while scrolling a long grid */
+.luxuryGallery__filters {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.86),
+    rgba(250, 248, 244, 0.66)
+  );
+  border-bottom: 1px solid rgba(26, 26, 26, 0.06);
+  box-shadow: 0 6px 20px rgba(26, 22, 12, 0.05);
+}
+
+/* Dark glass: anything overlaid on imagery */
+.p-card__dp-pill,
+.p-card__handover-pill,
+.p-card__category-tag {
+  background: var(--pv-glass-ink) !important;
+  border: 1px solid var(--pv-glass-ink-border) !important;
+  color: #fdf8ec !important;
+  font-weight: 600 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.24);
+}
+
+.p-card__dp-pill i,
+.p-card__handover-pill i,
+.p-card__category-tag i {
+  color: #f0d98f !important;
+}
+
+/* Frosted hero search panel */
+.pvHeroSearch__form {
+  background: rgba(18, 17, 21, 0.62) !important;
+  border: 1px solid rgba(255, 255, 255, 0.16) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    0 18px 48px rgba(0, 0, 0, 0.34);
+}
+
+/* =========================================================================
+   9. PREMIUM PROPERTY CARD (.p-card)
+   Equal-height cards with a common baseline for price/meta rows — the grid
+   previously ragged because each card sized to its own copy length.
+   ========================================================================= */
+
+.dev-grid,
+.developmentsGrid {
+  align-items: stretch;
+}
+
+.p-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  background: var(--pv-surface);
+  border: 1px solid var(--pv-line);
+  box-shadow: var(--pv-shadow-sm);
+  isolation: isolate;
+  transition: transform 0.42s var(--pv-ease-out), box-shadow 0.42s var(--pv-ease),
+    border-color 0.42s var(--pv-ease);
+}
+
+/* Gold gradient hairline that fades in on hover */
+.p-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    140deg,
+    rgba(201, 168, 76, 0.85),
+    rgba(201, 168, 76, 0.1) 42%,
+    rgba(201, 168, 76, 0.55)
+  );
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.42s var(--pv-ease);
+  pointer-events: none;
+  z-index: 3;
+}
+
+.p-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--pv-shadow-lg);
+  border-color: transparent;
+}
+
+.p-card:hover::after {
+  opacity: 1;
+}
+
+/* Pointer-tracked sheen (coordinates set by ui-polish.js) */
+.p-card__image-wrapper {
+  position: relative;
+  background: var(--pv-surface-sand) !important;
+  overflow: hidden;
+  flex: none;
+  aspect-ratio: 16 / 11;
+}
+
+.p-card__image-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    260px circle at var(--pv-mx, 50%) var(--pv-my, 50%),
+    rgba(255, 246, 220, 0.16),
+    transparent 62%
+  );
+  opacity: 0;
+  transition: opacity 0.4s var(--pv-ease);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.p-card:hover .p-card__image-wrapper::after {
+  opacity: 1;
+}
+
+.p-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.7s var(--pv-ease-out);
+}
+
+.p-card:hover .p-card__img {
+  transform: scale(1.06);
+}
+
+/* Scrim so the overlaid pills always have something behind them */
+.p-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.04) 32%,
+    rgba(0, 0, 0, 0.06) 58%,
+    rgba(0, 0, 0, 0.52) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.p-card__tags-top,
+.p-card__image-bottom {
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  z-index: 2;
+}
+
+.p-card__tags-top {
+  top: 14px;
+  justify-content: space-between;
+}
+
+.p-card__image-bottom {
+  bottom: 14px;
+}
+
+.p-card__badge,
+.p-card__category-tag,
+.p-card__dp-pill,
+.p-card__handover-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 11px;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  line-height: 1.2;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+
+/* ---- Body: single flex column so the footer can share a baseline ---- */
+.p-card__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  gap: 12px;
+  padding: 20px 20px 18px;
+}
+
+.p-card__header {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.p-card__location {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--pv-gold-ink) !important;
+}
+
+.p-card__title {
+  margin: 0;
+  font-size: 1.12rem;
+  line-height: 1.32;
+  /* Two-line clamp keeps every card's title block the same height. */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: calc(2 * 1.32em);
+}
+
+.p-card__title a {
+  color: var(--pv-ink);
+  text-decoration: none;
+  background-image: linear-gradient(var(--pv-gold-deep), var(--pv-gold-deep));
+  background-repeat: no-repeat;
+  background-size: 0% 1px;
+  background-position: 0 100%;
+  transition: background-size 0.4s var(--pv-ease), color 0.25s var(--pv-ease);
+}
+
+.p-card:hover .p-card__title a {
+  color: var(--pv-gold-ink);
+  background-size: 100% 1px;
+}
+
+.p-card__type-beds {
+  font-size: 0.82rem;
+  color: var(--pv-ink-muted);
+  line-height: 1.5;
+}
+
+.p-card__desc {
+  margin: 0;
+  font-size: 0.86rem;
+  line-height: 1.6;
+  color: var(--pv-ink-muted) !important;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* margin-top:auto pins every card's price row to the same baseline */
+.p-card__footer {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid var(--pv-line);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px 16px;
+  flex-wrap: wrap;
+}
+
+.p-card__price-box {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.p-card__price-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--pv-gold-ink) !important;
+}
+
+.p-card__price-val {
+  font-size: 1.06rem;
+  font-weight: 700;
+  color: var(--pv-gold-text) !important;
+  line-height: 1.25;
+}
+
+.p-card__meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.78rem;
+  color: var(--pv-gold-ink) !important;
+}
+
+/* =========================================================================
+   10. PREMIUM GALLERY CARD — frosted caption panel
+   ========================================================================= */
+
+.galleryCard {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  isolation: isolate;
+  box-shadow: var(--pv-shadow-sm);
+  transition: transform 0.42s var(--pv-ease-out), box-shadow 0.42s var(--pv-ease);
+}
+
+.galleryCard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--pv-shadow-lg);
+}
+
+.galleryCard__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 14px;
+  margin: 12px;
+  padding: 15px 17px;
+  border-radius: 13px;
+  /* Frosted dark panel: legible over any photograph, and the blur is what
+     makes this read as glass rather than a flat black box. */
+  background: var(--pv-glass-ink);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  backdrop-filter: blur(16px) saturate(150%);
+  border: 1px solid var(--pv-glass-ink-border);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    0 8px 26px rgba(0, 0, 0, 0.3);
+  transition: background 0.4s var(--pv-ease), transform 0.42s var(--pv-ease-out);
+}
+
+.galleryCard:hover .galleryCard__content {
+  background: rgba(18, 16, 12, 0.72);
+}
+
+.galleryCard__title {
+  margin: 0 0 3px;
+  font-size: 1.04rem;
+  line-height: 1.3;
+}
+
+.galleryCard__subtitle {
+  margin: 0;
+  font-size: 0.79rem;
+  line-height: 1.45;
+}
+
+.galleryCard__btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s var(--pv-ease-out), background 0.3s var(--pv-ease),
+    color 0.3s var(--pv-ease);
+}
+
+.galleryCard:hover .galleryCard__btn {
+  transform: translateX(3px) rotate(-45deg);
+}
+
+/* =========================================================================
+   11. MOTION — scroll reveal + accents
+   Gated behind .pv-anim (added by ui-polish.js) so a JS-less page is never
+   left at opacity:0.
+   ========================================================================= */
+
+.pv-anim [data-pv-reveal] {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.pv-anim [data-pv-reveal].is-pv-visible {
+  animation: pvReveal 0.72s var(--pv-ease-out) both;
+  animation-delay: var(--pv-delay, 0ms);
+}
+
+@keyframes pvReveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Reduced motion: land on the final state immediately, never mid-fade. */
+@media (prefers-reduced-motion: reduce) {
+  .pv-anim [data-pv-reveal],
+  .pv-anim [data-pv-reveal].is-pv-visible {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+}
+
+/* =========================================================================
+   12. RESPONSIVE REFINEMENTS for the premium layer
+   ========================================================================= */
+
+@media (max-width: 768px) {
+  .p-card {
+    border-radius: 16px;
+  }
+  .p-card__body {
+    padding: 17px 16px 16px;
+    gap: 11px;
+  }
+  .p-card__title {
+    font-size: 1.05rem;
+  }
+  .p-card__image-wrapper {
+    aspect-ratio: 16 / 10;
+  }
+  .p-card__footer {
+    /* Stacked so a long price and the meta row never collide at 375px. */
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .galleryCard__content {
+    margin: 9px;
+    padding: 12px 13px;
+    border-radius: 11px;
+  }
+  .galleryCard__title {
+    font-size: 0.95rem;
+  }
+  .galleryCard__subtitle {
+    font-size: 0.74rem;
+  }
+  .galleryCard__btn {
+    width: 36px;
+    height: 36px;
+  }
+  .pvFooter__brandLogo {
+    padding: 13px 22px;
+    border-radius: 14px;
+  }
+  /* Sticky filters would eat a third of a phone viewport. */
+  .luxuryGallery__filters {
+    position: static;
+  }
+}
+
+/* Fallback for engines without backdrop-filter: use opaque panels so the
+   glass surfaces never degrade into unreadable washes. */
+@supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  .galleryCard__content,
+  .p-card__dp-pill,
+  .p-card__handover-pill,
+  .p-card__category-tag {
+    background: rgba(16, 15, 11, 0.86) !important;
+  }
+  .pvHeroSearch__form {
+    background: rgba(18, 17, 21, 0.92) !important;
+  }
+  .luxuryGallery__filters {
+    background: var(--pv-surface-ivory);
+  }
+  .pvPill,
+  .luxuryGallery__badge,
+  .pvFooter__badge {
+    background: var(--pv-surface-cream) !important;
+  }
+}
+
+/* =========================================================================
+   13. CARD CTA ROW — refined actions
+   The flat-black "Explore" and the saturated green WhatsApp disc fought each
+   other for attention and neither matched the gold palette. Both become the
+   same height and weight, with gold as the primary accent.
+   ========================================================================= */
+
+.p-card__actions {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex: none;
+}
+
+.p-card__btn-explore,
+.p-card__btn-wa {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-decoration: none;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transition: transform 0.32s var(--pv-ease-out), box-shadow 0.32s var(--pv-ease),
+    background 0.32s var(--pv-ease), color 0.32s var(--pv-ease),
+    border-color 0.32s var(--pv-ease);
+}
+
+/* Primary: deep ink with a gold hairline and a sheen that sweeps on hover */
+.p-card__btn-explore {
+  gap: 8px;
+  padding: 0 20px;
+  background: var(--pv-plate) !important;
+  color: #fdf8ec !important;
+  border: 1px solid rgba(201, 168, 76, 0.42) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.09),
+    0 4px 14px rgba(18, 16, 12, 0.18);
+}
+
+.p-card__btn-explore::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -60%;
+  width: 46%;
+  background: linear-gradient(
+    100deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.18) 45%,
+    rgba(255, 246, 220, 0.32) 55%,
+    transparent 100%
+  );
+  transform: skewX(-18deg);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.p-card__btn-explore:hover,
+.p-card__btn-explore:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(201, 168, 76, 0.85) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    0 8px 22px rgba(18, 16, 12, 0.26);
+}
+
+.p-card__btn-explore:hover::after,
+.p-card__btn-explore:focus-visible::after {
+  animation: pvSheen 0.8s var(--pv-ease) forwards;
+}
+
+.p-card__btn-explore i {
+  font-size: 0.76rem;
+  transition: transform 0.32s var(--pv-ease-out);
+}
+
+.p-card__btn-explore:hover i {
+  transform: translateX(3px);
+}
+
+[dir="rtl"] .p-card__btn-explore:hover i {
+  transform: translateX(-3px) scaleX(-1);
+}
+
+[dir="rtl"] .p-card__btn-explore i {
+  transform: scaleX(-1);
+}
+
+/* Secondary: ghost disc that fills with WhatsApp green only on hover, so the
+   resting card stays in the gold/ivory palette. */
+.p-card__btn-wa {
+  width: 40px;
+  flex: none;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.92),
+    rgba(248, 246, 240, 0.72)
+  ) !important;
+  color: #0f7a4a !important;
+  border: 1px solid rgba(15, 122, 74, 0.34) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 2px 8px rgba(26, 22, 12, 0.07);
+}
+
+.p-card__btn-wa i {
+  font-size: 1.02rem;
+  line-height: 1;
+}
+
+.p-card__btn-wa:hover,
+.p-card__btn-wa:focus-visible {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #16a35c, #0d7a44) !important;
+  color: #fff !important;
+  border-color: rgba(13, 122, 68, 0.9) !important;
+  box-shadow: 0 8px 20px rgba(13, 122, 68, 0.3);
+}
+
+/* ---- Footer divider: gold-centred hairline rather than a flat grey rule ---- */
+.p-card__footer {
+  border-top: 0 !important;
+  position: relative;
+}
+
+.p-card__footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(201, 168, 76, 0.5) 0%,
+    rgba(201, 168, 76, 0.16) 45%,
+    rgba(26, 26, 26, 0.07) 100%
+  );
+}
+
+/* ---- Price: display face, with the label reading as a small-caps kicker ---- */
+.p-card__price-val {
+  font-family: var(--pv-font-display, "Cormorant Garamond", Georgia, serif);
+  font-size: 1.3rem !important;
+  letter-spacing: 0.2px;
+}
+
+/* Crisp top corners where the photo meets the card, plus a hairline so the
+   image never looks pasted on. */
+.p-card__image-wrapper {
+  border-radius: 17px 17px 0 0;
+}
+
+.p-card__image-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 0 0 1px rgba(26, 22, 12, 0.06);
+  pointer-events: none;
+  z-index: 3;
+}
+
+@media (max-width: 768px) {
+  /* Keep the two CTAs side by side and let them span the stacked footer. */
+  .p-card__actions {
+    width: 100%;
+  }
+  .p-card__btn-explore {
+    flex: 1 1 auto;
+  }
+  .p-card__image-wrapper {
+    border-radius: 15px 15px 0 0;
+  }
+}
