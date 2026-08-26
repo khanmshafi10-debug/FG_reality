@@ -729,6 +729,18 @@ a.pvFooter__contactLink:focus-visible {
   white-space: nowrap;
 }
 
+/*
+ * `.developmentCard__tags` is positioned absolutely by the page's own inline
+ * styles — and so is the `.cardTag` inside it. That leaves the wrapper with no
+ * in-flow content, so its used width is 0px. The `max-width: calc(100% - 40px)`
+ * above then resolved against that zero and clamped the tag to its padding,
+ * collapsing "Off-Plan Q1 2029" to a single clipped letter. Giving the wrapper
+ * a right edge makes it span the card, so the percentage has a real basis.
+ */
+.developmentCard__tags {
+  right: 8px;
+}
+
 /* Titles/subtitles sitting directly on imagery */
 .galleryCard__title,
 .developmentCard__title {
@@ -1075,7 +1087,8 @@ h1, h2, h3, h4,
  * it read as "the icon disappears on hover".
  *
  * Filling with the gold gradient rather than flat ink keeps the hover state in
- * the palette: ivory mark on deep gold is 8.9:1, comfortably AAA.
+ * the palette: the ivory mark measures 4.96:1 against the lightest stop and
+ * 9.46:1 against the darkest, so it clears AA across the whole sweep.
  */
 .pvFooter__socialLink:hover,
 .pvFooter__socialLink:focus-visible {
@@ -1130,13 +1143,8 @@ h1, h2, h3, h4,
   color: #f0d98f !important;
 }
 
-/* Frosted hero search panel */
-.pvHeroSearch__form {
-  background: rgba(18, 17, 21, 0.62) !important;
-  border: 1px solid rgba(255, 255, 255, 0.16) !important;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12),
-    0 18px 48px rgba(0, 0, 0, 0.34);
-}
+/* The hero search panel is built in full in §14; it needs more than a glass
+   surface, so it is no longer styled from here. */
 
 /* =========================================================================
    9. PREMIUM PROPERTY CARD (.p-card)
@@ -1565,9 +1573,8 @@ h1, h2, h3, h4,
   .p-card__category-tag {
     background: rgba(16, 15, 11, 0.86) !important;
   }
-  .pvHeroSearch__form {
-    background: rgba(18, 17, 21, 0.92) !important;
-  }
+  /* .pvHeroSearch__form has its own fallback at the end of §14, where it can
+     sit after the panel's !important background instead of before it. */
   .luxuryGallery__filters {
     background: var(--pv-surface-ivory);
   }
@@ -1756,5 +1763,319 @@ h1, h2, h3, h4,
   }
   .p-card__image-wrapper {
     border-radius: 15px 15px 0 0;
+  }
+}
+
+/* =========================================================================
+   14. HERO SEARCH — the primary entry point into the portfolio
+   -------------------------------------------------------------------------
+   This section defines the component outright, not as a polish layer over
+   index.css. index.css does carry a .pvHeroSearch block, but it sits after an
+   unclosed `@media (min-width: 768px) {` at index.css:125, so the CSSOM
+   discards it along with the rest of that file — the bar was rendering on
+   user-agent defaults (block layout, white input, Times New Roman, an outset
+   button border). Reviving index.css is a separate, site-wide change; until
+   then every declaration the component needs is stated here.
+
+   The bar sits on hero photography, so this is one of the sanctioned
+   deep-ink plates: ivory type on a dark translucent panel is the only way to
+   stay legible over an arbitrary image. Everything else — the gold rim, the
+   brass CTA, the focus bloom — is drawn from the light palette's tokens.
+
+   Two shapes, not one scaled down:
+     desktop   a single 999px pill — icon / field / CTA on one line
+     <= 768px  a rounded card — field row on top, full-width CTA beneath
+   ========================================================================= */
+
+/* No max-width of its own: .hero__content-middle caps the hero copy column at
+   680px, and the bar should line up with the headline above it rather than
+   break out of that column. */
+.pvHeroSearch {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 100%;
+  margin: 2rem auto 1.75rem !important;
+}
+
+.pvHeroSearch__form {
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 8px;
+  padding: 7px 8px 7px 10px !important;
+  border-radius: 999px !important;
+  background: linear-gradient(
+    135deg,
+    rgba(20, 18, 24, 0.72) 0%,
+    rgba(12, 11, 15, 0.62) 100%
+  ) !important;
+  -webkit-backdrop-filter: blur(22px) saturate(150%) !important;
+  backdrop-filter: blur(22px) saturate(150%) !important;
+  border: 1px solid rgba(201, 168, 76, 0.42) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.25), 0 18px 44px rgba(0, 0, 0, 0.34),
+    0 2px 8px rgba(0, 0, 0, 0.2) !important;
+  transition: border-color 0.35s var(--pv-ease),
+    box-shadow 0.35s var(--pv-ease), transform 0.35s var(--pv-ease-out);
+}
+
+/* Focus lives on the panel, not the bare input: the input has no border of
+   its own, so without this a keyboard user gets no visible ring at all. */
+.pvHeroSearch__form:focus-within {
+  border-color: rgba(226, 192, 104, 0.9) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18),
+    0 0 0 4px rgba(201, 168, 76, 0.16), 0 22px 52px rgba(0, 0, 0, 0.38) !important;
+  transform: translateY(-2px);
+}
+
+/* min-width:0 lets the field shrink instead of shoving the CTA off the pill —
+   a flex item refuses to go below its content width without it. */
+.pvHeroSearch__inputWrap {
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto;
+  gap: 12px !important;
+  min-width: 0;
+}
+
+/* Gold-tinted disc. The height is set explicitly because index.css normalises
+   every svg to `height: auto`, which would leave the disc non-square. */
+.pvHeroSearch__icon {
+  display: block;
+  flex-shrink: 0;
+  width: 38px !important;
+  height: 38px !important;
+  padding: 9px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background: rgba(201, 168, 76, 0.14);
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  color: #e8cf8a !important;
+  transition: background 0.3s var(--pv-ease), border-color 0.3s var(--pv-ease);
+}
+
+.pvHeroSearch__form:focus-within .pvHeroSearch__icon {
+  background: rgba(201, 168, 76, 0.24);
+  border-color: rgba(226, 192, 104, 0.55);
+}
+
+/* Named rather than `inherit`: nothing in the cascade sets a body font, so
+   inheriting here resolves to the UA default (Times New Roman). Plus Jakarta
+   Sans is already requested by every page's Google Fonts link. */
+.pvHeroSearch__input,
+.pvHeroSearch__btn {
+  font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+[dir="rtl"] .pvHeroSearch__input,
+[dir="rtl"] .pvHeroSearch__btn {
+  font-family: "Noto Kufi Arabic", "Plus Jakarta Sans", -apple-system,
+    "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+.pvHeroSearch__input {
+  width: 100%;
+  min-width: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  font-size: 1rem !important;
+  color: #fffdf7 !important;
+  letter-spacing: 0.2px;
+  padding-block: 12px;
+  text-overflow: ellipsis;
+}
+
+.pvHeroSearch__input::placeholder {
+  color: rgba(255, 250, 238, 0.62) !important;
+  opacity: 1;
+}
+
+.pvHeroSearch__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  gap: 8px;
+  height: 48px;
+  padding: 0 26px !important;
+  border: 0;
+  border-radius: 999px !important;
+  cursor: pointer;
+  background: linear-gradient(
+    135deg,
+    #e2c068 0%,
+    #c9a84c 46%,
+    #a88232 100%
+  ) !important;
+  color: #17130a !important;
+  font-weight: 700;
+  font-size: 0.875rem !important;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.42),
+    0 6px 18px rgba(140, 106, 28, 0.34);
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transition: transform 0.3s var(--pv-ease-out), box-shadow 0.3s var(--pv-ease),
+    filter 0.3s var(--pv-ease);
+}
+
+/*
+ * z-index 0 with the label lifted to 1, rather than a negative index on the
+ * sheen: where a negative pseudo-element paints depends on whether its host
+ * forms a stacking context, and this button's `isolation` makes that subtle.
+ * Two positive layers are unambiguous.
+ */
+.pvHeroSearch__btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -60%;
+  width: 45%;
+  background: linear-gradient(
+    100deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.45) 50%,
+    transparent 100%
+  );
+  transform: skewX(-18deg);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.pvHeroSearch__btn > *,
+.pvHeroSearch__btn span,
+.pvHeroSearch__btn svg {
+  position: relative;
+  z-index: 1;
+}
+
+.pvHeroSearch__btn:hover,
+.pvHeroSearch__btn:focus-visible {
+  transform: translateY(-2px);
+  filter: saturate(112%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    0 10px 26px rgba(140, 106, 28, 0.42);
+}
+
+.pvHeroSearch__btn:hover::after,
+.pvHeroSearch__btn:focus-visible::after {
+  animation: pvSheen 0.8s var(--pv-ease) forwards;
+}
+
+.pvHeroSearch__btn:active {
+  transform: translateY(0);
+}
+
+.pvHeroSearch__btn svg {
+  transition: transform 0.3s var(--pv-ease-out);
+}
+
+.pvHeroSearch__btn:hover svg {
+  transform: translateX(3px);
+}
+
+/* The arrow points in the submit direction, so it mirrors with the writing
+   mode — and the hover nudge has to mirror with it. */
+[dir="rtl"] .pvHeroSearch__btn svg {
+  transform: scaleX(-1);
+}
+
+[dir="rtl"] .pvHeroSearch__btn:hover svg {
+  transform: scaleX(-1) translateX(3px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pvHeroSearch__form:focus-within,
+  .pvHeroSearch__btn:hover,
+  .pvHeroSearch__btn:focus-visible {
+    transform: none;
+  }
+  .pvHeroSearch__btn:hover::after,
+  .pvHeroSearch__btn:focus-visible::after {
+    animation: none;
+  }
+  .pvHeroSearch__btn:hover svg {
+    transform: none;
+  }
+  [dir="rtl"] .pvHeroSearch__btn:hover svg {
+    transform: scaleX(-1);
+  }
+}
+
+/* ---------------------------------------------------------------- *
+ * Mobile: stack into a card so the CTA can carry its label
+ * ---------------------------------------------------------------- */
+
+@media (max-width: 768px) {
+  .pvHeroSearch {
+    padding: 0 16px !important;
+  }
+
+  .pvHeroSearch__form {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 12px !important;
+    border-radius: 22px !important;
+  }
+
+  /* A recessed well around the field, so the two rows read as field + action
+     instead of one undifferentiated dark rectangle. */
+  .pvHeroSearch__inputWrap {
+    flex: 1 1 100%;
+    padding: 2px 12px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .pvHeroSearch__icon {
+    width: 32px !important;
+    height: 32px !important;
+    padding: 7px;
+  }
+
+  /* 16px exactly: iOS zooms the whole viewport on focus below this. */
+  .pvHeroSearch__input {
+    font-size: 16px !important;
+    min-height: 44px;
+  }
+
+  .pvHeroSearch__btn {
+    flex: 1 1 100%;
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+    padding: 0 20px !important;
+    border-radius: 14px !important;
+    font-size: 0.9375rem !important;
+  }
+
+  /* index.css hides this label under 768px and rounds the button into a bare
+     circle. That rule is currently dead (see the section header), but state
+     the label explicitly so the CTA survives index.css being repaired — an
+     unlabelled gold dot is not a call to action. */
+  .pvHeroSearch__btn span {
+    display: inline !important;
+  }
+}
+
+/* Opaque fallback, declared after the panel's !important background so it can
+   actually win where backdrop-filter is unsupported. */
+@supports not
+  ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  .pvHeroSearch__form {
+    background: linear-gradient(
+      135deg,
+      rgba(20, 18, 24, 0.95) 0%,
+      rgba(12, 11, 15, 0.92) 100%
+    ) !important;
   }
 }

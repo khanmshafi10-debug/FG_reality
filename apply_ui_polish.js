@@ -381,10 +381,29 @@ function fixMojibake(html) {
 const CSS_LINK = '<link rel="stylesheet" href="/ui-polish.css?v=20260825">';
 const JS_LINK = '<script src="/ui-polish.js?v=20260825" defer></script>';
 
+const CSS_LINK_RE = /[ \t]*<link[^>]*ui-polish\.css[^>]*>\n?/i;
+
+/*
+ * Anchors on the FIRST </head>. Six pages (developments, privacy-policy,
+ * terms-and-conditions, and their /en counterparts) ship two nested documents
+ * — a second <html><head> opens partway through the first <body> — so the last
+ * </head> is not in the head at all. An earlier pass anchored there and left
+ * the stylesheet inside the body on those pages. Relocating an already-placed
+ * link keeps the script self-healing rather than needing a manual pass.
+ */
 function ensurePolishCss(html) {
-  if (html.includes('/ui-polish.css')) return { html, changed: false };
-  const i = html.lastIndexOf('</head>');
-  if (i < 0) return { html, changed: false };
+  const firstHeadClose = html.indexOf('</head>');
+  if (firstHeadClose < 0) return { html, changed: false };
+
+  const existing = html.match(CSS_LINK_RE);
+  if (existing) {
+    if (existing.index < firstHeadClose) return { html, changed: false };
+    html =
+      html.slice(0, existing.index) +
+      html.slice(existing.index + existing[0].length);
+  }
+
+  const i = html.indexOf('</head>');
   return {
     html: html.slice(0, i) + '    ' + CSS_LINK + '\n' + html.slice(i),
     changed: true,
